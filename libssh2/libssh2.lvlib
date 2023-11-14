@@ -47,6 +47,9 @@
 	<Item Name="Dereference NULL-Terminated String.vi" Type="VI" URL="../Dereference NULL-Terminated String.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
+	<Item Name="Error Status.vi" Type="VI" URL="../Error Status.vi">
+		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+	</Item>
 	<Item Name="Free Known Host.vi" Type="VI" URL="../Free Known Host.vi"/>
 	<Item Name="Global Settings.vi" Type="VI" URL="../Global Settings.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>

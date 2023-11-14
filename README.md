@@ -40,6 +40,13 @@
 
 **libssh2-labview** provides LabVIEW&trade; bindings for [libssh2](https://github.com/libssh2/libssh2).
 
+### Limitations
+
+Although this project aims to provide complete bindings for libssh2, there are several limitations users need to be aware of:
+
+- When calling `libssh2_channel_read()` and `libssh2_channel_read_ex()`, the buffer length is limited to 2^32-1 bytes (2 GiB) instead of 2^32-1 bytes (4 GiB). The reason for this is that arrays in LabVIEW are limited to 3^31-1 elements. The function must be called in a loop in order to read more data.
+- When calling `libssh2_channel_write()` and `libssh2_channel_write_ex()`, the buffer length is limited to 2^31-1 bytes (2 GiB) instead of 2^32-1 bytes (4 GiB). The reason for this is that arrays in LabVIEW are limited to 2^31-1 elements. The function must be called in a loop in order to write more data.
+
 ### Built With
 
 * [LabVIEW&trade;](https://www.ni.com/labview)
@@ -69,6 +76,13 @@ Here is an example that uses libssh2-labview to execute a command on a remote SS
 ## Roadmap
 
 See the [open issues](https://github.com/logmanoriginal/labview-composition/issues) for a list of proposed features (and known issues).
+
+## Further Reading
+
+- [RFC4251](https://www.rfc-editor.org/rfc/rfc4251): The Secure Shell (SSH) Protocol Architecture
+- [RFC4252](https://www.rfc-editor.org/rfc/rfc4252): The Secure Shell (SSH) Authentication Protocol
+- [RFC4253](https://www.rfc-editor.org/rfc/rfc4253): The Secure Shell (SSH) Transport Layer Protocol
+- [RFC4254](https://www.rfc-editor.org/rfc/rfc4254): The Secure Shell (SSH) Connection Protocol
 
 ## Contributing
 
