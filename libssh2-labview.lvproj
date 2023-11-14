@@ -13,12 +13,15 @@
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="examples" Type="Folder">
 			<Item Name="direct_tcpip.vi" Type="VI" URL="../direct_tcpip.vi"/>
+			<Item Name="ssh2_exec.vi" Type="VI" URL="../ssh2_exec.vi"/>
 			<Item Name="tcpip_forward.vi" Type="VI" URL="../tcpip_forward.vi"/>
 		</Item>
 		<Item Name="Clear Errors (Backport).vi" Type="VI" URL="../Clear Errors (Backport).vi"/>
 		<Item Name="libssh2.lvlib" Type="Library" URL="../libssh2.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
+				<Item Name="Get System Directory.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/sysdir.llb/Get System Directory.vi"/>
+				<Item Name="System Directory Type.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/sysdir.llb/System Directory Type.ctl"/>
 				<Item Name="TCP Get Raw Net Object.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tcp.llb/TCP Get Raw Net Object.vi"/>
 			</Item>
 			<Item Name="libssh2.dll" Type="Document" URL="../libssh2.dll"/>
