@@ -71,6 +71,7 @@
 	<Item Name="libssh2_channel_process_startup.vi" Type="VI" URL="../libssh2_channel_process_startup.vi"/>
 	<Item Name="libssh2_channel_read.vi" Type="VI" URL="../libssh2_channel_read.vi"/>
 	<Item Name="libssh2_channel_read_ex.vi" Type="VI" URL="../libssh2_channel_read_ex.vi"/>
+	<Item Name="libssh2_channel_send_eof.vi" Type="VI" URL="../libssh2_channel_send_eof.vi"/>
 	<Item Name="libssh2_channel_window_read_ex.vi" Type="VI" URL="../libssh2_channel_window_read_ex.vi"/>
 	<Item Name="libssh2_channel_window_write_ex.vi" Type="VI" URL="../libssh2_channel_window_write_ex.vi"/>
 	<Item Name="libssh2_channel_write.vi" Type="VI" URL="../libssh2_channel_write.vi"/>

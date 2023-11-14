@@ -23,6 +23,7 @@
 	<Item Name="libssh2_channel_process_startup - invalid channel - no error 1097.vi" Type="VI" URL="../libssh2_channel_process_startup - invalid channel - no error 1097.vi"/>
 	<Item Name="libssh2_channel_read - invalid channel - no error 1097.vi" Type="VI" URL="../libssh2_channel_read - invalid channel - no error 1097.vi"/>
 	<Item Name="libssh2_channel_read_ex - invalid channel - no error 1097.vi" Type="VI" URL="../libssh2_channel_read_ex - invalid channel - no error 1097.vi"/>
+	<Item Name="libssh2_channel_send_eof - invalid channel - no error 1097.vi" Type="VI" URL="../libssh2_channel_send_eof - invalid channel - no error 1097.vi"/>
 	<Item Name="libssh2_channel_window_read_ex - invalid channel - no error 1097.vi" Type="VI" URL="../libssh2_channel_window_read_ex - invalid channel - no error 1097.vi"/>
 	<Item Name="libssh2_channel_window_write_ex - invalid channel - no error 1097.vi" Type="VI" URL="../libssh2_channel_window_write_ex - invalid channel - no error 1097.vi"/>
 	<Item Name="libssh2_channel_write - invalid channel - no error 1097.vi" Type="VI" URL="../libssh2_channel_write - invalid channel - no error 1097.vi"/>
