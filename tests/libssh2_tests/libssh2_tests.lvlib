@@ -7,6 +7,24 @@
 	<Item Name="Assert Not Error 1097.vi" Type="VI" URL="../Assert Not Error 1097.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
+	<Item Name="libssh2_channel_close - invalid channel - no error 1097.vi" Type="VI" URL="../libssh2_channel_close - invalid channel - no error 1097.vi"/>
+	<Item Name="libssh2_channel_direct_tcpip_ex - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_channel_direct_tcpip_ex - invalid session - no error 1097.vi"/>
+	<Item Name="libssh2_channel_eof - invalid channel - no error 1097.vi" Type="VI" URL="../libssh2_channel_eof - invalid channel - no error 1097.vi"/>
+	<Item Name="libssh2_channel_exec - invalid channel - no error 1097.vi" Type="VI" URL="../libssh2_channel_exec - invalid channel - no error 1097.vi"/>
+	<Item Name="libssh2_channel_flush_ex - invalid channel - no error 1097.vi" Type="VI" URL="../libssh2_channel_flush_ex - invalid channel - no error 1097.vi"/>
+	<Item Name="libssh2_channel_forward_accept - invalid listener - no error 1097.vi" Type="VI" URL="../libssh2_channel_forward_accept - invalid listener - no error 1097.vi"/>
+	<Item Name="libssh2_channel_forward_cancel - invalid listener - no error 1097.vi" Type="VI" URL="../libssh2_channel_forward_cancel - invalid listener - no error 1097.vi"/>
+	<Item Name="libssh2_channel_forward_listen_ex - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_channel_forward_listen_ex - invalid session - no error 1097.vi"/>
+	<Item Name="libssh2_channel_free - invalid channel - no error 1097.vi" Type="VI" URL="../libssh2_channel_free - invalid channel - no error 1097.vi"/>
+	<Item Name="libssh2_channel_get_exit_signal - invalid channel - no error 1097.vi" Type="VI" URL="../libssh2_channel_get_exit_signal - invalid channel - no error 1097.vi"/>
+	<Item Name="libssh2_channel_get_exit_status - invalid channel - no error 1097.vi" Type="VI" URL="../libssh2_channel_get_exit_status - invalid channel - no error 1097.vi"/>
+	<Item Name="libssh2_channel_open_ex - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_channel_open_ex - invalid session - no error 1097.vi"/>
+	<Item Name="libssh2_channel_open_session - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_channel_open_session - invalid session - no error 1097.vi"/>
+	<Item Name="libssh2_channel_process_startup - invalid channel - no error 1097.vi" Type="VI" URL="../libssh2_channel_process_startup - invalid channel - no error 1097.vi"/>
+	<Item Name="libssh2_channel_read - invalid channel - no error 1097.vi" Type="VI" URL="../libssh2_channel_read - invalid channel - no error 1097.vi"/>
+	<Item Name="libssh2_channel_read_ex - invalid channel - no error 1097.vi" Type="VI" URL="../libssh2_channel_read_ex - invalid channel - no error 1097.vi"/>
+	<Item Name="libssh2_channel_write - invalid channel - no error 1097.vi" Type="VI" URL="../libssh2_channel_write - invalid channel - no error 1097.vi"/>
+	<Item Name="libssh2_channel_write_ex - invalid channel - no error 1097.vi" Type="VI" URL="../libssh2_channel_write_ex - invalid channel - no error 1097.vi"/>
 	<Item Name="libssh2_hostkey_hash - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_hostkey_hash - invalid session - no error 1097.vi"/>
 	<Item Name="libssh2_knownhost_checkp - empty key - returns failure.vi" Type="VI" URL="../libssh2_knownhost_checkp - empty key - returns failure.vi"/>
 	<Item Name="libssh2_knownhost_checkp - invalid key - returns mismatch.vi" Type="VI" URL="../libssh2_knownhost_checkp - invalid key - returns mismatch.vi"/>
