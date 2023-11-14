@@ -103,6 +103,7 @@
 	<Item Name="Listener Refnum.ctl" Type="VI" URL="../Listener Refnum.ctl"/>
 	<Item Name="Not A Channel.vi" Type="VI" URL="../Not A Channel.vi"/>
 	<Item Name="Not A Known Host.vi" Type="VI" URL="../Not A Known Host.vi"/>
+	<Item Name="Not A Known Hosts Collection.vi" Type="VI" URL="../Not A Known Hosts Collection.vi"/>
 	<Item Name="Not A Listener.vi" Type="VI" URL="../Not A Listener.vi"/>
 	<Item Name="Not A Session.vi" Type="VI" URL="../Not A Session.vi"/>
 	<Item Name="Read Known Host Data.vi" Type="VI" URL="../Read Known Host Data.vi"/>
