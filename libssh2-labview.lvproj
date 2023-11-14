@@ -12,12 +12,12 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="examples" Type="Folder">
-			<Item Name="direct_tcpip.vi" Type="VI" URL="../direct_tcpip.vi"/>
-			<Item Name="ssh2.vi" Type="VI" URL="../ssh2.vi"/>
-			<Item Name="ssh2_exec.vi" Type="VI" URL="../ssh2_exec.vi"/>
-			<Item Name="tcpip_forward.vi" Type="VI" URL="../tcpip_forward.vi"/>
+			<Item Name="Clear Errors (Backport).vi" Type="VI" URL="../examples/Clear Errors (Backport).vi"/>
+			<Item Name="direct_tcpip.vi" Type="VI" URL="../examples/direct_tcpip.vi"/>
+			<Item Name="ssh2.vi" Type="VI" URL="../examples/ssh2.vi"/>
+			<Item Name="ssh2_exec.vi" Type="VI" URL="../examples/ssh2_exec.vi"/>
+			<Item Name="tcpip_forward.vi" Type="VI" URL="../examples/tcpip_forward.vi"/>
 		</Item>
-		<Item Name="Clear Errors (Backport).vi" Type="VI" URL="../Clear Errors (Backport).vi"/>
 		<Item Name="libssh2.lvlib" Type="Library" URL="../libssh2/libssh2.lvlib"/>
 		<Item Name="VI Tree.vi" Type="VI" URL="../VI Tree.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
