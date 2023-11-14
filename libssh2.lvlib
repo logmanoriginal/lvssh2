@@ -48,6 +48,7 @@
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
 	<Item Name="Free Known Host.vi" Type="VI" URL="../Free Known Host.vi"/>
+	<Item Name="Hostkey Hash Type.ctl" Type="VI" URL="../Hostkey Hash Type.ctl"/>
 	<Item Name="libssh2_channel_close.vi" Type="VI" URL="../libssh2_channel_close.vi"/>
 	<Item Name="libssh2_channel_direct_tcpip_ex.vi" Type="VI" URL="../libssh2_channel_direct_tcpip_ex.vi"/>
 	<Item Name="libssh2_channel_eof.vi" Type="VI" URL="../libssh2_channel_eof.vi"/>
