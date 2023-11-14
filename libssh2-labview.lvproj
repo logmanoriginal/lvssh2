@@ -14,6 +14,7 @@
 		<Item Name="examples" Type="Folder">
 			<Item Name="direct_tcpip.vi" Type="VI" URL="../examples/direct_tcpip.vi"/>
 			<Item Name="ssh2.vi" Type="VI" URL="../examples/ssh2.vi"/>
+			<Item Name="ssh2_echo.vi" Type="VI" URL="../examples/ssh2_echo.vi"/>
 			<Item Name="ssh2_exec.vi" Type="VI" URL="../examples/ssh2_exec.vi"/>
 			<Item Name="tcpip_forward.vi" Type="VI" URL="../examples/tcpip_forward.vi"/>
 		</Item>
