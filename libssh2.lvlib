@@ -14,21 +14,21 @@
 		<Item Name="Delete Channel Refnum.vi" Type="VI" URL="../Delete Channel Refnum.vi"/>
 		<Item Name="Read Channel Refnum.vi" Type="VI" URL="../Read Channel Refnum.vi"/>
 	</Item>
-	<Item Name="Host" Type="Folder">
+	<Item Name="Known Host" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-		<Item Name="Alloc libssh2_knownhost.vi" Type="VI" URL="../Alloc libssh2_knownhost.vi"/>
-		<Item Name="Create Host Refnum.vi" Type="VI" URL="../Create Host Refnum.vi"/>
-		<Item Name="Delete Host Refnum.vi" Type="VI" URL="../Delete Host Refnum.vi"/>
+		<Item Name="Create Known Host Refnum.vi" Type="VI" URL="../Create Known Host Refnum.vi"/>
+		<Item Name="Delete Known Host Refnum.vi" Type="VI" URL="../Delete Known Host Refnum.vi"/>
 		<Item Name="Free libssh2_knownhost.vi" Type="VI" URL="../Free libssh2_knownhost.vi"/>
-		<Item Name="Host Refnum.ctl" Type="VI" URL="../Host Refnum.ctl"/>
-		<Item Name="Read Host Refnum.vi" Type="VI" URL="../Read Host Refnum.vi"/>
+		<Item Name="Init libssh2_knownhost.vi" Type="VI" URL="../Init libssh2_knownhost.vi"/>
+		<Item Name="Known Host Refnum.ctl" Type="VI" URL="../Known Host Refnum.ctl"/>
+		<Item Name="Read Known Host Refnum.vi" Type="VI" URL="../Read Known Host Refnum.vi"/>
 	</Item>
-	<Item Name="Hosts" Type="Folder">
+	<Item Name="Known Hosts" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-		<Item Name="Create Hosts Refnum.vi" Type="VI" URL="../Create Hosts Refnum.vi"/>
-		<Item Name="Delete Hosts Refnum.vi" Type="VI" URL="../Delete Hosts Refnum.vi"/>
-		<Item Name="Hosts Refnum.ctl" Type="VI" URL="../Hosts Refnum.ctl"/>
-		<Item Name="Read Hosts Refnum.vi" Type="VI" URL="../Read Hosts Refnum.vi"/>
+		<Item Name="Create Known Hosts Refnum.vi" Type="VI" URL="../Create Known Hosts Refnum.vi"/>
+		<Item Name="Delete Known Hosts Refnum.vi" Type="VI" URL="../Delete Known Hosts Refnum.vi"/>
+		<Item Name="Known Hosts Refnum.ctl" Type="VI" URL="../Known Hosts Refnum.ctl"/>
+		<Item Name="Read Known Hosts Refnum.vi" Type="VI" URL="../Read Known Hosts Refnum.vi"/>
 	</Item>
 	<Item Name="Listener" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
@@ -44,7 +44,7 @@
 		<Item Name="Read Session Refnum.vi" Type="VI" URL="../Read Session Refnum.vi"/>
 		<Item Name="Session Refnum.ctl" Type="VI" URL="../Session Refnum.ctl"/>
 	</Item>
-	<Item Name="Free Host.vi" Type="VI" URL="../Free Host.vi"/>
+	<Item Name="Free Known Host.vi" Type="VI" URL="../Free Known Host.vi"/>
 	<Item Name="libssh2_channel_close.vi" Type="VI" URL="../libssh2_channel_close.vi"/>
 	<Item Name="libssh2_channel_direct_tcpip_ex.vi" Type="VI" URL="../libssh2_channel_direct_tcpip_ex.vi"/>
 	<Item Name="libssh2_channel_eof.vi" Type="VI" URL="../libssh2_channel_eof.vi"/>
@@ -88,6 +88,7 @@
 	<Item Name="libssh2_userauth_password_ex.vi" Type="VI" URL="../libssh2_userauth_password_ex.vi"/>
 	<Item Name="Move LPSTR to String.vi" Type="VI" URL="../Move LPSTR to String.vi"/>
 	<Item Name="Not A Channel.vi" Type="VI" URL="../Not A Channel.vi"/>
+	<Item Name="Not A Listener.vi" Type="VI" URL="../Not A Listener.vi"/>
 	<Item Name="Not A Session.vi" Type="VI" URL="../Not A Session.vi"/>
-	<Item Name="Read Host.vi" Type="VI" URL="../Read Host.vi"/>
+	<Item Name="Read Known Host Data.vi" Type="VI" URL="../Read Known Host Data.vi"/>
 </Library>

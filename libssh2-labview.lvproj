@@ -18,6 +18,7 @@
 		</Item>
 		<Item Name="Clear Errors (Backport).vi" Type="VI" URL="../Clear Errors (Backport).vi"/>
 		<Item Name="libssh2.lvlib" Type="Library" URL="../libssh2.lvlib"/>
+		<Item Name="VI Tree.vi" Type="VI" URL="../VI Tree.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Get System Directory.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/sysdir.llb/Get System Directory.vi"/>
