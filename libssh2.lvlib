@@ -21,6 +21,13 @@
 		<Item Name="Hosts Refnum.ctl" Type="VI" URL="../Hosts Refnum.ctl"/>
 		<Item Name="Read Hosts Refnum.vi" Type="VI" URL="../Read Hosts Refnum.vi"/>
 	</Item>
+	<Item Name="Listener" Type="Folder">
+		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		<Item Name="Create Listener Refnum.vi" Type="VI" URL="../Create Listener Refnum.vi"/>
+		<Item Name="Delete Listener Refnum.vi" Type="VI" URL="../Delete Listener Refnum.vi"/>
+		<Item Name="Listener Refnum.ctl" Type="VI" URL="../Listener Refnum.ctl"/>
+		<Item Name="Read Listener Refnum.vi" Type="VI" URL="../Read Listener Refnum.vi"/>
+	</Item>
 	<Item Name="Session" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		<Item Name="Create Session Refnum.vi" Type="VI" URL="../Create Session Refnum.vi"/>
