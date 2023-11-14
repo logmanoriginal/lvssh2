@@ -10,11 +10,14 @@
 	<Item Name="libssh2_channel_close.vi" Type="VI" URL="../libssh2_channel_close.vi"/>
 	<Item Name="libssh2_channel_direct_tcpip_ex.vi" Type="VI" URL="../libssh2_channel_direct_tcpip_ex.vi"/>
 	<Item Name="libssh2_channel_eof.vi" Type="VI" URL="../libssh2_channel_eof.vi"/>
+	<Item Name="libssh2_channel_exec.vi" Type="VI" URL="../libssh2_channel_exec.vi"/>
+	<Item Name="libssh2_channel_flush_ex.vi" Type="VI" URL="../libssh2_channel_flush_ex.vi"/>
 	<Item Name="libssh2_channel_forward_accept.vi" Type="VI" URL="../libssh2_channel_forward_accept.vi"/>
 	<Item Name="libssh2_channel_forward_cancel.vi" Type="VI" URL="../libssh2_channel_forward_cancel.vi"/>
 	<Item Name="libssh2_channel_forward_listen_ex.vi" Type="VI" URL="../libssh2_channel_forward_listen_ex.vi"/>
 	<Item Name="libssh2_channel_free.vi" Type="VI" URL="../libssh2_channel_free.vi"/>
 	<Item Name="libssh2_channel_open_ex.vi" Type="VI" URL="../libssh2_channel_open_ex.vi"/>
+	<Item Name="libssh2_channel_open_session.vi" Type="VI" URL="../libssh2_channel_open_session.vi"/>
 	<Item Name="libssh2_channel_process_startup.vi" Type="VI" URL="../libssh2_channel_process_startup.vi"/>
 	<Item Name="libssh2_channel_read.vi" Type="VI" URL="../libssh2_channel_read.vi"/>
 	<Item Name="libssh2_channel_read_ex.vi" Type="VI" URL="../libssh2_channel_read_ex.vi"/>
@@ -29,6 +32,7 @@
 	<Item Name="libssh2_session_handshake.vi" Type="VI" URL="../libssh2_session_handshake.vi"/>
 	<Item Name="libssh2_session_init.vi" Type="VI" URL="../libssh2_session_init.vi"/>
 	<Item Name="libssh2_session_init_ex.vi" Type="VI" URL="../libssh2_session_init_ex.vi"/>
+	<Item Name="libssh2_session_last_error.vi" Type="VI" URL="../libssh2_session_last_error.vi"/>
 	<Item Name="libssh2_session_set_blocking.vi" Type="VI" URL="../libssh2_session_set_blocking.vi"/>
 	<Item Name="libssh2_userauth_banner.vi" Type="VI" URL="../libssh2_userauth_banner.vi"/>
 	<Item Name="libssh2_userauth_list.vi" Type="VI" URL="../libssh2_userauth_list.vi"/>
