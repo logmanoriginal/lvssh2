@@ -14,6 +14,13 @@
 		<Item Name="Delete Channel Refnum.vi" Type="VI" URL="../Delete Channel Refnum.vi"/>
 		<Item Name="Read Channel Refnum.vi" Type="VI" URL="../Read Channel Refnum.vi"/>
 	</Item>
+	<Item Name="Hosts" Type="Folder">
+		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		<Item Name="Create Hosts Refnum.vi" Type="VI" URL="../Create Hosts Refnum.vi"/>
+		<Item Name="Delete Hosts Refnum.vi" Type="VI" URL="../Delete Hosts Refnum.vi"/>
+		<Item Name="Hosts Refnum.ctl" Type="VI" URL="../Hosts Refnum.ctl"/>
+		<Item Name="Read Hosts Refnum.vi" Type="VI" URL="../Read Hosts Refnum.vi"/>
+	</Item>
 	<Item Name="Session" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		<Item Name="Create Session Refnum.vi" Type="VI" URL="../Create Session Refnum.vi"/>
