@@ -17,9 +17,12 @@
 	<Item Name="libssh2_knownhost_readfile - invalid file - returns error.vi" Type="VI" URL="../libssh2_knownhost_readfile - invalid file - returns error.vi"/>
 	<Item Name="libssh2_knownhost_readfile - invalid known hosts collection - returns zero.vi" Type="VI" URL="../libssh2_knownhost_readfile - invalid known hosts collection - returns zero.vi"/>
 	<Item Name="libssh2_knownhost_readfile - valid file - returns number of hosts.vi" Type="VI" URL="../libssh2_knownhost_readfile - valid file - returns number of hosts.vi"/>
-	<Item Name="libssh2_knownhost_writefile - invalid known hosts collection - does not return error 1097.vi" Type="VI" URL="../libssh2_knownhost_writefile - invalid known hosts collection - does not return error 1097.vi"/>
+	<Item Name="libssh2_knownhost_writefile - invalid known hosts collection - no error 1097.vi" Type="VI" URL="../libssh2_knownhost_writefile - invalid known hosts collection - no error 1097.vi"/>
 	<Item Name="libssh2_session_get_blocking - blocking - returns true.vi" Type="VI" URL="../libssh2_session_get_blocking - blocking - returns true.vi"/>
 	<Item Name="libssh2_session_get_blocking - non-blocking - returns false.vi" Type="VI" URL="../libssh2_session_get_blocking - non-blocking - returns false.vi"/>
+	<Item Name="libssh2_userauth_banner - invalid session - returns error.vi" Type="VI" URL="../libssh2_userauth_banner - invalid session - returns error.vi"/>
+	<Item Name="libssh2_userauth_list - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_userauth_list - invalid session - no error 1097.vi"/>
+	<Item Name="libssh2_userauth_password - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_userauth_password - invalid session - no error 1097.vi"/>
 	<Item Name="libssh2_version - no required version - returns version number.vi" Type="VI" URL="../libssh2_version - no required version - returns version number.vi"/>
 	<Item Name="libssh2_version - required version to high - returns empty string.vi" Type="VI" URL="../libssh2_version - required version to high - returns empty string.vi"/>
 	<Item Name="Not A Session - invalid session - returns true.vi" Type="VI" URL="../Not A Session - invalid session - returns true.vi"/>
