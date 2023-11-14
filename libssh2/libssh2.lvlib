@@ -72,6 +72,8 @@
 	<Item Name="libssh2_channel_write_ex.vi" Type="VI" URL="../libssh2_channel_write_ex.vi"/>
 	<Item Name="libssh2_exit.vi" Type="VI" URL="../libssh2_exit.vi"/>
 	<Item Name="libssh2_hostkey_hash.vi" Type="VI" URL="../libssh2_hostkey_hash.vi"/>
+	<Item Name="libssh2_init (Custom).vi" Type="VI" URL="../libssh2_init (Custom).vi"/>
+	<Item Name="libssh2_init (Default).vi" Type="VI" URL="../libssh2_init (Default).vi"/>
 	<Item Name="libssh2_init.vi" Type="VI" URL="../libssh2_init.vi"/>
 	<Item Name="libssh2_knownhost.ctl" Type="VI" URL="../libssh2_knownhost.ctl"/>
 	<Item Name="libssh2_knownhost_checkp.vi" Type="VI" URL="../libssh2_knownhost_checkp.vi"/>
