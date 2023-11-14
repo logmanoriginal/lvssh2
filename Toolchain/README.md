@@ -1,0 +1,1 @@
+This folder contains tools used for continuous integration. These tools are based on LabVIEW CLI, which requires LabVIEW 2014 or higher.
