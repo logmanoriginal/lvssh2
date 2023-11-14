@@ -9,7 +9,6 @@
 </Property>
 	<Item Name="Channel" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-		<Item Name="Channel Refnum.ctl" Type="VI" URL="../Channel Refnum.ctl"/>
 		<Item Name="Create Channel Refnum.vi" Type="VI" URL="../Create Channel Refnum.vi"/>
 		<Item Name="Delete Channel Refnum.vi" Type="VI" URL="../Delete Channel Refnum.vi"/>
 		<Item Name="Read Channel Refnum.vi" Type="VI" URL="../Read Channel Refnum.vi"/>
@@ -20,21 +19,18 @@
 		<Item Name="Delete Known Host Refnum.vi" Type="VI" URL="../Delete Known Host Refnum.vi"/>
 		<Item Name="Free libssh2_knownhost.vi" Type="VI" URL="../Free libssh2_knownhost.vi"/>
 		<Item Name="Init libssh2_knownhost.vi" Type="VI" URL="../Init libssh2_knownhost.vi"/>
-		<Item Name="Known Host Refnum.ctl" Type="VI" URL="../Known Host Refnum.ctl"/>
 		<Item Name="Read Known Host Refnum.vi" Type="VI" URL="../Read Known Host Refnum.vi"/>
 	</Item>
 	<Item Name="Known Hosts" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		<Item Name="Create Known Hosts Refnum.vi" Type="VI" URL="../Create Known Hosts Refnum.vi"/>
 		<Item Name="Delete Known Hosts Refnum.vi" Type="VI" URL="../Delete Known Hosts Refnum.vi"/>
-		<Item Name="Known Hosts Refnum.ctl" Type="VI" URL="../Known Hosts Refnum.ctl"/>
 		<Item Name="Read Known Hosts Refnum.vi" Type="VI" URL="../Read Known Hosts Refnum.vi"/>
 	</Item>
 	<Item Name="Listener" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		<Item Name="Create Listener Refnum.vi" Type="VI" URL="../Create Listener Refnum.vi"/>
 		<Item Name="Delete Listener Refnum.vi" Type="VI" URL="../Delete Listener Refnum.vi"/>
-		<Item Name="Listener Refnum.ctl" Type="VI" URL="../Listener Refnum.ctl"/>
 		<Item Name="Read Listener Refnum.vi" Type="VI" URL="../Read Listener Refnum.vi"/>
 	</Item>
 	<Item Name="Session" Type="Folder">
@@ -42,8 +38,8 @@
 		<Item Name="Create Session Refnum.vi" Type="VI" URL="../Create Session Refnum.vi"/>
 		<Item Name="Delete Session Refnum.vi" Type="VI" URL="../Delete Session Refnum.vi"/>
 		<Item Name="Read Session Refnum.vi" Type="VI" URL="../Read Session Refnum.vi"/>
-		<Item Name="Session Refnum.ctl" Type="VI" URL="../Session Refnum.ctl"/>
 	</Item>
+	<Item Name="Channel Refnum.ctl" Type="VI" URL="../Channel Refnum.ctl"/>
 	<Item Name="Dereference NULL-Terminated String.vi" Type="VI" URL="../Dereference NULL-Terminated String.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
@@ -55,6 +51,8 @@
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
 	<Item Name="Hostkey Hash Type.ctl" Type="VI" URL="../Hostkey Hash Type.ctl"/>
+	<Item Name="Known Host Refnum.ctl" Type="VI" URL="../Known Host Refnum.ctl"/>
+	<Item Name="Known Hosts Refnum.ctl" Type="VI" URL="../Known Hosts Refnum.ctl"/>
 	<Item Name="Knownhost Check Result.ctl" Type="VI" URL="../Knownhost Check Result.ctl"/>
 	<Item Name="Knownhost Type.ctl" Type="VI" URL="../Knownhost Type.ctl"/>
 	<Item Name="libssh2_channel_close.vi" Type="VI" URL="../libssh2_channel_close.vi"/>
@@ -102,9 +100,11 @@
 	<Item Name="libssh2_userauth_password.vi" Type="VI" URL="../libssh2_userauth_password.vi"/>
 	<Item Name="libssh2_userauth_password_ex.vi" Type="VI" URL="../libssh2_userauth_password_ex.vi"/>
 	<Item Name="libssh2_version.vi" Type="VI" URL="../libssh2_version.vi"/>
+	<Item Name="Listener Refnum.ctl" Type="VI" URL="../Listener Refnum.ctl"/>
 	<Item Name="Not A Channel.vi" Type="VI" URL="../Not A Channel.vi"/>
 	<Item Name="Not A Known Host.vi" Type="VI" URL="../Not A Known Host.vi"/>
 	<Item Name="Not A Listener.vi" Type="VI" URL="../Not A Listener.vi"/>
 	<Item Name="Not A Session.vi" Type="VI" URL="../Not A Session.vi"/>
 	<Item Name="Read Known Host Data.vi" Type="VI" URL="../Read Known Host Data.vi"/>
+	<Item Name="Session Refnum.ctl" Type="VI" URL="../Session Refnum.ctl"/>
 </Library>
