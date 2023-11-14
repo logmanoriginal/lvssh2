@@ -4,6 +4,7 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">318799872</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Item Name="libssh2_hostkey_hash - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_hostkey_hash - invalid session - no error 1097.vi"/>
 	<Item Name="libssh2_knownhost_checkp - empty key - returns failure.vi" Type="VI" URL="../libssh2_knownhost_checkp - empty key - returns failure.vi"/>
 	<Item Name="libssh2_knownhost_checkp - invalid key - returns mismatch.vi" Type="VI" URL="../libssh2_knownhost_checkp - invalid key - returns mismatch.vi"/>
 	<Item Name="libssh2_knownhost_checkp - invalid known hosts collection - returns failure.vi" Type="VI" URL="../libssh2_knownhost_checkp - invalid known hosts collection - returns failure.vi"/>
@@ -18,8 +19,15 @@
 	<Item Name="libssh2_knownhost_readfile - invalid known hosts collection - returns zero.vi" Type="VI" URL="../libssh2_knownhost_readfile - invalid known hosts collection - returns zero.vi"/>
 	<Item Name="libssh2_knownhost_readfile - valid file - returns number of hosts.vi" Type="VI" URL="../libssh2_knownhost_readfile - valid file - returns number of hosts.vi"/>
 	<Item Name="libssh2_knownhost_writefile - invalid known hosts collection - no error 1097.vi" Type="VI" URL="../libssh2_knownhost_writefile - invalid known hosts collection - no error 1097.vi"/>
+	<Item Name="libssh2_session_disconnect - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_session_disconnect - invalid session - no error 1097.vi"/>
+	<Item Name="libssh2_session_free - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_session_free - invalid session - no error 1097.vi"/>
 	<Item Name="libssh2_session_get_blocking - blocking - returns true.vi" Type="VI" URL="../libssh2_session_get_blocking - blocking - returns true.vi"/>
+	<Item Name="libssh2_session_get_blocking - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_session_get_blocking - invalid session - no error 1097.vi"/>
 	<Item Name="libssh2_session_get_blocking - non-blocking - returns false.vi" Type="VI" URL="../libssh2_session_get_blocking - non-blocking - returns false.vi"/>
+	<Item Name="libssh2_session_handshake - invalid session - no error.vi" Type="VI" URL="../libssh2_session_handshake - invalid session - no error.vi"/>
+	<Item Name="libssh2_session_hostkey - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_session_hostkey - invalid session - no error 1097.vi"/>
+	<Item Name="libssh2_session_last_error - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_session_last_error - invalid session - no error 1097.vi"/>
+	<Item Name="libssh2_session_set_blocking - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_session_set_blocking - invalid session - no error 1097.vi"/>
 	<Item Name="libssh2_userauth_banner - invalid session - returns error.vi" Type="VI" URL="../libssh2_userauth_banner - invalid session - returns error.vi"/>
 	<Item Name="libssh2_userauth_list - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_userauth_list - invalid session - no error 1097.vi"/>
 	<Item Name="libssh2_userauth_password - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_userauth_password - invalid session - no error 1097.vi"/>
