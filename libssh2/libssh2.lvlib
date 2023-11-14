@@ -21,10 +21,10 @@
 		<Item Name="Init libssh2_knownhost.vi" Type="VI" URL="../Init libssh2_knownhost.vi"/>
 		<Item Name="Read Known Host Refnum.vi" Type="VI" URL="../Read Known Host Refnum.vi"/>
 	</Item>
-	<Item Name="Known Hosts" Type="Folder">
+	<Item Name="Known Hosts Collection" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-		<Item Name="Create Known Hosts Refnum.vi" Type="VI" URL="../Create Known Hosts Refnum.vi"/>
-		<Item Name="Delete Known Hosts Refnum.vi" Type="VI" URL="../Delete Known Hosts Refnum.vi"/>
+		<Item Name="Create Known Hosts Collection Refnum.vi" Type="VI" URL="../Create Known Hosts Collection Refnum.vi"/>
+		<Item Name="Delete Known Hosts Collection Refnum.vi" Type="VI" URL="../Delete Known Hosts Collection Refnum.vi"/>
 		<Item Name="Read Known Hosts Refnum.vi" Type="VI" URL="../Read Known Hosts Refnum.vi"/>
 	</Item>
 	<Item Name="Listener" Type="Folder">
@@ -52,7 +52,7 @@
 	</Item>
 	<Item Name="Hostkey Hash Type.ctl" Type="VI" URL="../Hostkey Hash Type.ctl"/>
 	<Item Name="Known Host Refnum.ctl" Type="VI" URL="../Known Host Refnum.ctl"/>
-	<Item Name="Known Hosts Refnum.ctl" Type="VI" URL="../Known Hosts Refnum.ctl"/>
+	<Item Name="Known Hosts Collection Refnum.ctl" Type="VI" URL="../Known Hosts Collection Refnum.ctl"/>
 	<Item Name="Knownhost Check Result.ctl" Type="VI" URL="../Knownhost Check Result.ctl"/>
 	<Item Name="Knownhost Type.ctl" Type="VI" URL="../Knownhost Type.ctl"/>
 	<Item Name="libssh2_channel_close.vi" Type="VI" URL="../libssh2_channel_close.vi"/>
