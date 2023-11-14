@@ -112,6 +112,7 @@ Project Link: [https://github.com/logmanoriginal/libssh2-labview](https://github
 ## Acknowledgements
 
 * [libssh2](https://github.com/libssh2/libssh2)
+* [Caraya Unit Test Framework](https://github.com/JKISoftware/Caraya)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
