@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-11-02 16:41:01" Modified_Date="2023-11-05 12:32:15" Creator="pasca" Comments="" ID="5eb7de156d67691ffed0415c7fe05c36">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-11-02 16:41:01" Modified_Date="2023-11-05 12:36:46" Creator="pasca" Comments="" ID="5f711fabb47d96980608f6a4edf1e9ab">
   <Library_General_Settings>
     <Package_File_Name>PNR_lib_libssh2_labview</Package_File_Name>
-    <Library_Version>0.1.0.11</Library_Version>
+    <Library_Version>0.1.0.12</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>..</Library_Output_Folder>
@@ -217,7 +217,7 @@
   <Library_Palette_Definition>
     <Functions_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
-      <Name/>
+      <Name>libssh2</Name>
       <View_Format>Icons</View_Format>
       <Size>
         <Height_Row>2</Height_Row>
