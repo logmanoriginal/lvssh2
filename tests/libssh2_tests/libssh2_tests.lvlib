@@ -6,12 +6,18 @@
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="libssh2_knownhost_checkp - empty key - returns failure.vi" Type="VI" URL="../libssh2_knownhost_checkp - empty key - returns failure.vi"/>
 	<Item Name="libssh2_knownhost_checkp - invalid key - returns mismatch.vi" Type="VI" URL="../libssh2_knownhost_checkp - invalid key - returns mismatch.vi"/>
+	<Item Name="libssh2_knownhost_checkp - invalid known hosts collection - returns failure.vi" Type="VI" URL="../libssh2_knownhost_checkp - invalid known hosts collection - returns failure.vi"/>
 	<Item Name="libssh2_knownhost_checkp - unknown host - returns not found.vi" Type="VI" URL="../libssh2_knownhost_checkp - unknown host - returns not found.vi"/>
 	<Item Name="libssh2_knownhost_checkp - valid key - returns match.vi" Type="VI" URL="../libssh2_knownhost_checkp - valid key - returns match.vi"/>
+	<Item Name="libssh2_knownhost_get - invalid known hosts collection - eol reached is true.vi" Type="VI" URL="../libssh2_knownhost_get - invalid known hosts collection - eol reached is true.vi"/>
+	<Item Name="libssh2_knownhost_get - invalid known hosts collection - returns invalid host.vi" Type="VI" URL="../libssh2_knownhost_get - invalid known hosts collection - returns invalid host.vi"/>
 	<Item Name="libssh2_knownhost_get - no previous - returns first host.vi" Type="VI" URL="../libssh2_knownhost_get - no previous - returns first host.vi"/>
 	<Item Name="libssh2_knownhost_get - with previous - returns next host.vi" Type="VI" URL="../libssh2_knownhost_get - with previous - returns next host.vi"/>
+	<Item Name="libssh2_knownhost_init - invalid session - returns invalid known hosts collection.vi" Type="VI" URL="../libssh2_knownhost_init - invalid session - returns invalid known hosts collection.vi"/>
 	<Item Name="libssh2_knownhost_readfile - invalid file - returns error.vi" Type="VI" URL="../libssh2_knownhost_readfile - invalid file - returns error.vi"/>
+	<Item Name="libssh2_knownhost_readfile - invalid known hosts collection - returns zero.vi" Type="VI" URL="../libssh2_knownhost_readfile - invalid known hosts collection - returns zero.vi"/>
 	<Item Name="libssh2_knownhost_readfile - valid file - returns number of hosts.vi" Type="VI" URL="../libssh2_knownhost_readfile - valid file - returns number of hosts.vi"/>
+	<Item Name="libssh2_knownhost_writefile - invalid known hosts collection - does not return error 1097.vi" Type="VI" URL="../libssh2_knownhost_writefile - invalid known hosts collection - does not return error 1097.vi"/>
 	<Item Name="libssh2_session_get_blocking - blocking - returns true.vi" Type="VI" URL="../libssh2_session_get_blocking - blocking - returns true.vi"/>
 	<Item Name="libssh2_session_get_blocking - non-blocking - returns false.vi" Type="VI" URL="../libssh2_session_get_blocking - non-blocking - returns false.vi"/>
 	<Item Name="libssh2_version - no required version - returns version number.vi" Type="VI" URL="../libssh2_version - no required version - returns version number.vi"/>
