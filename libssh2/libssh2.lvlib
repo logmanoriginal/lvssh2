@@ -56,6 +56,7 @@
 	</Item>
 	<Item Name="Hostkey Hash Type.ctl" Type="VI" URL="../Hostkey Hash Type.ctl"/>
 	<Item Name="Knownhost Check Result.ctl" Type="VI" URL="../Knownhost Check Result.ctl"/>
+	<Item Name="Knownhost Type.ctl" Type="VI" URL="../Knownhost Type.ctl"/>
 	<Item Name="libssh2_channel_close.vi" Type="VI" URL="../libssh2_channel_close.vi"/>
 	<Item Name="libssh2_channel_direct_tcpip_ex.vi" Type="VI" URL="../libssh2_channel_direct_tcpip_ex.vi"/>
 	<Item Name="libssh2_channel_eof.vi" Type="VI" URL="../libssh2_channel_eof.vi"/>
