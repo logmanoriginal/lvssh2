@@ -44,6 +44,9 @@
 		<Item Name="Read Session Refnum.vi" Type="VI" URL="../Read Session Refnum.vi"/>
 		<Item Name="Session Refnum.ctl" Type="VI" URL="../Session Refnum.ctl"/>
 	</Item>
+	<Item Name="Dereference NULL-Terminated String.vi" Type="VI" URL="../Dereference NULL-Terminated String.vi">
+		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+	</Item>
 	<Item Name="Free Known Host.vi" Type="VI" URL="../Free Known Host.vi"/>
 	<Item Name="libssh2_channel_close.vi" Type="VI" URL="../libssh2_channel_close.vi"/>
 	<Item Name="libssh2_channel_direct_tcpip_ex.vi" Type="VI" URL="../libssh2_channel_direct_tcpip_ex.vi"/>
@@ -86,7 +89,6 @@
 	<Item Name="libssh2_userauth_list.vi" Type="VI" URL="../libssh2_userauth_list.vi"/>
 	<Item Name="libssh2_userauth_password.vi" Type="VI" URL="../libssh2_userauth_password.vi"/>
 	<Item Name="libssh2_userauth_password_ex.vi" Type="VI" URL="../libssh2_userauth_password_ex.vi"/>
-	<Item Name="Move LPSTR to String.vi" Type="VI" URL="../Move LPSTR to String.vi"/>
 	<Item Name="Not A Channel.vi" Type="VI" URL="../Not A Channel.vi"/>
 	<Item Name="Not A Listener.vi" Type="VI" URL="../Not A Listener.vi"/>
 	<Item Name="Not A Session.vi" Type="VI" URL="../Not A Session.vi"/>
