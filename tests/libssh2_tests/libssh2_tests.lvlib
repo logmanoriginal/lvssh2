@@ -7,6 +7,13 @@
 	<Item Name="Assert Not Error 1097.vi" Type="VI" URL="../Assert Not Error 1097.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
+	<Item Name="libssh2_agent_connect - invalid agent - no error 1097.vi" Type="VI" URL="../libssh2_agent_connect - invalid agent - no error 1097.vi"/>
+	<Item Name="libssh2_agent_disconnect - invalid agent - no error 1097.vi" Type="VI" URL="../libssh2_agent_disconnect - invalid agent - no error 1097.vi"/>
+	<Item Name="libssh2_agent_free - invalid agent - no error 1097.vi" Type="VI" URL="../libssh2_agent_free - invalid agent - no error 1097.vi"/>
+	<Item Name="libssh2_agent_get_identity_path - invalid agent - no error 1097.vi" Type="VI" URL="../libssh2_agent_get_identity_path - invalid agent - no error 1097.vi"/>
+	<Item Name="libssh2_agent_init - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_agent_init - invalid session - no error 1097.vi"/>
+	<Item Name="libssh2_agent_list_identities - invalid agent - no error 1097.vi" Type="VI" URL="../libssh2_agent_list_identities - invalid agent - no error 1097.vi"/>
+	<Item Name="libssh2_agent_set_identity_path - invalid agent - no error 1097.vi" Type="VI" URL="../libssh2_agent_set_identity_path - invalid agent - no error 1097.vi"/>
 	<Item Name="libssh2_channel_close - invalid channel - no error 1097.vi" Type="VI" URL="../libssh2_channel_close - invalid channel - no error 1097.vi"/>
 	<Item Name="libssh2_channel_direct_tcpip_ex - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_channel_direct_tcpip_ex - invalid session - no error 1097.vi"/>
 	<Item Name="libssh2_channel_eof - invalid channel - no error 1097.vi" Type="VI" URL="../libssh2_channel_eof - invalid channel - no error 1097.vi"/>
