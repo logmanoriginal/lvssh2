@@ -11,8 +11,11 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
+		<Item Name="examples" Type="Folder">
+			<Item Name="direct_tcpip.vi" Type="VI" URL="../direct_tcpip.vi"/>
+			<Item Name="tcpip_forward.vi" Type="VI" URL="../tcpip_forward.vi"/>
+		</Item>
 		<Item Name="Clear Errors (Backport).vi" Type="VI" URL="../Clear Errors (Backport).vi"/>
-		<Item Name="direct_tcpip.vi" Type="VI" URL="../direct_tcpip.vi"/>
 		<Item Name="libssh2.lvlib" Type="Library" URL="../libssh2.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
