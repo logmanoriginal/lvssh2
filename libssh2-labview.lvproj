@@ -18,7 +18,7 @@
 			<Item Name="tcpip_forward.vi" Type="VI" URL="../tcpip_forward.vi"/>
 		</Item>
 		<Item Name="Clear Errors (Backport).vi" Type="VI" URL="../Clear Errors (Backport).vi"/>
-		<Item Name="libssh2.lvlib" Type="Library" URL="../libssh2.lvlib"/>
+		<Item Name="libssh2.lvlib" Type="Library" URL="../libssh2/libssh2.lvlib"/>
 		<Item Name="VI Tree.vi" Type="VI" URL="../VI Tree.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -26,7 +26,7 @@
 				<Item Name="System Directory Type.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/sysdir.llb/System Directory Type.ctl"/>
 				<Item Name="TCP Get Raw Net Object.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tcp.llb/TCP Get Raw Net Object.vi"/>
 			</Item>
-			<Item Name="libssh2.dll" Type="Document" URL="../libssh2.dll"/>
+			<Item Name="libssh2.dll" Type="Document" URL="../libssh2/libssh2.dll"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
