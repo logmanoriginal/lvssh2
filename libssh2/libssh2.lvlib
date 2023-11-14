@@ -93,6 +93,8 @@
 	<Item Name="libssh2_session_free.vi" Type="VI" URL="../libssh2_session_free.vi"/>
 	<Item Name="libssh2_session_get_blocking.vi" Type="VI" URL="../libssh2_session_get_blocking.vi"/>
 	<Item Name="libssh2_session_handshake.vi" Type="VI" URL="../libssh2_session_handshake.vi"/>
+	<Item Name="libssh2_session_handshake_socket.vi" Type="VI" URL="../libssh2_session_handshake_socket.vi"/>
+	<Item Name="libssh2_session_handshake_tcp.vi" Type="VI" URL="../libssh2_session_handshake_tcp.vi"/>
 	<Item Name="libssh2_session_hostkey.vi" Type="VI" URL="../libssh2_session_hostkey.vi"/>
 	<Item Name="libssh2_session_init.vi" Type="VI" URL="../libssh2_session_init.vi"/>
 	<Item Name="libssh2_session_init_ex.vi" Type="VI" URL="../libssh2_session_init_ex.vi"/>

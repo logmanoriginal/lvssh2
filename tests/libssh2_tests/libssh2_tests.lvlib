@@ -48,7 +48,8 @@
 	<Item Name="libssh2_session_get_blocking - blocking - returns true.vi" Type="VI" URL="../libssh2_session_get_blocking - blocking - returns true.vi"/>
 	<Item Name="libssh2_session_get_blocking - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_session_get_blocking - invalid session - no error 1097.vi"/>
 	<Item Name="libssh2_session_get_blocking - non-blocking - returns false.vi" Type="VI" URL="../libssh2_session_get_blocking - non-blocking - returns false.vi"/>
-	<Item Name="libssh2_session_handshake - invalid session - no error.vi" Type="VI" URL="../libssh2_session_handshake - invalid session - no error.vi"/>
+	<Item Name="libssh2_session_handshake_socket - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_session_handshake_socket - invalid session - no error 1097.vi"/>
+	<Item Name="libssh2_session_handshake_tcp - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_session_handshake_tcp - invalid session - no error 1097.vi"/>
 	<Item Name="libssh2_session_hostkey - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_session_hostkey - invalid session - no error 1097.vi"/>
 	<Item Name="libssh2_session_last_error - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_session_last_error - invalid session - no error 1097.vi"/>
 	<Item Name="libssh2_session_set_blocking - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_session_set_blocking - invalid session - no error 1097.vi"/>
