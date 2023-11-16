@@ -65,9 +65,23 @@
 	<Item Name="libssh2_agent_connect.vi" Type="VI" URL="../libssh2_agent_connect.vi"/>
 	<Item Name="libssh2_agent_disconnect.vi" Type="VI" URL="../libssh2_agent_disconnect.vi"/>
 	<Item Name="libssh2_agent_free.vi" Type="VI" URL="../libssh2_agent_free.vi"/>
+	<Item Name="libssh2_agent_get_identity.vi" Type="VI" URL="../libssh2_agent_get_identity.vi"/>
 	<Item Name="libssh2_agent_get_identity_path.vi" Type="VI" URL="../libssh2_agent_get_identity_path.vi"/>
 	<Item Name="libssh2_agent_init.vi" Type="VI" URL="../libssh2_agent_init.vi"/>
 	<Item Name="libssh2_agent_list_identities.vi" Type="VI" URL="../libssh2_agent_list_identities.vi"/>
+	<Item Name="libssh2_agent_publickey.ctl" Type="VI" URL="../libssh2_agent_publickey.ctl"/>
+	<Item Name="libssh2_agent_publickey_free.vi" Type="VI" URL="../libssh2_agent_publickey_free.vi"/>
+	<Item Name="libssh2_agent_publickey_read.vi" Type="VI" URL="../libssh2_agent_publickey_read.vi"/>
+	<Item Name="libssh2_agent_publickey_refnum.ctl" Type="VI" URL="../libssh2_agent_publickey_refnum.ctl"/>
+	<Item Name="libssh2_agent_publickey_refnum_create.vi" Type="VI" URL="../libssh2_agent_publickey_refnum_create.vi">
+		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+	</Item>
+	<Item Name="libssh2_agent_publickey_refnum_delete.vi" Type="VI" URL="../libssh2_agent_publickey_refnum_delete.vi">
+		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+	</Item>
+	<Item Name="libssh2_agent_publickey_refnum_get.vi" Type="VI" URL="../libssh2_agent_publickey_refnum_get.vi">
+		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+	</Item>
 	<Item Name="libssh2_agent_set_identity_path.vi" Type="VI" URL="../libssh2_agent_set_identity_path.vi"/>
 	<Item Name="libssh2_channel_close.vi" Type="VI" URL="../libssh2_channel_close.vi"/>
 	<Item Name="libssh2_channel_direct_tcpip_ex.vi" Type="VI" URL="../libssh2_channel_direct_tcpip_ex.vi"/>
