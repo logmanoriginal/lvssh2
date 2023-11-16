@@ -83,6 +83,7 @@
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
 	<Item Name="libssh2_agent_set_identity_path.vi" Type="VI" URL="../libssh2_agent_set_identity_path.vi"/>
+	<Item Name="libssh2_agent_userauth.vi" Type="VI" URL="../libssh2_agent_userauth.vi"/>
 	<Item Name="libssh2_channel_close.vi" Type="VI" URL="../libssh2_channel_close.vi"/>
 	<Item Name="libssh2_channel_direct_tcpip_ex.vi" Type="VI" URL="../libssh2_channel_direct_tcpip_ex.vi"/>
 	<Item Name="libssh2_channel_eof.vi" Type="VI" URL="../libssh2_channel_eof.vi"/>
@@ -139,6 +140,7 @@
 	<Item Name="Not A Known Host.vi" Type="VI" URL="../Not A Known Host.vi"/>
 	<Item Name="Not A Known Hosts Collection.vi" Type="VI" URL="../Not A Known Hosts Collection.vi"/>
 	<Item Name="Not A Listener.vi" Type="VI" URL="../Not A Listener.vi"/>
+	<Item Name="Not A Public Key.vi" Type="VI" URL="../Not A Public Key.vi"/>
 	<Item Name="Not A Session.vi" Type="VI" URL="../Not A Session.vi"/>
 	<Item Name="Read Known Host Data.vi" Type="VI" URL="../Read Known Host Data.vi"/>
 	<Item Name="Session Refnum.ctl" Type="VI" URL="../Session Refnum.ctl"/>
