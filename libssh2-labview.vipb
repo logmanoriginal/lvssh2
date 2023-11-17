@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-11-02 16:41:01" Modified_Date="2023-11-16 08:29:43" Creator="pasca" Comments="" ID="d291d686f7741ccf86f58fb32e788559">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-11-02 16:41:01" Modified_Date="2023-11-17 08:29:44" Creator="pasca" Comments="" ID="1af5766c5c95b40b1913910b603ab18c">
   <Library_General_Settings>
     <Package_File_Name>PNR_lib_libssh2_labview</Package_File_Name>
-    <Library_Version>0.1.0.15</Library_Version>
+    <Library_Version>0.1.0.16</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>..</Library_Output_Folder>
@@ -338,7 +338,7 @@
         <Path>Agent</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>66C75E27FB70C95D394731CFA8E529D1</GUID>
+      <GUID>6B7DFF21DEAA3FDBCBAF2AD969849421</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -527,7 +527,7 @@
         <Path>libssh2\libssh2_session_last_error.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>14F6762E09AC0E3E2F91EE004B66DA4A</GUID>
+      <GUID>FD0CA9D524406C35A1E27D065D2D6D77</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -576,7 +576,7 @@
         <Path>libssh2\libssh2_session_disconnect_ex.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>BBE30086014241940C8A74BDC8D77BAD</GUID>
+      <GUID>1E24FFEBB2ABF0A31F13ED24A96173B7</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -779,7 +779,7 @@
         <Path>Advanced</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>5A925A26BAF416A47E15B16C9333A360</GUID>
+      <GUID>59A6A7495E0570F739D2346EB3242517</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>3</Parent_Palette_Index>
@@ -912,7 +912,7 @@
         <Path>libssh2\libssh2_channel_direct_tcpip_ex.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>83B153DE1F9C227F75AE4BCCCB69A052</GUID>
+      <GUID>082FF8A6CAEF7503451BE5E5ACEEB758</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1034,20 +1034,6 @@
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Free Known Host.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>6</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>libssh2\Free Known Host.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
         <NameSub_Menu_Name>Not A Known Host.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
@@ -1062,7 +1048,7 @@
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Not A Known Hosts Collection.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>Not A Known Host Collection.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1070,10 +1056,10 @@
           <Column>7</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>libssh2\Not A Known Hosts Collection.vi</Path>
+        <Path>libssh2\Not A Known Host Collection.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>7A5D0BA5B8B2300B26D921D162CE54EE</GUID>
+      <GUID>FE67C8FA7ACDC4E58F89D96B21C09EC0</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>3</Parent_Palette_Index>
@@ -1150,7 +1136,7 @@
         <Path>libssh2\Not A Listener.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>30439FD9FED1C596FE5008B2FAB6D74E</GUID>
+      <GUID>D56E09B196B66193304BF57500D0D928</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1227,7 +1213,7 @@
         <Path>Advanced</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>166070AEB6F24F761984038B2F1AAB7D</GUID>
+      <GUID>5EAC8D9895C28AA87F34DA72A590F9B4</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>7</Parent_Palette_Index>
@@ -1262,7 +1248,7 @@
         <Path>libssh2\libssh2_userauth_password_ex.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>84BCDB6C60BF4ACDD8B71364D2E85DF8</GUID>
+      <GUID>556C3B0F0B816CE37EA7A012AD826F98</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1412,34 +1398,6 @@
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_agent_publickey_read.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>2</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>libssh2\libssh2_agent_publickey_read.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_agent_publickey_free.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>5</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>libssh2\libssh2_agent_publickey_free.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
         <NameSub_Menu_Name>Not A Public Key.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
@@ -1451,7 +1409,21 @@
         <Path>libssh2\Not A Public Key.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>1E17F9696D8A3A4DA668588AB606A931</GUID>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>Read Public Key Data.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>2</Row>
+          <Column>5</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>libssh2\Read Public Key Data.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <GUID>CEEEC08CA46A4F2865D1C8F3A92B5C4D</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
