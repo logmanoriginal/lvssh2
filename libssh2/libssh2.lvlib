@@ -113,13 +113,7 @@
 	<Item Name="Error Status.vi" Type="VI" URL="../Error Status.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
-	<Item Name="Free libssh2_knownhost.vi" Type="VI" URL="../Free libssh2_knownhost.vi">
-		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-	</Item>
 	<Item Name="Global Settings.vi" Type="VI" URL="../Global Settings.vi">
-		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-	</Item>
-	<Item Name="Init libssh2_knownhost.vi" Type="VI" URL="../Init libssh2_knownhost.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
 	<Item Name="libssh2_agent_connect.vi" Type="VI" URL="../libssh2_agent_connect.vi"/>
