@@ -15,6 +15,9 @@
 		<Item Name="Delete Agent Refnum.vi" Type="VI" URL="../Delete Agent Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
+		<Item Name="Error if not an Agent.vi" Type="VI" URL="../Error if not an Agent.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="Not A Agent.vi" Type="VI" URL="../Not A Agent.vi"/>
 		<Item Name="Read Agent Refnum.vi" Type="VI" URL="../Read Agent Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
@@ -26,6 +29,9 @@
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 		<Item Name="Delete Channel Refnum.vi" Type="VI" URL="../Delete Channel Refnum.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Error if not a Channel.vi" Type="VI" URL="../Error if not a Channel.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 		<Item Name="Not A Channel.vi" Type="VI" URL="../Not A Channel.vi"/>
@@ -60,6 +66,9 @@
 		<Item Name="Delete Known Host Collection Refnum.vi" Type="VI" URL="../Delete Known Host Collection Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
+		<Item Name="Error if not a Known Host Collection.vi" Type="VI" URL="../Error if not a Known Host Collection.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="Known Host Collection Refnum.ctl" Type="VI" URL="../Known Host Collection Refnum.ctl"/>
 		<Item Name="Not A Known Host Collection.vi" Type="VI" URL="../Not A Known Host Collection.vi"/>
 		<Item Name="Read Known Host Collection Refnum.vi" Type="VI" URL="../Read Known Host Collection Refnum.vi">
@@ -71,6 +80,9 @@
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 		<Item Name="Delete Listener Refnum.vi" Type="VI" URL="../Delete Listener Refnum.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Error if not a Listener.vi" Type="VI" URL="../Error if not a Listener.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 		<Item Name="Listener Refnum.ctl" Type="VI" URL="../Listener Refnum.ctl"/>
@@ -86,6 +98,9 @@
 		<Item Name="Delete Public Key Refnum.vi" Type="VI" URL="../Delete Public Key Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
+		<Item Name="Error if not a Public Key.vi" Type="VI" URL="../Error if not a Public Key.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="Not A Public Key.vi" Type="VI" URL="../Not A Public Key.vi"/>
 		<Item Name="Public Key Refnum.ctl" Type="VI" URL="../Public Key Refnum.ctl"/>
 		<Item Name="Read Public Key Data.vi" Type="VI" URL="../Read Public Key Data.vi"/>
@@ -99,6 +114,9 @@
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 		<Item Name="Delete Session Refnum.vi" Type="VI" URL="../Delete Session Refnum.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Error if not a Session.vi" Type="VI" URL="../Error if not a Session.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 		<Item Name="Not A Session.vi" Type="VI" URL="../Not A Session.vi"/>

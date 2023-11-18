@@ -10,13 +10,14 @@
 	<Item Name="libssh2_agent_connect - invalid agent - no error 1097.vi" Type="VI" URL="../libssh2_agent_connect - invalid agent - no error 1097.vi"/>
 	<Item Name="libssh2_agent_disconnect - invalid agent - no error 1097.vi" Type="VI" URL="../libssh2_agent_disconnect - invalid agent - no error 1097.vi"/>
 	<Item Name="libssh2_agent_free - invalid agent - no error 1097.vi" Type="VI" URL="../libssh2_agent_free - invalid agent - no error 1097.vi"/>
-	<Item Name="libssh2_agent_get_identity - invalid agent - end reached is TRUE.vi" Type="VI" URL="../libssh2_agent_get_identity - invalid agent - end reached is TRUE.vi"/>
 	<Item Name="libssh2_agent_get_identity - invalid agent - no error 1097.vi" Type="VI" URL="../libssh2_agent_get_identity - invalid agent - no error 1097.vi"/>
 	<Item Name="libssh2_agent_get_identity_path - invalid agent - no error 1097.vi" Type="VI" URL="../libssh2_agent_get_identity_path - invalid agent - no error 1097.vi"/>
 	<Item Name="libssh2_agent_init - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_agent_init - invalid session - no error 1097.vi"/>
 	<Item Name="libssh2_agent_list_identities - invalid agent - no error 1097.vi" Type="VI" URL="../libssh2_agent_list_identities - invalid agent - no error 1097.vi"/>
 	<Item Name="libssh2_agent_publickey_read - invalid public key - no error 1097.vi" Type="VI" URL="../libssh2_agent_publickey_read - invalid public key - no error 1097.vi"/>
 	<Item Name="libssh2_agent_set_identity_path - invalid agent - no error 1097.vi" Type="VI" URL="../libssh2_agent_set_identity_path - invalid agent - no error 1097.vi"/>
+	<Item Name="libssh2_agent_userauth - invalid agent - no error 1097.vi" Type="VI" URL="../libssh2_agent_userauth - invalid agent - no error 1097.vi"/>
+	<Item Name="libssh2_agent_userauth - invalid public key - no error 1097.vi" Type="VI" URL="../libssh2_agent_userauth - invalid public key - no error 1097.vi"/>
 	<Item Name="libssh2_channel_close - invalid channel - no error 1097.vi" Type="VI" URL="../libssh2_channel_close - invalid channel - no error 1097.vi"/>
 	<Item Name="libssh2_channel_direct_tcpip_ex - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_channel_direct_tcpip_ex - invalid session - no error 1097.vi"/>
 	<Item Name="libssh2_channel_eof - invalid channel - no error 1097.vi" Type="VI" URL="../libssh2_channel_eof - invalid channel - no error 1097.vi"/>
@@ -41,10 +42,8 @@
 	<Item Name="libssh2_hostkey_hash - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_hostkey_hash - invalid session - no error 1097.vi"/>
 	<Item Name="libssh2_knownhost_checkp - empty key - returns failure.vi" Type="VI" URL="../libssh2_knownhost_checkp - empty key - returns failure.vi"/>
 	<Item Name="libssh2_knownhost_checkp - invalid key - returns mismatch.vi" Type="VI" URL="../libssh2_knownhost_checkp - invalid key - returns mismatch.vi"/>
-	<Item Name="libssh2_knownhost_checkp - invalid known hosts collection - returns failure.vi" Type="VI" URL="../libssh2_knownhost_checkp - invalid known hosts collection - returns failure.vi"/>
 	<Item Name="libssh2_knownhost_checkp - unknown host - returns not found.vi" Type="VI" URL="../libssh2_knownhost_checkp - unknown host - returns not found.vi"/>
 	<Item Name="libssh2_knownhost_checkp - valid key - returns match.vi" Type="VI" URL="../libssh2_knownhost_checkp - valid key - returns match.vi"/>
-	<Item Name="libssh2_knownhost_get - invalid known hosts collection - eol reached is true.vi" Type="VI" URL="../libssh2_knownhost_get - invalid known hosts collection - eol reached is true.vi"/>
 	<Item Name="libssh2_knownhost_get - invalid known hosts collection - returns invalid host.vi" Type="VI" URL="../libssh2_knownhost_get - invalid known hosts collection - returns invalid host.vi"/>
 	<Item Name="libssh2_knownhost_get - no previous - returns first host.vi" Type="VI" URL="../libssh2_knownhost_get - no previous - returns first host.vi"/>
 	<Item Name="libssh2_knownhost_get - with previous - returns next host.vi" Type="VI" URL="../libssh2_knownhost_get - with previous - returns next host.vi"/>
@@ -63,7 +62,7 @@
 	<Item Name="libssh2_session_hostkey - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_session_hostkey - invalid session - no error 1097.vi"/>
 	<Item Name="libssh2_session_last_error - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_session_last_error - invalid session - no error 1097.vi"/>
 	<Item Name="libssh2_session_set_blocking - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_session_set_blocking - invalid session - no error 1097.vi"/>
-	<Item Name="libssh2_userauth_banner - invalid session - returns error.vi" Type="VI" URL="../libssh2_userauth_banner - invalid session - returns error.vi"/>
+	<Item Name="libssh2_userauth_banner - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_userauth_banner - invalid session - no error 1097.vi"/>
 	<Item Name="libssh2_userauth_list - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_userauth_list - invalid session - no error 1097.vi"/>
 	<Item Name="libssh2_userauth_password - invalid session - no error 1097.vi" Type="VI" URL="../libssh2_userauth_password - invalid session - no error 1097.vi"/>
 	<Item Name="libssh2_version - no required version - returns version number.vi" Type="VI" URL="../libssh2_version - no required version - returns version number.vi"/>
