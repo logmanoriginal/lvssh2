@@ -14,6 +14,7 @@
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="examples" Type="Folder">
 			<Item Name="direct_tcpip.vi" Type="VI" URL="../examples/direct_tcpip.vi"/>
+			<Item Name="knownhosts.vi" Type="VI" URL="../examples/knownhosts.vi"/>
 			<Item Name="ssh2.vi" Type="VI" URL="../examples/ssh2.vi"/>
 			<Item Name="ssh2_agent.vi" Type="VI" URL="../examples/ssh2_agent.vi"/>
 			<Item Name="ssh2_echo.vi" Type="VI" URL="../examples/ssh2_echo.vi"/>
