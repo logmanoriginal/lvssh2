@@ -125,6 +125,38 @@
 		</Item>
 		<Item Name="Session Refnum.ctl" Type="VI" URL="../Session Refnum.ctl"/>
 	</Item>
+	<Item Name="SFTP" Type="Folder">
+		<Item Name="Create SFTP Refnum.vi" Type="VI" URL="../Create SFTP Refnum.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Delete SFTP Refnum.vi" Type="VI" URL="../Delete SFTP Refnum.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Error if not a SFTP Refnum.vi" Type="VI" URL="../Error if not a SFTP Refnum.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Not a SFTP Refnum.vi" Type="VI" URL="../Not a SFTP Refnum.vi"/>
+		<Item Name="Read SFTP Refnum.vi" Type="VI" URL="../Read SFTP Refnum.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="SFTP Refnum.ctl" Type="VI" URL="../SFTP Refnum.ctl"/>
+	</Item>
+	<Item Name="SFTP Handle" Type="Folder">
+		<Item Name="Create SFTP Handle Refnum.vi" Type="VI" URL="../Create SFTP Handle Refnum.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Delete SFTP Handle Refnum.vi" Type="VI" URL="../Delete SFTP Handle Refnum.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Error if not a SFTP Handle Refnum.vi" Type="VI" URL="../Error if not a SFTP Handle Refnum.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Not a SFTP Handle Refnum.vi" Type="VI" URL="../Not a SFTP Handle Refnum.vi"/>
+		<Item Name="Read SFTP Handle Refnum.vi" Type="VI" URL="../Read SFTP Handle Refnum.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="SFTP Handle Refnum.ctl" Type="VI" URL="../SFTP Handle Refnum.ctl"/>
+	</Item>
 	<Item Name="Dereference NULL-Terminated String.vi" Type="VI" URL="../Dereference NULL-Terminated String.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
@@ -189,6 +221,14 @@
 	<Item Name="libssh2_session_init_ex.vi" Type="VI" URL="../libssh2_session_init_ex.vi"/>
 	<Item Name="libssh2_session_last_error.vi" Type="VI" URL="../libssh2_session_last_error.vi"/>
 	<Item Name="libssh2_session_set_blocking.vi" Type="VI" URL="../libssh2_session_set_blocking.vi"/>
+	<Item Name="libssh2_sftp_attributes.ctl" Type="VI" URL="../libssh2_sftp_attributes.ctl"/>
+	<Item Name="libssh2_sftp_close_handle.vi" Type="VI" URL="../libssh2_sftp_close_handle.vi"/>
+	<Item Name="libssh2_sftp_init.vi" Type="VI" URL="../libssh2_sftp_init.vi"/>
+	<Item Name="libssh2_sftp_open.vi" Type="VI" URL="../libssh2_sftp_open.vi"/>
+	<Item Name="libssh2_sftp_open_ex.vi" Type="VI" URL="../libssh2_sftp_open_ex.vi"/>
+	<Item Name="libssh2_sftp_opendir.vi" Type="VI" URL="../libssh2_sftp_opendir.vi"/>
+	<Item Name="libssh2_sftp_readdir_ex.vi" Type="VI" URL="../libssh2_sftp_readdir_ex.vi"/>
+	<Item Name="libssh2_sftp_shutdown.vi" Type="VI" URL="../libssh2_sftp_shutdown.vi"/>
 	<Item Name="libssh2_userauth_banner.vi" Type="VI" URL="../libssh2_userauth_banner.vi"/>
 	<Item Name="libssh2_userauth_list.vi" Type="VI" URL="../libssh2_userauth_list.vi"/>
 	<Item Name="libssh2_userauth_password.vi" Type="VI" URL="../libssh2_userauth_password.vi"/>
