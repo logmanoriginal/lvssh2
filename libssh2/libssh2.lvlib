@@ -231,6 +231,7 @@
 	<Item Name="libssh2_sftp_readdir.vi" Type="VI" URL="../libssh2_sftp_readdir.vi"/>
 	<Item Name="libssh2_sftp_readdir_ex.vi" Type="VI" URL="../libssh2_sftp_readdir_ex.vi"/>
 	<Item Name="libssh2_sftp_shutdown.vi" Type="VI" URL="../libssh2_sftp_shutdown.vi"/>
+	<Item Name="libssh2_sftp_write.vi" Type="VI" URL="../libssh2_sftp_write.vi"/>
 	<Item Name="libssh2_userauth_banner.vi" Type="VI" URL="../libssh2_userauth_banner.vi"/>
 	<Item Name="libssh2_userauth_list.vi" Type="VI" URL="../libssh2_userauth_list.vi"/>
 	<Item Name="libssh2_userauth_password.vi" Type="VI" URL="../libssh2_userauth_password.vi"/>
