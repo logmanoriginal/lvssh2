@@ -16,29 +16,29 @@
 <!-- PROJECT LOGO -->
 <br>
 <p align="center">
-  <a href="https://github.com/logmanoriginal/libssh2-labview">
+  <a href="https://github.com/logmanoriginal/lvssh2">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">libssh2-labview</h3>
+  <h3 align="center">lvssh2</h3>
 
   <p align="center">
     LabVIEW&trade; bindings for <a href="https://github.com/libssh2/libssh2">libssh2</a>.
     <br>
-    <a href="https://github.com/logmanoriginal/libssh2-labview"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/logmanoriginal/lvssh2"><strong>Explore the docs »</strong></a>
     <br>
     <br>
-    <a href="https://github.com/logmanoriginal/libssh2-labview">View Demo</a>
+    <a href="https://github.com/logmanoriginal/lvssh2">View Demo</a>
     <br>
-    <a href="https://github.com/logmanoriginal/libssh2-labview/issues">Report Bug</a>
+    <a href="https://github.com/logmanoriginal/lvssh2/issues">Report Bug</a>
     <br>
-    <a href="https://github.com/logmanoriginal/libssh2-labview/issues">Request Feature</a>
+    <a href="https://github.com/logmanoriginal/lvssh2/issues">Request Feature</a>
   </p>
 </p>
 
 ## About The Project
 
-**libssh2-labview** provides LabVIEW&trade; bindings for [libssh2](https://github.com/libssh2/libssh2).
+**lvssh2** provides LabVIEW&trade; bindings for [libssh2](https://github.com/libssh2/libssh2).
 
 ### Limitations
 
@@ -64,12 +64,12 @@ To get a local copy up and running follow these simple steps.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/logmanoriginal/libssh2-labview.git
+   git clone https://github.com/logmanoriginal/lvssh2.git
    ```
 
 ## Usage
 
-Here is an example that uses libssh2-labview to execute a command on a remote SSH server.
+Here is an example that uses lvssh2 to execute a command on a remote SSH server.
 
 ![Example](images/example.png)
 
@@ -107,7 +107,7 @@ This project uses third-party libraries or other resources that may be distribut
 
 ## Contact
 
-Project Link: [https://github.com/logmanoriginal/libssh2-labview](https://github.com/logmanoriginal/libssh2-labview)
+Project Link: [https://github.com/logmanoriginal/lvssh2](https://github.com/logmanoriginal/lvssh2)
 
 ## Acknowledgements
 
@@ -116,13 +116,13 @@ Project Link: [https://github.com/logmanoriginal/libssh2-labview](https://github
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/logmanoriginal/libssh2-labview.svg?style=for-the-badge
-[contributors-url]: https://github.com/logmanoriginal/libssh2-labview/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/logmanoriginal/libssh2-labview.svg?style=for-the-badge
-[forks-url]: https://github.com/logmanoriginal/libssh2-labview/network/members
-[stars-shield]: https://img.shields.io/github/stars/logmanoriginal/libssh2-labview.svg?style=for-the-badge
-[stars-url]: https://github.com/logmanoriginal/libssh2-labview/stargazers
-[issues-shield]: https://img.shields.io/github/issues/logmanoriginal/libssh2-labview.svg?style=for-the-badge
-[issues-url]: https://github.com/logmanoriginal/libssh2-labview/issues
-[license-shield]: https://img.shields.io/github/license/logmanoriginal/libssh2-labview.svg?style=for-the-badge
-[license-url]: https://github.com/logmanoriginal/libssh2-labview/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/logmanoriginal/lvssh2.svg?style=for-the-badge
+[contributors-url]: https://github.com/logmanoriginal/lvssh2/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/logmanoriginal/lvssh2.svg?style=for-the-badge
+[forks-url]: https://github.com/logmanoriginal/lvssh2/network/members
+[stars-shield]: https://img.shields.io/github/stars/logmanoriginal/lvssh2.svg?style=for-the-badge
+[stars-url]: https://github.com/logmanoriginal/lvssh2/stargazers
+[issues-shield]: https://img.shields.io/github/issues/logmanoriginal/lvssh2.svg?style=for-the-badge
+[issues-url]: https://github.com/logmanoriginal/lvssh2/issues
+[license-shield]: https://img.shields.io/github/license/logmanoriginal/lvssh2.svg?style=for-the-badge
+[license-url]: https://github.com/logmanoriginal/lvssh2/blob/master/LICENSE.txt

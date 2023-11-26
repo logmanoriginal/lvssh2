@@ -4,7 +4,7 @@ This is a list of exported libssh2 APIs and their corresponding matches in this 
 # Constants
 
 # Functions
-| libssh2                                                                                                                                | libssh2-labview                                      |
+| libssh2                                                                                                                                | lvssh2                                               |
 | -------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
 | [`libssh2_agent_connect`](https://libssh2.org/libssh2_agent_connect.html)                                                              | `libssh2.lvlib:libssh2_agent_connect.vi`             |
 | [`libssh2_agent_disconnect`](https://libssh2.org/libssh2_agent_disconnect.html)                                                        | `libssh2.lvlib:libssh2_agent_disconnect.vi`          |
