@@ -223,6 +223,7 @@
 	<Item Name="libssh2_session_set_blocking.vi" Type="VI" URL="../libssh2_session_set_blocking.vi"/>
 	<Item Name="libssh2_sftp_attributes.ctl" Type="VI" URL="../libssh2_sftp_attributes.ctl"/>
 	<Item Name="libssh2_sftp_close_handle.vi" Type="VI" URL="../libssh2_sftp_close_handle.vi"/>
+	<Item Name="libssh2_sftp_fstat_ex.vi" Type="VI" URL="../libssh2_sftp_fstat_ex.vi"/>
 	<Item Name="libssh2_sftp_init.vi" Type="VI" URL="../libssh2_sftp_init.vi"/>
 	<Item Name="libssh2_sftp_open.vi" Type="VI" URL="../libssh2_sftp_open.vi"/>
 	<Item Name="libssh2_sftp_open_ex.vi" Type="VI" URL="../libssh2_sftp_open_ex.vi"/>
@@ -230,6 +231,7 @@
 	<Item Name="libssh2_sftp_read.vi" Type="VI" URL="../libssh2_sftp_read.vi"/>
 	<Item Name="libssh2_sftp_readdir.vi" Type="VI" URL="../libssh2_sftp_readdir.vi"/>
 	<Item Name="libssh2_sftp_readdir_ex.vi" Type="VI" URL="../libssh2_sftp_readdir_ex.vi"/>
+	<Item Name="libssh2_sftp_seek64.vi" Type="VI" URL="../libssh2_sftp_seek64.vi"/>
 	<Item Name="libssh2_sftp_shutdown.vi" Type="VI" URL="../libssh2_sftp_shutdown.vi"/>
 	<Item Name="libssh2_sftp_write.vi" Type="VI" URL="../libssh2_sftp_write.vi"/>
 	<Item Name="libssh2_userauth_banner.vi" Type="VI" URL="../libssh2_userauth_banner.vi"/>

@@ -133,7 +133,7 @@ This is a list of exported libssh2 APIs and their corresponding matches in this 
 | [`libssh2_sftp_closedir`](https://libssh2.org/libssh2_sftp_closedir.html)                                                              |
 | [`libssh2_sftp_fsetstat`](https://libssh2.org/libssh2_sftp_fsetstat.html)                                                              |
 | [`libssh2_sftp_fstat`](https://libssh2.org/libssh2_sftp_fstat.html)                                                                    |
-| [`libssh2_sftp_fstat_ex`](https://libssh2.org/libssh2_sftp_fstat_ex.html)                                                              |
+| [`libssh2_sftp_fstat_ex`](https://libssh2.org/libssh2_sftp_fstat_ex.html)                                                              | `libssh2.lvlib:libssh2_sftp_fstat_ex.vi`             |
 | [`libssh2_sftp_fstatvfs`](https://libssh2.org/libssh2_sftp_fstatvfs.html)                                                              |
 | [`libssh2_sftp_fsync`](https://libssh2.org/libssh2_sftp_fsync.html)                                                                    |
 | [`libssh2_sftp_get_channel`](https://libssh2.org/libssh2_sftp_get_channel.html)                                                        |
@@ -158,7 +158,7 @@ This is a list of exported libssh2 APIs and their corresponding matches in this 
 | [`libssh2_sftp_rmdir`](https://libssh2.org/libssh2_sftp_rmdir.html)                                                                    |
 | [`libssh2_sftp_rmdir_ex`](https://libssh2.org/libssh2_sftp_rmdir_ex.html)                                                              |
 | [`libssh2_sftp_seek`](https://libssh2.org/libssh2_sftp_seek.html)                                                                      |
-| [`libssh2_sftp_seek64`](https://libssh2.org/libssh2_sftp_seek64.html)                                                                  |
+| [`libssh2_sftp_seek64`](https://libssh2.org/libssh2_sftp_seek64.html)                                                                  | `libssh2.lvlib:libssh2_sftp_seek64.vi`               |
 | [`libssh2_sftp_setstat`](https://libssh2.org/libssh2_sftp_setstat.html)                                                                |
 | [`libssh2_sftp_shutdown`](https://libssh2.org/libssh2_sftp_shutdown.html)                                                              | `libssh2.lvlib:libssh2_sftp_shutdown.vi`             |
 | [`libssh2_sftp_stat`](https://libssh2.org/libssh2_sftp_stat.html)                                                                      |
