@@ -1,6 +1,37 @@
 # libssh2 API
 This is a list of exported libssh2 APIs and their corresponding matches in this project.
 
+# Constants
+
+| libssh2                            | lvssh2                                      |
+| ---------------------------------- | ------------------------------------------- |
+| `LIBSSH2_INIT_NO_CRYPTO`           |
+| `LIBSSH2_HOSTKEY_HASH_MD5`         | `libssh2.lvlib:Host Key Hash Type.ctl`      |
+| `LIBSSH2_HOSTKEY_HASH_SHA1`        | `libssh2.lvlib:Host Key Hash Type.ctl`      |
+| `LIBSSH2_HOSTKEY_HASH_SHA256`      | `libssh2.lvlib:Host Key Hash Type.ctl`      |
+| `LIBSSH2_KNOWNHOST_CHECK_MATCH`    | `libssh2.lvlib:Known Host Check Result.ctl` |
+| `LIBSSH2_KNOWNHOST_CHECK_MISMATCH` | `libssh2.lvlib:Known Host Check Result.ctl` |
+| `LIBSSH2_KNOWNHOST_CHECK_NOTFOUND` | `libssh2.lvlib:Known Host Check Result.ctl` |
+| `LIBSSH2_KNOWNHOST_CHECK_FAILURE`  | `libssh2.lvlib:Known Host Check Result.ctl` |
+| `LIBSSH2_KNOWNHOST_TYPE_MASK`      |
+| `LIBSSH2_KNOWNHOST_TYPE_PLAIN`     |
+| `LIBSSH2_KNOWNHOST_TYPE_SHA1`      |
+| `LIBSSH2_KNOWNHOST_TYPE_CUSTOM`    |
+| `LIBSSH2_KNOWNHOST_KEYENC_MASK`    |
+| `LIBSSH2_KNOWNHOST_KEYENC_RAW`     |
+| `LIBSSH2_KNOWNHOST_KEYENC_BASE64`  |
+| `LIBSSH2_KNOWNHOST_KEY_MASK`       |
+| `LIBSSH2_KNOWNHOST_KEY_SHIFT`      |
+| `LIBSSH2_KNOWNHOST_KEY_RSA1`       |
+| `LIBSSH2_KNOWNHOST_KEY_SSHRSA`     |
+| `LIBSSH2_KNOWNHOST_KEY_SSHDSS`     |
+| `LIBSSH2_KNOWNHOST_KEY_ECDSA_256`  |
+| `LIBSSH2_KNOWNHOST_KEY_ECDSA_384`  |
+| `LIBSSH2_KNOWNHOST_KEY_ECDSA_521`  |
+| `LIBSSH2_KNOWNHOST_KEY_ED25519`    |
+| `LIBSSH2_KNOWNHOST_KEY_UNKNOWN`    |
+| `LIBSSH2_KNOWNHOST_FILE_OPENSSH`   | `libssh2.lvlib:Known Host File Type.ctl`    |
+
 # Error Codes
 Error codes are mapped to error range 5000 through 9999 (0x1388 through 0x270F).
 
