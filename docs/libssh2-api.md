@@ -1,7 +1,65 @@
 # libssh2 API
 This is a list of exported libssh2 APIs and their corresponding matches in this project.
 
-# Constants
+# Error Codes
+Error codes are mapped to error range 5000 through 9999 (0x1388 through 0x270F).
+
+| libssh2                                 | lvssh2                                                        |
+| --------------------------------------- | ------------------------------------------------------------- |
+| `LIBSSH2_ERROR_NONE`                    | no error                                                      |
+| `LIBSSH2_ERROR_SOCKET_NONE`             | `libssh2: (Hex 0x1388) LIBSSH2_ERROR_SOCKET_NONE`             |
+| `LIBSSH2_ERROR_BANNER_RECV`             | `libssh2: (Hex 0x1389) LIBSSH2_ERROR_BANNER_RECV`             |
+| `LIBSSH2_ERROR_BANNER_NONE`             | `libssh2: (Hex 0x1389) LIBSSH2_ERROR_BANNER_RECV`             |
+| `LIBSSH2_ERROR_BANNER_SEND`             | `libssh2: (Hex 0x138A) LIBSSH2_ERROR_BANNER_SEND`             |
+| `LIBSSH2_ERROR_INVALID_MAC`             | `libssh2: (Hex 0x138B) LIBSSH2_ERROR_INVALID_MAC`             |
+| `LIBSSH2_ERROR_KEX_FAILURE`             | `libssh2: (Hex 0x138C) LIBSSH2_ERROR_KEX_FAILURE`             |
+| `LIBSSH2_ERROR_ALLOC`                   | `libssh2: (Hex 0x138D) LIBSSH2_ERROR_ALLOC`                   |
+| `LIBSSH2_ERROR_SOCKET_SEND`             | `libssh2: (Hex 0x138E) LIBSSH2_ERROR_SOCKET_SEND`             |
+| `LIBSSH2_ERROR_KEY_EXCHANGE_FAILURE`    | `libssh2: (Hex 0x138F) LIBSSH2_ERROR_KEY_EXCHANGE_FAILURE`    |
+| `LIBSSH2_ERROR_TIMEOUT`                 | `libssh2: (Hex 0x1390) LIBSSH2_ERROR_TIMEOUT`                 |
+| `LIBSSH2_ERROR_HOSTKEY_INIT`            | `libssh2: (Hex 0x1391) LIBSSH2_ERROR_HOSTKEY_INIT`            |
+| `LIBSSH2_ERROR_HOSTKEY_SIGN`            | `libssh2: (Hex 0x1392) LIBSSH2_ERROR_HOSTKEY_SIGN`            |
+| `LIBSSH2_ERROR_DECRYPT`                 | `libssh2: (Hex 0x1393) LIBSSH2_ERROR_DECRYPT`                 |
+| `LIBSSH2_ERROR_SOCKET_DISCONNECT`       | `libssh2: (Hex 0x1394) LIBSSH2_ERROR_SOCKET_DISCONNECT`       |
+| `LIBSSH2_ERROR_PROTO`                   | `libssh2: (Hex 0x1395) LIBSSH2_ERROR_PROTO`                   |
+| `LIBSSH2_ERROR_PASSWORD_EXPIRED`        | `libssh2: (Hex 0x1396) LIBSSH2_ERROR_PASSWORD_EXPIRED`        |
+| `LIBSSH2_ERROR_FILE`                    | `libssh2: (Hex 0x1397) LIBSSH2_ERROR_FILE`                    |
+| `LIBSSH2_ERROR_METHOD_NONE`             | `libssh2: (Hex 0x1398) LIBSSH2_ERROR_METHOD_NONE`             |
+| `LIBSSH2_ERROR_AUTHENTICATION_FAILED`   | `libssh2: (Hex 0x1399) LIBSSH2_ERROR_AUTHENTICATION_FAILED`   |
+| `LIBSSH2_ERROR_PUBLICKEY_UNRECOGNIZED`  | `libssh2: (Hex 0x1399) LIBSSH2_ERROR_AUTHENTICATION_FAILED`   |
+| `LIBSSH2_ERROR_PUBLICKEY_UNVERIFIED`    | `libssh2: (Hex 0x139A) LIBSSH2_ERROR_PUBLICKEY_UNVERIFIED`    |
+| `LIBSSH2_ERROR_CHANNEL_OUTOFORDER`      | `libssh2: (Hex 0x139B) LIBSSH2_ERROR_CHANNEL_OUTOFORDER`      |
+| `LIBSSH2_ERROR_CHANNEL_FAILURE`         | `libssh2: (Hex 0x139C) LIBSSH2_ERROR_CHANNEL_FAILURE`         |
+| `LIBSSH2_ERROR_CHANNEL_REQUEST_DENIED`  | `libssh2: (Hex 0x139D) LIBSSH2_ERROR_CHANNEL_REQUEST_DENIED`  |
+| `LIBSSH2_ERROR_CHANNEL_UNKNOWN`         | `libssh2: (Hex 0x139E) LIBSSH2_ERROR_CHANNEL_UNKNOWN`         |
+| `LIBSSH2_ERROR_CHANNEL_WINDOW_EXCEEDED` | `libssh2: (Hex 0x139F) LIBSSH2_ERROR_CHANNEL_WINDOW_EXCEEDED` |
+| `LIBSSH2_ERROR_CHANNEL_PACKET_EXCEEDED` | `libssh2: (Hex 0x13A0) LIBSSH2_ERROR_CHANNEL_PACKET_EXCEEDED` |
+| `LIBSSH2_ERROR_CHANNEL_CLOSED`          | `libssh2: (Hex 0x13A1) LIBSSH2_ERROR_CHANNEL_CLOSED`          |
+| `LIBSSH2_ERROR_CHANNEL_EOF_SENT`        | `libssh2: (Hex 0x13A2) LIBSSH2_ERROR_CHANNEL_EOF_SENT`        |
+| `LIBSSH2_ERROR_SCP_PROTOCOL`            | `libssh2: (Hex 0x13A3) LIBSSH2_ERROR_SCP_PROTOCOL`            |
+| `LIBSSH2_ERROR_ZLIB`                    | `libssh2: (Hex 0x13A4) LIBSSH2_ERROR_ZLIB`                    |
+| `LIBSSH2_ERROR_SOCKET_TIMEOUT`          | `libssh2: (Hex 0x13A5) LIBSSH2_ERROR_SOCKET_TIMEOUT`          |
+| `LIBSSH2_ERROR_SFTP_PROTOCOL`           | `libssh2: (Hex 0x13A6) LIBSSH2_ERROR_SFTP_PROTOCOL`           |
+| `LIBSSH2_ERROR_REQUEST_DENIED`          | `libssh2: (Hex 0x13A7) LIBSSH2_ERROR_REQUEST_DENIED`          |
+| `LIBSSH2_ERROR_METHOD_NOT_SUPPORTED`    | `libssh2: (Hex 0x13A8) LIBSSH2_ERROR_METHOD_NOT_SUPPORTED`    |
+| `LIBSSH2_ERROR_INVAL`                   | `libssh2: (Hex 0x13A9) LIBSSH2_ERROR_INVAL`                   |
+| `LIBSSH2_ERROR_INVALID_POLL_TYPE`       | `libssh2: (Hex 0x13AA) LIBSSH2_ERROR_INVALID_POLL_TYPE`       |
+| `LIBSSH2_ERROR_PUBLICKEY_PROTOCOL`      | `libssh2: (Hex 0x13AB) LIBSSH2_ERROR_PUBLICKEY_PROTOCOL`      |
+| `LIBSSH2_ERROR_EAGAIN`                  | `libssh2: (Hex 0x13AC) LIBSSH2_ERROR_EAGAIN`                  |
+| `LIBSSH2_ERROR_BUFFER_TOO_SMALL`        | `libssh2: (Hex 0x13AD) LIBSSH2_ERROR_BUFFER_TOO_SMALL`        |
+| `LIBSSH2_ERROR_BAD_USE`                 | `libssh2: (Hex 0x13AE) LIBSSH2_ERROR_BAD_USE`                 |
+| `LIBSSH2_ERROR_COMPRESS`                | `libssh2: (Hex 0x13AF) LIBSSH2_ERROR_COMPRESS`                |
+| `LIBSSH2_ERROR_OUT_OF_BOUNDARY`         | `libssh2: (Hex 0x13B0) LIBSSH2_ERROR_OUT_OF_BOUNDARY`         |
+| `LIBSSH2_ERROR_AGENT_PROTOCOL`          | `libssh2: (Hex 0x13B1) LIBSSH2_ERROR_AGENT_PROTOCOL`          |
+| `LIBSSH2_ERROR_SOCKET_RECV`             | `libssh2: (Hex 0x13B2) LIBSSH2_ERROR_SOCKET_RECV`             |
+| `LIBSSH2_ERROR_ENCRYPT`                 | `libssh2: (Hex 0x13B3) LIBSSH2_ERROR_ENCRYPT`                 |
+| `LIBSSH2_ERROR_BAD_SOCKET`              | `libssh2: (Hex 0x13B4) LIBSSH2_ERROR_BAD_SOCKET`              |
+| `LIBSSH2_ERROR_KNOWN_HOSTS`             | `libssh2: (Hex 0x13B5) LIBSSH2_ERROR_KNOWN_HOSTS`             |
+| `LIBSSH2_ERROR_CHANNEL_WINDOW_FULL`     | `libssh2: (Hex 0x13B6) LIBSSH2_ERROR_CHANNEL_WINDOW_FULL`     |
+| `LIBSSH2_ERROR_KEYFILE_AUTH_FAILED`     | `libssh2: (Hex 0x13B7) LIBSSH2_ERROR_KEYFILE_AUTH_FAILED`     |
+| `LIBSSH2_ERROR_RANDGEN`                 | `libssh2: (Hex 0x13B8) LIBSSH2_ERROR_RANDGEN`                 |
+| `LIBSSH2_ERROR_MISSING_USERAUTH_BANNER` | `libssh2: (Hex 0x13B9) LIBSSH2_ERROR_MISSING_USERAUTH_BANNER` |
+| `LIBSSH2_ERROR_ALGO_UNSUPPORTED`        | `libssh2: (Hex 0x13BA) LIBSSH2_ERROR_ALGO_UNSUPPORTED`        |
 
 # Functions
 | libssh2                                                                                                                                | lvssh2                                               |
