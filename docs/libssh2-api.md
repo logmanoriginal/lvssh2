@@ -229,8 +229,8 @@ Error codes are mapped to error range 5000 through 9999 (0x1388 through 0x270F).
 | [`libssh2_sftp_init`](https://libssh2.org/libssh2_sftp_init.html)                                                                      | `libssh2.lvlib:libssh2_sftp_init.vi`                 |
 | [`libssh2_sftp_last_error`](https://libssh2.org/libssh2_sftp_last_error.html)                                                          |
 | [`libssh2_sftp_lstat`](https://libssh2.org/libssh2_sftp_lstat.html)                                                                    |
-| [`libssh2_sftp_mkdir`](https://libssh2.org/libssh2_sftp_mkdir.html)                                                                    |
-| [`libssh2_sftp_mkdir_ex`](https://libssh2.org/libssh2_sftp_mkdir_ex.html)                                                              |
+| [`libssh2_sftp_mkdir`](https://libssh2.org/libssh2_sftp_mkdir.html)                                                                    | `libssh2.lvlib:libssh2_sftp_mkdir.vi`                |
+| [`libssh2_sftp_mkdir_ex`](https://libssh2.org/libssh2_sftp_mkdir_ex.html)                                                              | `libssh2.lvlib:libssh2_sftp_mkdir.vi`                |
 | [`libssh2_sftp_open`](https://libssh2.org/libssh2_sftp_open.html)                                                                      | `libssh2.lvlib:libssh2_sftp_open.vi`                 |
 | [`libssh2_sftp_open_ex`](https://libssh2.org/libssh2_sftp_open_ex.html)                                                                | `libssh2.lvlib:libssh2_sftp_open_ex.vi`              |
 | [`libssh2_sftp_open_ex_r`](https://github.com/libssh2/libssh2/blob/master/docs/libssh2_sftp_open_ex_r.3)                               |

@@ -225,6 +225,7 @@
 	<Item Name="libssh2_sftp_close_handle.vi" Type="VI" URL="../libssh2_sftp_close_handle.vi"/>
 	<Item Name="libssh2_sftp_fstat_ex.vi" Type="VI" URL="../libssh2_sftp_fstat_ex.vi"/>
 	<Item Name="libssh2_sftp_init.vi" Type="VI" URL="../libssh2_sftp_init.vi"/>
+	<Item Name="libssh2_sftp_mkdir.vi" Type="VI" URL="../libssh2_sftp_mkdir.vi"/>
 	<Item Name="libssh2_sftp_open.vi" Type="VI" URL="../libssh2_sftp_open.vi"/>
 	<Item Name="libssh2_sftp_open_ex.vi" Type="VI" URL="../libssh2_sftp_open_ex.vi"/>
 	<Item Name="libssh2_sftp_opendir.vi" Type="VI" URL="../libssh2_sftp_opendir.vi"/>
