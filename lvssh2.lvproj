@@ -1,5 +1,6 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Project Type="Project" LVVersion="13008000">
+	<Property Name="CCSymbols" Type="Str">LVSSH2_NO_EXTENSIONS,False;</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI.Project.Description" Type="Str"></Property>
 	<Item Name="My Computer" Type="My Computer">
@@ -13,6 +14,7 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="examples" Type="Folder">
+			<Item Name="debug_trace.vi" Type="VI" URL="../examples/debug_trace.vi"/>
 			<Item Name="direct_tcpip.vi" Type="VI" URL="../examples/direct_tcpip.vi"/>
 			<Item Name="knownhosts.vi" Type="VI" URL="../examples/knownhosts.vi"/>
 			<Item Name="sftp.vi" Type="VI" URL="../examples/sftp.vi"/>
@@ -167,6 +169,7 @@
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
 			<Item Name="libssh2.dll" Type="Document" URL="../libssh2/libssh2.dll"/>
+			<Item Name="lvssh2_extensions.dll" Type="Document" URL="../libssh2/lvssh2_extensions.dll"/>
 			<Item Name="TRef FinderCallback.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/traverseref.llb/TRef FinderCallback.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>

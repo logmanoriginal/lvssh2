@@ -235,6 +235,8 @@
 	<Item Name="libssh2_sftp_seek64.vi" Type="VI" URL="../libssh2_sftp_seek64.vi"/>
 	<Item Name="libssh2_sftp_shutdown.vi" Type="VI" URL="../libssh2_sftp_shutdown.vi"/>
 	<Item Name="libssh2_sftp_write.vi" Type="VI" URL="../libssh2_sftp_write.vi"/>
+	<Item Name="libssh2_trace.vi" Type="VI" URL="../libssh2_trace.vi"/>
+	<Item Name="libssh2_trace_sethandler.vi" Type="VI" URL="../libssh2_trace_sethandler.vi"/>
 	<Item Name="libssh2_userauth_banner.vi" Type="VI" URL="../libssh2_userauth_banner.vi"/>
 	<Item Name="libssh2_userauth_list.vi" Type="VI" URL="../libssh2_userauth_list.vi"/>
 	<Item Name="libssh2_userauth_password.vi" Type="VI" URL="../libssh2_userauth_password.vi"/>

@@ -261,8 +261,8 @@ Error codes are mapped to error range 5000 through 9999 (0x1388 through 0x270F).
 | [`libssh2_sftp_unlink_ex`](https://libssh2.org/libssh2_sftp_unlink_ex.html)                                                            |
 | [`libssh2_sftp_write`](https://libssh2.org/libssh2_sftp_write.html)                                                                    | `libssh2.lvlib:libssh2_sftp_write.vi`                |
 | [`libssh2_sign_sk`](https://github.com/libssh2/libssh2/blob/master/docs/libssh2_sign_sk.3)                                             |
-| [`libssh2_trace`](https://libssh2.org/libssh2_trace.html)                                                                              |
-| [`libssh2_trace_sethandler`](https://libssh2.org/libssh2_trace_sethandler.html)                                                        |
+| [`libssh2_trace`](https://libssh2.org/libssh2_trace.html)                                                                              | `libssh2.lvlib:libssh2_trace.vi`                     |
+| [`libssh2_trace_sethandler`](https://libssh2.org/libssh2_trace_sethandler.html)                                                        | `libssh2.lvlib:libssh2_trace_sethandler.vi`          |
 | [`libssh2_userauth_authenticated`](https://libssh2.org/libssh2_userauth_authenticated.html)                                            |
 | [`libssh2_userauth_banner`](https://github.com/libssh2/libssh2/blob/master/docs/libssh2_userauth_banner.3)                             | `libssh2.lvlib:libssh2_userauth_banner.vi`           |
 | [`libssh2_userauth_hostbased_fromfile`](https://libssh2.org/libssh2_userauth_hostbased_fromfile.html)                                  |
