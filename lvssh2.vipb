@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-11-02 16:41:01" Modified_Date="2023-12-30 18:16:23" Creator="pasca" Comments="" ID="d5c43e4c9f9a0b5cc4de5253d724d9cd">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-11-02 16:41:01" Modified_Date="2023-12-30 18:17:20" Creator="pasca" Comments="" ID="96a4a27ff57633032b9f4f934db1108d">
   <Library_General_Settings>
     <Package_File_Name>PNR_lib_lvssh2</Package_File_Name>
     <Library_Version>0.1.0.4</Library_Version>
@@ -31,7 +31,7 @@
       <Description/>
       <Copyright>Copyright (c) 2023, Pascal Neuperger</Copyright>
       <Packager>Pascal Neuperger</Packager>
-      <URL>https://github.com/logmanoriginal/libssh2-labview</URL>
+      <URL>https://github.com/logmanoriginal/lvssh2</URL>
       <Release_Notes/>
     </Description>
     <Destinations>
