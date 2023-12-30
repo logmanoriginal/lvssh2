@@ -209,6 +209,7 @@
 	<Item Name="libssh2_knownhost_init.vi" Type="VI" URL="../libssh2_knownhost_init.vi"/>
 	<Item Name="libssh2_knownhost_readfile.vi" Type="VI" URL="../libssh2_knownhost_readfile.vi"/>
 	<Item Name="libssh2_knownhost_writefile.vi" Type="VI" URL="../libssh2_knownhost_writefile.vi"/>
+	<Item Name="libssh2_method_type.ctl" Type="VI" URL="../libssh2_method_type.ctl"/>
 	<Item Name="libssh2_session_disconnect.vi" Type="VI" URL="../libssh2_session_disconnect.vi"/>
 	<Item Name="libssh2_session_disconnect_ex.vi" Type="VI" URL="../libssh2_session_disconnect_ex.vi"/>
 	<Item Name="libssh2_session_free.vi" Type="VI" URL="../libssh2_session_free.vi"/>
@@ -220,6 +221,8 @@
 	<Item Name="libssh2_session_init.vi" Type="VI" URL="../libssh2_session_init.vi"/>
 	<Item Name="libssh2_session_init_ex.vi" Type="VI" URL="../libssh2_session_init_ex.vi"/>
 	<Item Name="libssh2_session_last_error.vi" Type="VI" URL="../libssh2_session_last_error.vi"/>
+	<Item Name="libssh2_session_method_pref.vi" Type="VI" URL="../libssh2_session_method_pref.vi"/>
+	<Item Name="libssh2_session_methods.vi" Type="VI" URL="../libssh2_session_methods.vi"/>
 	<Item Name="libssh2_session_set_blocking.vi" Type="VI" URL="../libssh2_session_set_blocking.vi"/>
 	<Item Name="libssh2_sftp_attributes.ctl" Type="VI" URL="../libssh2_sftp_attributes.ctl"/>
 	<Item Name="libssh2_sftp_close_handle.vi" Type="VI" URL="../libssh2_sftp_close_handle.vi"/>

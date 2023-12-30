@@ -31,6 +31,17 @@ This is a list of exported libssh2 APIs and their corresponding matches in this 
 | `LIBSSH2_KNOWNHOST_KEY_ED25519`    |
 | `LIBSSH2_KNOWNHOST_KEY_UNKNOWN`    |
 | `LIBSSH2_KNOWNHOST_FILE_OPENSSH`   | `libssh2.lvlib:Known Host File Type.ctl`    |
+| `LIBSSH2_METHOD_KEX`               | `libssh2.lvlib:libssh2_method_type.ctl`     |
+| `LIBSSH2_METHOD_HOSTKEY`           | `libssh2.lvlib:libssh2_method_type.ctl`     |
+| `LIBSSH2_METHOD_CRYPT_CS`          | `libssh2.lvlib:libssh2_method_type.ctl`     |
+| `LIBSSH2_METHOD_CRYPT_SC`          | `libssh2.lvlib:libssh2_method_type.ctl`     |
+| `LIBSSH2_METHOD_MAC_CS`            | `libssh2.lvlib:libssh2_method_type.ctl`     |
+| `LIBSSH2_METHOD_MAC_SC`            | `libssh2.lvlib:libssh2_method_type.ctl`     |
+| `LIBSSH2_METHOD_COMP_CS`           | `libssh2.lvlib:libssh2_method_type.ctl`     |
+| `LIBSSH2_METHOD_COMP_SC`           | `libssh2.lvlib:libssh2_method_type.ctl`     |
+| `LIBSSH2_METHOD_LANG_CS`           | `libssh2.lvlib:libssh2_method_type.ctl`     |
+| `LIBSSH2_METHOD_LANG_SC`           | `libssh2.lvlib:libssh2_method_type.ctl`     |
+| `LIBSSH2_METHOD_SIGN_ALGO`         | `libssh2.lvlib:libssh2_method_type.ctl`     |
 
 # Error Codes
 Error codes are mapped to error range 5000 through 9999 (0x1388 through 0x270F).
@@ -209,8 +220,8 @@ Error codes are mapped to error range 5000 through 9999 (0x1388 through 0x270F).
 | [`libssh2_session_init_ex`](https://libssh2.org/libssh2_session_init_ex.html)                                                          | `libssh2.lvlib:libssh2_session_init_ex.vi`           |
 | [`libssh2_session_last_errno`](https://libssh2.org/libssh2_session_last_errno.html)                                                    |
 | [`libssh2_session_last_error`](https://libssh2.org/libssh2_session_last_error.html)                                                    | `libssh2.lvlib:libssh2_session_last_error.vi`        |
-| [`libssh2_session_method_pref`](https://libssh2.org/libssh2_session_method_pref.html)                                                  |
-| [`libssh2_session_methods`](https://libssh2.org/libssh2_session_methods.html)                                                          |
+| [`libssh2_session_method_pref`](https://libssh2.org/libssh2_session_method_pref.html)                                                  | `libssh2.lvlib:libssh2_session_method_pref.vi`       |
+| [`libssh2_session_methods`](https://libssh2.org/libssh2_session_methods.html)                                                          | `libssh2.lvlib:libssh2_session_methods.vi`           |
 | [`libssh2_session_set_blocking`](https://libssh2.org/libssh2_session_set_blocking.html)                                                | `libssh2.lvlib:libssh2_session_set_blocking.vi`      |
 | [`libssh2_session_set_last_error`](https://libssh2.org/libssh2_session_set_last_error.html)                                            |
 | [`libssh2_session_set_read_timeout`](https://github.com/libssh2/libssh2/blob/master/docs/libssh2_session_set_read_timeout.3)           |
