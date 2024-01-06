@@ -116,7 +116,7 @@ Error codes are mapped to error range 5000 through 9999 (0x1388 through 0x270F).
 | [`libssh2_agent_set_identity_path`](https://libssh2.org/libssh2_agent_set_identity_path.html)                                          | `libssh2.lvlib:libssh2_agent_set_identity_path.vi`   |
 | [`libssh2_agent_sign`](https://github.com/libssh2/libssh2/blob/master/docs/libssh2_agent_sign.3)                                       |
 | [`libssh2_agent_userauth`](https://libssh2.org/libssh2_agent_userauth.html)                                                            | `libssh2.lvlib:libssh2_agent_userauth.vi`            |
-| [`libssh2_banner_set`](https://libssh2.org/libssh2_banner_set.html)                                                                    |
+| [`libssh2_banner_set`](https://libssh2.org/libssh2_banner_set.html)                                                                    | Deprecated. Use `libssh2_session_banner_set`         |
 | [`libssh2_base64_decode`](https://libssh2.org/libssh2_base64_decode.html)                                                              |
 | [`libssh2_channel_close`](https://libssh2.org/libssh2_channel_close.html)                                                              | `libssh2.lvlib:libssh2_channel_close.vi`             |
 | [`libssh2_channel_direct_streamlocal_ex`](https://github.com/libssh2/libssh2/blob/master/docs/libssh2_channel_direct_streamlocal_ex.3) |
@@ -203,8 +203,8 @@ Error codes are mapped to error range 5000 through 9999 (0x1388 through 0x270F).
 | [`libssh2_scp_send64`](https://libssh2.org/libssh2_scp_send64.html)                                                                    |
 | [`libssh2_scp_send_ex`](https://libssh2.org/libssh2_scp_send_ex.html)                                                                  |
 | [`libssh2_session_abstract`](https://libssh2.org/libssh2_session_abstract.html)                                                        |
-| [`libssh2_session_banner_get`](https://libssh2.org/libssh2_session_banner_get.html)                                                    |
-| [`libssh2_session_banner_set`](https://libssh2.org/libssh2_session_banner_set.html)                                                    |
+| [`libssh2_session_banner_get`](https://libssh2.org/libssh2_session_banner_get.html)                                                    | `libssh2.lvlib:libssh2_session_banner_get.vi`        |
+| [`libssh2_session_banner_set`](https://libssh2.org/libssh2_session_banner_set.html)                                                    | `libssh2.lvlib:libssh2_session_banner_set.vi`        |
 | [`libssh2_session_block_directions`](https://libssh2.org/libssh2_session_block_directions.html)                                        |
 | [`libssh2_session_callback_set`](https://libssh2.org/libssh2_session_callback_set.html)                                                |
 | [`libssh2_session_disconnect`](https://libssh2.org/libssh2_session_disconnect.html)                                                    | `libssh2.lvlib:libssh2_session_disconnect.vi`        |
