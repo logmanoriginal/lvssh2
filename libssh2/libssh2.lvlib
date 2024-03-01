@@ -245,6 +245,7 @@
 	<Item Name="libssh2_sftp_fsetstat.vi" Type="VI" URL="../libssh2_sftp_fsetstat.vi"/>
 	<Item Name="libssh2_sftp_fstat.vi" Type="VI" URL="../libssh2_sftp_fstat.vi"/>
 	<Item Name="libssh2_sftp_fstat_ex.vi" Type="VI" URL="../libssh2_sftp_fstat_ex.vi"/>
+	<Item Name="libssh2_sftp_fstatvfs.vi" Type="VI" URL="../libssh2_sftp_fstatvfs.vi"/>
 	<Item Name="libssh2_sftp_init.vi" Type="VI" URL="../libssh2_sftp_init.vi"/>
 	<Item Name="libssh2_sftp_mkdir.vi" Type="VI" URL="../libssh2_sftp_mkdir.vi"/>
 	<Item Name="libssh2_sftp_open.vi" Type="VI" URL="../libssh2_sftp_open.vi"/>
@@ -255,6 +256,8 @@
 	<Item Name="libssh2_sftp_readdir_ex.vi" Type="VI" URL="../libssh2_sftp_readdir_ex.vi"/>
 	<Item Name="libssh2_sftp_seek64.vi" Type="VI" URL="../libssh2_sftp_seek64.vi"/>
 	<Item Name="libssh2_sftp_shutdown.vi" Type="VI" URL="../libssh2_sftp_shutdown.vi"/>
+	<Item Name="libssh2_sftp_statvfs.ctl" Type="VI" URL="../libssh2_sftp_statvfs.ctl"/>
+	<Item Name="libssh2_sftp_statvfs.vi" Type="VI" URL="../libssh2_sftp_statvfs.vi"/>
 	<Item Name="libssh2_sftp_write.vi" Type="VI" URL="../libssh2_sftp_write.vi"/>
 	<Item Name="libssh2_trace.vi" Type="VI" URL="../libssh2_trace.vi"/>
 	<Item Name="libssh2_trace_sethandler.vi" Type="VI" URL="../libssh2_trace_sethandler.vi"/>

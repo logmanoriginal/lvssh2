@@ -18,7 +18,7 @@
 			<Item Name="debug_trace.vi" Type="VI" URL="../examples/debug_trace.vi"/>
 			<Item Name="direct_tcpip.vi" Type="VI" URL="../examples/direct_tcpip.vi"/>
 			<Item Name="knownhosts.vi" Type="VI" URL="../examples/knownhosts.vi"/>
-			<Item Name="session_compression.vi" Type="VI" URL="../libssh2/session_compression.vi"/>
+			<Item Name="session_compression.vi" Type="VI" URL="../examples/session_compression.vi"/>
 			<Item Name="session_error.vi" Type="VI" URL="../examples/session_error.vi"/>
 			<Item Name="session_methods.vi" Type="VI" URL="../examples/session_methods.vi"/>
 			<Item Name="session_timeout.vi" Type="VI" URL="../examples/session_timeout.vi"/>
@@ -26,6 +26,7 @@
 			<Item Name="sftp_append.vi" Type="VI" URL="../examples/sftp_append.vi"/>
 			<Item Name="sftp_fstat.vi" Type="VI" URL="../examples/sftp_fstat.vi"/>
 			<Item Name="sftp_mkdir.vi" Type="VI" URL="../examples/sftp_mkdir.vi"/>
+			<Item Name="sftp_statvfs.vi" Type="VI" URL="../examples/sftp_statvfs.vi"/>
 			<Item Name="sftp_write.vi" Type="VI" URL="../examples/sftp_write.vi"/>
 			<Item Name="sftpdir.vi" Type="VI" URL="../examples/sftpdir.vi"/>
 			<Item Name="ssh2.vi" Type="VI" URL="../examples/ssh2.vi"/>

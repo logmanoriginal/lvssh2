@@ -45,6 +45,7 @@ This is a list of exported libssh2 APIs and their corresponding matches in this 
 | `LIBSSH2_METHOD_LANG_CS`           | `libssh2.lvlib:libssh2_method_type.ctl`     |
 | `LIBSSH2_METHOD_LANG_SC`           | `libssh2.lvlib:libssh2_method_type.ctl`     |
 | `LIBSSH2_METHOD_SIGN_ALGO`         | `libssh2.lvlib:libssh2_method_type.ctl`     |
+| `LIBSSH2_SFTP_STATVFS`             | `libssh2.lvlib:libssh2_sftp_statvfs.ctl`    |
 
 # Error Codes
 Error codes are mapped to error range 5000 through 9999 (0x1388 through 0x270F).
@@ -237,7 +238,7 @@ Error codes are mapped to error range 5000 through 9999 (0x1388 through 0x270F).
 | [`libssh2_sftp_fsetstat`](https://libssh2.org/libssh2_sftp_fsetstat.html)                                                              | `libssh2.lvlib:libssh2_sftp_fsetstat.vi`             |
 | [`libssh2_sftp_fstat`](https://libssh2.org/libssh2_sftp_fstat.html)                                                                    | `libssh2.lvlib:libssh2_sftp_fstat.vi`                |
 | [`libssh2_sftp_fstat_ex`](https://libssh2.org/libssh2_sftp_fstat_ex.html)                                                              | `libssh2.lvlib:libssh2_sftp_fstat_ex.vi`             |
-| [`libssh2_sftp_fstatvfs`](https://libssh2.org/libssh2_sftp_fstatvfs.html)                                                              |
+| [`libssh2_sftp_fstatvfs`](https://libssh2.org/libssh2_sftp_fstatvfs.html)                                                              | `libssh2.lvlib:libssh2_sftp_fstatvfs.vi`             |
 | [`libssh2_sftp_fsync`](https://libssh2.org/libssh2_sftp_fsync.html)                                                                    |
 | [`libssh2_sftp_get_channel`](https://libssh2.org/libssh2_sftp_get_channel.html)                                                        |
 | [`libssh2_sftp_init`](https://libssh2.org/libssh2_sftp_init.html)                                                                      | `libssh2.lvlib:libssh2_sftp_init.vi`                 |
@@ -266,7 +267,7 @@ Error codes are mapped to error range 5000 through 9999 (0x1388 through 0x270F).
 | [`libssh2_sftp_shutdown`](https://libssh2.org/libssh2_sftp_shutdown.html)                                                              | `libssh2.lvlib:libssh2_sftp_shutdown.vi`             |
 | [`libssh2_sftp_stat`](https://libssh2.org/libssh2_sftp_stat.html)                                                                      |
 | [`libssh2_sftp_stat_ex`](https://libssh2.org/libssh2_sftp_stat_ex.html)                                                                |
-| [`libssh2_sftp_statvfs`](https://libssh2.org/libssh2_sftp_statvfs.html)                                                                |
+| [`libssh2_sftp_statvfs`](https://libssh2.org/libssh2_sftp_statvfs.html)                                                                | `libssh2.lvlib:libssh2_sftp_statvfs.vi`              |
 | [`libssh2_sftp_symlink`](https://libssh2.org/libssh2_sftp_symlink.html)                                                                |
 | [`libssh2_sftp_symlink_ex`](https://libssh2.org/libssh2_sftp_symlink_ex.html)                                                          |
 | [`libssh2_sftp_tell`](https://libssh2.org/libssh2_sftp_tell.html)                                                                      |
