@@ -198,6 +198,7 @@
 	<Item Name="libssh2_channel_write.vi" Type="VI" URL="../libssh2_channel_write.vi"/>
 	<Item Name="libssh2_channel_write_ex.vi" Type="VI" URL="../libssh2_channel_write_ex.vi"/>
 	<Item Name="libssh2_exit.vi" Type="VI" URL="../libssh2_exit.vi"/>
+	<Item Name="libssh2_flag.ctl" Type="VI" URL="../libssh2_flag.ctl"/>
 	<Item Name="libssh2_hostkey_hash.vi" Type="VI" URL="../libssh2_hostkey_hash.vi"/>
 	<Item Name="libssh2_init.vi" Type="VI" URL="../libssh2_init.vi"/>
 	<Item Name="libssh2_init_custom.vi" Type="VI" URL="../libssh2_init_custom.vi"/>
@@ -214,6 +215,7 @@
 	<Item Name="libssh2_session_banner_set.vi" Type="VI" URL="../libssh2_session_banner_set.vi"/>
 	<Item Name="libssh2_session_disconnect.vi" Type="VI" URL="../libssh2_session_disconnect.vi"/>
 	<Item Name="libssh2_session_disconnect_ex.vi" Type="VI" URL="../libssh2_session_disconnect_ex.vi"/>
+	<Item Name="libssh2_session_flag.vi" Type="VI" URL="../libssh2_session_flag.vi"/>
 	<Item Name="libssh2_session_free.vi" Type="VI" URL="../libssh2_session_free.vi"/>
 	<Item Name="libssh2_session_get_blocking.vi" Type="VI" URL="../libssh2_session_get_blocking.vi"/>
 	<Item Name="libssh2_session_get_read_timeout.vi" Type="VI" URL="../libssh2_session_get_read_timeout.vi"/>

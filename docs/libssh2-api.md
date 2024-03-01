@@ -6,6 +6,9 @@ This is a list of exported libssh2 APIs and their corresponding matches in this 
 | libssh2                            | lvssh2                                      |
 | ---------------------------------- | ------------------------------------------- |
 | `LIBSSH2_INIT_NO_CRYPTO`           |
+| `LIBSSH2_FLAG_SIGPIPE`             | `libssh2.lvlib:libssh2_flag.ctl`            |
+| `LIBSSH2_FLAG_COMPRESS`            | `libssh2.lvlib:libssh2_flag.ctl`            |
+| `LIBSSH2_FLAG_QUOTE_PATHS`         | `libssh2.lvlib:libssh2_flag.ctl`            |
 | `LIBSSH2_HOSTKEY_HASH_MD5`         | `libssh2.lvlib:Host Key Hash Type.ctl`      |
 | `LIBSSH2_HOSTKEY_HASH_SHA1`        | `libssh2.lvlib:Host Key Hash Type.ctl`      |
 | `LIBSSH2_HOSTKEY_HASH_SHA256`      | `libssh2.lvlib:Host Key Hash Type.ctl`      |
@@ -209,7 +212,7 @@ Error codes are mapped to error range 5000 through 9999 (0x1388 through 0x270F).
 | [`libssh2_session_callback_set`](https://libssh2.org/libssh2_session_callback_set.html)                                                |
 | [`libssh2_session_disconnect`](https://libssh2.org/libssh2_session_disconnect.html)                                                    | `libssh2.lvlib:libssh2_session_disconnect.vi`        |
 | [`libssh2_session_disconnect_ex`](https://libssh2.org/libssh2_session_disconnect_ex.html)                                              | `libssh2.lvlib:libssh2_session_disconnect_ex.vi`     |
-| [`libssh2_session_flag`](https://libssh2.org/libssh2_session_flag.html)                                                                |
+| [`libssh2_session_flag`](https://libssh2.org/libssh2_session_flag.html)                                                                | `libssh2.lvlib:libssh2_session_flag.vi`              |
 | [`libssh2_session_free`](https://libssh2.org/libssh2_session_free.html)                                                                | `libssh2.lvlib:libssh2_session_free.vi`              |
 | [`libssh2_session_get_blocking`](https://libssh2.org/libssh2_session_get_blocking.html)                                                | `libssh2.lvlib:libssh2_session_get_blocking.vi`      |
 | [`libssh2_session_get_read_timeout`](https://github.com/libssh2/libssh2/blob/master/docs/libssh2_session_get_read_timeout.3)           | `libssh2.lvlib:libssh2_session_get_read_timeout.vi`  |

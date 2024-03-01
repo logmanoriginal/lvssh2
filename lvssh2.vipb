@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-11-02 16:41:01" Modified_Date="2024-03-01 07:49:06" Creator="pasca" Comments="" ID="00edbfc5e14b520b1d8d3e0f436634ae">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-11-02 16:41:01" Modified_Date="2024-03-01 11:53:12" Creator="pasca" Comments="" ID="21e03ff121b2e09110af8fea9aa9e19f">
   <Library_General_Settings>
     <Package_File_Name>PNR_lib_lvssh2</Package_File_Name>
-    <Library_Version>0.1.0.7</Library_Version>
+    <Library_Version>0.1.0.8</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>..</Library_Output_Folder>
@@ -372,7 +372,7 @@
         <Path>Debug</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>3116CF4DEA4217AF0414B0018E327F03</GUID>
+      <GUID>8126B80601C7B5251A3C88506166A75E</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -617,7 +617,7 @@
         <Path>libssh2\libssh2_session_get_read_timeout.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>67B40464253C703F95CC33EB3D4E0E72</GUID>
+      <GUID>A6BA0467590EBD2994C63D92F437354E</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -750,7 +750,21 @@
         <Path>libssh2\libssh2_session_set_last_error.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>AA025B11B83B5D608118F057587A05F9</GUID>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>libssh2_session_flag.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>1</Row>
+          <Column>3</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>libssh2\libssh2_session_flag.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <GUID>84E4066E564FAAF97D03610207481E52</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -953,7 +967,7 @@
         <Path>Advanced</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>410A4FF43B37D1B5DF0A5CD2201D04F3</GUID>
+      <GUID>2C7B3F71C8FA44E7A76BF1A768CBA10A</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>3</Parent_Palette_Index>
@@ -1086,7 +1100,7 @@
         <Path>libssh2\libssh2_channel_direct_tcpip_ex.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>73CDE26DF57ECF4D5800826DCE490621</GUID>
+      <GUID>3AC5B85303D297423B68E1E9F4C8D2F7</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1233,7 +1247,7 @@
         <Path>libssh2\Not A Known Host Collection.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>579672E702C6D2C63CCDA0A373114C0B</GUID>
+      <GUID>FBAB20EEBFCF8A44CE2FA5B3DE7C3214</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>3</Parent_Palette_Index>
@@ -1310,7 +1324,7 @@
         <Path>libssh2\Not A Listener.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>932A27BBD8850006090430CC99A23DB0</GUID>
+      <GUID>005DAED6AC8C03BF2C777997AD8D0174</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1387,7 +1401,7 @@
         <Path>Advanced</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>DA8D0A081E065AA78ACE0FF11FB110B3</GUID>
+      <GUID>643523FD72C551BEA46CBF17E2174B49</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>7</Parent_Palette_Index>
@@ -1422,7 +1436,7 @@
         <Path>libssh2\libssh2_userauth_password_ex.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>0D8D7E79383F9F289A5407D2EDAFDD97</GUID>
+      <GUID>CE0EBE30C2A59753E6A0DD6FA1FC8BC6</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1597,7 +1611,7 @@
         <Path>libssh2\Read Public Key Data.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>9837B7913A96FF37298F6E52DC9FE3F9</GUID>
+      <GUID>96E4861C07398D388ED0F5131BA85E13</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1814,7 +1828,7 @@
         <Path>libssh2\libssh2_sftp_mkdir.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F02C6792E01EA596C16841876BF76B72</GUID>
+      <GUID>BAA392B574A6E6B43C560B646563EF47</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>10</Parent_Palette_Index>
@@ -1863,7 +1877,7 @@
         <Path>libssh2\libssh2_sftp_readdir_ex.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>5BA86775DCCF9B28F9448B4F387E8AA4</GUID>
+      <GUID>A0972C9D46FABFC21A6010ED9105C2A5</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1912,7 +1926,7 @@
         <Path>libssh2\libssh2_trace_sethandler.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>5A3FC06746EEDBB839FD9EFDA8546F5B</GUID>
+      <GUID>4C2E071118A880A7F61EE459C03CF600</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
