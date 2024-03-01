@@ -40,6 +40,8 @@
 
 **lvssh2** provides LabVIEW&trade; bindings for [libssh2](https://github.com/libssh2/libssh2).
 
+See [libssh2-api](docs/libssh2-api.md) for API coverage.
+
 ### Limitations
 
 Although this project aims to provide complete bindings for libssh2, there are several limitations users need to be aware of:
