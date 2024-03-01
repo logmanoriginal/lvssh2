@@ -18,6 +18,7 @@
 			<Item Name="debug_trace.vi" Type="VI" URL="../examples/debug_trace.vi"/>
 			<Item Name="direct_tcpip.vi" Type="VI" URL="../examples/direct_tcpip.vi"/>
 			<Item Name="knownhosts.vi" Type="VI" URL="../examples/knownhosts.vi"/>
+			<Item Name="session_error.vi" Type="VI" URL="../examples/session_error.vi"/>
 			<Item Name="session_methods.vi" Type="VI" URL="../examples/session_methods.vi"/>
 			<Item Name="session_timeout.vi" Type="VI" URL="../examples/session_timeout.vi"/>
 			<Item Name="sftp.vi" Type="VI" URL="../examples/sftp.vi"/>

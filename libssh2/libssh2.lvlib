@@ -224,10 +224,12 @@
 	<Item Name="libssh2_session_hostkey.vi" Type="VI" URL="../libssh2_session_hostkey.vi"/>
 	<Item Name="libssh2_session_init.vi" Type="VI" URL="../libssh2_session_init.vi"/>
 	<Item Name="libssh2_session_init_ex.vi" Type="VI" URL="../libssh2_session_init_ex.vi"/>
+	<Item Name="libssh2_session_last_errno.vi" Type="VI" URL="../libssh2_session_last_errno.vi"/>
 	<Item Name="libssh2_session_last_error.vi" Type="VI" URL="../libssh2_session_last_error.vi"/>
 	<Item Name="libssh2_session_method_pref.vi" Type="VI" URL="../libssh2_session_method_pref.vi"/>
 	<Item Name="libssh2_session_methods.vi" Type="VI" URL="../libssh2_session_methods.vi"/>
 	<Item Name="libssh2_session_set_blocking.vi" Type="VI" URL="../libssh2_session_set_blocking.vi"/>
+	<Item Name="libssh2_session_set_last_error.vi" Type="VI" URL="../libssh2_session_set_last_error.vi"/>
 	<Item Name="libssh2_session_set_read_timeout.vi" Type="VI" URL="../libssh2_session_set_read_timeout.vi"/>
 	<Item Name="libssh2_session_set_timeout.vi" Type="VI" URL="../libssh2_session_set_timeout.vi"/>
 	<Item Name="libssh2_sftp_attributes.ctl" Type="VI" URL="../libssh2_sftp_attributes.ctl"/>

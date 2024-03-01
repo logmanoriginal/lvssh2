@@ -218,12 +218,12 @@ Error codes are mapped to error range 5000 through 9999 (0x1388 through 0x270F).
 | [`libssh2_session_hostkey`](https://libssh2.org/libssh2_session_hostkey.html)                                                          | `libssh2.lvlib:libssh2_session_hostkey.vi`           |
 | [`libssh2_session_init`](https://libssh2.org/libssh2_session_init.html)                                                                | `libssh2.lvlib:libssh2_session_init.vi`              |
 | [`libssh2_session_init_ex`](https://libssh2.org/libssh2_session_init_ex.html)                                                          | `libssh2.lvlib:libssh2_session_init_ex.vi`           |
-| [`libssh2_session_last_errno`](https://libssh2.org/libssh2_session_last_errno.html)                                                    |
+| [`libssh2_session_last_errno`](https://libssh2.org/libssh2_session_last_errno.html)                                                    | `libssh2.lvlib:libssh2_session_last_errno.vi`        |
 | [`libssh2_session_last_error`](https://libssh2.org/libssh2_session_last_error.html)                                                    | `libssh2.lvlib:libssh2_session_last_error.vi`        |
 | [`libssh2_session_method_pref`](https://libssh2.org/libssh2_session_method_pref.html)                                                  | `libssh2.lvlib:libssh2_session_method_pref.vi`       |
 | [`libssh2_session_methods`](https://libssh2.org/libssh2_session_methods.html)                                                          | `libssh2.lvlib:libssh2_session_methods.vi`           |
 | [`libssh2_session_set_blocking`](https://libssh2.org/libssh2_session_set_blocking.html)                                                | `libssh2.lvlib:libssh2_session_set_blocking.vi`      |
-| [`libssh2_session_set_last_error`](https://libssh2.org/libssh2_session_set_last_error.html)                                            |
+| [`libssh2_session_set_last_error`](https://libssh2.org/libssh2_session_set_last_error.html)                                            | `libssh2.lvlib:libssh2_session_set_last_error.vi`    |
 | [`libssh2_session_set_read_timeout`](https://github.com/libssh2/libssh2/blob/master/docs/libssh2_session_set_read_timeout.3)           | `libssh2.lvlib:libssh2_session_set_read_timeout.vi`  |
 | [`libssh2_session_set_timeout`](https://libssh2.org/libssh2_session_set_timeout.html)                                                  | `libssh2.lvlib:libssh2_session_set_timeout.vi`       |
 | [`libssh2_session_startup`](https://libssh2.org/libssh2_session_startup.html)                                                          |
