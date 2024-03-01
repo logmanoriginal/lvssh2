@@ -24,6 +24,7 @@
 			<Item Name="session_timeout.vi" Type="VI" URL="../examples/session_timeout.vi"/>
 			<Item Name="sftp.vi" Type="VI" URL="../examples/sftp.vi"/>
 			<Item Name="sftp_append.vi" Type="VI" URL="../examples/sftp_append.vi"/>
+			<Item Name="sftp_fstat.vi" Type="VI" URL="../examples/sftp_fstat.vi"/>
 			<Item Name="sftp_mkdir.vi" Type="VI" URL="../examples/sftp_mkdir.vi"/>
 			<Item Name="sftp_write.vi" Type="VI" URL="../examples/sftp_write.vi"/>
 			<Item Name="sftpdir.vi" Type="VI" URL="../examples/sftpdir.vi"/>
