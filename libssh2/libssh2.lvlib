@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <Library LVVersion="13008000">
 	<Property Name="NI.Lib.Icon" Type="Bin">%Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!)`!!!*Q(C=\&gt;5^&lt;NN!%-8RFS"&amp;7H5J!^UAG#K^LK!LT"65/F7A+]Q66$N)I2-9?&amp;&gt;1DK$7H:E`VS0$6J!I1$Y,EVZ;?O4/`%QO;'FML[68GCZN.T`=@PI]`?Y0][_&lt;_=O4]XJ]U/HTE`F^U(WF&lt;`PX&lt;08BL0[J`;H`?@V@`@O_?`\#JO@N?@OXWY?,C`30L^E8GF^%$$/+E9T1X'ISO=F.&lt;H+4G\T)C\T)C\T)CTT*ETT*ETT*ETT)ATT)ATT)AXTMZ#)8O=ABG?;GE3FK#JC,I=A=D-&gt;YD-&gt;Y_#LD-2\D-2\DY2):D`%9D`%9$^.E0-:D0-:D0*1;%I_&gt;()`R5&amp;[&amp;J`!5HM*4?'CJQF-!CG:&amp;Y;))$"5HCQ_&amp;J`!5(D[K]"3?QF.Y#A_H68A+4_%J0)7(+?/OV.$-/TE?SCDR**\%EXA3$[76?"*0YEE]C9&gt;W3DS**U%E$:0C%*2-3CZ)PC3?R--P*:\%EXA34_,BV(B#/?\-L*FX=DS"*`!%HM!4?#CBQ".Y!E`A#4S56?!*0)%H]!1?7CHQ"*\!%U##JL285#S9'&amp;Q5")'(H\&amp;;9DSF'J)9O^3,6\UIV9N.P9D5CU0^U.505`W1V$&gt;@@606.UN^%^2`H"KNRKC&lt;K#@0&amp;_L)]=$9-X;-,70$7$.7D#6D-5`^T2=?DU=&gt;$A@N^XPN&gt;DNNNVNN.BONVWON6CMNFUMN&amp;IO(V]"&lt;^I=8QNF\[=XV&gt;(@\_7J[`X';PHS;\NZ&gt;8`W&amp;`[8`Q&lt;N2,`7Y,P@I+\NY$^)!!!!!</Property>
 	<Property Name="NI.Lib.SourceVersion" Type="Int">318799872</Property>
@@ -239,7 +239,9 @@
 	<Item Name="libssh2_session_set_read_timeout.vi" Type="VI" URL="../libssh2_session_set_read_timeout.vi"/>
 	<Item Name="libssh2_session_set_timeout.vi" Type="VI" URL="../libssh2_session_set_timeout.vi"/>
 	<Item Name="libssh2_sftp_attributes.ctl" Type="VI" URL="../libssh2_sftp_attributes.ctl"/>
+	<Item Name="libssh2_sftp_close.vi" Type="VI" URL="../libssh2_sftp_close.vi"/>
 	<Item Name="libssh2_sftp_close_handle.vi" Type="VI" URL="../libssh2_sftp_close_handle.vi"/>
+	<Item Name="libssh2_sftp_closedir.vi" Type="VI" URL="../libssh2_sftp_closedir.vi"/>
 	<Item Name="libssh2_sftp_fsetstat.vi" Type="VI" URL="../libssh2_sftp_fsetstat.vi"/>
 	<Item Name="libssh2_sftp_fstat.vi" Type="VI" URL="../libssh2_sftp_fstat.vi"/>
 	<Item Name="libssh2_sftp_fstat_ex.vi" Type="VI" URL="../libssh2_sftp_fstat_ex.vi"/>

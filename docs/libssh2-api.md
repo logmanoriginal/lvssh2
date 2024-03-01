@@ -231,9 +231,9 @@ Error codes are mapped to error range 5000 through 9999 (0x1388 through 0x270F).
 | [`libssh2_session_set_timeout`](https://libssh2.org/libssh2_session_set_timeout.html)                                                  | `libssh2.lvlib:libssh2_session_set_timeout.vi`       |
 | [`libssh2_session_startup`](https://libssh2.org/libssh2_session_startup.html)                                                          |
 | [`libssh2_session_supported_algs`](https://libssh2.org/libssh2_session_supported_algs.html)                                            |
-| [`libssh2_sftp_close`](https://libssh2.org/libssh2_sftp_close.html)                                                                    |
+| [`libssh2_sftp_close`](https://libssh2.org/libssh2_sftp_close.html)                                                                    | `libssh2.lvlib:libssh2_sftp_close.vi`                |
 | [`libssh2_sftp_close_handle`](https://libssh2.org/libssh2_sftp_close_handle.html)                                                      | `libssh2.lvlib:libssh2_sftp_close_handle.vi`         |
-| [`libssh2_sftp_closedir`](https://libssh2.org/libssh2_sftp_closedir.html)                                                              |
+| [`libssh2_sftp_closedir`](https://libssh2.org/libssh2_sftp_closedir.html)                                                              | `libssh2.lvlib:libssh2_sftp_closedir.vi`             |
 | [`libssh2_sftp_fsetstat`](https://libssh2.org/libssh2_sftp_fsetstat.html)                                                              | `libssh2.lvlib:libssh2_sftp_fsetstat.vi`             |
 | [`libssh2_sftp_fstat`](https://libssh2.org/libssh2_sftp_fstat.html)                                                                    | `libssh2.lvlib:libssh2_sftp_fstat.vi`                |
 | [`libssh2_sftp_fstat_ex`](https://libssh2.org/libssh2_sftp_fstat_ex.html)                                                              | `libssh2.lvlib:libssh2_sftp_fstat_ex.vi`             |
