@@ -216,6 +216,8 @@
 	<Item Name="libssh2_session_disconnect_ex.vi" Type="VI" URL="../libssh2_session_disconnect_ex.vi"/>
 	<Item Name="libssh2_session_free.vi" Type="VI" URL="../libssh2_session_free.vi"/>
 	<Item Name="libssh2_session_get_blocking.vi" Type="VI" URL="../libssh2_session_get_blocking.vi"/>
+	<Item Name="libssh2_session_get_read_timeout.vi" Type="VI" URL="../libssh2_session_get_read_timeout.vi"/>
+	<Item Name="libssh2_session_get_timeout.vi" Type="VI" URL="../libssh2_session_get_timeout.vi"/>
 	<Item Name="libssh2_session_handshake.vi" Type="VI" URL="../libssh2_session_handshake.vi"/>
 	<Item Name="libssh2_session_handshake_socket.vi" Type="VI" URL="../libssh2_session_handshake_socket.vi"/>
 	<Item Name="libssh2_session_handshake_tcp.vi" Type="VI" URL="../libssh2_session_handshake_tcp.vi"/>
@@ -226,6 +228,8 @@
 	<Item Name="libssh2_session_method_pref.vi" Type="VI" URL="../libssh2_session_method_pref.vi"/>
 	<Item Name="libssh2_session_methods.vi" Type="VI" URL="../libssh2_session_methods.vi"/>
 	<Item Name="libssh2_session_set_blocking.vi" Type="VI" URL="../libssh2_session_set_blocking.vi"/>
+	<Item Name="libssh2_session_set_read_timeout.vi" Type="VI" URL="../libssh2_session_set_read_timeout.vi"/>
+	<Item Name="libssh2_session_set_timeout.vi" Type="VI" URL="../libssh2_session_set_timeout.vi"/>
 	<Item Name="libssh2_sftp_attributes.ctl" Type="VI" URL="../libssh2_sftp_attributes.ctl"/>
 	<Item Name="libssh2_sftp_close_handle.vi" Type="VI" URL="../libssh2_sftp_close_handle.vi"/>
 	<Item Name="libssh2_sftp_fstat_ex.vi" Type="VI" URL="../libssh2_sftp_fstat_ex.vi"/>
