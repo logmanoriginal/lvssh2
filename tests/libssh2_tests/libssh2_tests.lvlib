@@ -4,9 +4,6 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">318799872</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
-	<Item Name="Assert Not Error 1097.vi" Type="VI" URL="../Assert Not Error 1097.vi">
-		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-	</Item>
 	<Item Name="libssh2_knownhost_checkp - empty key - returns failure.vi" Type="VI" URL="../libssh2_knownhost_checkp - empty key - returns failure.vi"/>
 	<Item Name="libssh2_knownhost_checkp - invalid key - returns mismatch.vi" Type="VI" URL="../libssh2_knownhost_checkp - invalid key - returns mismatch.vi"/>
 	<Item Name="libssh2_knownhost_checkp - unknown host - returns not found.vi" Type="VI" URL="../libssh2_knownhost_checkp - unknown host - returns not found.vi"/>
