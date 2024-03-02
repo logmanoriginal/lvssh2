@@ -46,6 +46,9 @@ This is a list of exported libssh2 APIs and their corresponding matches in this 
 | `LIBSSH2_METHOD_LANG_SC`           | `libssh2.lvlib:libssh2_method_type.ctl`     |
 | `LIBSSH2_METHOD_SIGN_ALGO`         | `libssh2.lvlib:libssh2_method_type.ctl`     |
 | `LIBSSH2_SFTP_STATVFS`             | `libssh2.lvlib:libssh2_sftp_statvfs.ctl`    |
+| `LIBSSH2_SFTP_STAT`                | `libssh2.lvlib:libssh2_sftp_stat_type.ctl`  |
+| `LIBSSH2_SFTP_LSTAT`               | `libssh2.lvlib:libssh2_sftp_stat_type.ctl`  |
+| `LIBSSH2_SFTP_SETSTAT`             | `libssh2.lvlib:libssh2_sftp_stat_type.ctl`  |
 
 # Error Codes
 Error codes are mapped to error range 5000 through 9999 (0x1388 through 0x270F).
@@ -243,7 +246,7 @@ Error codes are mapped to error range 5000 through 9999 (0x1388 through 0x270F).
 | [`libssh2_sftp_get_channel`](https://libssh2.org/libssh2_sftp_get_channel.html)                                                        |
 | [`libssh2_sftp_init`](https://libssh2.org/libssh2_sftp_init.html)                                                                      | `libssh2.lvlib:libssh2_sftp_init.vi`                 |
 | [`libssh2_sftp_last_error`](https://libssh2.org/libssh2_sftp_last_error.html)                                                          |
-| [`libssh2_sftp_lstat`](https://libssh2.org/libssh2_sftp_lstat.html)                                                                    |
+| [`libssh2_sftp_lstat`](https://libssh2.org/libssh2_sftp_lstat.html)                                                                    | `libssh2.lvlib:libssh2_sftp_lstat.vi`                |
 | [`libssh2_sftp_mkdir`](https://libssh2.org/libssh2_sftp_mkdir.html)                                                                    | `libssh2.lvlib:libssh2_sftp_mkdir.vi`                |
 | [`libssh2_sftp_mkdir_ex`](https://libssh2.org/libssh2_sftp_mkdir_ex.html)                                                              | `libssh2.lvlib:libssh2_sftp_mkdir.vi`                |
 | [`libssh2_sftp_open`](https://libssh2.org/libssh2_sftp_open.html)                                                                      | `libssh2.lvlib:libssh2_sftp_open.vi`                 |
@@ -263,10 +266,10 @@ Error codes are mapped to error range 5000 through 9999 (0x1388 through 0x270F).
 | [`libssh2_sftp_rmdir_ex`](https://libssh2.org/libssh2_sftp_rmdir_ex.html)                                                              |
 | [`libssh2_sftp_seek`](https://libssh2.org/libssh2_sftp_seek.html)                                                                      |
 | [`libssh2_sftp_seek64`](https://libssh2.org/libssh2_sftp_seek64.html)                                                                  | `libssh2.lvlib:libssh2_sftp_seek64.vi`               |
-| [`libssh2_sftp_setstat`](https://libssh2.org/libssh2_sftp_setstat.html)                                                                |
+| [`libssh2_sftp_setstat`](https://libssh2.org/libssh2_sftp_setstat.html)                                                                | `libssh2.lvlib:libssh2_sftp_setstat.vi`              |
 | [`libssh2_sftp_shutdown`](https://libssh2.org/libssh2_sftp_shutdown.html)                                                              | `libssh2.lvlib:libssh2_sftp_shutdown.vi`             |
-| [`libssh2_sftp_stat`](https://libssh2.org/libssh2_sftp_stat.html)                                                                      |
-| [`libssh2_sftp_stat_ex`](https://libssh2.org/libssh2_sftp_stat_ex.html)                                                                |
+| [`libssh2_sftp_stat`](https://libssh2.org/libssh2_sftp_stat.html)                                                                      | `libssh2.lvlib:libssh2_sftp_stat.vi`                 |
+| [`libssh2_sftp_stat_ex`](https://libssh2.org/libssh2_sftp_stat_ex.html)                                                                | `libssh2.lvlib:libssh2_sftp_stat_ex.vi`              |
 | [`libssh2_sftp_statvfs`](https://libssh2.org/libssh2_sftp_statvfs.html)                                                                | `libssh2.lvlib:libssh2_sftp_statvfs.vi`              |
 | [`libssh2_sftp_symlink`](https://libssh2.org/libssh2_sftp_symlink.html)                                                                |
 | [`libssh2_sftp_symlink_ex`](https://libssh2.org/libssh2_sftp_symlink_ex.html)                                                          |
