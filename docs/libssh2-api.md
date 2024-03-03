@@ -285,8 +285,8 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_sftp_read`](https://libssh2.org/libssh2_sftp_read.html)                                                                      | `libssh2.lvlib:libssh2_sftp_read.vi`                  |
 | [`libssh2_sftp_readdir`](https://libssh2.org/libssh2_sftp_readdir.html)                                                                | `libssh2.lvlib:libssh2_sftp_readdir.vi`               |
 | [`libssh2_sftp_readdir_ex`](https://libssh2.org/libssh2_sftp_readdir_ex.html)                                                          | `libssh2.lvlib:libssh2_sftp_readdir_ex.vi`            |
-| [`libssh2_sftp_readlink`](https://libssh2.org/libssh2_sftp_readlink.html)                                                              |
-| [`libssh2_sftp_realpath`](https://libssh2.org/libssh2_sftp_realpath.html)                                                              |
+| [`libssh2_sftp_readlink`](https://libssh2.org/libssh2_sftp_readlink.html)                                                              | `libssh2.lvlib:libssh2_sftp_readlink.vi`              |
+| [`libssh2_sftp_realpath`](https://libssh2.org/libssh2_sftp_realpath.html)                                                              | `libssh2.lvlib:libssh2_sftp_realpath.vi`              |
 | [`libssh2_sftp_rename`](https://libssh2.org/libssh2_sftp_rename.html)                                                                  |
 | [`libssh2_sftp_rename_ex`](https://libssh2.org/libssh2_sftp_rename_ex.html)                                                            |
 | [`libssh2_sftp_rewind`](https://libssh2.org/libssh2_sftp_rewind.html)                                                                  |
@@ -299,8 +299,8 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_sftp_stat`](https://libssh2.org/libssh2_sftp_stat.html)                                                                      | `libssh2.lvlib:libssh2_sftp_stat.vi`                  |
 | [`libssh2_sftp_stat_ex`](https://libssh2.org/libssh2_sftp_stat_ex.html)                                                                | `libssh2.lvlib:libssh2_sftp_stat_ex.vi`               |
 | [`libssh2_sftp_statvfs`](https://libssh2.org/libssh2_sftp_statvfs.html)                                                                | `libssh2.lvlib:libssh2_sftp_statvfs.vi`               |
-| [`libssh2_sftp_symlink`](https://libssh2.org/libssh2_sftp_symlink.html)                                                                |
-| [`libssh2_sftp_symlink_ex`](https://libssh2.org/libssh2_sftp_symlink_ex.html)                                                          |
+| [`libssh2_sftp_symlink`](https://libssh2.org/libssh2_sftp_symlink.html)                                                                | `libssh2.lvlib:libssh2_sftp_symlink.vi`               |
+| [`libssh2_sftp_symlink_ex`](https://libssh2.org/libssh2_sftp_symlink_ex.html)                                                          | `libssh2.lvlib:libssh2_sftp_symlink_ex.vi`            |
 | [`libssh2_sftp_tell`](https://libssh2.org/libssh2_sftp_tell.html)                                                                      |
 | [`libssh2_sftp_tell64`](https://libssh2.org/libssh2_sftp_tell64.html)                                                                  |
 | [`libssh2_sftp_unlink`](https://libssh2.org/libssh2_sftp_unlink.html)                                                                  |

@@ -29,6 +29,7 @@
 			<Item Name="sftp_mkdir.vi" Type="VI" URL="../examples/sftp_mkdir.vi"/>
 			<Item Name="sftp_stat.vi" Type="VI" URL="../examples/sftp_stat.vi"/>
 			<Item Name="sftp_statvfs.vi" Type="VI" URL="../examples/sftp_statvfs.vi"/>
+			<Item Name="sftp_symlink.vi" Type="VI" URL="../examples/sftp_symlink.vi"/>
 			<Item Name="sftp_write.vi" Type="VI" URL="../examples/sftp_write.vi"/>
 			<Item Name="sftpdir.vi" Type="VI" URL="../examples/sftpdir.vi"/>
 			<Item Name="ssh2.vi" Type="VI" URL="../examples/ssh2.vi"/>
