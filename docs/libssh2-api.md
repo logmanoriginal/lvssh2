@@ -270,7 +270,7 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_sftp_fstat`](https://libssh2.org/libssh2_sftp_fstat.html)                                                                    | `libssh2.lvlib:libssh2_sftp_fstat.vi`                 |
 | [`libssh2_sftp_fstat_ex`](https://libssh2.org/libssh2_sftp_fstat_ex.html)                                                              | `libssh2.lvlib:libssh2_sftp_fstat_ex.vi`              |
 | [`libssh2_sftp_fstatvfs`](https://libssh2.org/libssh2_sftp_fstatvfs.html)                                                              | `libssh2.lvlib:libssh2_sftp_fstatvfs.vi`              |
-| [`libssh2_sftp_fsync`](https://libssh2.org/libssh2_sftp_fsync.html)                                                                    |
+| [`libssh2_sftp_fsync`](https://libssh2.org/libssh2_sftp_fsync.html)                                                                    | `libssh2.lvlib:libssh2_sftp_fsync.vi`                 |
 | [`libssh2_sftp_get_channel`](https://libssh2.org/libssh2_sftp_get_channel.html)                                                        |
 | [`libssh2_sftp_init`](https://libssh2.org/libssh2_sftp_init.html)                                                                      | `libssh2.lvlib:libssh2_sftp_init.vi`                  |
 | [`libssh2_sftp_last_error`](https://libssh2.org/libssh2_sftp_last_error.html)                                                          | `libssh2.lvlib:libssh2_sftp_last_error.vi`            |
