@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<nidocument>
+<nicomment>
+
+<nifamily familyname="libssh2-sftp" displayname="libssh2-sftp">
+</nifamily>
+</nicomment>
+<nierror code="6000">
+libssh2-sftp: (Hex 0x1770) LIBSSH2_FX_EOF
+</nierror>
+<nierror code="6001">
+libssh2-sftp: (Hex 0x1771) LIBSSH2_FX_NO_SUCH_FILE
+</nierror>
+<nierror code="6002">
+libssh2-sftp: (Hex 0x1772) LIBSSH2_FX_PERMISSION_DENIED
+</nierror>
+<nierror code="6003">
+libssh2-sftp: (Hex 0x1773) LIBSSH2_FX_FAILURE
+</nierror>
+<nierror code="6004">
+libssh2-sftp: (Hex 0x1774) LIBSSH2_FX_BAD_MESSAGE
+</nierror>
+<nierror code="6005">
+libssh2-sftp: (Hex 0x1775) LIBSSH2_FX_NO_CONNECTION
+</nierror>
+<nierror code="6006">
+libssh2-sftp: (Hex 0x1776) LIBSSH2_FX_CONNECTION_LOST
+</nierror>
+<nierror code="6007">
+libssh2-sftp: (Hex 0x1777) LIBSSH2_FX_OP_UNSUPPORTED
+</nierror>
+<nierror code="6008">
+libssh2-sftp: (Hex 0x1778) LIBSSH2_FX_INVALID_HANDLE
+</nierror>
+<nierror code="6009">
+libssh2-sftp: (Hex 0x1779) LIBSSH2_FX_NO_SUCH_PATH
+</nierror>
+<nierror code="6010">
+libssh2-sftp: (Hex 0x177A) LIBSSH2_FX_FILE_ALREADY_EXISTS
+</nierror>
+<nierror code="6011">
+libssh2-sftp: (Hex 0x177B) LIBSSH2_FX_WRITE_PROTECT
+</nierror>
+<nierror code="6012">
+libssh2-sftp: (Hex 0x177C) LIBSSH2_FX_NO_MEDIA
+</nierror>
+<nierror code="6013">
+libssh2-sftp: (Hex 0x177D) LIBSSH2_FX_NO_SPACE_ON_FILESYSTEM
+</nierror>
+<nierror code="6014">
+libssh2-sftp: (Hex 0x177E) LIBSSH2_FX_QUOTA_EXCEEDED
+</nierror>
+<nierror code="6015">
+libssh2-sftp: (Hex 0x177F) LIBSSH2_FX_UNKNOWN_PRINCIPAL
+</nierror>
+<nierror code="6016">
+libssh2-sftp: (Hex 0x1780) LIBSSH2_FX_LOCK_CONFLICT
+</nierror>
+<nierror code="6017">
+libssh2-sftp: (Hex 0x1781) LIBSSH2_FX_DIR_NOT_EMPTY
+</nierror>
+<nierror code="6018">
+libssh2-sftp: (Hex 0x1782) LIBSSH2_FX_NOT_A_DIRECTORY
+</nierror>
+<nierror code="6019">
+libssh2-sftp: (Hex 0x1783) LIBSSH2_FX_INVALID_FILENAME
+</nierror>
+<nierror code="6020">
+libssh2-sftp: (Hex 0x1784) LIBSSH2_FX_LINK_LOOP
+</nierror>
+</nidocument>

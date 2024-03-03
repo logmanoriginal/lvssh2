@@ -247,6 +247,7 @@
 	<Item Name="libssh2_sftp_fstat_ex.vi" Type="VI" URL="../libssh2_sftp_fstat_ex.vi"/>
 	<Item Name="libssh2_sftp_fstatvfs.vi" Type="VI" URL="../libssh2_sftp_fstatvfs.vi"/>
 	<Item Name="libssh2_sftp_init.vi" Type="VI" URL="../libssh2_sftp_init.vi"/>
+	<Item Name="libssh2_sftp_last_error.vi" Type="VI" URL="../libssh2_sftp_last_error.vi"/>
 	<Item Name="libssh2_sftp_lstat.vi" Type="VI" URL="../libssh2_sftp_lstat.vi"/>
 	<Item Name="libssh2_sftp_mkdir.vi" Type="VI" URL="../libssh2_sftp_mkdir.vi"/>
 	<Item Name="libssh2_sftp_open.vi" Type="VI" URL="../libssh2_sftp_open.vi"/>
@@ -271,4 +272,7 @@
 	<Item Name="libssh2_userauth_password.vi" Type="VI" URL="../libssh2_userauth_password.vi"/>
 	<Item Name="libssh2_userauth_password_ex.vi" Type="VI" URL="../libssh2_userauth_password_ex.vi"/>
 	<Item Name="libssh2_version.vi" Type="VI" URL="../libssh2_version.vi"/>
+	<Item Name="SFTP Error Status.vi" Type="VI" URL="../SFTP Error Status.vi">
+		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+	</Item>
 </Library>
