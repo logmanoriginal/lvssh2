@@ -247,6 +247,7 @@
 	<Item Name="libssh2_sftp_fstat_ex.vi" Type="VI" URL="../libssh2_sftp_fstat_ex.vi"/>
 	<Item Name="libssh2_sftp_fstatvfs.vi" Type="VI" URL="../libssh2_sftp_fstatvfs.vi"/>
 	<Item Name="libssh2_sftp_fsync.vi" Type="VI" URL="../libssh2_sftp_fsync.vi"/>
+	<Item Name="libssh2_sftp_get_channel.vi" Type="VI" URL="../libssh2_sftp_get_channel.vi"/>
 	<Item Name="libssh2_sftp_init.vi" Type="VI" URL="../libssh2_sftp_init.vi"/>
 	<Item Name="libssh2_sftp_last_error.vi" Type="VI" URL="../libssh2_sftp_last_error.vi"/>
 	<Item Name="libssh2_sftp_lstat.vi" Type="VI" URL="../libssh2_sftp_lstat.vi"/>
