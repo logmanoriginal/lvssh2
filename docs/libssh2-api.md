@@ -149,7 +149,7 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_agent_init`](https://libssh2.org/libssh2_agent_init.html)                                                                    | `libssh2.lvlib:libssh2_agent_init.vi`                 |
 | [`libssh2_agent_list_identities`](https://libssh2.org/libssh2_agent_list_identities.html)                                              | `libssh2.lvlib:libssh2_agent_list_identities.vi`      |
 | [`libssh2_agent_set_identity_path`](https://libssh2.org/libssh2_agent_set_identity_path.html)                                          | `libssh2.lvlib:libssh2_agent_set_identity_path.vi`    |
-| [`libssh2_agent_sign`](https://github.com/libssh2/libssh2/blob/master/docs/libssh2_agent_sign.3)                                       |
+| [`libssh2_agent_sign`](https://github.com/libssh2/libssh2/blob/master/docs/libssh2_agent_sign.3)                                       | `libssh2.lvlib:libssh2_agent_sign.vi`                 |
 | [`libssh2_agent_userauth`](https://libssh2.org/libssh2_agent_userauth.html)                                                            | `libssh2.lvlib:libssh2_agent_userauth.vi`             |
 | [`libssh2_banner_set`](https://libssh2.org/libssh2_banner_set.html)                                                                    | Deprecated. Use `libssh2_session_banner_set` instead! |
 | [`libssh2_base64_decode`](https://libssh2.org/libssh2_base64_decode.html)                                                              |

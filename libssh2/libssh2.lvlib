@@ -179,6 +179,7 @@
 	<Item Name="libssh2_agent_list_identities.vi" Type="VI" URL="../libssh2_agent_list_identities.vi"/>
 	<Item Name="libssh2_agent_publickey.ctl" Type="VI" URL="../libssh2_agent_publickey.ctl"/>
 	<Item Name="libssh2_agent_set_identity_path.vi" Type="VI" URL="../libssh2_agent_set_identity_path.vi"/>
+	<Item Name="libssh2_agent_sign.vi" Type="VI" URL="../libssh2_agent_sign.vi"/>
 	<Item Name="libssh2_agent_userauth.vi" Type="VI" URL="../libssh2_agent_userauth.vi"/>
 	<Item Name="libssh2_channel_close.vi" Type="VI" URL="../libssh2_channel_close.vi"/>
 	<Item Name="libssh2_channel_direct_tcpip_ex.vi" Type="VI" URL="../libssh2_channel_direct_tcpip_ex.vi"/>
