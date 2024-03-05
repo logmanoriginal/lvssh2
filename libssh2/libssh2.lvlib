@@ -191,6 +191,7 @@
 	<Item Name="libssh2_channel_flush_stderr.vi" Type="VI" URL="../libssh2_channel_flush_stderr.vi"/>
 	<Item Name="libssh2_channel_forward_accept.vi" Type="VI" URL="../libssh2_channel_forward_accept.vi"/>
 	<Item Name="libssh2_channel_forward_cancel.vi" Type="VI" URL="../libssh2_channel_forward_cancel.vi"/>
+	<Item Name="libssh2_channel_forward_listen.vi" Type="VI" URL="../libssh2_channel_forward_listen.vi"/>
 	<Item Name="libssh2_channel_forward_listen_ex.vi" Type="VI" URL="../libssh2_channel_forward_listen_ex.vi"/>
 	<Item Name="libssh2_channel_free.vi" Type="VI" URL="../libssh2_channel_free.vi"/>
 	<Item Name="libssh2_channel_get_exit_signal.vi" Type="VI" URL="../libssh2_channel_get_exit_signal.vi"/>
