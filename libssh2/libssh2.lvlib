@@ -186,7 +186,9 @@
 	<Item Name="libssh2_channel_direct_tcpip_ex.vi" Type="VI" URL="../libssh2_channel_direct_tcpip_ex.vi"/>
 	<Item Name="libssh2_channel_eof.vi" Type="VI" URL="../libssh2_channel_eof.vi"/>
 	<Item Name="libssh2_channel_exec.vi" Type="VI" URL="../libssh2_channel_exec.vi"/>
+	<Item Name="libssh2_channel_flush.vi" Type="VI" URL="../libssh2_channel_flush.vi"/>
 	<Item Name="libssh2_channel_flush_ex.vi" Type="VI" URL="../libssh2_channel_flush_ex.vi"/>
+	<Item Name="libssh2_channel_flush_stderr.vi" Type="VI" URL="../libssh2_channel_flush_stderr.vi"/>
 	<Item Name="libssh2_channel_forward_accept.vi" Type="VI" URL="../libssh2_channel_forward_accept.vi"/>
 	<Item Name="libssh2_channel_forward_cancel.vi" Type="VI" URL="../libssh2_channel_forward_cancel.vi"/>
 	<Item Name="libssh2_channel_forward_listen_ex.vi" Type="VI" URL="../libssh2_channel_forward_listen_ex.vi"/>
