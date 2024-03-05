@@ -152,10 +152,10 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_agent_sign`](https://github.com/libssh2/libssh2/blob/master/docs/libssh2_agent_sign.3)                                       | `libssh2.lvlib:libssh2_agent_sign.vi`                 |
 | [`libssh2_agent_userauth`](https://libssh2.org/libssh2_agent_userauth.html)                                                            | `libssh2.lvlib:libssh2_agent_userauth.vi`             |
 | [`libssh2_banner_set`](https://libssh2.org/libssh2_banner_set.html)                                                                    | Deprecated. Use `libssh2_session_banner_set` instead! |
-| [`libssh2_base64_decode`](https://libssh2.org/libssh2_base64_decode.html)                                                              |
+| [`libssh2_base64_decode`](https://libssh2.org/libssh2_base64_decode.html)                                                              | Deprecated. Use dedicated base64 library instead!     |
 | [`libssh2_channel_close`](https://libssh2.org/libssh2_channel_close.html)                                                              | `libssh2.lvlib:libssh2_channel_close.vi`              |
 | [`libssh2_channel_direct_streamlocal_ex`](https://github.com/libssh2/libssh2/blob/master/docs/libssh2_channel_direct_streamlocal_ex.3) |
-| [`libssh2_channel_direct_tcpip`](https://libssh2.org/libssh2_channel_direct_tcpip.html)                                                |
+| [`libssh2_channel_direct_tcpip`](https://libssh2.org/libssh2_channel_direct_tcpip.html)                                                | `libssh2.lvlib:libssh2_channel_direct_tcpip.vi`       |
 | [`libssh2_channel_direct_tcpip_ex`](https://libssh2.org/libssh2_channel_direct_tcpip_ex.html)                                          | `libssh2.lvlib:libssh2_channel_direct_tcpip_ex.vi`    |
 | [`libssh2_channel_eof`](https://libssh2.org/libssh2_channel_eof.html)                                                                  | `libssh2.lvlib:libssh2_channel_eof.vi`                |
 | [`libssh2_channel_exec`](https://libssh2.org/libssh2_channel_exec.html)                                                                | `libssh2.lvlib:libssh2_channel_exec.vi`               |

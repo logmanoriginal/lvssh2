@@ -182,6 +182,7 @@
 	<Item Name="libssh2_agent_sign.vi" Type="VI" URL="../libssh2_agent_sign.vi"/>
 	<Item Name="libssh2_agent_userauth.vi" Type="VI" URL="../libssh2_agent_userauth.vi"/>
 	<Item Name="libssh2_channel_close.vi" Type="VI" URL="../libssh2_channel_close.vi"/>
+	<Item Name="libssh2_channel_direct_tcpip.vi" Type="VI" URL="../libssh2_channel_direct_tcpip.vi"/>
 	<Item Name="libssh2_channel_direct_tcpip_ex.vi" Type="VI" URL="../libssh2_channel_direct_tcpip_ex.vi"/>
 	<Item Name="libssh2_channel_eof.vi" Type="VI" URL="../libssh2_channel_eof.vi"/>
 	<Item Name="libssh2_channel_exec.vi" Type="VI" URL="../libssh2_channel_exec.vi"/>
