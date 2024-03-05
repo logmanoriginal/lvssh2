@@ -159,12 +159,12 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_channel_direct_tcpip_ex`](https://libssh2.org/libssh2_channel_direct_tcpip_ex.html)                                          | `libssh2.lvlib:libssh2_channel_direct_tcpip_ex.vi`    |
 | [`libssh2_channel_eof`](https://libssh2.org/libssh2_channel_eof.html)                                                                  | `libssh2.lvlib:libssh2_channel_eof.vi`                |
 | [`libssh2_channel_exec`](https://libssh2.org/libssh2_channel_exec.html)                                                                | `libssh2.lvlib:libssh2_channel_exec.vi`               |
-| [`libssh2_channel_flush`](https://libssh2.org/libssh2_channel_flush.html)                                                              | `libssh2.lvlib:libssh2_channel_flush.vi`
+| [`libssh2_channel_flush`](https://libssh2.org/libssh2_channel_flush.html)                                                              | `libssh2.lvlib:libssh2_channel_flush.vi`              |
 | [`libssh2_channel_flush_ex`](https://libssh2.org/libssh2_channel_flush_ex.html)                                                        | `libssh2.lvlib:libssh2_channel_flush_ex.vi`           |
-| [`libssh2_channel_flush_stderr`](https://libssh2.org/libssh2_channel_flush_stderr.html)                                                | `libssh2.lvlib:libssh2_channel_flush_stderr.vi`
+| [`libssh2_channel_flush_stderr`](https://libssh2.org/libssh2_channel_flush_stderr.html)                                                | `libssh2.lvlib:libssh2_channel_flush_stderr.vi`       |
 | [`libssh2_channel_forward_accept`](https://libssh2.org/libssh2_channel_forward_accept.html)                                            | `libssh2.lvlib:libssh2_channel_forward_accept.vi`     |
 | [`libssh2_channel_forward_cancel`](https://libssh2.org/libssh2_channel_forward_cancel.html)                                            | `libssh2.lvlib:libssh2_channel_forward_cancel.vi`     |
-| [`libssh2_channel_forward_listen`](https://libssh2.org/libssh2_channel_forward_listen.html)                                            |
+| [`libssh2_channel_forward_listen`](https://libssh2.org/libssh2_channel_forward_listen.html)                                            | `libssh2.lvlib:libssh2_channel_forward_listen.vi`     |
 | [`libssh2_channel_forward_listen_ex`](https://libssh2.org/libssh2_channel_forward_listen_ex.html)                                      | `libssh2.lvlib:libssh2_channel_forward_listen_ex.vi`  |
 | [`libssh2_channel_free`](https://libssh2.org/libssh2_channel_free.html)                                                                | `libssh2.lvlib:libssh2_channel_free.vi`               |
 | [`libssh2_channel_get_exit_signal`](https://libssh2.org/libssh2_channel_get_exit_signal.html)                                          | `libssh2.lvlib:libssh2_channel_get_exit_signal.vi`    |
