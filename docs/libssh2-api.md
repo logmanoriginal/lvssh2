@@ -200,7 +200,7 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_channel_window_write_ex`](https://libssh2.org/libssh2_channel_window_write_ex.html)                                          | `libssh2.lvlib:libssh2_channel_window_write_ex.vi`    |
 | [`libssh2_channel_write`](https://libssh2.org/libssh2_channel_write.html)                                                              | `libssh2.lvlib:libssh2_channel_write.vi`              |
 | [`libssh2_channel_write_ex`](https://libssh2.org/libssh2_channel_write_ex.html)                                                        | `libssh2.lvlib:libssh2_channel_write_ex.vi`           |
-| [`libssh2_channel_write_stderr`](https://libssh2.org/libssh2_channel_write_stderr.html)                                                |
+| [`libssh2_channel_write_stderr`](https://libssh2.org/libssh2_channel_write_stderr.html)                                                | `libssh2.lvlib:libssh2_channel_write_stderr.vi`       |
 | [`libssh2_channel_x11_req`](https://libssh2.org/libssh2_channel_x11_req.html)                                                          |
 | [`libssh2_channel_x11_req_ex`](https://libssh2.org/libssh2_channel_x11_req_ex.html)                                                    |
 | [`libssh2_crypto_engine`](https://github.com/libssh2/libssh2/blob/master/docs/libssh2_crypto_engine.3)                                 |
