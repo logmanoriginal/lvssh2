@@ -16,6 +16,7 @@
 		<Item Name="examples" Type="Folder">
 			<Item Name="agent_sign.vi" Type="VI" URL="../examples/agent_sign.vi"/>
 			<Item Name="banner.vi" Type="VI" URL="../examples/banner.vi"/>
+			<Item Name="channel_setenv.vi" Type="VI" URL="../examples/channel_setenv.vi"/>
 			<Item Name="debug_trace.vi" Type="VI" URL="../examples/debug_trace.vi"/>
 			<Item Name="direct_tcpip.vi" Type="VI" URL="../examples/direct_tcpip.vi"/>
 			<Item Name="knownhosts.vi" Type="VI" URL="../examples/knownhosts.vi"/>
