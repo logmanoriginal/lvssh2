@@ -160,6 +160,9 @@
 	<Item Name="Utitlity" Type="Folder">
 		<Item Name="From Unix Time.vi" Type="VI" URL="../From Unix Time.vi"/>
 		<Item Name="To Unix Time.vi" Type="VI" URL="../To Unix Time.vi"/>
+		<Item Name="Wait Socket (Socket).vi" Type="VI" URL="../Wait Socket (Socket).vi"/>
+		<Item Name="Wait Socket (TCP).vi" Type="VI" URL="../Wait Socket (TCP).vi"/>
+		<Item Name="Wait Socket.vi" Type="VI" URL="../Wait Socket.vi"/>
 	</Item>
 	<Item Name="Dereference NULL-Terminated String.vi" Type="VI" URL="../Dereference NULL-Terminated String.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
@@ -229,6 +232,8 @@
 	<Item Name="libssh2_method_type.ctl" Type="VI" URL="../libssh2_method_type.ctl"/>
 	<Item Name="libssh2_session_banner_get.vi" Type="VI" URL="../libssh2_session_banner_get.vi"/>
 	<Item Name="libssh2_session_banner_set.vi" Type="VI" URL="../libssh2_session_banner_set.vi"/>
+	<Item Name="libssh2_session_block_direction.ctl" Type="VI" URL="../libssh2_session_block_direction.ctl"/>
+	<Item Name="libssh2_session_block_directions.vi" Type="VI" URL="../libssh2_session_block_directions.vi"/>
 	<Item Name="libssh2_session_disconnect.vi" Type="VI" URL="../libssh2_session_disconnect.vi"/>
 	<Item Name="libssh2_session_disconnect_ex.vi" Type="VI" URL="../libssh2_session_disconnect_ex.vi"/>
 	<Item Name="libssh2_session_flag.vi" Type="VI" URL="../libssh2_session_flag.vi"/>

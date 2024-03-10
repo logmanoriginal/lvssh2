@@ -183,6 +183,9 @@
 			<Item Name="libssh2.dll" Type="Document" URL="../libssh2/libssh2.dll"/>
 			<Item Name="lvssh2_extensions.dll" Type="Document" URL="../libssh2/lvssh2_extensions.dll"/>
 			<Item Name="TRef FinderCallback.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/traverseref.llb/TRef FinderCallback.vi"/>
+			<Item Name="Ws2_32.dll" Type="Document" URL="Ws2_32.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>

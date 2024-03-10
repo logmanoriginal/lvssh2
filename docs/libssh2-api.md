@@ -3,19 +3,19 @@ This is a list of exported libssh2 APIs and their corresponding matches in this 
 
 # Constants
 
-| libssh2                            | lvssh2                                      |
-| ---------------------------------- | ------------------------------------------- |
+| libssh2                            | lvssh2                                              |
+| ---------------------------------- | --------------------------------------------------- |
 | `LIBSSH2_INIT_NO_CRYPTO`           |
-| `LIBSSH2_FLAG_SIGPIPE`             | `libssh2.lvlib:libssh2_flag.ctl`            |
-| `LIBSSH2_FLAG_COMPRESS`            | `libssh2.lvlib:libssh2_flag.ctl`            |
-| `LIBSSH2_FLAG_QUOTE_PATHS`         | `libssh2.lvlib:libssh2_flag.ctl`            |
-| `LIBSSH2_HOSTKEY_HASH_MD5`         | `libssh2.lvlib:Host Key Hash Type.ctl`      |
-| `LIBSSH2_HOSTKEY_HASH_SHA1`        | `libssh2.lvlib:Host Key Hash Type.ctl`      |
-| `LIBSSH2_HOSTKEY_HASH_SHA256`      | `libssh2.lvlib:Host Key Hash Type.ctl`      |
-| `LIBSSH2_KNOWNHOST_CHECK_MATCH`    | `libssh2.lvlib:Known Host Check Result.ctl` |
-| `LIBSSH2_KNOWNHOST_CHECK_MISMATCH` | `libssh2.lvlib:Known Host Check Result.ctl` |
-| `LIBSSH2_KNOWNHOST_CHECK_NOTFOUND` | `libssh2.lvlib:Known Host Check Result.ctl` |
-| `LIBSSH2_KNOWNHOST_CHECK_FAILURE`  | `libssh2.lvlib:Known Host Check Result.ctl` |
+| `LIBSSH2_FLAG_SIGPIPE`             | `libssh2.lvlib:libssh2_flag.ctl`                    |
+| `LIBSSH2_FLAG_COMPRESS`            | `libssh2.lvlib:libssh2_flag.ctl`                    |
+| `LIBSSH2_FLAG_QUOTE_PATHS`         | `libssh2.lvlib:libssh2_flag.ctl`                    |
+| `LIBSSH2_HOSTKEY_HASH_MD5`         | `libssh2.lvlib:Host Key Hash Type.ctl`              |
+| `LIBSSH2_HOSTKEY_HASH_SHA1`        | `libssh2.lvlib:Host Key Hash Type.ctl`              |
+| `LIBSSH2_HOSTKEY_HASH_SHA256`      | `libssh2.lvlib:Host Key Hash Type.ctl`              |
+| `LIBSSH2_KNOWNHOST_CHECK_MATCH`    | `libssh2.lvlib:Known Host Check Result.ctl`         |
+| `LIBSSH2_KNOWNHOST_CHECK_MISMATCH` | `libssh2.lvlib:Known Host Check Result.ctl`         |
+| `LIBSSH2_KNOWNHOST_CHECK_NOTFOUND` | `libssh2.lvlib:Known Host Check Result.ctl`         |
+| `LIBSSH2_KNOWNHOST_CHECK_FAILURE`  | `libssh2.lvlib:Known Host Check Result.ctl`         |
 | `LIBSSH2_KNOWNHOST_TYPE_MASK`      |
 | `LIBSSH2_KNOWNHOST_TYPE_PLAIN`     |
 | `LIBSSH2_KNOWNHOST_TYPE_SHA1`      |
@@ -33,22 +33,24 @@ This is a list of exported libssh2 APIs and their corresponding matches in this 
 | `LIBSSH2_KNOWNHOST_KEY_ECDSA_521`  |
 | `LIBSSH2_KNOWNHOST_KEY_ED25519`    |
 | `LIBSSH2_KNOWNHOST_KEY_UNKNOWN`    |
-| `LIBSSH2_KNOWNHOST_FILE_OPENSSH`   | `libssh2.lvlib:Known Host File Type.ctl`    |
-| `LIBSSH2_METHOD_KEX`               | `libssh2.lvlib:libssh2_method_type.ctl`     |
-| `LIBSSH2_METHOD_HOSTKEY`           | `libssh2.lvlib:libssh2_method_type.ctl`     |
-| `LIBSSH2_METHOD_CRYPT_CS`          | `libssh2.lvlib:libssh2_method_type.ctl`     |
-| `LIBSSH2_METHOD_CRYPT_SC`          | `libssh2.lvlib:libssh2_method_type.ctl`     |
-| `LIBSSH2_METHOD_MAC_CS`            | `libssh2.lvlib:libssh2_method_type.ctl`     |
-| `LIBSSH2_METHOD_MAC_SC`            | `libssh2.lvlib:libssh2_method_type.ctl`     |
-| `LIBSSH2_METHOD_COMP_CS`           | `libssh2.lvlib:libssh2_method_type.ctl`     |
-| `LIBSSH2_METHOD_COMP_SC`           | `libssh2.lvlib:libssh2_method_type.ctl`     |
-| `LIBSSH2_METHOD_LANG_CS`           | `libssh2.lvlib:libssh2_method_type.ctl`     |
-| `LIBSSH2_METHOD_LANG_SC`           | `libssh2.lvlib:libssh2_method_type.ctl`     |
-| `LIBSSH2_METHOD_SIGN_ALGO`         | `libssh2.lvlib:libssh2_method_type.ctl`     |
-| `LIBSSH2_SFTP_STATVFS`             | `libssh2.lvlib:libssh2_sftp_statvfs.ctl`    |
-| `LIBSSH2_SFTP_STAT`                | `libssh2.lvlib:libssh2_sftp_stat_type.ctl`  |
-| `LIBSSH2_SFTP_LSTAT`               | `libssh2.lvlib:libssh2_sftp_stat_type.ctl`  |
-| `LIBSSH2_SFTP_SETSTAT`             | `libssh2.lvlib:libssh2_sftp_stat_type.ctl`  |
+| `LIBSSH2_KNOWNHOST_FILE_OPENSSH`   | `libssh2.lvlib:Known Host File Type.ctl`            |
+| `LIBSSH2_METHOD_KEX`               | `libssh2.lvlib:libssh2_method_type.ctl`             |
+| `LIBSSH2_METHOD_HOSTKEY`           | `libssh2.lvlib:libssh2_method_type.ctl`             |
+| `LIBSSH2_METHOD_CRYPT_CS`          | `libssh2.lvlib:libssh2_method_type.ctl`             |
+| `LIBSSH2_METHOD_CRYPT_SC`          | `libssh2.lvlib:libssh2_method_type.ctl`             |
+| `LIBSSH2_METHOD_MAC_CS`            | `libssh2.lvlib:libssh2_method_type.ctl`             |
+| `LIBSSH2_METHOD_MAC_SC`            | `libssh2.lvlib:libssh2_method_type.ctl`             |
+| `LIBSSH2_METHOD_COMP_CS`           | `libssh2.lvlib:libssh2_method_type.ctl`             |
+| `LIBSSH2_METHOD_COMP_SC`           | `libssh2.lvlib:libssh2_method_type.ctl`             |
+| `LIBSSH2_METHOD_LANG_CS`           | `libssh2.lvlib:libssh2_method_type.ctl`             |
+| `LIBSSH2_METHOD_LANG_SC`           | `libssh2.lvlib:libssh2_method_type.ctl`             |
+| `LIBSSH2_METHOD_SIGN_ALGO`         | `libssh2.lvlib:libssh2_method_type.ctl`             |
+| `LIBSSH2_SESSION_BLOCK_INBOUND`    | `libssh2.lvlib:libssh2_session_block_direction.ctl` |
+| `LIBSSH2_SESSION_BLOCK_OUTBOUND`   | `libssh2.lvlib:libssh2_session_block_direction.ctl` |
+| `LIBSSH2_SFTP_STATVFS`             | `libssh2.lvlib:libssh2_sftp_statvfs.ctl`            |
+| `LIBSSH2_SFTP_STAT`                | `libssh2.lvlib:libssh2_sftp_stat_type.ctl`          |
+| `LIBSSH2_SFTP_LSTAT`               | `libssh2.lvlib:libssh2_sftp_stat_type.ctl`          |
+| `LIBSSH2_SFTP_SETSTAT`             | `libssh2.lvlib:libssh2_sftp_stat_type.ctl`          |
 
 # Standard Error Codes
 Standard error codes are mapped to error range 5000 through 5999 (0x1388 through 0x176F).
@@ -240,7 +242,7 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_session_abstract`][libssh2_session_abstract]                                 |
 | [`libssh2_session_banner_get`][libssh2_session_banner_get]                             | `libssh2.lvlib:libssh2_session_banner_get.vi`         |
 | [`libssh2_session_banner_set`][libssh2_session_banner_set]                             | `libssh2.lvlib:libssh2_session_banner_set.vi`         |
-| [`libssh2_session_block_directions`][libssh2_session_block_directions]                 |
+| [`libssh2_session_block_directions`][libssh2_session_block_directions]                 | `libssh2.lvlib:libssh2_session_block_directions.vi`   |
 | [`libssh2_session_callback_set`][libssh2_session_callback_set]                         |
 | [`libssh2_session_disconnect`][libssh2_session_disconnect]                             | `libssh2.lvlib:libssh2_session_disconnect.vi`         |
 | [`libssh2_session_disconnect_ex`][libssh2_session_disconnect_ex]                       | `libssh2.lvlib:libssh2_session_disconnect_ex.vi`      |
