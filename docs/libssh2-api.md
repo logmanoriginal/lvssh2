@@ -177,7 +177,7 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_channel_process_startup`](https://libssh2.org/libssh2_channel_process_startup.html)                                          | `libssh2.lvlib:libssh2_channel_process_startup.vi`    |
 | [`libssh2_channel_read`](https://libssh2.org/libssh2_channel_read.html)                                                                | `libssh2.lvlib:libssh2_channel_read.vi`               |
 | [`libssh2_channel_read_ex`](https://libssh2.org/libssh2_channel_read_ex.html)                                                          | `libssh2.lvlib:libssh2_channel_read_ex.vi`            |
-| [`libssh2_channel_read_stderr`](https://libssh2.org/libssh2_channel_read_stderr.html)                                                  |
+| [`libssh2_channel_read_stderr`](https://libssh2.org/libssh2_channel_read_stderr.html)                                                  | `libssh2.lvlib:libssh2_channel_read_stderr.vi`        |
 | [`libssh2_channel_receive_window_adjust`](https://libssh2.org/libssh2_channel_receive_window_adjust.html)                              |
 | [`libssh2_channel_receive_window_adjust2`](https://libssh2.org/libssh2_channel_receive_window_adjust2.html)                            |
 | [`libssh2_channel_request_auth_agent`](https://libssh2.org/libssh2_channel_request_auth_agent.html)                                    |
