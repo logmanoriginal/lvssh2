@@ -47,10 +47,8 @@ See [libssh2-api](docs/libssh2-api.md) for API coverage.
 
 Although this project aims to provide complete bindings for libssh2, there are several limitations users need to be aware of:
 
-- When calling `libssh2_channel_read()` and `libssh2_channel_read_ex()`, the buffer length is limited to 2^31-1 bytes (2 GiB) instead of 2^32-1 bytes (4 GiB). The reason for this is that arrays in LabVIEW are limited to 3^31-1 elements. The function must be called in a loop in order to read more data.
-- When calling `libssh2_channel_write()` and `libssh2_channel_write_ex()`, the buffer length is limited to 2^31-1 bytes (2 GiB) instead of 2^32-1 bytes (4 GiB). The reason for this is that arrays in LabVIEW are limited to 2^31-1 elements. The function must be called in a loop in order to write more data.
-
-This project includes an extension library to provide functionality that cannot otherwise be realized in LabVIEW. Callers can specify a conditional disable symbol `LVSSH2_NO_EXTENSIONS=True` to disable the extension library. When this conditional disable symbol is set, then all functions utilizing the extension library will turn into stubs.
+- Buffer sizes are limited to 2^31-1 bytes (2 GiB) instead of 2^32-1 bytes (4 GiB). The reason for this is that arrays and strings in LabVIEW are limited to 2^31-1 elements.
+- This project includes an extension library to provide functionality that cannot otherwise be realized in LabVIEW. Callers can specify a conditional disable symbol `LVSSH2_NO_EXTENSIONS=True` to disable the extension library. When this conditional disable symbol is set, then all functions utilizing the extension library will turn into stubs.
 
 ### Built With
 
