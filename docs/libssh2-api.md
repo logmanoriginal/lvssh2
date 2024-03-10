@@ -205,7 +205,7 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_channel_x11_req_ex`](https://libssh2.org/libssh2_channel_x11_req_ex.html)                                                    |
 | [`libssh2_crypto_engine`](https://github.com/libssh2/libssh2/blob/master/docs/libssh2_crypto_engine.3)                                 |
 | [`libssh2_exit`](https://libssh2.org/libssh2_exit.html)                                                                                | `libssh2.lvlib:libssh2_exit.vi`                       |
-| [`libssh2_free`](https://libssh2.org/libssh2_free.html)                                                                                |
+| [`libssh2_free`](https://libssh2.org/libssh2_free.html)                                                                                | `libssh2.lvlib:libssh2_free.vi`                       |
 | [`libssh2_hostkey_hash`](https://libssh2.org/libssh2_hostkey_hash.html)                                                                | `libssh2.lvlib:libssh2_hostkey_hash.vi`               |
 | [`libssh2_init`](https://libssh2.org/libssh2_init.html)                                                                                | `libssh2.lvlib:libssh2_init.vi`                       |
 | [`libssh2_keepalive_config`](https://libssh2.org/libssh2_keepalive_config.html)                                                        |
@@ -262,7 +262,7 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_session_set_read_timeout`](https://github.com/libssh2/libssh2/blob/master/docs/libssh2_session_set_read_timeout.3)           | `libssh2.lvlib:libssh2_session_set_read_timeout.vi`   |
 | [`libssh2_session_set_timeout`](https://libssh2.org/libssh2_session_set_timeout.html)                                                  | `libssh2.lvlib:libssh2_session_set_timeout.vi`        |
 | [`libssh2_session_startup`](https://libssh2.org/libssh2_session_startup.html)                                                          |
-| [`libssh2_session_supported_algs`](https://libssh2.org/libssh2_session_supported_algs.html)                                            |
+| [`libssh2_session_supported_algs`](https://libssh2.org/libssh2_session_supported_algs.html)                                            | `libssh2.lvlib:libssh2_session_supported_algs`        |
 | [`libssh2_sftp_close`](https://libssh2.org/libssh2_sftp_close.html)                                                                    | `libssh2.lvlib:libssh2_sftp_close.vi`                 |
 | [`libssh2_sftp_close_handle`](https://libssh2.org/libssh2_sftp_close_handle.html)                                                      | `libssh2.lvlib:libssh2_sftp_close_handle.vi`          |
 | [`libssh2_sftp_closedir`](https://libssh2.org/libssh2_sftp_closedir.html)                                                              | `libssh2.lvlib:libssh2_sftp_closedir.vi`              |
