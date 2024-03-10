@@ -261,7 +261,7 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_session_set_last_error`][libssh2_session_set_last_error]                     | `libssh2.lvlib:libssh2_session_set_last_error.vi`     |
 | [`libssh2_session_set_read_timeout`][libssh2_session_set_read_timeout]                 | `libssh2.lvlib:libssh2_session_set_read_timeout.vi`   |
 | [`libssh2_session_set_timeout`][libssh2_session_set_timeout]                           | `libssh2.lvlib:libssh2_session_set_timeout.vi`        |
-| [`libssh2_session_startup`][libssh2_session_startup]                                   |                                                       |
+| [`libssh2_session_startup`][libssh2_session_startup]                                   | Deprecated. Use `libssh2_session_handshake` instead!  |
 | [`libssh2_session_supported_algs`][libssh2_session_supported_algs]                     | `libssh2.lvlib:libssh2_session_supported_algs`        |
 | [`libssh2_sftp_close`][libssh2_sftp_close]                                             | `libssh2.lvlib:libssh2_sftp_close.vi`                 |
 | [`libssh2_sftp_close_handle`][libssh2_sftp_close_handle]                               | `libssh2.lvlib:libssh2_sftp_close_handle.vi`          |
