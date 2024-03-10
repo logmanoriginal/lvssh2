@@ -20,6 +20,7 @@
 			<Item Name="debug_trace.vi" Type="VI" URL="../examples/debug_trace.vi"/>
 			<Item Name="direct_tcpip.vi" Type="VI" URL="../examples/direct_tcpip.vi"/>
 			<Item Name="knownhosts.vi" Type="VI" URL="../examples/knownhosts.vi"/>
+			<Item Name="libssh2_info.vi" Type="VI" URL="../examples/libssh2_info.vi"/>
 			<Item Name="session_compression.vi" Type="VI" URL="../examples/session_compression.vi"/>
 			<Item Name="session_error.vi" Type="VI" URL="../examples/session_error.vi"/>
 			<Item Name="session_methods.vi" Type="VI" URL="../examples/session_methods.vi"/>

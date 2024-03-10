@@ -210,6 +210,8 @@
 	<Item Name="libssh2_channel_write.vi" Type="VI" URL="../libssh2_channel_write.vi"/>
 	<Item Name="libssh2_channel_write_ex.vi" Type="VI" URL="../libssh2_channel_write_ex.vi"/>
 	<Item Name="libssh2_channel_write_stderr.vi" Type="VI" URL="../libssh2_channel_write_stderr.vi"/>
+	<Item Name="libssh2_crypto_engine.ctl" Type="VI" URL="../libssh2_crypto_engine.ctl"/>
+	<Item Name="libssh2_crypto_engine.vi" Type="VI" URL="../libssh2_crypto_engine.vi"/>
 	<Item Name="libssh2_exit.vi" Type="VI" URL="../libssh2_exit.vi"/>
 	<Item Name="libssh2_flag.ctl" Type="VI" URL="../libssh2_flag.ctl"/>
 	<Item Name="libssh2_free.vi" Type="VI" URL="../libssh2_free.vi"/>
