@@ -194,9 +194,9 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_channel_subsystem`](https://libssh2.org/libssh2_channel_subsystem.html)                                                      |
 | [`libssh2_channel_wait_closed`](https://libssh2.org/libssh2_channel_wait_closed.html)                                                  |
 | [`libssh2_channel_wait_eof`](https://libssh2.org/libssh2_channel_wait_eof.html)                                                        |
-| [`libssh2_channel_window_read`](https://libssh2.org/libssh2_channel_window_read.html)                                                  |
+| [`libssh2_channel_window_read`](https://libssh2.org/libssh2_channel_window_read.html)                                                  | See `libssh2_channel_window_read_ex`                  |
 | [`libssh2_channel_window_read_ex`](https://libssh2.org/libssh2_channel_window_read_ex.html)                                            | `libssh2.lvlib:libssh2_channel_window_read_ex.vi`     |
-| [`libssh2_channel_window_write`](https://libssh2.org/libssh2_channel_window_write.html)                                                |
+| [`libssh2_channel_window_write`](https://libssh2.org/libssh2_channel_window_write.html)                                                | See `libssh2_channel_window_write_ex`                 |
 | [`libssh2_channel_window_write_ex`](https://libssh2.org/libssh2_channel_window_write_ex.html)                                          | `libssh2.lvlib:libssh2_channel_window_write_ex.vi`    |
 | [`libssh2_channel_write`](https://libssh2.org/libssh2_channel_write.html)                                                              | `libssh2.lvlib:libssh2_channel_write.vi`              |
 | [`libssh2_channel_write_ex`](https://libssh2.org/libssh2_channel_write_ex.html)                                                        | `libssh2.lvlib:libssh2_channel_write_ex.vi`           |
