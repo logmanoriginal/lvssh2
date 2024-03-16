@@ -21,6 +21,8 @@
 			<Item Name="direct_tcpip.vi" Type="VI" URL="../examples/direct_tcpip.vi"/>
 			<Item Name="knownhosts.vi" Type="VI" URL="../examples/knownhosts.vi"/>
 			<Item Name="libssh2_info.vi" Type="VI" URL="../examples/libssh2_info.vi"/>
+			<Item Name="session_callback.vi" Type="VI" URL="../examples/session_callback.vi"/>
+			<Item Name="session_callback_send_function.vi" Type="VI" URL="../examples/session_callback_send_function.vi"/>
 			<Item Name="session_compression.vi" Type="VI" URL="../examples/session_compression.vi"/>
 			<Item Name="session_error.vi" Type="VI" URL="../examples/session_error.vi"/>
 			<Item Name="session_methods.vi" Type="VI" URL="../examples/session_methods.vi"/>
@@ -118,6 +120,7 @@
 				<Item Name="Error Code Database.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Code Database.vi"/>
 				<Item Name="ErrWarn.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/ErrWarn.ctl"/>
 				<Item Name="Escape Characters for HTTP.vi" Type="VI" URL="/&lt;vilib&gt;/printing/PathToURL.llb/Escape Characters for HTTP.vi"/>
+				<Item Name="eventsource.ctl" Type="VI" URL="/&lt;vilib&gt;/event_ctls.llb/eventsource.ctl"/>
 				<Item Name="eventvkey.ctl" Type="VI" URL="/&lt;vilib&gt;/event_ctls.llb/eventvkey.ctl"/>
 				<Item Name="ex_CorrectErrorChain.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_CorrectErrorChain.vi"/>
 				<Item Name="Find Tag.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Find Tag.vi"/>

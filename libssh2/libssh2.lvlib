@@ -23,6 +23,21 @@
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 	</Item>
+	<Item Name="Callback" Type="Folder">
+		<Item Name="lvssh2_abstract.ctl" Type="VI" URL="../lvssh2_abstract.ctl">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="lvssh2_abstract_init.vi" Type="VI" URL="../lvssh2_abstract_init.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="lvssh2_session_callback_send_32.vi" Type="VI" URL="../lvssh2_session_callback_send_32.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="lvssh2_session_callback_send_function.vit" Type="VI" URL="../lvssh2_session_callback_send_function.vit"/>
+		<Item Name="lvssh2_session_callback_send_function_input_args_32.ctl" Type="VI" URL="../lvssh2_session_callback_send_function_input_args_32.ctl">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+	</Item>
 	<Item Name="Channel" Type="Folder">
 		<Item Name="Channel Refnum.ctl" Type="VI" URL="../Channel Refnum.ctl"/>
 		<Item Name="Create Channel Refnum.vi" Type="VI" URL="../Create Channel Refnum.vi">
@@ -234,6 +249,8 @@
 	<Item Name="libssh2_session_banner_set.vi" Type="VI" URL="../libssh2_session_banner_set.vi"/>
 	<Item Name="libssh2_session_block_direction.ctl" Type="VI" URL="../libssh2_session_block_direction.ctl"/>
 	<Item Name="libssh2_session_block_directions.vi" Type="VI" URL="../libssh2_session_block_directions.vi"/>
+	<Item Name="libssh2_session_callback_set.vi" Type="VI" URL="../libssh2_session_callback_set.vi"/>
+	<Item Name="libssh2_session_callback_type.ctl" Type="VI" URL="../libssh2_session_callback_type.ctl"/>
 	<Item Name="libssh2_session_disconnect.vi" Type="VI" URL="../libssh2_session_disconnect.vi"/>
 	<Item Name="libssh2_session_disconnect_ex.vi" Type="VI" URL="../libssh2_session_disconnect_ex.vi"/>
 	<Item Name="libssh2_session_flag.vi" Type="VI" URL="../libssh2_session_flag.vi"/>
