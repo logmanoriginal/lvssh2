@@ -22,7 +22,8 @@
 			<Item Name="knownhosts.vi" Type="VI" URL="../examples/knownhosts.vi"/>
 			<Item Name="libssh2_info.vi" Type="VI" URL="../examples/libssh2_info.vi"/>
 			<Item Name="session_callback.vi" Type="VI" URL="../examples/session_callback.vi"/>
-			<Item Name="session_callback_send_function.vi" Type="VI" URL="../examples/session_callback_send_function.vi"/>
+			<Item Name="session_callback_receive.vi" Type="VI" URL="../examples/session_callback_receive.vi"/>
+			<Item Name="session_callback_send.vi" Type="VI" URL="../examples/session_callback_send.vi"/>
 			<Item Name="session_compression.vi" Type="VI" URL="../examples/session_compression.vi"/>
 			<Item Name="session_error.vi" Type="VI" URL="../examples/session_error.vi"/>
 			<Item Name="session_methods.vi" Type="VI" URL="../examples/session_methods.vi"/>
