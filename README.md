@@ -56,6 +56,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
 ### Built With
 
 * [LabVIEW&trade;](https://www.ni.com/labview)
+* [Visual Studio](https://visualstudio.microsoft.com)
 
 ## Getting Started
 
@@ -64,6 +65,7 @@ To get a local copy up and running follow these simple steps.
 ### Prerequisites
 
 * LabVIEW&trade; 2013 or later
+* Visual Studio 2022 or later (for building the extension library)
 * VI Package Manager
 
 ### Installation
@@ -104,6 +106,9 @@ Keep in mind that LabVIEW&trade; VIs are binary files, which are difficult to me
 - Only change a single VI or library.
 - Avoid conflicts with other pull requests (don't work on the same libraries or VIs).
 - Send VI Snippets (via issues) instead of pull requests when possible.
+
+> [!NOTE]
+> This project contains C++ code that is compiled into a shared library (see [extensions](/extensions/)). If you are familiar with C++ and want to contribute to the project, please consider contributing to the C++ code as well.
 
 ## License
 
