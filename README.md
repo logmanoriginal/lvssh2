@@ -45,6 +45,9 @@ See [libssh2-api](docs/libssh2-api.md) for API coverage.
 
 ### Limitations
 
+> [!WARNING]
+> Support for LabVIEW 64-bit is experimental and incomplete.
+
 Although this project aims to provide complete bindings for libssh2, there are several limitations users need to be aware of:
 
 - Buffer sizes are limited to 2^31-1 bytes (2 GiB) instead of 2^32-1 bytes (4 GiB). The reason for this is that arrays and strings in LabVIEW are limited to 2^31-1 elements.
