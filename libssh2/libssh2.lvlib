@@ -253,6 +253,7 @@
 	<Item Name="libssh2_knownhost_readfile.vi" Type="VI" URL="../libssh2_knownhost_readfile.vi"/>
 	<Item Name="libssh2_knownhost_writefile.vi" Type="VI" URL="../libssh2_knownhost_writefile.vi"/>
 	<Item Name="libssh2_method_type.ctl" Type="VI" URL="../libssh2_method_type.ctl"/>
+	<Item Name="libssh2_session_abstract.ctl" Type="VI" URL="../libssh2_session_abstract.ctl"/>
 	<Item Name="libssh2_session_banner_get.vi" Type="VI" URL="../libssh2_session_banner_get.vi"/>
 	<Item Name="libssh2_session_banner_set.vi" Type="VI" URL="../libssh2_session_banner_set.vi"/>
 	<Item Name="libssh2_session_block_direction.ctl" Type="VI" URL="../libssh2_session_block_direction.ctl"/>
