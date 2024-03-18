@@ -24,10 +24,10 @@
 		</Item>
 	</Item>
 	<Item Name="Callback" Type="Folder">
-		<Item Name="lvssh2_abstract.ctl" Type="VI" URL="../lvssh2_abstract.ctl">
+		<Item Name="lvssh2_session_callback_events.ctl" Type="VI" URL="../lvssh2_session_callback_events.ctl">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
-		<Item Name="lvssh2_abstract_init.vi" Type="VI" URL="../lvssh2_abstract_init.vi">
+		<Item Name="lvssh2_session_callback_events_init.vi" Type="VI" URL="../lvssh2_session_callback_events_init.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 		<Item Name="lvssh2_session_callback_get_function.vi" Type="VI" URL="../lvssh2_session_callback_get_function.vi"/>
@@ -254,6 +254,7 @@
 	<Item Name="libssh2_knownhost_writefile.vi" Type="VI" URL="../libssh2_knownhost_writefile.vi"/>
 	<Item Name="libssh2_method_type.ctl" Type="VI" URL="../libssh2_method_type.ctl"/>
 	<Item Name="libssh2_session_abstract.ctl" Type="VI" URL="../libssh2_session_abstract.ctl"/>
+	<Item Name="libssh2_session_abstract.vi" Type="VI" URL="../libssh2_session_abstract.vi"/>
 	<Item Name="libssh2_session_banner_get.vi" Type="VI" URL="../libssh2_session_banner_get.vi"/>
 	<Item Name="libssh2_session_banner_set.vi" Type="VI" URL="../libssh2_session_banner_set.vi"/>
 	<Item Name="libssh2_session_block_direction.ctl" Type="VI" URL="../libssh2_session_block_direction.ctl"/>

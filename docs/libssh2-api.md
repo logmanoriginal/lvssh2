@@ -249,7 +249,7 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_scp_send`][libssh2_scp_send]                                                 |
 | [`libssh2_scp_send64`][libssh2_scp_send64]                                             |
 | [`libssh2_scp_send_ex`][libssh2_scp_send_ex]                                           |
-| [`libssh2_session_abstract`][libssh2_session_abstract]                                 |
+| [`libssh2_session_abstract`][libssh2_session_abstract]                                 | `libssh2.lvlib:libssh2_session_abstract.vi`           |
 | [`libssh2_session_banner_get`][libssh2_session_banner_get]                             | `libssh2.lvlib:libssh2_session_banner_get.vi`         |
 | [`libssh2_session_banner_set`][libssh2_session_banner_set]                             | `libssh2.lvlib:libssh2_session_banner_set.vi`         |
 | [`libssh2_session_block_directions`][libssh2_session_block_directions]                 | `libssh2.lvlib:libssh2_session_block_directions.vi`   |
