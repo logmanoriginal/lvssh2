@@ -301,7 +301,7 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_sftp_realpath`][libssh2_sftp_realpath]                                       | `libssh2.lvlib:libssh2_sftp_realpath.vi`              |
 | [`libssh2_sftp_rename`][libssh2_sftp_rename]                                           | `libssh2.lvlib:libssh2_sftp_rename.vi`                |
 | [`libssh2_sftp_rename_ex`][libssh2_sftp_rename_ex]                                     | `libssh2.lvlib:libssh2_sftp_rename_ex.vi`             |
-| [`libssh2_sftp_rewind`][libssh2_sftp_rewind]                                           |
+| [`libssh2_sftp_rewind`][libssh2_sftp_rewind]                                           | `libssh2.lvlib:libssh2_sftp_rewind.vi`                |
 | [`libssh2_sftp_rmdir`][libssh2_sftp_rmdir]                                             | See `libssh2_sftp_rmdir_ex`                           |
 | [`libssh2_sftp_rmdir_ex`][libssh2_sftp_rmdir_ex]                                       | `libssh2.lvlib:libssh2_sftp_rmdir_ex.vi`              |
 | [`libssh2_sftp_seek`][libssh2_sftp_seek]                                               | Deprecated. Use `libssh2_sftp_seek64` instead!        |
