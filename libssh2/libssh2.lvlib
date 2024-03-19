@@ -299,6 +299,8 @@
 	<Item Name="libssh2_sftp_mkdir.vi" Type="VI" URL="../libssh2_sftp_mkdir.vi"/>
 	<Item Name="libssh2_sftp_open.vi" Type="VI" URL="../libssh2_sftp_open.vi"/>
 	<Item Name="libssh2_sftp_open_ex.vi" Type="VI" URL="../libssh2_sftp_open_ex.vi"/>
+	<Item Name="libssh2_sftp_open_ex_r.vi" Type="VI" URL="../libssh2_sftp_open_ex_r.vi"/>
+	<Item Name="libssh2_sftp_open_r.vi" Type="VI" URL="../libssh2_sftp_open_r.vi"/>
 	<Item Name="libssh2_sftp_opendir.vi" Type="VI" URL="../libssh2_sftp_opendir.vi"/>
 	<Item Name="libssh2_sftp_read.vi" Type="VI" URL="../libssh2_sftp_read.vi"/>
 	<Item Name="libssh2_sftp_readdir.vi" Type="VI" URL="../libssh2_sftp_readdir.vi"/>
