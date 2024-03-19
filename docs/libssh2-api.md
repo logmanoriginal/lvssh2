@@ -287,8 +287,8 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_sftp_init`][libssh2_sftp_init]                                               | `libssh2.lvlib:libssh2_sftp_init.vi`                  |
 | [`libssh2_sftp_last_error`][libssh2_sftp_last_error]                                   | `libssh2.lvlib:libssh2_sftp_last_error.vi`            |
 | [`libssh2_sftp_lstat`][libssh2_sftp_lstat]                                             | `libssh2.lvlib:libssh2_sftp_lstat.vi`                 |
-| [`libssh2_sftp_mkdir`][libssh2_sftp_mkdir]                                             | `libssh2.lvlib:libssh2_sftp_mkdir.vi`                 |
-| [`libssh2_sftp_mkdir_ex`][libssh2_sftp_mkdir_ex]                                       | `libssh2.lvlib:libssh2_sftp_mkdir.vi`                 |
+| [`libssh2_sftp_mkdir`][libssh2_sftp_mkdir]                                             | See `libssh2_sftp_mkdir_ex`                           |
+| [`libssh2_sftp_mkdir_ex`][libssh2_sftp_mkdir_ex]                                       | `libssh2.lvlib:libssh2_sftp_mkdir_ex.vi`              |
 | [`libssh2_sftp_open`][libssh2_sftp_open]                                               | `libssh2.lvlib:libssh2_sftp_open.vi`                  |
 | [`libssh2_sftp_open_ex`][libssh2_sftp_open_ex]                                         | `libssh2.lvlib:libssh2_sftp_open_ex.vi`               |
 | [`libssh2_sftp_open_ex_r`][libssh2_sftp_open_ex_r]                                     | `libssh2.lvlib:libssh2_sftp_open_ex_r.vi`             |
@@ -302,8 +302,8 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_sftp_rename`][libssh2_sftp_rename]                                           | `libssh2.lvlib:libssh2_sftp_rename.vi`                |
 | [`libssh2_sftp_rename_ex`][libssh2_sftp_rename_ex]                                     | `libssh2.lvlib:libssh2_sftp_rename_ex.vi`             |
 | [`libssh2_sftp_rewind`][libssh2_sftp_rewind]                                           |
-| [`libssh2_sftp_rmdir`][libssh2_sftp_rmdir]                                             |
-| [`libssh2_sftp_rmdir_ex`][libssh2_sftp_rmdir_ex]                                       |
+| [`libssh2_sftp_rmdir`][libssh2_sftp_rmdir]                                             | See `libssh2_sftp_rmdir_ex`                           |
+| [`libssh2_sftp_rmdir_ex`][libssh2_sftp_rmdir_ex]                                       | `libssh2.lvlib:libssh2_sftp_rmdir_ex.vi`              |
 | [`libssh2_sftp_seek`][libssh2_sftp_seek]                                               | Deprecated. Use `libssh2_sftp_seek64` instead!        |
 | [`libssh2_sftp_seek64`][libssh2_sftp_seek64]                                           | `libssh2.lvlib:libssh2_sftp_seek64.vi`                |
 | [`libssh2_sftp_setstat`][libssh2_sftp_setstat]                                         | `libssh2.lvlib:libssh2_sftp_setstat.vi`               |

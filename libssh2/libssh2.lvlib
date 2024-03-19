@@ -296,7 +296,7 @@
 	<Item Name="libssh2_sftp_init.vi" Type="VI" URL="../libssh2_sftp_init.vi"/>
 	<Item Name="libssh2_sftp_last_error.vi" Type="VI" URL="../libssh2_sftp_last_error.vi"/>
 	<Item Name="libssh2_sftp_lstat.vi" Type="VI" URL="../libssh2_sftp_lstat.vi"/>
-	<Item Name="libssh2_sftp_mkdir.vi" Type="VI" URL="../libssh2_sftp_mkdir.vi"/>
+	<Item Name="libssh2_sftp_mkdir_ex.vi" Type="VI" URL="../libssh2_sftp_mkdir_ex.vi"/>
 	<Item Name="libssh2_sftp_open.vi" Type="VI" URL="../libssh2_sftp_open.vi"/>
 	<Item Name="libssh2_sftp_open_ex.vi" Type="VI" URL="../libssh2_sftp_open_ex.vi"/>
 	<Item Name="libssh2_sftp_open_ex_r.vi" Type="VI" URL="../libssh2_sftp_open_ex_r.vi"/>
@@ -309,6 +309,7 @@
 	<Item Name="libssh2_sftp_realpath.vi" Type="VI" URL="../libssh2_sftp_realpath.vi"/>
 	<Item Name="libssh2_sftp_rename.vi" Type="VI" URL="../libssh2_sftp_rename.vi"/>
 	<Item Name="libssh2_sftp_rename_ex.vi" Type="VI" URL="../libssh2_sftp_rename_ex.vi"/>
+	<Item Name="libssh2_sftp_rmdir_ex.vi" Type="VI" URL="../libssh2_sftp_rmdir_ex.vi"/>
 	<Item Name="libssh2_sftp_seek64.vi" Type="VI" URL="../libssh2_sftp_seek64.vi"/>
 	<Item Name="libssh2_sftp_setstat.vi" Type="VI" URL="../libssh2_sftp_setstat.vi"/>
 	<Item Name="libssh2_sftp_shutdown.vi" Type="VI" URL="../libssh2_sftp_shutdown.vi"/>

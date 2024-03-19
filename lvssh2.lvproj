@@ -47,6 +47,7 @@
 		</Item>
 		<Item Name="libssh2.lvlib" Type="Library" URL="../libssh2/libssh2.lvlib"/>
 		<Item Name="libssh2_tests.lvlib" Type="Library" URL="../tests/libssh2_tests/libssh2_tests.lvlib"/>
+		<Item Name="sftp_rmdir.vi" Type="VI" URL="../examples/sftp_rmdir.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="96D64E02C3F47849182DC8639B93F2ADArray Size(s)__ogtk.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/_Caraya_internal_deps/96D64E02C3F47849182DC8639B93F2ADArray Size(s)__ogtk.vi"/>
