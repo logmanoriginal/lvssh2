@@ -33,6 +33,7 @@
 			<Item Name="sftp_error.vi" Type="VI" URL="../examples/sftp_error.vi"/>
 			<Item Name="sftp_fstat.vi" Type="VI" URL="../examples/sftp_fstat.vi"/>
 			<Item Name="sftp_mkdir.vi" Type="VI" URL="../examples/sftp_mkdir.vi"/>
+			<Item Name="sftp_rename.vi" Type="VI" URL="../examples/sftp_rename.vi"/>
 			<Item Name="sftp_stat.vi" Type="VI" URL="../examples/sftp_stat.vi"/>
 			<Item Name="sftp_statvfs.vi" Type="VI" URL="../examples/sftp_statvfs.vi"/>
 			<Item Name="sftp_symlink.vi" Type="VI" URL="../examples/sftp_symlink.vi"/>
