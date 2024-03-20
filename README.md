@@ -48,9 +48,13 @@ See [libssh2-api](docs/libssh2-api.md) for API coverage.
 > [!WARNING]
 > Support for LabVIEW 64-bit is experimental and incomplete.
 
+> [!NOTE]
+> There is currently no built-in support for Linux and macOS.
+> Users need to build the libssh2 shared library for these platforms themselves.
+
 Although this project aims to provide complete bindings for libssh2, there are several limitations users need to be aware of:
 
-- Buffer sizes are limited to 2^31-1 bytes (2 GiB) instead of 2^32-1 bytes (4 GiB). The reason for this is that arrays and strings in LabVIEW are limited to 2^31-1 elements.
+- Buffer sizes are limited to 2^31-1 bytes (2 GiB) instead of 2^32-1 bytes (4 GiB). The reason for this is that arrays and strings in LabVIEW are limited to 2^31-1 elements. Additional limits may apply due to memory copies when calling external functions.
 - This project includes an extension library to provide functionality that cannot otherwise be realized in LabVIEW. Callers can specify a conditional disable symbol `LVSSH2_NO_EXTENSIONS=True` to disable the extension library. When this conditional disable symbol is set, then all functions utilizing the extension library will turn into stubs.
 
 ### Built With
