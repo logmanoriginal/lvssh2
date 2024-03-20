@@ -315,8 +315,8 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_sftp_symlink_ex`][libssh2_sftp_symlink_ex]                                   | `libssh2.lvlib:libssh2_sftp_symlink_ex.vi`            |
 | [`libssh2_sftp_tell`][libssh2_sftp_tell]                                               | Deprecated. Use `libssh2_sftp_tell64` instead!        |
 | [`libssh2_sftp_tell64`][libssh2_sftp_tell64]                                           | `libssh2.lvlib:libssh2_sftp_tell64.vi`                |
-| [`libssh2_sftp_unlink`][libssh2_sftp_unlink]                                           |                                                       |
-| [`libssh2_sftp_unlink_ex`][libssh2_sftp_unlink_ex]                                     |                                                       |
+| [`libssh2_sftp_unlink`][libssh2_sftp_unlink]                                           | See `libssh2_sftp_unlink_ex`                          |
+| [`libssh2_sftp_unlink_ex`][libssh2_sftp_unlink_ex]                                     | `libssh2.lvlib:libssh2_sftp_unlink_ex.vi`             |
 | [`libssh2_sftp_write`][libssh2_sftp_write]                                             | `libssh2.lvlib:libssh2_sftp_write.vi`                 |
 | [`libssh2_sign_sk`][libssh2_sign_sk]                                                   |                                                       |
 | [`libssh2_trace`][libssh2_trace]                                                       | `libssh2.lvlib:libssh2_trace.vi`                      |

@@ -34,9 +34,11 @@
 			<Item Name="sftp_fstat.vi" Type="VI" URL="../examples/sftp_fstat.vi"/>
 			<Item Name="sftp_mkdir.vi" Type="VI" URL="../examples/sftp_mkdir.vi"/>
 			<Item Name="sftp_rename.vi" Type="VI" URL="../examples/sftp_rename.vi"/>
+			<Item Name="sftp_rmdir.vi" Type="VI" URL="../examples/sftp_rmdir.vi"/>
 			<Item Name="sftp_stat.vi" Type="VI" URL="../examples/sftp_stat.vi"/>
 			<Item Name="sftp_statvfs.vi" Type="VI" URL="../examples/sftp_statvfs.vi"/>
 			<Item Name="sftp_symlink.vi" Type="VI" URL="../examples/sftp_symlink.vi"/>
+			<Item Name="sftp_unlink.vi" Type="VI" URL="../examples/sftp_unlink.vi"/>
 			<Item Name="sftp_write.vi" Type="VI" URL="../examples/sftp_write.vi"/>
 			<Item Name="sftpdir.vi" Type="VI" URL="../examples/sftpdir.vi"/>
 			<Item Name="ssh2.vi" Type="VI" URL="../examples/ssh2.vi"/>
@@ -47,7 +49,6 @@
 		</Item>
 		<Item Name="libssh2.lvlib" Type="Library" URL="../libssh2/libssh2.lvlib"/>
 		<Item Name="libssh2_tests.lvlib" Type="Library" URL="../tests/libssh2_tests/libssh2_tests.lvlib"/>
-		<Item Name="sftp_rmdir.vi" Type="VI" URL="../examples/sftp_rmdir.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="96D64E02C3F47849182DC8639B93F2ADArray Size(s)__ogtk.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/_Caraya_internal_deps/96D64E02C3F47849182DC8639B93F2ADArray Size(s)__ogtk.vi"/>

@@ -323,6 +323,7 @@
 	<Item Name="libssh2_sftp_symlink_ex.vi" Type="VI" URL="../libssh2_sftp_symlink_ex.vi"/>
 	<Item Name="libssh2_sftp_symlink_type.ctl" Type="VI" URL="../libssh2_sftp_symlink_type.ctl"/>
 	<Item Name="libssh2_sftp_tell64.vi" Type="VI" URL="../libssh2_sftp_tell64.vi"/>
+	<Item Name="libssh2_sftp_unlink_ex.vi" Type="VI" URL="../libssh2_sftp_unlink_ex.vi"/>
 	<Item Name="libssh2_sftp_write.vi" Type="VI" URL="../libssh2_sftp_write.vi"/>
 	<Item Name="libssh2_trace.vi" Type="VI" URL="../libssh2_trace.vi"/>
 	<Item Name="libssh2_trace_sethandler.vi" Type="VI" URL="../libssh2_trace_sethandler.vi"/>
