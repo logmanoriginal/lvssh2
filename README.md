@@ -57,6 +57,14 @@ Although this project aims to provide complete bindings for libssh2, there are s
 - Buffer sizes are limited to 2^31-1 bytes (2 GiB) instead of 2^32-1 bytes (4 GiB). The reason for this is that arrays and strings in LabVIEW are limited to 2^31-1 elements. Additional limits may apply due to memory copies when calling external functions.
 - This project includes an extension library to provide functionality that cannot otherwise be realized in LabVIEW. Callers can specify a conditional disable symbol `LVSSH2_NO_EXTENSIONS=True` to disable the extension library. When this conditional disable symbol is set, then all functions utilizing the extension library will turn into stubs.
 
+### Design Decisions
+
+- **Error Handling**: This project uses the LabVIEW error handling mechanism. All functions return an error cluster that corresponds to a libssh2 error code (see [lvssh2-errors.txt](/lvssh2-errors.txt) and [lvssh2-sftp-errors.txt](/lvssh2-sftp-errors.txt)). See [libssh2-api](docs/libssh2-api.md) for a complete overview of error codes and how they are defined.
+- **Length Parameters for String and Array types**: All functions that take a string or array type as an input parameter do not expose a separate length parameter. Instead, the length of the string or array is determined by the type itself. Because of this, some of the libssh2 convenience functions are not included. For example, `libssh2_channel_window_write` is not included because it would be equivalent to `libssh2_channel_write_ex`. For a complete overview of the functions that are included, see [libssh2-api](docs/libssh2-api.md).
+- **Pointer Handling**: Pointers are not exposed to the caller. Instead, the caller receives a Refnum that represents a Data Value Reference which contains the pointer. This is done to provide a more LabVIEW-like interface and to avoid pointer handling for the caller. Note that this also ensures 32-bit and 64-bit compatibility.
+- **Constants**: Constants are defined as enum typedefs in the lvssh2 library. This is done to provide a more LabVIEW-like interface. See [libssh2-api](docs/libssh2-api.md) for a complete overview of the constants and how they are defined.
+- **Naming Conventions**: The naming conventions for the functions are based on the libssh2 function names.
+
 ### Built With
 
 * [LabVIEW&trade;](https://www.ni.com/labview)
