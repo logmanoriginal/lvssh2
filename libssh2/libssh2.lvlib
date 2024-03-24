@@ -253,6 +253,7 @@
 	<Item Name="libssh2_knownhost_readfile.vi" Type="VI" URL="../libssh2_knownhost_readfile.vi"/>
 	<Item Name="libssh2_knownhost_writefile.vi" Type="VI" URL="../libssh2_knownhost_writefile.vi"/>
 	<Item Name="libssh2_method_type.ctl" Type="VI" URL="../libssh2_method_type.ctl"/>
+	<Item Name="libssh2_scp_recv2.vi" Type="VI" URL="../libssh2_scp_recv2.vi"/>
 	<Item Name="libssh2_session_abstract.ctl" Type="VI" URL="../libssh2_session_abstract.ctl"/>
 	<Item Name="libssh2_session_abstract.vi" Type="VI" URL="../libssh2_session_abstract.vi"/>
 	<Item Name="libssh2_session_banner_get.vi" Type="VI" URL="../libssh2_session_banner_get.vi"/>
@@ -325,6 +326,7 @@
 	<Item Name="libssh2_sftp_tell64.vi" Type="VI" URL="../libssh2_sftp_tell64.vi"/>
 	<Item Name="libssh2_sftp_unlink_ex.vi" Type="VI" URL="../libssh2_sftp_unlink_ex.vi"/>
 	<Item Name="libssh2_sftp_write.vi" Type="VI" URL="../libssh2_sftp_write.vi"/>
+	<Item Name="libssh2_struct_stat.ctl" Type="VI" URL="../libssh2_struct_stat.ctl"/>
 	<Item Name="libssh2_trace.vi" Type="VI" URL="../libssh2_trace.vi"/>
 	<Item Name="libssh2_trace_sethandler.vi" Type="VI" URL="../libssh2_trace_sethandler.vi"/>
 	<Item Name="libssh2_userauth_banner.vi" Type="VI" URL="../libssh2_userauth_banner.vi"/>

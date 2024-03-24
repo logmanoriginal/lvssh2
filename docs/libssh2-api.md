@@ -244,8 +244,8 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_publickey_remove`][libssh2_publickey_remove]                                 |
 | [`libssh2_publickey_remove_ex`][libssh2_publickey_remove_ex]                           |
 | [`libssh2_publickey_shutdown`][libssh2_publickey_shutdown]                             |
-| [`libssh2_scp_recv`][libssh2_scp_recv]                                                 |
-| [`libssh2_scp_recv2`][libssh2_scp_recv2]                                               |
+| [`libssh2_scp_recv`][libssh2_scp_recv]                                                 | Deprecated. Use `libssh2_scp_recv2` instead!          |
+| [`libssh2_scp_recv2`][libssh2_scp_recv2]                                               | `libssh2.lvlib:libssh2_scp_recv2.vi`                  |
 | [`libssh2_scp_send`][libssh2_scp_send]                                                 |
 | [`libssh2_scp_send64`][libssh2_scp_send64]                                             |
 | [`libssh2_scp_send_ex`][libssh2_scp_send_ex]                                           |
