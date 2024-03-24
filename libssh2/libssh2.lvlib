@@ -254,6 +254,7 @@
 	<Item Name="libssh2_knownhost_writefile.vi" Type="VI" URL="../libssh2_knownhost_writefile.vi"/>
 	<Item Name="libssh2_method_type.ctl" Type="VI" URL="../libssh2_method_type.ctl"/>
 	<Item Name="libssh2_scp_recv2.vi" Type="VI" URL="../libssh2_scp_recv2.vi"/>
+	<Item Name="libssh2_scp_send64.vi" Type="VI" URL="../libssh2_scp_send64.vi"/>
 	<Item Name="libssh2_session_abstract.ctl" Type="VI" URL="../libssh2_session_abstract.ctl"/>
 	<Item Name="libssh2_session_abstract.vi" Type="VI" URL="../libssh2_session_abstract.vi"/>
 	<Item Name="libssh2_session_banner_get.vi" Type="VI" URL="../libssh2_session_banner_get.vi"/>

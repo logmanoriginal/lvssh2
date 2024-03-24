@@ -22,6 +22,7 @@
 			<Item Name="knownhosts.vi" Type="VI" URL="../examples/knownhosts.vi"/>
 			<Item Name="libssh2_info.vi" Type="VI" URL="../examples/libssh2_info.vi"/>
 			<Item Name="scp_recv.vi" Type="VI" URL="../examples/scp_recv.vi"/>
+			<Item Name="scp_send.vi" Type="VI" URL="../examples/scp_send.vi"/>
 			<Item Name="session_callback.vi" Type="VI" URL="../examples/session_callback.vi"/>
 			<Item Name="session_callback_receive.vi" Type="VI" URL="../examples/session_callback_receive.vi"/>
 			<Item Name="session_callback_send.vi" Type="VI" URL="../examples/session_callback_send.vi"/>
