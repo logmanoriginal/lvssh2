@@ -231,7 +231,7 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_knownhost_get`][libssh2_knownhost_get]                                       | `libssh2.lvlib:libssh2_knownhost_get.vi`                 |
 | [`libssh2_knownhost_init`][libssh2_knownhost_init]                                     | `libssh2.lvlib:libssh2_knownhost_init.vi`                |
 | [`libssh2_knownhost_readfile`][libssh2_knownhost_readfile]                             | `libssh2.lvlib:libssh2_knownhost_readfile.vi`            |
-| [`libssh2_knownhost_readline`][libssh2_knownhost_readline]                             |                                                          |
+| [`libssh2_knownhost_readline`][libssh2_knownhost_readline]                             | `libssh2.lvlib:libssh2_knownhost_readline.vi`            |
 | [`libssh2_knownhost_writefile`][libssh2_knownhost_writefile]                           | `libssh2.lvlib:libssh2_knownhost_writefile.vi`           |
 | [`libssh2_knownhost_writeline`][libssh2_knownhost_writeline]                           |
 | [`libssh2_poll`][libssh2_poll]                                                         | Deprecated. Use `select` or `poll` system calls instead! |
