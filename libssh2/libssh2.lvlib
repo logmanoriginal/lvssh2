@@ -72,6 +72,9 @@
 		<Item Name="Delete Known Host Refnum.vi" Type="VI" URL="../Delete Known Host Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
+		<Item Name="Error if not a Known Host.vi" Type="VI" URL="../Error if not a Known Host.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="Known Host Check Result.ctl" Type="VI" URL="../Known Host Check Result.ctl"/>
 		<Item Name="Known Host File Type.ctl" Type="VI" URL="../Known Host File Type.ctl"/>
 		<Item Name="Known Host Refnum.ctl" Type="VI" URL="../Known Host Refnum.ctl"/>
