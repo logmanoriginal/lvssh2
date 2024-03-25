@@ -21,6 +21,7 @@
 			<Item Name="direct_tcpip.vi" Type="VI" URL="../examples/direct_tcpip.vi"/>
 			<Item Name="knownhosts.vi" Type="VI" URL="../examples/knownhosts.vi"/>
 			<Item Name="knownhosts_readline.vi" Type="VI" URL="../examples/knownhosts_readline.vi"/>
+			<Item Name="knownhosts_writeline.vi" Type="VI" URL="../examples/knownhosts_writeline.vi"/>
 			<Item Name="libssh2_info.vi" Type="VI" URL="../examples/libssh2_info.vi"/>
 			<Item Name="scp_recv.vi" Type="VI" URL="../examples/scp_recv.vi"/>
 			<Item Name="scp_send.vi" Type="VI" URL="../examples/scp_send.vi"/>

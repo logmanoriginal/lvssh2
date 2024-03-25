@@ -253,6 +253,7 @@
 	<Item Name="libssh2_knownhost_readfile.vi" Type="VI" URL="../libssh2_knownhost_readfile.vi"/>
 	<Item Name="libssh2_knownhost_readline.vi" Type="VI" URL="../libssh2_knownhost_readline.vi"/>
 	<Item Name="libssh2_knownhost_writefile.vi" Type="VI" URL="../libssh2_knownhost_writefile.vi"/>
+	<Item Name="libssh2_knownhost_writeline.vi" Type="VI" URL="../libssh2_knownhost_writeline.vi"/>
 	<Item Name="libssh2_method_type.ctl" Type="VI" URL="../libssh2_method_type.ctl"/>
 	<Item Name="libssh2_scp_recv2.vi" Type="VI" URL="../libssh2_scp_recv2.vi"/>
 	<Item Name="libssh2_scp_send64.vi" Type="VI" URL="../libssh2_scp_send64.vi"/>
