@@ -321,7 +321,7 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_sign_sk`][libssh2_sign_sk]                                                   |                                                          |
 | [`libssh2_trace`][libssh2_trace]                                                       | `libssh2.lvlib:libssh2_trace.vi`                         |
 | [`libssh2_trace_sethandler`][libssh2_trace_sethandler]                                 | `libssh2.lvlib:libssh2_trace_sethandler.vi`              |
-| [`libssh2_userauth_authenticated`][libssh2_userauth_authenticated]                     |                                                          |
+| [`libssh2_userauth_authenticated`][libssh2_userauth_authenticated]                     | `libssh2.lvlib:libssh2_userauth_authenticated.vi`        |
 | [`libssh2_userauth_banner`][libssh2_userauth_banner]                                   | `libssh2.lvlib:libssh2_userauth_banner.vi`               |
 | [`libssh2_userauth_hostbased_fromfile`][libssh2_userauth_hostbased_fromfile]           |                                                          |
 | [`libssh2_userauth_hostbased_fromfile_ex`][libssh2_userauth_hostbased_fromfile_ex]     |                                                          |
