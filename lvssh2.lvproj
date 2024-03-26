@@ -53,6 +53,8 @@
 			<Item Name="ssh2_exec.vi" Type="VI" URL="../examples/ssh2_exec.vi"/>
 			<Item Name="tcpip_forward.vi" Type="VI" URL="../examples/tcpip_forward.vi"/>
 			<Item Name="userauth_authenticated.vi" Type="VI" URL="../examples/userauth_authenticated.vi"/>
+			<Item Name="userauth_publickey.vi" Type="VI" URL="../examples/userauth_publickey.vi"/>
+			<Item Name="userauth_publickey_sign.vi" Type="VI" URL="../examples/userauth_publickey_sign.vi"/>
 		</Item>
 		<Item Name="libssh2.lvlib" Type="Library" URL="../libssh2/libssh2.lvlib"/>
 		<Item Name="libssh2_tests.lvlib" Type="Library" URL="../tests/libssh2_tests/libssh2_tests.lvlib"/>

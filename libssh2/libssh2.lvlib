@@ -23,29 +23,6 @@
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 	</Item>
-	<Item Name="Callback" Type="Folder">
-		<Item Name="lvssh2_session_callback_events.ctl" Type="VI" URL="../lvssh2_session_callback_events.ctl">
-			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-		</Item>
-		<Item Name="lvssh2_session_callback_events_init.vi" Type="VI" URL="../lvssh2_session_callback_events_init.vi">
-			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-		</Item>
-		<Item Name="lvssh2_session_callback_get_function.vi" Type="VI" URL="../lvssh2_session_callback_get_function.vi"/>
-		<Item Name="lvssh2_session_callback_receive.vit" Type="VI" URL="../lvssh2_session_callback_receive.vit"/>
-		<Item Name="lvssh2_session_callback_receive_function_input_args_32.ctl" Type="VI" URL="../lvssh2_session_callback_receive_function_input_args_32.ctl">
-			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-		</Item>
-		<Item Name="lvssh2_session_callback_receive_handler_32.vi" Type="VI" URL="../lvssh2_session_callback_receive_handler_32.vi">
-			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-		</Item>
-		<Item Name="lvssh2_session_callback_send.vit" Type="VI" URL="../lvssh2_session_callback_send.vit"/>
-		<Item Name="lvssh2_session_callback_send_function_input_args_32.ctl" Type="VI" URL="../lvssh2_session_callback_send_function_input_args_32.ctl">
-			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-		</Item>
-		<Item Name="lvssh2_session_callback_send_handler_32.vi" Type="VI" URL="../lvssh2_session_callback_send_handler_32.vi">
-			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-		</Item>
-	</Item>
 	<Item Name="Channel" Type="Folder">
 		<Item Name="Channel Refnum.ctl" Type="VI" URL="../Channel Refnum.ctl"/>
 		<Item Name="Create Channel Refnum.vi" Type="VI" URL="../Create Channel Refnum.vi">
@@ -151,6 +128,29 @@
 		</Item>
 		<Item Name="Session Refnum.ctl" Type="VI" URL="../Session Refnum.ctl"/>
 	</Item>
+	<Item Name="Session Callback" Type="Folder">
+		<Item Name="lvssh2_session_callback_events.ctl" Type="VI" URL="../lvssh2_session_callback_events.ctl">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="lvssh2_session_callback_events_init.vi" Type="VI" URL="../lvssh2_session_callback_events_init.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="lvssh2_session_callback_get_function.vi" Type="VI" URL="../lvssh2_session_callback_get_function.vi"/>
+		<Item Name="lvssh2_session_callback_receive.vit" Type="VI" URL="../lvssh2_session_callback_receive.vit"/>
+		<Item Name="lvssh2_session_callback_receive_function_input_args_32.ctl" Type="VI" URL="../lvssh2_session_callback_receive_function_input_args_32.ctl">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="lvssh2_session_callback_receive_handler_32.vi" Type="VI" URL="../lvssh2_session_callback_receive_handler_32.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="lvssh2_session_callback_send.vit" Type="VI" URL="../lvssh2_session_callback_send.vit"/>
+		<Item Name="lvssh2_session_callback_send_function_input_args_32.ctl" Type="VI" URL="../lvssh2_session_callback_send_function_input_args_32.ctl">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="lvssh2_session_callback_send_handler_32.vi" Type="VI" URL="../lvssh2_session_callback_send_handler_32.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+	</Item>
 	<Item Name="SFTP" Type="Folder">
 		<Item Name="Create SFTP Refnum.vi" Type="VI" URL="../Create SFTP Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
@@ -182,6 +182,15 @@
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 		<Item Name="SFTP Handle Refnum.ctl" Type="VI" URL="../SFTP Handle Refnum.ctl"/>
+	</Item>
+	<Item Name="Userauth Callback" Type="Folder">
+		<Item Name="lvssh2_userauth_publickey_sign_function.vit" Type="VI" URL="../lvssh2_userauth_publickey_sign_function.vit"/>
+		<Item Name="lvssh2_userauth_publickey_sign_function_handler_32.vi" Type="VI" URL="../lvssh2_userauth_publickey_sign_function_handler_32.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="lvssh2_userauth_publickey_sign_function_input_args_32.ctl" Type="VI" URL="../lvssh2_userauth_publickey_sign_function_input_args_32.ctl">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 	</Item>
 	<Item Name="Utitlity" Type="Folder">
 		<Item Name="From Unix Time.vi" Type="VI" URL="../From Unix Time.vi"/>
@@ -342,6 +351,7 @@
 	<Item Name="libssh2_userauth_list.vi" Type="VI" URL="../libssh2_userauth_list.vi"/>
 	<Item Name="libssh2_userauth_password.vi" Type="VI" URL="../libssh2_userauth_password.vi"/>
 	<Item Name="libssh2_userauth_password_ex.vi" Type="VI" URL="../libssh2_userauth_password_ex.vi"/>
+	<Item Name="libssh2_userauth_publickey.vi" Type="VI" URL="../libssh2_userauth_publickey.vi"/>
 	<Item Name="libssh2_version.vi" Type="VI" URL="../libssh2_version.vi"/>
 	<Item Name="SFTP Error Status.vi" Type="VI" URL="../SFTP Error Status.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
