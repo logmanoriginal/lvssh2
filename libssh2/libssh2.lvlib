@@ -250,6 +250,7 @@
 	<Item Name="libssh2_init_default.vi" Type="VI" URL="../libssh2_init_default.vi"/>
 	<Item Name="libssh2_knownhost.ctl" Type="VI" URL="../libssh2_knownhost.ctl"/>
 	<Item Name="libssh2_knownhost_checkp.vi" Type="VI" URL="../libssh2_knownhost_checkp.vi"/>
+	<Item Name="libssh2_knownhost_del.vi" Type="VI" URL="../libssh2_knownhost_del.vi"/>
 	<Item Name="libssh2_knownhost_free.vi" Type="VI" URL="../libssh2_knownhost_free.vi"/>
 	<Item Name="libssh2_knownhost_get.vi" Type="VI" URL="../libssh2_knownhost_get.vi"/>
 	<Item Name="libssh2_knownhost_init.vi" Type="VI" URL="../libssh2_knownhost_init.vi"/>
