@@ -353,6 +353,7 @@
 	<Item Name="libssh2_userauth_password_ex.vi" Type="VI" URL="../libssh2_userauth_password_ex.vi"/>
 	<Item Name="libssh2_userauth_publickey.vi" Type="VI" URL="../libssh2_userauth_publickey.vi"/>
 	<Item Name="libssh2_userauth_publickey_fromfile_ex.vi" Type="VI" URL="../libssh2_userauth_publickey_fromfile_ex.vi"/>
+	<Item Name="libssh2_userauth_publickey_frommemory.vi" Type="VI" URL="../libssh2_userauth_publickey_frommemory.vi"/>
 	<Item Name="libssh2_version.vi" Type="VI" URL="../libssh2_version.vi"/>
 	<Item Name="SFTP Error Status.vi" Type="VI" URL="../SFTP Error Status.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>

@@ -333,7 +333,7 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_userauth_publickey`][libssh2_userauth_publickey]                             | `libssh2.lvlib:libssh2_userauth_publickey.vi`             |
 | [`libssh2_userauth_publickey_fromfile`][libssh2_userauth_publickey_fromfile]           | See `libssh2_userauth_publickey_fromfile_ex`              |
 | [`libssh2_userauth_publickey_fromfile_ex`][libssh2_userauth_publickey_fromfile_ex]     | `libssh2.lvlib:libssh2_userauth_publickey_fromfile_ex.vi` |
-| [`libssh2_userauth_publickey_frommemory`][libssh2_userauth_publickey_frommemory]       |
+| [`libssh2_userauth_publickey_frommemory`][libssh2_userauth_publickey_frommemory]       | `libssh2.lvlib:libssh2_userauth_publickey_frommemory.vi`  |
 | [`libssh2_userauth_publickey_sk`][libssh2_userauth_publickey_sk]                       |
 | [`libssh2_version`][libssh2_version]                                                   | `libssh2.lvlib:libssh2_version.vi`                        |
 
