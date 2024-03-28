@@ -348,6 +348,7 @@
 	<Item Name="libssh2_trace_sethandler.vi" Type="VI" URL="../libssh2_trace_sethandler.vi"/>
 	<Item Name="libssh2_userauth_authenticated.vi" Type="VI" URL="../libssh2_userauth_authenticated.vi"/>
 	<Item Name="libssh2_userauth_banner.vi" Type="VI" URL="../libssh2_userauth_banner.vi"/>
+	<Item Name="libssh2_userauth_hostbased_fromfile_ex.vi" Type="VI" URL="../libssh2_userauth_hostbased_fromfile_ex.vi"/>
 	<Item Name="libssh2_userauth_list.vi" Type="VI" URL="../libssh2_userauth_list.vi"/>
 	<Item Name="libssh2_userauth_password.vi" Type="VI" URL="../libssh2_userauth_password.vi"/>
 	<Item Name="libssh2_userauth_password_ex.vi" Type="VI" URL="../libssh2_userauth_password_ex.vi"/>
