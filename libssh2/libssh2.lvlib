@@ -184,6 +184,14 @@
 		<Item Name="SFTP Handle Refnum.ctl" Type="VI" URL="../SFTP Handle Refnum.ctl"/>
 	</Item>
 	<Item Name="Userauth Callback" Type="Folder">
+		<Item Name="lvssh2_userauth_keyboard_interactive_prompt.ctl" Type="VI" URL="../lvssh2_userauth_keyboard_interactive_prompt.ctl"/>
+		<Item Name="lvssh2_userauth_keyboard_interactive_response_function.vit" Type="VI" URL="../lvssh2_userauth_keyboard_interactive_response_function.vit"/>
+		<Item Name="lvssh2_userauth_keyboard_interactive_response_function_handler_32.vi" Type="VI" URL="../lvssh2_userauth_keyboard_interactive_response_function_handler_32.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="lvssh2_userauth_keyboard_interactive_response_function_input_args_32.ctl" Type="VI" URL="../lvssh2_userauth_keyboard_interactive_response_function_input_args_32.ctl">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="lvssh2_userauth_publickey_sign_function.vit" Type="VI" URL="../lvssh2_userauth_publickey_sign_function.vit"/>
 		<Item Name="lvssh2_userauth_publickey_sign_function_handler_32.vi" Type="VI" URL="../lvssh2_userauth_publickey_sign_function_handler_32.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
@@ -349,6 +357,7 @@
 	<Item Name="libssh2_userauth_authenticated.vi" Type="VI" URL="../libssh2_userauth_authenticated.vi"/>
 	<Item Name="libssh2_userauth_banner.vi" Type="VI" URL="../libssh2_userauth_banner.vi"/>
 	<Item Name="libssh2_userauth_hostbased_fromfile_ex.vi" Type="VI" URL="../libssh2_userauth_hostbased_fromfile_ex.vi"/>
+	<Item Name="libssh2_userauth_keyboard_interactive_ex.vi" Type="VI" URL="../libssh2_userauth_keyboard_interactive_ex.vi"/>
 	<Item Name="libssh2_userauth_list.vi" Type="VI" URL="../libssh2_userauth_list.vi"/>
 	<Item Name="libssh2_userauth_password.vi" Type="VI" URL="../libssh2_userauth_password.vi"/>
 	<Item Name="libssh2_userauth_password_ex.vi" Type="VI" URL="../libssh2_userauth_password_ex.vi"/>

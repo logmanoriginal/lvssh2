@@ -54,6 +54,8 @@
 			<Item Name="tcpip_forward.vi" Type="VI" URL="../examples/tcpip_forward.vi"/>
 			<Item Name="userauth_authenticated.vi" Type="VI" URL="../examples/userauth_authenticated.vi"/>
 			<Item Name="userauth_hostbased_fromfile.vi" Type="VI" URL="../examples/userauth_hostbased_fromfile.vi"/>
+			<Item Name="userauth_keyboard_interactive.vi" Type="VI" URL="../examples/userauth_keyboard_interactive.vi"/>
+			<Item Name="userauth_keyboard_interactive_response.vi" Type="VI" URL="../examples/userauth_keyboard_interactive_response.vi"/>
 			<Item Name="userauth_list.vi" Type="VI" URL="../examples/userauth_list.vi"/>
 			<Item Name="userauth_publickey.vi" Type="VI" URL="../examples/userauth_publickey.vi"/>
 			<Item Name="userauth_publickey_fromfile.vi" Type="VI" URL="../examples/userauth_publickey_fromfile.vi"/>

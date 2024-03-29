@@ -77,3 +77,50 @@ void lvssh2_session_callback_recv_function_return(ssize_t bytes_received) {
 	lvssh2_session_callback_recv_return_value = bytes_received;
 }
 
+void lvssh2_userauth_keyboard_interactive_response_function(
+	const char* name,
+	int name_len,
+	const char* instruction,
+	int instruction_len,
+	int num_prompts,
+	const LIBSSH2_USERAUTH_KBDINT_PROMPT* prompts,
+	LIBSSH2_USERAUTH_KBDINT_RESPONSE* responses,
+	void** abstract)
+{
+	if (num_prompts == 0) {
+		return;
+	}
+
+	LStrHandle lv_name = (LStrHandle)DSNewHClr(sizeof(int32) + name_len + sizeof(uChar));
+	LStrPrintf(lv_name, (CStr)"%s", name);
+
+	LStrHandle lv_instruction = (LStrHandle)DSNewHClr(sizeof(int32) + instruction_len + sizeof(uChar));
+	LStrPrintf(lv_instruction, (CStr)"%s", instruction);
+	
+	lvssh2_userauth_keyboard_interactive_response_function_input_args* payload = (lvssh2_userauth_keyboard_interactive_response_function_input_args*)malloc(sizeof(lvssh2_userauth_keyboard_interactive_response_function_input_args));
+	payload->name = lv_name;
+	payload->instruction = lv_instruction;
+	payload->num_prompts = num_prompts;
+	payload->prompts = (LIBSSH2_USERAUTH_KBDINT_PROMPT*)prompts;
+
+	lvssh2_userauth_keyboard_interactive_response_return_value = responses;
+	lvssh2_userauth_keyboard_interactive_response_return_value_count = 0;
+
+	PostLVUserEvent(*lvssh2_userauth_keyboard_interactive_response_event, payload);
+
+	free(payload);
+	DSDisposeHandle(lv_name);
+	DSDisposeHandle(lv_instruction);
+}
+
+void lvssh2_userauth_keyboard_interactive_add_response(const char* text, unsigned int text_len) {
+	LIBSSH2_USERAUTH_KBDINT_RESPONSE response = { 0 };
+	
+	response.text = (char*)malloc(text_len);
+	memcpy(response.text, text, text_len);
+
+	response.length = text_len;
+
+	lvssh2_userauth_keyboard_interactive_response_return_value[lvssh2_userauth_keyboard_interactive_response_return_value_count] = response;
+	lvssh2_userauth_keyboard_interactive_response_return_value_count++;
+}

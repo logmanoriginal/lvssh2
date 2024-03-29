@@ -20,7 +20,6 @@ typedef struct {
 	LVUserEventRef recv;
 } lvssh2_abstract;
 
-
 typedef struct {
 	UINT_PTR socket;
 	void* buffer;
@@ -35,10 +34,20 @@ typedef struct {
 	int32_t flags;
 } lvssh2_session_callback_recv_function_input_args;
 
-#pragma pack(pop)
+typedef struct {
+	LStrHandle name;
+	LStrHandle instruction;
+	int num_prompts;
+	LIBSSH2_USERAUTH_KBDINT_PROMPT* prompts;
+} lvssh2_userauth_keyboard_interactive_response_function_input_args;
 
 ssize_t lvssh2_session_callback_send_return_value = 0;
 ssize_t lvssh2_session_callback_recv_return_value = 0;
+LVUserEventRef* lvssh2_userauth_keyboard_interactive_response_event = { 0 };
+LIBSSH2_USERAUTH_KBDINT_RESPONSE* lvssh2_userauth_keyboard_interactive_response_return_value = { 0 };
+int lvssh2_userauth_keyboard_interactive_response_return_value_count = 0;
+
+#pragma pack(pop)
 
 lvssh2_userauth_publickey_sign_function_output_args lvssh2_userauth_publickey_sign_return_value = { 0 };
 
@@ -48,11 +57,25 @@ int lvssh2_userauth_publickey_sign_function(LIBSSH2_SESSION* session, unsigned c
 ssize_t lvssh2_session_callback_send_function(libssh2_socket_t socket, const void* buffer, size_t length, int flags, lvssh2_abstract** abstract);
 ssize_t lvssh2_session_callback_recv_function(libssh2_socket_t socket, void* buffer, size_t length, int flags, lvssh2_abstract** abstract);
 
+void lvssh2_userauth_keyboard_interactive_response_function(
+	const char* name,
+	int name_len,
+	const char* instruction,
+	int instruction_len,
+	int num_prompts,
+	const LIBSSH2_USERAUTH_KBDINT_PROMPT* prompts,
+	LIBSSH2_USERAUTH_KBDINT_RESPONSE* responses,
+	void** abstract);
+
 extern "C" __declspec(dllexport) void* get_lvssh2_trace_handler_function() { return lvssh2_trace_handler_function; }
 extern "C" __declspec(dllexport) void* get_lvssh2_userauth_publickey_sign_function() { return lvssh2_userauth_publickey_sign_function; }
 
 extern "C" __declspec(dllexport) void* get_lvssh2_session_callback_send_function() { return lvssh2_session_callback_send_function; }
 extern "C" __declspec(dllexport) void* get_lvssh2_session_callback_recv_function() { return lvssh2_session_callback_recv_function; }
+
+extern "C" __declspec(dllexport) void* get_lvssh2_userauth_keyboard_interactive_response_function() { return lvssh2_userauth_keyboard_interactive_response_function; }
+extern "C" __declspec(dllexport) void set_lvssh2_userauth_keyboard_interactive_response_callback(LVUserEventRef* event) { lvssh2_userauth_keyboard_interactive_response_event = event; }
+extern "C" __declspec(dllexport) void lvssh2_userauth_keyboard_interactive_add_response(const char* text, unsigned int text_len);
 
 extern "C" __declspec(dllexport) void lvssh2_session_callback_send_function_return(ssize_t bytes_send);
 extern "C" __declspec(dllexport) void lvssh2_session_callback_recv_function_return(ssize_t bytes_received);
