@@ -255,6 +255,7 @@
 	<Item Name="libssh2_channel_send_eof.vi" Type="VI" URL="../libssh2_channel_send_eof.vi"/>
 	<Item Name="libssh2_channel_set_blocking.vi" Type="VI" URL="../libssh2_channel_set_blocking.vi"/>
 	<Item Name="libssh2_channel_setenv_ex.vi" Type="VI" URL="../libssh2_channel_setenv_ex.vi"/>
+	<Item Name="libssh2_channel_wait_eof.vi" Type="VI" URL="../libssh2_channel_wait_eof.vi"/>
 	<Item Name="libssh2_channel_window_read_ex.vi" Type="VI" URL="../libssh2_channel_window_read_ex.vi"/>
 	<Item Name="libssh2_channel_window_write_ex.vi" Type="VI" URL="../libssh2_channel_window_write_ex.vi"/>
 	<Item Name="libssh2_channel_write.vi" Type="VI" URL="../libssh2_channel_write.vi"/>
