@@ -265,6 +265,8 @@
 	<Item Name="libssh2_init.vi" Type="VI" URL="../libssh2_init.vi"/>
 	<Item Name="libssh2_init_custom.vi" Type="VI" URL="../libssh2_init_custom.vi"/>
 	<Item Name="libssh2_init_default.vi" Type="VI" URL="../libssh2_init_default.vi"/>
+	<Item Name="libssh2_keepalive_config.vi" Type="VI" URL="../libssh2_keepalive_config.vi"/>
+	<Item Name="libssh2_keepalive_send.vi" Type="VI" URL="../libssh2_keepalive_send.vi"/>
 	<Item Name="libssh2_knownhost.ctl" Type="VI" URL="../libssh2_knownhost.ctl"/>
 	<Item Name="libssh2_knownhost_addc.vi" Type="VI" URL="../libssh2_knownhost_addc.vi"/>
 	<Item Name="libssh2_knownhost_checkp.vi" Type="VI" URL="../libssh2_knownhost_checkp.vi"/>

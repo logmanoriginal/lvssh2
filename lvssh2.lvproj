@@ -19,6 +19,7 @@
 			<Item Name="channel_setenv.vi" Type="VI" URL="../examples/channel_setenv.vi"/>
 			<Item Name="debug_trace.vi" Type="VI" URL="../examples/debug_trace.vi"/>
 			<Item Name="direct_tcpip.vi" Type="VI" URL="../examples/direct_tcpip.vi"/>
+			<Item Name="keepalive.vi" Type="VI" URL="../examples/keepalive.vi"/>
 			<Item Name="knownhosts.vi" Type="VI" URL="../examples/knownhosts.vi"/>
 			<Item Name="knownhosts_add.vi" Type="VI" URL="../examples/knownhosts_add.vi"/>
 			<Item Name="knownhosts_delete.vi" Type="VI" URL="../examples/knownhosts_delete.vi"/>
