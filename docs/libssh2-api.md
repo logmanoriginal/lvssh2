@@ -201,9 +201,9 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_channel_set_blocking`][libssh2_channel_set_blocking]                         | `libssh2.lvlib:libssh2_channel_set_blocking.vi`                   |
 | [`libssh2_channel_setenv`][libssh2_channel_setenv]                                     | See `libssh2_channel_setenv_ex`                                   |
 | [`libssh2_channel_setenv_ex`][libssh2_channel_setenv_ex]                               | `libssh2.lvlib:libssh2_channel_setenv_ex.vi`                      |
-| [`libssh2_channel_shell`][libssh2_channel_shell]                                       |
+| [`libssh2_channel_shell`][libssh2_channel_shell]                                       | `libssh2.lvlib:libssh2_channel_shell.vi`                          |
 | [`libssh2_channel_signal_ex`][libssh2_channel_signal_ex]                               |
-| [`libssh2_channel_subsystem`][libssh2_channel_subsystem]                               |
+| [`libssh2_channel_subsystem`][libssh2_channel_subsystem]                               | `libssh2.lvlib:libssh2_channel_subsystem.vi`                      |
 | [`libssh2_channel_wait_closed`][libssh2_channel_wait_closed]                           | `libssh2.lvlib:libssh2_channel_wait_closed.vi`                    |
 | [`libssh2_channel_wait_eof`][libssh2_channel_wait_eof]                                 | `libssh2.lvlib:libssh2_channel_wait_eof.vi`                       |
 | [`libssh2_channel_window_read`][libssh2_channel_window_read]                           | See `libssh2_channel_window_read_ex`                              |
