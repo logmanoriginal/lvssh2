@@ -192,7 +192,7 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_channel_read_stderr`][libssh2_channel_read_stderr]                           | `libssh2.lvlib:libssh2_channel_read_stderr.vi`                    |
 | [`libssh2_channel_receive_window_adjust`][libssh2_channel_receive_window_adjust]       | Deprecated. Use `libssh2_channel_receive_window_adjust2` instead! |
 | [`libssh2_channel_receive_window_adjust2`][libssh2_channel_receive_window_adjust2]     | `libssh2.lvlib:libssh2_channel_receive_window_adjust2.vi`         |
-| [`libssh2_channel_request_auth_agent`][libssh2_channel_request_auth_agent]             |
+| [`libssh2_channel_request_auth_agent`][libssh2_channel_request_auth_agent]             | `libssh2.lvlib:libssh2_channel_request_auth_agent.vi`             |
 | [`libssh2_channel_request_pty`][libssh2_channel_request_pty]                           | `libssh2.lvlib:libssh2_channel_request_pty.vi`                    |
 | [`libssh2_channel_request_pty_ex`][libssh2_channel_request_pty_ex]                     | `libssh2.lvlib:libssh2_channel_request_pty_ex.vi`                 |
 | [`libssh2_channel_request_pty_size`][libssh2_channel_request_pty_size]                 | See `libssh2_channel_request_pty_size_ex`                         |

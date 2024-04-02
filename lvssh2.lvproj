@@ -16,6 +16,7 @@
 		<Item Name="examples" Type="Folder">
 			<Item Name="agent_sign.vi" Type="VI" URL="../examples/agent_sign.vi"/>
 			<Item Name="banner.vi" Type="VI" URL="../examples/banner.vi"/>
+			<Item Name="channel_agent_forward.vi" Type="VI" URL="../examples/channel_agent_forward.vi"/>
 			<Item Name="channel_handle_extended_data.vi" Type="VI" URL="../examples/channel_handle_extended_data.vi"/>
 			<Item Name="channel_request_pty.vi" Type="VI" URL="../examples/channel_request_pty.vi"/>
 			<Item Name="channel_setenv.vi" Type="VI" URL="../examples/channel_setenv.vi"/>

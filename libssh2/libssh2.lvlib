@@ -250,6 +250,7 @@
 	<Item Name="libssh2_channel_read_ex.vi" Type="VI" URL="../libssh2_channel_read_ex.vi"/>
 	<Item Name="libssh2_channel_read_stderr.vi" Type="VI" URL="../libssh2_channel_read_stderr.vi"/>
 	<Item Name="libssh2_channel_receive_window_adjust2.vi" Type="VI" URL="../libssh2_channel_receive_window_adjust2.vi"/>
+	<Item Name="libssh2_channel_request_auth_agent.vi" Type="VI" URL="../libssh2_channel_request_auth_agent.vi"/>
 	<Item Name="libssh2_channel_request_pty.vi" Type="VI" URL="../libssh2_channel_request_pty.vi"/>
 	<Item Name="libssh2_channel_request_pty_ex.vi" Type="VI" URL="../libssh2_channel_request_pty_ex.vi"/>
 	<Item Name="libssh2_channel_request_pty_size_ex.vi" Type="VI" URL="../libssh2_channel_request_pty_size_ex.vi"/>
