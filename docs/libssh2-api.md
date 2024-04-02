@@ -202,7 +202,8 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_channel_setenv`][libssh2_channel_setenv]                                     | See `libssh2_channel_setenv_ex`                                   |
 | [`libssh2_channel_setenv_ex`][libssh2_channel_setenv_ex]                               | `libssh2.lvlib:libssh2_channel_setenv_ex.vi`                      |
 | [`libssh2_channel_shell`][libssh2_channel_shell]                                       | `libssh2.lvlib:libssh2_channel_shell.vi`                          |
-| [`libssh2_channel_signal_ex`][libssh2_channel_signal_ex]                               |
+| [`libssh2_channel_signal`][libssh2_channel_signal]                                     | See `libssh2_channel_signal_ex`                                   |
+| [`libssh2_channel_signal_ex`][libssh2_channel_signal_ex]                               | `libssh2.lvlib:libssh2_channel_signal_ex.vi`                      |
 | [`libssh2_channel_subsystem`][libssh2_channel_subsystem]                               | `libssh2.lvlib:libssh2_channel_subsystem.vi`                      |
 | [`libssh2_channel_wait_closed`][libssh2_channel_wait_closed]                           | `libssh2.lvlib:libssh2_channel_wait_closed.vi`                    |
 | [`libssh2_channel_wait_eof`][libssh2_channel_wait_eof]                                 | `libssh2.lvlib:libssh2_channel_wait_eof.vi`                       |
@@ -387,6 +388,7 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 [libssh2_channel_setenv]: https://libssh2.org/libssh2_channel_setenv.html
 [libssh2_channel_setenv_ex]: https://libssh2.org/libssh2_channel_setenv_ex.html
 [libssh2_channel_shell]: https://libssh2.org/libssh2_channel_shell.html
+[libssh2_channel_signal]: https://github.com/libssh2/libssh2/blob/master/docs/libssh2_channel_signal_ex.3
 [libssh2_channel_signal_ex]: https://github.com/libssh2/libssh2/blob/master/docs/libssh2_channel_signal_ex.3
 [libssh2_channel_subsystem]: https://libssh2.org/libssh2_channel_subsystem.html
 [libssh2_channel_wait_closed]: https://libssh2.org/libssh2_channel_wait_closed.html

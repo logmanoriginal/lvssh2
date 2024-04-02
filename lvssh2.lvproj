@@ -20,6 +20,7 @@
 			<Item Name="channel_handle_extended_data.vi" Type="VI" URL="../examples/channel_handle_extended_data.vi"/>
 			<Item Name="channel_request_pty.vi" Type="VI" URL="../examples/channel_request_pty.vi"/>
 			<Item Name="channel_setenv.vi" Type="VI" URL="../examples/channel_setenv.vi"/>
+			<Item Name="channel_signal.vi" Type="VI" URL="../examples/channel_signal.vi"/>
 			<Item Name="debug_trace.vi" Type="VI" URL="../examples/debug_trace.vi"/>
 			<Item Name="direct_tcpip.vi" Type="VI" URL="../examples/direct_tcpip.vi"/>
 			<Item Name="keepalive.vi" Type="VI" URL="../examples/keepalive.vi"/>
