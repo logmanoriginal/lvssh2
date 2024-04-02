@@ -181,9 +181,9 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_channel_free`][libssh2_channel_free]                                         | `libssh2.lvlib:libssh2_channel_free.vi`                           |
 | [`libssh2_channel_get_exit_signal`][libssh2_channel_get_exit_signal]                   | `libssh2.lvlib:libssh2_channel_get_exit_signal.vi`                |
 | [`libssh2_channel_get_exit_status`][libssh2_channel_get_exit_status]                   | `libssh2.lvlib:libssh2_channel_get_exit_status.vi`                |
-| [`libssh2_channel_handle_extended_data`][libssh2_channel_handle_extended_data]         |
-| [`libssh2_channel_handle_extended_data2`][libssh2_channel_handle_extended_data2]       |
-| [`libssh2_channel_ignore_extended_data`][libssh2_channel_ignore_extended_data]         |
+| [`libssh2_channel_handle_extended_data`][libssh2_channel_handle_extended_data]         | Deprecated. Use `libssh2_channel_handle_extended_data2` instead!  |
+| [`libssh2_channel_handle_extended_data2`][libssh2_channel_handle_extended_data2]       | `libssh2.lvlib:libssh2_channel_handle_extended_data2.vi`          |
+| [`libssh2_channel_ignore_extended_data`][libssh2_channel_ignore_extended_data]         | Deprecated. Use `libssh2_channel_handle_extended_data2` instead!  |
 | [`libssh2_channel_open_ex`][libssh2_channel_open_ex]                                   | `libssh2.lvlib:libssh2_channel_open_ex.vi`                        |
 | [`libssh2_channel_open_session`][libssh2_channel_open_session]                         | `libssh2.lvlib:libssh2_channel_open_session.vi`                   |
 | [`libssh2_channel_process_startup`][libssh2_channel_process_startup]                   | `libssh2.lvlib:libssh2_channel_process_startup.vi`                |

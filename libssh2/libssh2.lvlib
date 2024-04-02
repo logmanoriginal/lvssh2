@@ -242,6 +242,7 @@
 	<Item Name="libssh2_channel_free.vi" Type="VI" URL="../libssh2_channel_free.vi"/>
 	<Item Name="libssh2_channel_get_exit_signal.vi" Type="VI" URL="../libssh2_channel_get_exit_signal.vi"/>
 	<Item Name="libssh2_channel_get_exit_status.vi" Type="VI" URL="../libssh2_channel_get_exit_status.vi"/>
+	<Item Name="libssh2_channel_handle_extended_data2.vi" Type="VI" URL="../libssh2_channel_handle_extended_data2.vi"/>
 	<Item Name="libssh2_channel_open_ex.vi" Type="VI" URL="../libssh2_channel_open_ex.vi"/>
 	<Item Name="libssh2_channel_open_session.vi" Type="VI" URL="../libssh2_channel_open_session.vi"/>
 	<Item Name="libssh2_channel_process_startup.vi" Type="VI" URL="../libssh2_channel_process_startup.vi"/>
