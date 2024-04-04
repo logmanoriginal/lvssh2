@@ -56,6 +56,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
 
 - Buffer sizes are limited to 2^31-1 bytes (2 GiB) instead of 2^32-1 bytes (4 GiB). The reason for this is that arrays and strings in LabVIEW are limited to 2^31-1 elements. Additional limits may apply due to memory copies when calling external functions.
 - This project includes an extension library to provide functionality that cannot otherwise be realized in LabVIEW. Callers can specify a conditional disable symbol `LVSSH2_NO_EXTENSIONS=True` to disable the extension library. When this conditional disable symbol is set, then all functions utilizing the extension library will turn into stubs.
+- The public key subsystem is currently not implemented because of lack of support in OpenSSH and other major SSH servers. You can find more information at [ssh-publickeyd](https://github.com/grawity/ssh-publickeyd).
 
 ### Design Decisions
 
@@ -103,6 +104,7 @@ See the [open issues](https://github.com/logmanoriginal/labview-composition/issu
 - [RFC4252](https://www.rfc-editor.org/rfc/rfc4252): The Secure Shell (SSH) Authentication Protocol
 - [RFC4253](https://www.rfc-editor.org/rfc/rfc4253): The Secure Shell (SSH) Transport Layer Protocol
 - [RFC4254](https://www.rfc-editor.org/rfc/rfc4254): The Secure Shell (SSH) Connection Protocol
+- [RFC4819](https://www.rfc-editor.org/rfc/rfc4819): Secure Shell Public Key Subsystem
 
 ## Contributing
 

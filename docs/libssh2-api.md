@@ -237,14 +237,14 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_knownhost_writeline`][libssh2_knownhost_writeline]                           | `libssh2.lvlib:libssh2_knownhost_writeline.vi`                    |
 | [`libssh2_poll`][libssh2_poll]                                                         | Deprecated. Use `select` or `poll` system calls instead!          |
 | [`libssh2_poll_channel_read`][libssh2_poll_channel_read]                               | Deprecated. Use `select` or `poll` system calls instead!          |
-| [`libssh2_publickey_add`][libssh2_publickey_add]                                       |
-| [`libssh2_publickey_add_ex`][libssh2_publickey_add_ex]                                 |
-| [`libssh2_publickey_init`][libssh2_publickey_init]                                     |
-| [`libssh2_publickey_list_fetch`][libssh2_publickey_list_fetch]                         |
-| [`libssh2_publickey_list_free`][libssh2_publickey_list_free]                           |
-| [`libssh2_publickey_remove`][libssh2_publickey_remove]                                 |
-| [`libssh2_publickey_remove_ex`][libssh2_publickey_remove_ex]                           |
-| [`libssh2_publickey_shutdown`][libssh2_publickey_shutdown]                             |
+| [`libssh2_publickey_add`][libssh2_publickey_add]                                       | Not implemented. See [README](../README.md) for more details.     |
+| [`libssh2_publickey_add_ex`][libssh2_publickey_add_ex]                                 | Not implemented. See [README](../README.md) for more details.     |
+| [`libssh2_publickey_init`][libssh2_publickey_init]                                     | Not implemented. See [README](../README.md) for more details.     |
+| [`libssh2_publickey_list_fetch`][libssh2_publickey_list_fetch]                         | Not implemented. See [README](../README.md) for more details.     |
+| [`libssh2_publickey_list_free`][libssh2_publickey_list_free]                           | Not implemented. See [README](../README.md) for more details.     |
+| [`libssh2_publickey_remove`][libssh2_publickey_remove]                                 | Not implemented. See [README](../README.md) for more details.     |
+| [`libssh2_publickey_remove_ex`][libssh2_publickey_remove_ex]                           | Not implemented. See [README](../README.md) for more details.     |
+| [`libssh2_publickey_shutdown`][libssh2_publickey_shutdown]                             | Not implemented. See [README](../README.md) for more details.     |
 | [`libssh2_scp_recv`][libssh2_scp_recv]                                                 | Deprecated. Use `libssh2_scp_recv2` instead!                      |
 | [`libssh2_scp_recv2`][libssh2_scp_recv2]                                               | `libssh2.lvlib:libssh2_scp_recv2.vi`                              |
 | [`libssh2_scp_send`][libssh2_scp_send]                                                 | See `libssh2_scp_send_ex`                                         |
