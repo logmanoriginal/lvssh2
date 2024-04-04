@@ -23,6 +23,24 @@
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 	</Item>
+	<Item Name="Agent Public Key" Type="Folder">
+		<Item Name="Agent Public Key Refnum.ctl" Type="VI" URL="../Agent Public Key Refnum.ctl"/>
+		<Item Name="Create Agent Public Key Refnum.vi" Type="VI" URL="../Create Agent Public Key Refnum.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Delete Agent Public Key Refnum.vi" Type="VI" URL="../Delete Agent Public Key Refnum.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Error if not a Agent Public Key.vi" Type="VI" URL="../Error if not a Agent Public Key.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Not A Agent Public Key.vi" Type="VI" URL="../Not A Agent Public Key.vi"/>
+		<Item Name="Read Agent Public Key Data.vi" Type="VI" URL="../Read Agent Public Key Data.vi"/>
+		<Item Name="Read Agent Public Key Refnum.vi" Type="VI" URL="../Read Agent Public Key Refnum.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Release Agent Public Key.vi" Type="VI" URL="../Release Agent Public Key.vi"/>
+	</Item>
 	<Item Name="Channel" Type="Folder">
 		<Item Name="Channel Refnum.ctl" Type="VI" URL="../Channel Refnum.ctl"/>
 		<Item Name="Create Channel Refnum.vi" Type="VI" URL="../Create Channel Refnum.vi">
@@ -93,24 +111,6 @@
 		<Item Name="Read Listener Refnum.vi" Type="VI" URL="../Read Listener Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
-	</Item>
-	<Item Name="Public Key" Type="Folder">
-		<Item Name="Create Public Key Refnum.vi" Type="VI" URL="../Create Public Key Refnum.vi">
-			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-		</Item>
-		<Item Name="Delete Public Key Refnum.vi" Type="VI" URL="../Delete Public Key Refnum.vi">
-			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-		</Item>
-		<Item Name="Error if not a Public Key.vi" Type="VI" URL="../Error if not a Public Key.vi">
-			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-		</Item>
-		<Item Name="Not A Public Key.vi" Type="VI" URL="../Not A Public Key.vi"/>
-		<Item Name="Public Key Refnum.ctl" Type="VI" URL="../Public Key Refnum.ctl"/>
-		<Item Name="Read Public Key Data.vi" Type="VI" URL="../Read Public Key Data.vi"/>
-		<Item Name="Read Public Key Refnum.vi" Type="VI" URL="../Read Public Key Refnum.vi">
-			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-		</Item>
-		<Item Name="Release Public Key.vi" Type="VI" URL="../Release Public Key.vi"/>
 	</Item>
 	<Item Name="Session" Type="Folder">
 		<Item Name="Create Session Refnum.vi" Type="VI" URL="../Create Session Refnum.vi">
