@@ -21,7 +21,7 @@ This is a list of exported libssh2 APIs and their corresponding matches in this 
 | `LIBSSH2_HOSTKEY_HASH_MD5`              | `libssh2.lvlib:Host Key Hash Type.ctl`              |
 | `LIBSSH2_HOSTKEY_HASH_SHA1`             | `libssh2.lvlib:Host Key Hash Type.ctl`              |
 | `LIBSSH2_HOSTKEY_HASH_SHA256`           | `libssh2.lvlib:Host Key Hash Type.ctl`              |
-| `LIBSSH2_INIT_NO_CRYPTO`                |
+| `LIBSSH2_INIT_NO_CRYPTO`                | `libssh2.lvlib:libssh2_init_flags.ctl`              |
 | `LIBSSH2_KNOWNHOST_CHECK_MATCH`         | `libssh2.lvlib:Known Host Check Result.ctl`         |
 | `LIBSSH2_KNOWNHOST_CHECK_MISMATCH`      | `libssh2.lvlib:Known Host Check Result.ctl`         |
 | `LIBSSH2_KNOWNHOST_CHECK_NOTFOUND`      | `libssh2.lvlib:Known Host Check Result.ctl`         |
