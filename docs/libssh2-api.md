@@ -26,23 +26,23 @@ This is a list of exported libssh2 APIs and their corresponding matches in this 
 | `LIBSSH2_KNOWNHOST_CHECK_MISMATCH`      | `libssh2.lvlib:Known Host Check Result.ctl`         |
 | `LIBSSH2_KNOWNHOST_CHECK_NOTFOUND`      | `libssh2.lvlib:Known Host Check Result.ctl`         |
 | `LIBSSH2_KNOWNHOST_CHECK_FAILURE`       | `libssh2.lvlib:Known Host Check Result.ctl`         |
-| `LIBSSH2_KNOWNHOST_TYPE_MASK`           |
-| `LIBSSH2_KNOWNHOST_TYPE_PLAIN`          |
-| `LIBSSH2_KNOWNHOST_TYPE_SHA1`           |
-| `LIBSSH2_KNOWNHOST_TYPE_CUSTOM`         |
-| `LIBSSH2_KNOWNHOST_KEYENC_MASK`         |
-| `LIBSSH2_KNOWNHOST_KEYENC_RAW`          |
-| `LIBSSH2_KNOWNHOST_KEYENC_BASE64`       |
-| `LIBSSH2_KNOWNHOST_KEY_MASK`            |
-| `LIBSSH2_KNOWNHOST_KEY_SHIFT`           |
-| `LIBSSH2_KNOWNHOST_KEY_RSA1`            |
-| `LIBSSH2_KNOWNHOST_KEY_SSHRSA`          |
-| `LIBSSH2_KNOWNHOST_KEY_SSHDSS`          |
-| `LIBSSH2_KNOWNHOST_KEY_ECDSA_256`       |
-| `LIBSSH2_KNOWNHOST_KEY_ECDSA_384`       |
-| `LIBSSH2_KNOWNHOST_KEY_ECDSA_521`       |
-| `LIBSSH2_KNOWNHOST_KEY_ED25519`         |
-| `LIBSSH2_KNOWNHOST_KEY_UNKNOWN`         |
+| `LIBSSH2_KNOWNHOST_TYPE_MASK`           | `libssh2.lvlib:libssh2_knownhost_typemask.ctl`      |
+| `LIBSSH2_KNOWNHOST_TYPE_PLAIN`          | `libssh2.lvlib:libssh2_knownhost_typemask.ctl`      |
+| `LIBSSH2_KNOWNHOST_TYPE_SHA1`           | `libssh2.lvlib:libssh2_knownhost_typemask.ctl`      |
+| `LIBSSH2_KNOWNHOST_TYPE_CUSTOM`         | `libssh2.lvlib:libssh2_knownhost_typemask.ctl`      |
+| `LIBSSH2_KNOWNHOST_KEYENC_MASK`         | `libssh2.lvlib:libssh2_knownhost_typemask.ctl`      |
+| `LIBSSH2_KNOWNHOST_KEYENC_RAW`          | `libssh2.lvlib:libssh2_knownhost_typemask.ctl`      |
+| `LIBSSH2_KNOWNHOST_KEYENC_BASE64`       | `libssh2.lvlib:libssh2_knownhost_typemask.ctl`      |
+| `LIBSSH2_KNOWNHOST_KEY_MASK`            | `libssh2.lvlib:libssh2_knownhost_typemask.ctl`      |
+| `LIBSSH2_KNOWNHOST_KEY_SHIFT`           | `libssh2.lvlib:libssh2_knownhost_typemask.ctl`      |
+| `LIBSSH2_KNOWNHOST_KEY_RSA1`            | `libssh2.lvlib:libssh2_knownhost_typemask.ctl`      |
+| `LIBSSH2_KNOWNHOST_KEY_SSHRSA`          | `libssh2.lvlib:libssh2_knownhost_typemask.ctl`      |
+| `LIBSSH2_KNOWNHOST_KEY_SSHDSS`          | `libssh2.lvlib:libssh2_knownhost_typemask.ctl`      |
+| `LIBSSH2_KNOWNHOST_KEY_ECDSA_256`       | `libssh2.lvlib:libssh2_knownhost_typemask.ctl`      |
+| `LIBSSH2_KNOWNHOST_KEY_ECDSA_384`       | `libssh2.lvlib:libssh2_knownhost_typemask.ctl`      |
+| `LIBSSH2_KNOWNHOST_KEY_ECDSA_521`       | `libssh2.lvlib:libssh2_knownhost_typemask.ctl`      |
+| `LIBSSH2_KNOWNHOST_KEY_ED25519`         | `libssh2.lvlib:libssh2_knownhost_typemask.ctl`      |
+| `LIBSSH2_KNOWNHOST_KEY_UNKNOWN`         | `libssh2.lvlib:libssh2_knownhost_typemask.ctl`      |
 | `LIBSSH2_KNOWNHOST_FILE_OPENSSH`        | `libssh2.lvlib:Known Host File Type.ctl`            |
 | `LIBSSH2_METHOD_KEX`                    | `libssh2.lvlib:libssh2_method_type.ctl`             |
 | `LIBSSH2_METHOD_HOSTKEY`                | `libssh2.lvlib:libssh2_method_type.ctl`             |
