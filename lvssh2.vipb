@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-11-02 16:41:01" Modified_Date="2024-04-05 07:33:54" Creator="pasca" Comments="" ID="18ff237f0687bac1a50d512604ae05a0">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-11-02 16:41:01" Modified_Date="2024-04-05 07:56:42" Creator="pasca" Comments="" ID="ab7a6567f3f915a1e23298bded60e0ac">
   <Library_General_Settings>
     <Package_File_Name>PNR_lib_lvssh2</Package_File_Name>
-    <Library_Version>0.1.0.70</Library_Version>
+    <Library_Version>0.1.0.72</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>..</Library_Output_Folder>
@@ -28,11 +28,38 @@
     <VI_Package_Configuration_File>lvssh2.vipc</VI_Package_Configuration_File>
     <Description>
       <One_Line_Description_Summary>LabVIEW bindings for libssh2</One_Line_Description_Summary>
-      <Description/>
+      <Description>lvssh2 provides LabVIEW bindings for libssh2
+
+&lt;b&gt;Supported APIs&lt;/b&gt;
+
+- Agent
+- Channel
+- Knownhost
+- SCP
+- Session
+- SFTP
+- Userauth
+
+The public key subsystem is not implemented due to a lack of support in OpenSSH and other major SSH servers.
+For more details see https://github.com/logmanoriginal/lvssh2/blob/main/docs/libssh2-api.md
+
+&lt;b&gt;Error Codes&lt;/b&gt;
+Standard error codes are mapped to error range 5000 through 5999 (0x1388 through 0x176F).
+SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1B57).
+
+&lt;b&gt;Limitations&lt;/b&gt;
+&lt;color=red&gt;Support for 64-bit is experimental and incomplete.&lt;/color&gt;
+There is currently no built-in support for Linux and macOS. Users need to build the libssh2 shared library for these platforms themselves.
+
+Although this project aims to provide complete bindings for libssh2, there are several limitations users need to be aware of:
+
+- Buffer sizes are limited to 2^31-1 bytes (2 GiB) instead of 2^32-1 bytes (4 GiB). The reason for this is that arrays and strings in LabVIEW are limited to 2^31-1 elements. Additional limits may apply due to memory copies when calling external functions.
+- This project includes an extension library to provide functionality that cannot otherwise be realized in LabVIEW. Callers can specify a conditional disable symbol LVSSH2_NO_EXTENSIONS=True to disable the extension library. When this conditional disable symbol is set, then all functions utilizing the extension library will turn into stubs.
+- The public key subsystem is currently not implemented because of lack of support in OpenSSH and other major SSH servers. You can find more information at ssh-publickeyd.</Description>
       <Copyright>Copyright (c) 2023-2024, Pascal Neuperger</Copyright>
       <Packager>Pascal Neuperger</Packager>
       <URL>https://github.com/logmanoriginal/lvssh2</URL>
-      <Release_Notes/>
+      <Release_Notes>This is the first release. It covers all major APIs of libssh2 version 1.11.0 and provides support mostly for 32-bit on Windows.</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
