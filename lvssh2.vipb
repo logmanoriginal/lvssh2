@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-11-02 16:41:01" Modified_Date="2024-04-07 11:19:24" Creator="pasca" Comments="" ID="e2ef000da2ba8284b29ebf85a2391b0c">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-11-02 16:41:01" Modified_Date="2024-04-07 20:23:23" Creator="pasca" Comments="" ID="595286ab46d509c15feecfb1951b1477">
   <Library_General_Settings>
     <Package_File_Name>PNR_lib_lvssh2</Package_File_Name>
-    <Library_Version>0.1.0.72</Library_Version>
+    <Library_Version>0.1.0.75</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>..</Library_Output_Folder>
@@ -34,11 +34,11 @@
 
 - Agent
 - Channel
-- Knownhost
+- Known Host
 - SCP
 - Session
 - SFTP
-- Userauth
+- User Authentication
 
 The public key subsystem is not implemented due to a lack of support in OpenSSH and other major SSH servers.
 For more details see https://github.com/logmanoriginal/lvssh2/blob/main/docs/libssh2-api.md
@@ -183,6 +183,12 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Exclusions>
         <Path>extensions</Path>
       </Exclusions>
+      <Exclusions>
+        <Path>Update Descriptions.vi</Path>
+      </Exclusions>
+      <Exclusions>
+        <Path>lvssh2-descriptions.xml</Path>
+      </Exclusions>
       <Place_Folder_Contents>
         <Path/>
       </Place_Folder_Contents>
@@ -282,7 +288,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_init.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Init (libssh2_init)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -324,7 +330,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_version.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Version (libssh2_version)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -422,7 +428,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_exit.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Exit (libssh2_exit)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -436,7 +442,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_crypto_engine.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Crypto Engine (libssh2_crypto_engine)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -461,7 +467,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
         <Path>SCP</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>587C3E65A66B18E589F9B29B81D67CCC</GUID>
+      <GUID>70780EF034BC3F44AC072D3B77A6C76C</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -485,7 +491,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_session_init.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Session Init (libssh2_session_init)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -499,7 +505,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_session_handshake.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Session Handshake (libssh2_session_handshake)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -513,7 +519,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_session_hostkey.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Session Host Key (libssh2_session_hostkey)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -527,7 +533,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_hostkey_hash.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Host Key Hash (libssh2_hostkey_hash)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -541,7 +547,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_session_set_blocking.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Session Set Blocking (libssh2_session_set_blocking)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -555,7 +561,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_session_free.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Session Free (libssh2_session_free)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -569,7 +575,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Not A Session.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>Not An Session</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -583,7 +589,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_session_disconnect.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Session Disconnect (libssh2_session_disconnect)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -597,7 +603,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_session_get_blocking.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Session Get Blocking (libssh2_session_get_blocking)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -611,7 +617,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_session_last_error.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Session Last Error (libssh2_session_last_error)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -625,7 +631,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_session_set_timeout.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Session Set Timeout (libssh2_session_set_timeout)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -639,7 +645,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_session_get_timeout.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Session Get Timeout (libssh2_session_get_timeout)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -681,7 +687,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_session_set_read_timeout.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Session Set Read Timeout (libssh2_session_set_read_timeout)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -695,7 +701,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_session_get_read_timeout.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Session Get Read Timeout (libssh2_session_get_read_timeout)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -709,7 +715,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_keepalive_config.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Keepalive Configuration (libssh2_keepalive_config)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -723,7 +729,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_keepalive_send.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Keepalive Send (libssh2_keepalive_send)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -734,7 +740,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
         <Path>libssh2\libssh2_keepalive_send.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>BB928C13AE05068286D57088E8359284</GUID>
+      <GUID>78A2E7CD6C9D36CF9A005EFDFBED2AAC</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -758,7 +764,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_session_init_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Session Init Extended (libssh2_session_init_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -772,7 +778,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_session_disconnect_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Session Disconnect Extended (libssh2_session_disconnect_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -786,7 +792,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_session_method_pref.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Session Method Preference (libssh2_session_method_pref)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -800,7 +806,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_session_methods.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Session Methods (libssh2_session_methods)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -814,7 +820,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_session_banner_get.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Session Get Banner (libssh2_session_banner_get)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -828,7 +834,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_session_banner_set.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Session Set Banner (libssh2_session_banner_set)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -842,7 +848,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_session_last_errno.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Session Last Error Number (libssh2_session_last_errno)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -856,7 +862,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_session_set_last_error.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Session Set Last Error (libssh2_session_set_last_error)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -870,7 +876,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_session_flag.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Session Flag (libssh2_session_flag)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -884,7 +890,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_session_supported_algs.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Session Supported Algorithms (libssh2_session_supported_algs)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -898,7 +904,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_session_block_directions.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Session Block Directions (libssh2_session_block_directions)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -912,7 +918,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_session_callback_set.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Session Callback Set (libssh2_session_callback_set)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -926,7 +932,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_session_abstract.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Session Abstract (libssh2_session_abstract)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -937,7 +943,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
         <Path>libssh2\libssh2_session_abstract.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>842ACBBC015625F21D89BDD7A6170410</GUID>
+      <GUID>B1B93676DA35165171F34BFB92C1F68A</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -961,7 +967,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_open_session.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Open Session (libssh2_channel_open_session)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -975,7 +981,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_read.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Read (libssh2_channel_read)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -989,7 +995,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_write.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Write (libssh2_channel_write)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1003,7 +1009,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_exec.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Execute (libssh2_channel_exec)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1017,7 +1023,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_get_exit_status.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Get Exit Status (libssh2_channel_get_exit_status)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1031,7 +1037,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_get_exit_signal.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Get Exit Signal (libssh2_channel_get_exit_signal)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1045,7 +1051,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Not A Channel.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>Not An Channel</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1059,7 +1065,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_free.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Free (libssh2_channel_free)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1073,7 +1079,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_close.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Close (libssh2_channel_close)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1087,7 +1093,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_eof.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel EOF (libssh2_channel_eof)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1101,7 +1107,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_send_eof.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Send EOF (libssh2_channel_send_eof)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1115,7 +1121,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_flush.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Flush (libssh2_channel_flush)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1157,7 +1163,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_direct_tcpip.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Direct TCP (libssh2_channel_direct_tcpip)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1171,7 +1177,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_set_blocking.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Set Blocking (libssh2_channel_set_blocking)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1185,7 +1191,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_setenv_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Set Environment Extended (libssh2_channel_setenv_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1199,7 +1205,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_request_pty.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Request PTY (libssh2_channel_request_pty)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1213,7 +1219,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_request_pty_size_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Request PTY Size Extended (libssh2_channel_request_pty_size_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1227,7 +1233,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_wait_eof.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Wait EOF (libssh2_channel_wait_eof)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1241,7 +1247,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_flush_stderr.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Flush Standard Error (libssh2_channel_flush_stderr)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1255,7 +1261,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_read_stderr.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Read Standard Error (libssh2_channel_read_stderr)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1269,7 +1275,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_write_stderr.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Write Standard Error (libssh2_channel_write_stderr)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1283,7 +1289,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_wait_closed.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Wait Closed (libssh2_channel_wait_closed)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1297,7 +1303,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_shell.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Shell (libssh2_channel_shell)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1311,7 +1317,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_subsystem.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Subsystem (libssh2_channel_subsystem)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1325,7 +1331,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_handle_extended_data2.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Handle Extended Data (libssh2_channel_handle_extended_data2)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1339,7 +1345,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_request_auth_agent.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Request Authentication Agent (libssh2_channel_request_auth_agent)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1353,7 +1359,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_signal_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Signal Extended (libssh2_channel_signal_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1364,7 +1370,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
         <Path>libssh2\libssh2_channel_signal_ex.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>107A9DD0EF42C6B60F260DBB4DCBB8EE</GUID>
+      <GUID>1C1512931911C45D8001258E555DA12C</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>3</Parent_Palette_Index>
@@ -1388,7 +1394,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_open_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Open Extended (libssh2_channel_open_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1402,7 +1408,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_read_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Read Extended (libssh2_channel_read_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1416,7 +1422,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_write_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Write Extended (libssh2_channel_write_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1430,7 +1436,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_flush_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Flush Extended (libssh2_channel_flush_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1444,7 +1450,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_window_read_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Window Read Extended (libssh2_channel_window_read_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1458,7 +1464,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_window_write_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Window Write Extended (libssh2_channel_window_write_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1472,7 +1478,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_process_startup.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Process Startup (libssh2_channel_process_startup)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1486,7 +1492,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_direct_tcpip_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Direct TCP Extended (libssh2_channel_direct_tcpip_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1500,7 +1506,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_request_pty_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Request PTY Extended (libssh2_channel_request_pty_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1514,7 +1520,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_receive_window_adjust2.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Receive Window Adjust (libssh2_channel_receive_window_adjust2)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1525,7 +1531,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
         <Path>libssh2\libssh2_channel_receive_window_adjust2.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>749DC14FBD9847AEF0AB98813D591622</GUID>
+      <GUID>9655A5A310A7B54ED2AAFC94ED764086</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1549,7 +1555,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_knownhost_init.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Known Host Init (libssh2_knownhost_init)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1563,7 +1569,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_knownhost_readfile.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Known Host Read File (libssh2_knownhost_readfile)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1577,7 +1583,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_knownhost_writefile.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Known Host Write File (libssh2_knownhost_writefile)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1591,7 +1597,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_knownhost_get.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Known Host Get (libssh2_knownhost_get)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1605,7 +1611,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_knownhost_checkp.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Known Host Check (libssh2_knownhost_checkp)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1619,7 +1625,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_knownhost_free.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Known Host Free (libssh2_knownhost_free)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1633,7 +1639,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Read Known Host Data.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>Read Known Host Data</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1647,7 +1653,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Not A Known Host.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>Not An Known Host</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1661,7 +1667,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Not A Known Host Collection.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>Not An Known Host Collection</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1675,7 +1681,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_knownhost_readline.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Known Host Read Line (libssh2_knownhost_readline)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1689,7 +1695,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_knownhost_writeline.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Known Host Write Line (libssh2_knownhost_writeline)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1703,7 +1709,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_knownhost_del.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Known Host Delete (libssh2_knownhost_del)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1717,7 +1723,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_knownhost_addc.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Known Host Add (libssh2_knownhost_addc)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1728,7 +1734,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
         <Path>libssh2\libssh2_knownhost_addc.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>B47051612A1DF92654A05E53C653BDFD</GUID>
+      <GUID>11CFFB7AECAD3958A538770B59CE6E80</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>3</Parent_Palette_Index>
@@ -1752,7 +1758,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_forward_accept.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Forward Accept (libssh2_channel_forward_accept)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1766,7 +1772,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_forward_cancel.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Forward Cancel (libssh2_channel_forward_cancel)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1780,7 +1786,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Not A Listener.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>Not An Listener</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1794,7 +1800,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_forward_listen.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Forward Listen (libssh2_channel_forward_listen)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1819,7 +1825,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
         <Path>Advanced</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>78D8428D3242066FD433ECDA9A2B9AC1</GUID>
+      <GUID>39AE90B2B862253E94F41CB176B702E0</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1843,7 +1849,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_userauth_banner.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH User Authentication Banner (libssh2_userauth_banner)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1857,7 +1863,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_userauth_list.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH User Authentication List (libssh2_userauth_list)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1871,7 +1877,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_userauth_password.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH User Authentication Password (libssh2_userauth_password)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1899,7 +1905,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_userauth_authenticated.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH User Authentication Authenticated (libssh2_userauth_authenticated)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1913,7 +1919,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_userauth_publickey_fromfile_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH User Authentication Public Key From File (libssh2_userauth_publickey_fromfile_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1924,7 +1930,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
         <Path>libssh2\libssh2_userauth_publickey_fromfile_ex.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>6C0825F24BCE563899E72B45ABCF6C83</GUID>
+      <GUID>E3D3F5FB1F0797CE614AD87D635511AA</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>7</Parent_Palette_Index>
@@ -1948,7 +1954,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_userauth_password_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH User Authentication Password Extended (libssh2_userauth_password_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1962,7 +1968,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_userauth_publickey.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH User Authentication Public Key (libssh2_userauth_publickey)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1976,7 +1982,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_userauth_publickey_frommemory.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH User Authentication Public Key From Memory (libssh2_userauth_publickey_frommemory)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1990,7 +1996,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_userauth_hostbased_fromfile_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH User Authentication Host Based From File Extended (libssh2_userauth_hostbased_fromfile_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2004,7 +2010,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_userauth_keyboard_interactive_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH User Authentication Keyboard Interactive Extended (libssh2_userauth_keyboard_interactive_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2015,7 +2021,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
         <Path>libssh2\libssh2_userauth_keyboard_interactive_ex.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>EBE1EDE9AC15E2E2B4BCAD8465D0133B</GUID>
+      <GUID>20643CD289F0B685CAAEA885CAC10741</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -2039,7 +2045,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_agent_init.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Agent Init (libssh2_agent_init)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2053,7 +2059,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_agent_connect.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Agent Connect (libssh2_agent_connect)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2067,7 +2073,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_agent_get_identity_path.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Agent Get Identity Path (libssh2_agent_get_identity_path)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2081,7 +2087,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_agent_set_identity_path.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Agent Set Identity Path (libssh2_agent_set_identity_path)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2095,7 +2101,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_agent_disconnect.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Agent Disconnect (libssh2_agent_disconnect)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2109,7 +2115,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_agent_list_identities.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Agent List Identities (libssh2_agent_list_identities)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2123,7 +2129,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_agent_get_identity.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Agent Get Identity (libssh2_agent_get_identity)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2137,7 +2143,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_agent_sign.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Agent Sign (libssh2_agent_sign)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2151,7 +2157,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Release Agent Public Key.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>Release Agent Public Key</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2165,7 +2171,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_agent_free.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Agent Free (libssh2_agent_free)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2179,7 +2185,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Read Agent Public Key Data.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>Read Agent Public Key Data</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2193,7 +2199,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Not An Agent.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>Not An Agent</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2207,7 +2213,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Not An Agent Public Key.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>Not An Agent Public Key</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2218,7 +2224,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
         <Path>libssh2\Not An Agent Public Key.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>1308CAC27F6C197510B9ACF6C0A1AB49</GUID>
+      <GUID>E2705490881950C6E4A323B39A8F7BAC</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -2242,7 +2248,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_init.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Init (libssh2_sftp_init)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2256,7 +2262,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_open.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Open (libssh2_sftp_open)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2270,7 +2276,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_opendir.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Open Directory (libssh2_sftp_opendir)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2284,7 +2290,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_read.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Read (libssh2_sftp_read)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2298,7 +2304,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_write.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Write (libssh2_sftp_write)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2312,7 +2318,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_readdir.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Read Directory (libssh2_sftp_readdir)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2326,7 +2332,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_shutdown.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Shutdown (libssh2_sftp_shutdown)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2340,7 +2346,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_close.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Close (libssh2_sftp_close)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2354,7 +2360,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_closedir.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Close Directory (libssh2_sftp_closedir)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2368,7 +2374,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_fstatvfs.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP File Status VFS (libssh2_sftp_fstatvfs)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2396,7 +2402,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_statvfs.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Status VFS (libssh2_sftp_statvfs)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2410,7 +2416,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_fsetstat.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP File Set Status (libssh2_sftp_fsetstat)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2424,7 +2430,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_setstat.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Set Status (libssh2_sftp_setstat)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2438,7 +2444,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_lstat.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP LStat (libssh2_sftp_lstat)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2452,7 +2458,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_stat.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Status (libssh2_sftp_stat)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2466,7 +2472,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_fstat.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP File Status (libssh2_sftp_fstat)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2480,7 +2486,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_last_error.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Last Error (libssh2_sftp_last_error)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2494,7 +2500,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_fsync.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP File Sync (libssh2_sftp_fsync)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2508,7 +2514,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_symlink.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Symbolic Link (libssh2_sftp_symlink)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2522,7 +2528,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_mkdir_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Make Directory Extended (libssh2_sftp_mkdir_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2536,7 +2542,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_seek64.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Seek (libssh2_sftp_seek64)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2550,7 +2556,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_rewind.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Rewind (libssh2_sftp_rewind)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2564,7 +2570,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_tell64.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Tell (libssh2_sftp_tell64)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2578,7 +2584,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_readlink.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Read Link (libssh2_sftp_readlink)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2592,7 +2598,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_realpath.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Real Path (libssh2_sftp_realpath)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2606,7 +2612,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_rename.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Rename (libssh2_sftp_rename)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2620,7 +2626,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_unlink_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Unlink Extended (libssh2_sftp_unlink_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2634,7 +2640,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_rmdir_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Remove Directory Extended (libssh2_sftp_rmdir_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2648,7 +2654,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Not An SFTP Handle Refnum.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>Not An SFTP Handle Refnum</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2662,7 +2668,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Not An SFTP Refnum.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>Not An SFTP Refnum</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2673,7 +2679,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
         <Path>libssh2\Not An SFTP Refnum.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>1CD4B5EBA4B925F3D1365F2229ED2A93</GUID>
+      <GUID>3A7BFB7E1BC11B6CF0E1672E119FDC3C</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>10</Parent_Palette_Index>
@@ -2697,7 +2703,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_open_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Open Extended (libssh2_sftp_open_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2711,7 +2717,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_close_handle.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Close Handle (libssh2_sftp_close_handle)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2725,7 +2731,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_fstat_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP File Status Extended (libssh2_sftp_fstat_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2739,7 +2745,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_readdir_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Read Directory Extended (libssh2_sftp_readdir_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2753,7 +2759,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_stat_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Status Extended (libssh2_sftp_stat_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2767,7 +2773,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_symlink_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Symbolic Link Extended (libssh2_sftp_symlink_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2781,7 +2787,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_open_ex_r.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Open Read Extended (libssh2_sftp_open_ex_r)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2795,7 +2801,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_open_r.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Open Read (libssh2_sftp_open_r)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2809,7 +2815,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_sftp_rename_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SFTP Rename Extended (libssh2_sftp_rename_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2820,7 +2826,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
         <Path>libssh2\libssh2_sftp_rename_ex.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>CC402AD53A4480858E99524E5ED3997C</GUID>
+      <GUID>5ACAC9375442B15F478530B0BD4A05F9</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -2846,7 +2852,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_trace.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Trace (libssh2_trace)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2860,7 +2866,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_trace_sethandler.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Trace Set Handler (libssh2_trace_sethandler)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2871,7 +2877,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
         <Path>libssh2\libssh2_trace_sethandler.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F709051EA688823F05B931D30C9AA37E</GUID>
+      <GUID>16FFEA4B93AC4087579CB0C8455C972B</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -2895,7 +2901,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Wait Socket.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>Wait Socket</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2909,7 +2915,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>From Unix Time.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>From Unix Time</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2923,7 +2929,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>To Unix Time.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>To Unix Time</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2934,7 +2940,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
         <Path>libssh2\To Unix Time.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>A16AA677701582FC32E9D4A36DC53F6F</GUID>
+      <GUID>90D14B8AAA49AABE4139E51A147C257B</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>6</Parent_Palette_Index>
@@ -2958,7 +2964,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_channel_forward_listen_ex.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Channel Forward Listen Extended (libssh2_channel_forward_listen_ex)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -2969,7 +2975,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
         <Path>libssh2\libssh2_channel_forward_listen_ex.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>B7C9758A8B71A1C8E8EE1AD13F37B44F</GUID>
+      <GUID>658237A92951BD5FDAC6C7BB9ACA6DBB</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -2993,7 +2999,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_free.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH Free (libssh2_free)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -3004,7 +3010,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
         <Path>libssh2\libssh2_free.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E9D8D70958488C975121177BBA47BBAA</GUID>
+      <GUID>CE878D00CBFB7BD097A48FCF6F45720E</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -3028,7 +3034,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_scp_recv2.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SCP Receive (libssh2_scp_recv2)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -3042,7 +3048,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>libssh2_scp_send64.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>SSH SCP Send (libssh2_scp_send64)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -3053,7 +3059,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
         <Path>libssh2\libssh2_scp_send64.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>3979A2E8DC0A86FC8CF0984C6DC91174</GUID>
+      <GUID>702C40A50975F4518CEFD68524D5F1DE</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>

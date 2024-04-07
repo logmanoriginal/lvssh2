@@ -64,7 +64,10 @@ Although this project aims to provide complete bindings for libssh2, there are s
 - **Length Parameters for String and Array types**: All functions that take a string or array type as an input parameter do not expose a separate length parameter. Instead, the length of the string or array is determined by the type itself. Because of this, some of the libssh2 convenience functions are not included. For example, `libssh2_channel_window_write` is not included because it would be equivalent to `libssh2_channel_window_write_ex`. For a complete overview of the functions that are included, see [libssh2-api](docs/libssh2-api.md).
 - **Pointer Handling**: Pointers are not exposed to the caller. Instead, the caller receives a Refnum that represents a Data Value Reference which contains the pointer. This is done to provide a more LabVIEW-like interface and to avoid pointer handling for the caller. Note that this also ensures 32-bit and 64-bit compatibility.
 - **Constants**: Constants are defined as enum typedefs in the lvssh2 library. This is done to provide a more LabVIEW-like interface. See [libssh2-api](docs/libssh2-api.md) for a complete overview of the constants and how they are defined.
-- **Naming Conventions**: The naming conventions for the functions are based on the libssh2 function names.
+- **Naming Conventions**: The naming conventions for functions are based on the libssh2 function names. VI titles contain a human-readable function name and the function name of libssh2 in parenthesis. For example, the title for `libssh2_agent_get_identity` is "SSH Agent Get Identity (libssh2_agent_get_identity)". This makes it easier to find functions in quick-drop.
+
+> [!NOTE]
+> VI titles and descriptions are defined in [lvssh2-descriptions.xml](/lvssh2-descriptions.xml) using [Update Descriptions.vi](/Update%20Descriptions.vi). This is done to allow for easy updating of the descriptions using modern text editors (e.g., with Copilot support).
 
 ### Built With
 

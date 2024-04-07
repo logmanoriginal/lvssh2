@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+    This file contains the descriptions and titles for all VIs in the project to streamline the process of updating them.
+    It is used by 'Update Descriptions.vi'.
+-->
+<library path="libssh2/libssh2.lvlib">
+    <item path="libssh2/libssh2_agent_connect.vi">
+        <title>SSH Agent Connect (libssh2_agent_connect)</title>
+        <description>Connect to an SSH agent.</description>
+    </item>
+    <item path="libssh2/libssh2_agent_disconnect.vi">
+        <title>SSH Agent Disconnect (libssh2_agent_disconnect)</title>
+        <description>Disconnect from an SSH agent.</description>
+    </item>
+    <item path="libssh2/libssh2_agent_free.vi">
+        <title>SSH Agent Free (libssh2_agent_free)</title>
+        <description>Release memory associated with an SSH agent handle.</description>
+    </item>
+    <item path="libssh2/libssh2_agent_get_identity.vi">
+        <title>SSH Agent Get Identity (libssh2_agent_get_identity)</title>
+        <description>Get a public key off the internal list of public keys. Call <B>libssh2_agent_list_identities</B> to request a list of public keys from the SSH agent.</description>
+    </item>
+    <item path="libssh2/libssh2_agent_get_identity_path.vi">
+        <title>SSH Agent Get Identity Path (libssh2_agent_get_identity_path)</title>
+        <description>Get the path to the identity socket previously set with <B>libssh2_agent_set_identity_path</B>.</description>
+    </item>
+    <item path="libssh2/libssh2_agent_init.vi">
+        <title>SSH Agent Init (libssh2_agent_init)</title>
+        <description>Initialize an SSH agent handle. The caller is responsible for releasing the handle by calling <B>libssh2_agent_free</B>.</description>
+    </item>
+    <item path="libssh2/libssh2_agent_list_identities.vi">
+        <title>SSH Agent List Identities (libssh2_agent_list_identities)</title>
+        <description>Request a list of public keys from the SSH agent. Call <B>libssh2_agent_get_identity</B> to get a public key.</description>
+    </item>
+    <item path="libssh2/libssh2_agent_set_identity_path.vi">
+        <title>SSH Agent Set Identity Path (libssh2_agent_set_identity_path)</title>
+        <description>Set the path to a custom identity socket instead of the default <B>SSH_AUTH_SOCK</B> environment variable.</description>
+    </item>
+    <item path="libssh2/libssh2_agent_sign.vi">
+        <title>SSH Agent Sign (libssh2_agent_sign)</title>
+        <description>Sign a buffer with a public key from an SSH agent.</description>
+    </item>
+    <item path="libssh2/libssh2_agent_userauth.vi">
+        <title>SSH Agent User Authentication (libssh2_agent_userauth)</title>
+        <description>Authenticate a session with a public key from an SSH agent.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_close.vi">
+        <title>SSH Channel Close (libssh2_channel_close)</title>
+        <description>Close a channel. To wait for the remote end to close its channel as well, call <B>libssh2_channel_wait_closed</B>.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_direct_tcpip_ex.vi">
+        <title>SSH Channel Direct TCP Extended (libssh2_channel_direct_tcpip_ex)</title>
+        <description>Create a channel to tunnel a TCP connection from a local port to a target host through an SSH session. Communication to the SSH server remains encrypted. Communication from the SSH server to the target host happens in clear text.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_direct_tcpip.vi">
+        <title>SSH Channel Direct TCP (libssh2_channel_direct_tcpip)</title>
+        <description>Create a channel to tunnel a TCP connection from local port 22 to a target host through an SSH session. Communication to the SSH server remains encrypted. Communication from the SSH server to the target host happens in clear text.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_eof.vi">
+        <title>SSH Channel EOF (libssh2_channel_eof)</title>
+        <description>Check the EOF status of the channel.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_exec.vi">
+        <title>SSH Channel Execute (libssh2_channel_exec)</title>
+        <description>Execute a command on the SSH server.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_flush.vi">
+        <title>SSH Channel Flush (libssh2_channel_flush)</title>
+        <description>Flush the standard input/output buffer for a channel.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_flush_ex.vi">
+        <title>SSH Channel Flush Extended (libssh2_channel_flush_ex)</title>
+        <description>Flush the read buffer for a channel.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_flush_stderr.vi">
+        <title>SSH Channel Flush Standard Error (libssh2_channel_flush_stderr)</title>
+        <description>Flush the standard error buffer for a channel.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_forward_accept.vi">
+        <title>SSH Channel Forward Accept (libssh2_channel_forward_accept)</title>
+        <description>Accept a forwarded connection on a listening channel.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_forward_cancel.vi">
+        <title>SSH Channel Forward Cancel (libssh2_channel_forward_cancel)</title>
+        <description>Stop listening for inbound TCP connections on a listening channel.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_forward_listen_ex.vi">
+        <title>SSH Channel Forward Listen Extended (libssh2_channel_forward_listen_ex)</title>
+        <description>Create a listening channel for inbound TCP connections on a specific address and port on the SSH server. New connections are queued until accepted with <B>libssh2_channel_forward_accept</B>.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_forward_listen.vi">
+        <title>SSH Channel Forward Listen (libssh2_channel_forward_listen)</title>
+        <description>Create a listening channel for inbound TCP connections on a specific port on the SSH server. New connections are queued until accepted with <B>libssh2_channel_forward_accept</B>.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_free.vi">
+        <title>SSH Channel Free (libssh2_channel_free)</title>
+        <description>Release memory associated with a channel.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_get_exit_signal.vi">
+        <title>SSH Channel Get Exit Signal (libssh2_channel_get_exit_signal)</title>
+        <description>Get the exit signal from a channel.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_get_exit_status.vi">
+        <title>SSH Channel Get Exit Status (libssh2_channel_get_exit_status)</title>
+        <description>Get the exit status from a channel.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_handle_extended_data2.vi">
+        <title>SSH Channel Handle Extended Data (libssh2_channel_handle_extended_data2)</title>
+        <description>Set how extended data is handled on a channel.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_open_ex.vi">
+        <title>SSH Channel Open Extended (libssh2_channel_open_ex)</title>
+        <description>Open a channel.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_open_session.vi">
+        <title>SSH Channel Open Session (libssh2_channel_open_session)</title>
+        <description>Open a channel of type "session".</description>
+    </item>
+    <item path="libssh2/libssh2_channel_process_startup.vi">
+        <title>SSH Channel Process Startup (libssh2_channel_process_startup)</title>
+        <description>Start a process on a channel.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_read_ex.vi">
+        <title>SSH Channel Read Extended (libssh2_channel_read_ex)</title>
+        <description>
+            Read data from a channel.
+            All channel streams have one standard input/output substream (<B>stream id</B> = 0), and may have up to 2^32 extended data streams as identified by the selected <B>stream id</B>. The SSH-2 protocol currently defines a standard stream ID of 1 to be the stderr substream.
+        </description>
+    </item>
+    <item path="libssh2/libssh2_channel_read_stderr.vi">
+        <title>SSH Channel Read Standard Error (libssh2_channel_read_stderr)</title>
+        <description>Read data from the standard error substream of a channel.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_read.vi">
+        <title>SSH Channel Read (libssh2_channel_read)</title>
+        <description>Read data from the standard input/output substream of a channel.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_receive_window_adjust2.vi">
+        <title>SSH Channel Receive Window Adjust (libssh2_channel_receive_window_adjust2)</title>
+        <description>
+            Adjust the receive window for a channel by <B>adjustment</B> bytes.
+            If the amount to be adjusted is less than 1024 and <B>force</B> is zero the adjustment amount will be queued for a later packet.
+
+            Returns the new size of the receive window.
+        </description>
+    </item>
+    <item path="libssh2/libssh2_channel_request_auth_agent.vi">
+        <title>SSH Channel Request Authentication Agent (libssh2_channel_request_auth_agent)</title>
+        <description>Request authentication agent forwarding on a channel.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_request_pty_ex.vi">
+        <title>SSH Channel Request PTY Extended (libssh2_channel_request_pty_ex)</title>
+        <description>Request a pseudo-terminal on a channel.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_request_pty.vi">
+        <title>SSH Channel Request PTY (libssh2_channel_request_pty)</title>
+        <description>Request a pseudo-terminal with a default width of 80 columns and 24 rows on a channel.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_request_pty_size_ex.vi">
+        <title>SSH Channel Request PTY Size Extended (libssh2_channel_request_pty_size_ex)</title>
+        <description>Change the size of a pseudo-terminal on a channel.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_send_eof.vi">
+        <title>SSH Channel Send EOF (libssh2_channel_send_eof)</title>
+        <description>Send EOF on a channel.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_set_blocking.vi">
+        <title>SSH Channel Set Blocking (libssh2_channel_set_blocking)</title>
+        <description>
+            Set blocking mode on a channel. This will affect the session and all channels.
+
+            If a read is performed on a channel with no data currently available, a blocking channel will wait for data to arrive and return what it received. A non-blocking channel will return immediately with an empty buffer. If a write is performed on a channel with no room for more data, a blocking channel will wait for room. A non-blocking channel will return immediately without writing anything.
+        </description>
+    </item>
+    <item path="libssh2/libssh2_channel_setenv_ex.vi">
+        <title>SSH Channel Set Environment Extended (libssh2_channel_setenv_ex)</title>
+        <description>Set an environment variable on a channel.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_shell.vi">
+        <title>SSH Channel Shell (libssh2_channel_shell)</title>
+        <description>Open a channel of type "shell".</description>
+    </item>
+    <item path="libssh2/libssh2_channel_signal_ex.vi">
+        <title>SSH Channel Signal Extended (libssh2_channel_signal_ex)</title>
+        <description>
+            Send a signal (without "SIG" prefix) to a process previously opened on the channel.
+
+            Signals depend on the OS of the SSH server and may be ignored.
+
+            For example:
+            "TERM" - terminate the process.
+            "IGN" - ignore the signal (no-op).
+            "CORE" - terminate the process and dump core.
+            "STOP" - stop the process.
+            "CONT" - continue the process if it is currently stopped.
+        </description>
+    </item>
+    <item path="libssh2/libssh2_channel_subsystem.vi">
+        <title>SSH Channel Subsystem (libssh2_channel_subsystem)</title>
+        <description>Open a channel of type "subsystem".</description>
+    </item>
+    <item path="libssh2/libssh2_channel_wait_closed.vi">
+        <title>SSH Channel Wait Closed (libssh2_channel_wait_closed)</title>
+        <description>Wait for the remote end to close its channel.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_wait_eof.vi">
+        <title>SSH Channel Wait EOF (libssh2_channel_wait_eof)</title>
+        <description>Wait for EOF on a channel.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_window_read_ex.vi">
+        <title>SSH Channel Window Read Extended (libssh2_channel_window_read_ex)</title>
+        <description>
+            Returns the number of bytes which the remote end may send without overflowing the window limit.
+
+            <B>bytes available for read</B> returns the number of bytes actually available to be read.
+            <B>initial window size</B> returns the initial window size as defined by the channel_open request.
+        </description>
+    </item>
+    <item path="libssh2/libssh2_channel_window_write_ex.vi">
+        <title>SSH Channel Window Write Extended (libssh2_channel_window_write_ex)</title>
+        <description>
+            Returns the number of bytes which may safely be written on the channel without blocking.
+
+            <B>initial window size</B> returns the initial window size as defined by the channel_open request. It may be zero for locally initiated channels.
+        </description>
+    </item>
+    <item path="libssh2/libssh2_channel_write_ex.vi">
+        <title>SSH Channel Write Extended (libssh2_channel_write_ex)</title>
+        <description>Write data to a channel.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_write_stderr.vi">
+        <title>SSH Channel Write Standard Error (libssh2_channel_write_stderr)</title>
+        <description>Write data to the standard error substream of a channel.</description>
+    </item>
+    <item path="libssh2/libssh2_channel_write.vi">
+        <title>SSH Channel Write (libssh2_channel_write)</title>
+        <description>Write data to the standard input/output substream of a channel.</description>
+    </item>
+    <item path="libssh2/libssh2_crypto_engine.vi">
+        <title>SSH Crypto Engine (libssh2_crypto_engine)</title>
+        <description>Get the crypto engine used by libssh2.</description>
+    </item>
+    <item path="libssh2/libssh2_exit.vi">
+        <title>SSH Exit (libssh2_exit)</title>
+        <description>Exit libssh2 and release internal resources.</description>
+    </item>
+    <item path="libssh2/libssh2_free.vi">
+        <title>SSH Free (libssh2_free)</title>
+        <description>Release memory allocated by earlier calls to libssh2 functions.</description>
+    </item>
+    <item path="libssh2/libssh2_hostkey_hash.vi">
+        <title>SSH Host Key Hash (libssh2_hostkey_hash)</title>
+        <description>Get the hash of the remote host's public key.</description>
+    </item>
+    <item path="libssh2/libssh2_init.vi">
+        <title>SSH Init (libssh2_init)</title>
+        <description>Initialize libssh2.</description>
+    </item>
+    <item path="libssh2/libssh2_init_custom.vi">
+        <title>SSH Init Custom (libssh2_init_custom)</title>
+        <description>Initialize libssh2 with a custom build of libssh2.</description>
+    </item>
+    <item path="libssh2/libssh2_init_default.vi">
+        <title>SSH Init Default (libssh2_init_default)</title>
+        <description>Initialize libssh2 with the default build of libssh2 included with lvssh2.</description>
+    </item>
+    <item path="libssh2/libssh2_keepalive_config.vi">
+        <title>SSH Keepalive Configuration (libssh2_keepalive_config)</title>
+        <description>
+            Set how often keep-alive messages should be send.
+
+            <B>want reply</B> indicates whether the keep-alive messages should request a response from the server.
+            <B>interval</B> is the number of seconds that can pass without data being sent.
+
+            Note that an interval of 1 will be treated as 2 by libssh2 to avoid some busy-loop corner-cases.
+
+            The caller is responsible for sending keep-alive messages using <B>libssh2_keepalive_send</B>.
+        </description>
+    </item>
+    <item path="libssh2/libssh2_keepalive_send.vi">
+        <title>SSH Keepalive Send (libssh2_keepalive_send)</title>
+        <description>
+            Send a keep-alive message if needed.
+
+            <B>seconds to next</B> indicates how many seconds the caller can sleep before the next keep-alive message is due.
+        </description>
+    </item>
+    <item path="libssh2/libssh2_knownhost_addc.vi">
+        <title>SSH Known Host Add (libssh2_knownhost_addc)</title>
+        <description>Add a host and its associated key to the collection of known hosts.</description>
+    </item>
+    <item path="libssh2/libssh2_knownhost_checkp.vi">
+        <title>SSH Known Host Check (libssh2_knownhost_checkp)</title>
+        <description>Check if a host and its associated key are in the collection of known hosts.</description>
+    </item>
+    <item path="libssh2/libssh2_knownhost_del.vi">
+        <title>SSH Known Host Delete (libssh2_knownhost_del)</title>
+        <description>Delete a host and its associated key from the collection of known hosts.</description>
+    </item>
+    <item path="libssh2/libssh2_knownhost_free.vi">
+        <title>SSH Known Host Free (libssh2_knownhost_free)</title>
+        <description>Release memory associated with a known host collection.</description>
+    </item>
+    <item path="libssh2/libssh2_knownhost_get.vi">
+        <title>SSH Known Host Get (libssh2_knownhost_get)</title>
+        <description>
+            Get a known host from the collection of known hosts. Returns the first known host in the collection when <B>previous</B> is unwired.
+
+            <B>end reached</B> is TRUE when the end of hosts is reached. Otherwise, FALSE.
+        </description>
+    </item>
+    <item path="libssh2/libssh2_knownhost_init.vi">
+        <title>SSH Known Host Init (libssh2_knownhost_init)</title>
+        <description>Initialize a collection of known hosts.</description>
+    </item>
+    <item path="libssh2/libssh2_knownhost_readfile.vi">
+        <title>SSH Known Host Read File (libssh2_knownhost_readfile)</title>
+        <description>Read known hosts from a file and add them to a collection of known hosts.</description>
+    </item>
+    <item path="libssh2/libssh2_knownhost_readline.vi">
+        <title>SSH Known Host Read Line (libssh2_knownhost_readline)</title>
+        <description>Read a known host from a string and add it to a collection of known hosts.</description>
+    </item>
+    <item path="libssh2/libssh2_knownhost_writefile.vi">
+        <title>SSH Known Host Write File (libssh2_knownhost_writefile)</title>
+        <description>Write a collection of known hosts to a file.</description>
+    </item>
+    <item path="libssh2/libssh2_knownhost_writeline.vi">
+        <title>SSH Known Host Write Line (libssh2_knownhost_writeline)</title>
+        <description>Write a known host to a string.</description>
+    </item>
+    <item path="libssh2/libssh2_scp_recv2.vi">
+        <title>SSH SCP Receive (libssh2_scp_recv2)</title>
+        <description>Request a file from an SSH server. When successful, returns a channel instance and the remote file's size, mode, mtime, and atime.</description>
+    </item>
+    <item path="libssh2/libssh2_scp_send64.vi">
+        <title>SSH SCP Send (libssh2_scp_send64)</title>
+        <description>Send a file to an SSH server.</description>
+    </item>
+    <item path="libssh2/libssh2_session_abstract.vi">
+        <title>SSH Session Abstract (libssh2_session_abstract)</title>
+        <description>Get the abstract data that was provided to <B>libssh2_session_init_ex</B> when creating a session.</description>
+    </item>
+    <item path="libssh2/libssh2_session_banner_get.vi">
+        <title>SSH Session Get Banner (libssh2_session_banner_get)</title>
+        <description>Get the banner that was sent by the server when a session was established.</description>
+    </item>
+    <item path="libssh2/libssh2_session_banner_set.vi">
+        <title>SSH Session Set Banner (libssh2_session_banner_set)</title>
+        <description>Set the banner that will be sent to the server when a session is established.</description>
+    </item>
+    <item path="libssh2/libssh2_session_block_directions.vi">
+        <title>SSH Session Block Directions (libssh2_session_block_directions)</title>
+        <description>
+            Set the blocking mode for a session.
+
+            When any of the libssh2 functions return <B>LIBSSH2_ERROR_EAGAIN</B>, a caller should wait for the socket to have data available for reading or writing before calling the function again.
+        </description>
+    </item>
+    <item path="libssh2/libssh2_session_callback_set.vi">
+        <title>SSH Session Callback Set (libssh2_session_callback_set)</title>
+        <description>Set a callback handler for a session. Callbacks are triggered by the receipt of special packets at the transport layer. To disable the callback, set it to NULL.</description>
+    </item>
+    <item path="libssh2/libssh2_session_disconnect.vi">
+        <title>SSH Session Disconnect (libssh2_session_disconnect)</title>
+        <description>Disconnect a session.</description>
+    </item>
+    <item path="libssh2/libssh2_session_disconnect_ex.vi">
+        <title>SSH Session Disconnect Extended (libssh2_session_disconnect_ex)</title>
+        <description>Disconnect a session with a custom reason and language tag.</description>
+    </item>
+    <item path="libssh2/libssh2_session_flag.vi">
+        <title>SSH Session Flag (libssh2_session_flag)</title>
+        <description>Set the value of a session flag.</description>
+    </item>
+    <item path="libssh2/libssh2_session_free.vi">
+        <title>SSH Session Free (libssh2_session_free)</title>
+        <description>Release memory associated with a session.</description>
+    </item>
+    <item path="libssh2/libssh2_session_get_blocking.vi">
+        <title>SSH Session Get Blocking (libssh2_session_get_blocking)</title>
+        <description>Get the blocking mode for a session.</description>
+    </item>
+    <item path="libssh2/libssh2_session_get_read_timeout.vi">
+        <title>SSH Session Get Read Timeout (libssh2_session_get_read_timeout)</title>
+        <description>Get the timeout for socket read functions on a session.</description>
+    </item>
+    <item path="libssh2/libssh2_session_get_timeout.vi">
+        <title>SSH Session Get Timeout (libssh2_session_get_timeout)</title>
+        <description>Get the timeout for blocking functions on a session. A value of zero indicates no timeout.</description>
+    </item>
+    <item path="libssh2/libssh2_session_handshake.vi">
+        <title>SSH Session Handshake (libssh2_session_handshake)</title>
+        <description>Perform the SSH handshake on a session.</description>
+    </item>
+    <item path="libssh2/libssh2_session_handshake_socket.vi">
+        <title>SSH Session Handshake Socket (libssh2_session_handshake_socket)</title>
+        <description>Perform the SSH handshake on a session using a TCP socket.</description>
+    </item>
+    <item path="libssh2/libssh2_session_handshake_tcp.vi">
+        <title>SSH Session Handshake TCP (libssh2_session_handshake_tcp)</title>
+        <description>Perform the SSH handshake on a session using a TCP connection.</description>
+    </item>
+    <item path="libssh2/libssh2_session_hostkey.vi">
+        <title>SSH Session Host Key (libssh2_session_hostkey)</title>
+        <description>Get the host key of the remote host.</description>
+    </item>
+    <item path="libssh2/libssh2_session_init.vi">
+        <title>SSH Session Init (libssh2_session_init)</title>
+        <description>Initialize a session.</description>
+    </item>
+    <item path="libssh2/libssh2_session_init_ex.vi">
+        <title>SSH Session Init Extended (libssh2_session_init_ex)</title>
+        <description>Initialize a session with abstract data.</description>
+    </item>
+    <item path="libssh2/libssh2_session_last_errno.vi">
+        <title>SSH Session Last Error Number (libssh2_session_last_errno)</title>
+        <description>Get the last error code for a session.</description>
+    </item>
+    <item path="libssh2/libssh2_session_last_error.vi">
+        <title>SSH Session Last Error (libssh2_session_last_error)</title>
+        <description>Get the last error code and error message for a session.</description>
+    </item>
+    <item path="libssh2/libssh2_session_method_pref.vi">
+        <title>SSH Session Method Preference (libssh2_session_method_pref)</title>
+        <description>Set the preferred methods to negotiate for a session.</description>
+    </item>
+    <item path="libssh2/libssh2_session_methods.vi">
+        <title>SSH Session Methods (libssh2_session_methods)</title>
+        <description>Get the methods negotiated for a session.</description>
+    </item>
+    <item path="libssh2/libssh2_session_set_blocking.vi">
+        <title>SSH Session Set Blocking (libssh2_session_set_blocking)</title>
+        <description>
+            Set the blocking mode for a session. This will instantly affect any channels associated with a session.
+
+            If a read is performed on a session with no data currently available, a blocking session will wait for data to arrive and return what it received. A non-blocking session will return immediately with an empty buffer. If a write is performed on a session with no room for more data, a blocking session will wait for room. A non-blocking session will return immediately without writing anything.
+        </description>
+    </item>
+    <item path="libssh2/libssh2_session_set_last_error.vi">
+        <title>SSH Session Set Last Error (libssh2_session_set_last_error)</title>
+        <description>Set the last error code and error message for a session.</description>
+    </item>
+    <item path="libssh2/libssh2_session_set_read_timeout.vi">
+        <title>SSH Session Set Read Timeout (libssh2_session_set_read_timeout)</title>
+        <description>Set the timeout for socket read functions on a session. Set to zero to use the default value (60 s).</description>
+    </item>
+    <item path="libssh2/libssh2_session_set_timeout.vi">
+        <title>SSH Session Set Timeout (libssh2_session_set_timeout)</title>
+        <description>Set the timeout for blocking functions on a session. A value of zero indicates no timeout.</description>
+    </item>
+    <item path="libssh2/libssh2_session_supported_algs.vi">
+        <title>SSH Session Supported Algorithms (libssh2_session_supported_algs)</title>
+        <description>
+            Get the supported algorithms for a method type.
+
+            For a list of supported compression algorithms, <B>libssh2_session_flag</B> must be called with LIBSSH2_FLAG_COMPRESS=1. Otherwise, "none" will be returned.
+
+            If successful, returns an array with supported algorithms as defined in RFC 4253.
+        </description>
+    </item>
+    <item path="libssh2/libssh2_sftp_close.vi">
+        <title>SSH SFTP Close (libssh2_sftp_close)</title>
+        <description>Close a file handle.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_close_handle.vi">
+        <title>SSH SFTP Close Handle (libssh2_sftp_close_handle)</title>
+        <description>Close a file handle.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_closedir.vi">
+        <title>SSH SFTP Close Directory (libssh2_sftp_closedir)</title>
+        <description>Close a directory handle.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_fsetstat.vi">
+        <title>SSH SFTP File Set Status (libssh2_sftp_fsetstat)</title>
+        <description>Set the attributes of a file handle.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_fstat.vi">
+        <title>SSH SFTP File Status (libssh2_sftp_fstat)</title>
+        <description>Get the attributes of a file handle.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_fstat_ex.vi">
+        <title>SSH SFTP File Status Extended (libssh2_sftp_fstat_ex)</title>
+        <description>Get or set the attributes of a file handle.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_fstatvfs.vi">
+        <title>SSH SFTP File Status VFS (libssh2_sftp_fstatvfs)</title>
+        <description>Get the file system information of a file handle.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_fsync.vi">
+        <title>SSH SFTP File Sync (libssh2_sftp_fsync)</title>
+        <description>Flush a file handle to disk.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_get_channel.vi">
+        <title>SSH SFTP Get Channel (libssh2_sftp_get_channel)</title>
+        <description>Get the channel associated with an SFTP session.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_init.vi">
+        <title>SSH SFTP Init (libssh2_sftp_init)</title>
+        <description>Initialize an SFTP session.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_last_error.vi">
+        <title>SSH SFTP Last Error (libssh2_sftp_last_error)</title>
+        <description>
+            Get the last error code and error message for an SFTP session.
+
+            This only works when libssh2 returned <B>LIBSSH2_ERROR_SFTP_PROTOCOL</B> in a previous call. Otherwise, the return value is undefined.
+        </description>
+    </item>
+    <item path="libssh2/libssh2_sftp_lstat.vi">
+        <title>SSH SFTP LStat (libssh2_sftp_lstat)</title>
+        <description>Get the attributes of a symbolic link.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_mkdir_ex.vi">
+        <title>SSH SFTP Make Directory Extended (libssh2_sftp_mkdir_ex)</title>
+        <description>Create a directory with custom permissions.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_open_ex.vi">
+        <title>SSH SFTP Open Extended (libssh2_sftp_open_ex)</title>
+        <description>Open a file or directory handle with custom flags and permissions.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_open.vi">
+        <title>SSH SFTP Open (libssh2_sftp_open)</title>
+        <description>Open a file handle with default flags and permissions.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_open_ex_r.vi">
+        <title>SSH SFTP Open Read Extended (libssh2_sftp_open_ex_r)</title>
+        <description>Open a file or directory handle for reading with custom flags and permissions.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_open_r.vi">
+        <title>SSH SFTP Open Read (libssh2_sftp_open_r)</title>
+        <description>Open a file handle for reading with default flags and permissions.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_opendir.vi">
+        <title>SSH SFTP Open Directory (libssh2_sftp_opendir)</title>
+        <description>Open a directory handle.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_read.vi">
+        <title>SSH SFTP Read (libssh2_sftp_read)</title>
+        <description>Read data from a file handle.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_readdir_ex.vi">
+        <title>SSH SFTP Read Directory Extended (libssh2_sftp_readdir_ex)</title>
+        <description>Read the next entry from a directory handle. Optionally return the output of a directory listing command.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_readdir.vi">
+        <title>SSH SFTP Read Directory (libssh2_sftp_readdir)</title>
+        <description>Read the next entry from a directory handle.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_readlink.vi">
+        <title>SSH SFTP Read Link (libssh2_sftp_readlink)</title>
+        <description>Read the target of a symbolic link.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_realpath.vi">
+        <title>SSH SFTP Real Path (libssh2_sftp_realpath)</title>
+        <description>Get the real path of a file or directory. If <B>path</B> is relative or refers to a symbolic link, the absolute path to the actual file is returned.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_rename_ex.vi">
+        <title>SSH SFTP Rename Extended (libssh2_sftp_rename_ex)</title>
+        <description>Rename a file or directory with custom flags.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_rename.vi">
+        <title>SSH SFTP Rename (libssh2_sftp_rename)</title>
+        <description>Rename a file or directory.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_rewind.vi">
+        <title>SSH SFTP Rewind (libssh2_sftp_rewind)</title>
+        <description>Set the file position of a file handle to zero.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_rmdir_ex.vi">
+        <title>SSH SFTP Remove Directory Extended (libssh2_sftp_rmdir_ex)</title>
+        <description>Remove a directory.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_seek64.vi">
+        <title>SSH SFTP Seek (libssh2_sftp_seek64)</title>
+        <description>Set the file position of a file handle.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_setstat.vi">
+        <title>SSH SFTP Set Status (libssh2_sftp_setstat)</title>
+        <description>Set the attributes of a file or directory.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_shutdown.vi">
+        <title>SSH SFTP Shutdown (libssh2_sftp_shutdown)</title>
+        <description>Shutdown an SFTP session.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_stat.vi">
+        <title>SSH SFTP Status (libssh2_sftp_stat)</title>
+        <description>Get the attributes of a file or directory.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_stat_ex.vi">
+        <title>SSH SFTP Status Extended (libssh2_sftp_stat_ex)</title>
+        <description>Get or set the attributes of a file or directory.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_statvfs.vi">
+        <title>SSH SFTP Status VFS (libssh2_sftp_statvfs)</title>
+        <description>Get the file system information of a file or directory.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_symlink_ex.vi">
+        <title>SSH SFTP Symbolic Link Extended (libssh2_sftp_symlink_ex)</title>
+        <description>Create a symbolic link or read information about a symbolic link.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_symlink.vi">
+        <title>SSH SFTP Symbolic Link (libssh2_sftp_symlink)</title>
+        <description>Create a symbolic link.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_tell64.vi">
+        <title>SSH SFTP Tell (libssh2_sftp_tell64)</title>
+        <description>Get the file position of a file handle.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_unlink_ex.vi">
+        <title>SSH SFTP Unlink Extended (libssh2_sftp_unlink_ex)</title>
+        <description>Delete a file.</description>
+    </item>
+    <item path="libssh2/libssh2_sftp_write.vi">
+        <title>SSH SFTP Write (libssh2_sftp_write)</title>
+        <description>Write data to a file handle.</description>
+    </item>
+    <item path="libssh2/libssh2_trace.vi">
+        <title>SSH Trace (libssh2_trace)</title>
+        <description>Set the trace flags for libssh2.</description>
+    </item>
+    <item path="libssh2/libssh2_trace_sethandler.vi">
+        <title>SSH Trace Set Handler (libssh2_trace_sethandler)</title>
+        <description>Set the trace handler for libssh2. This only works on debug build of libssh2.</description>
+    </item>
+    <item path="libssh2/libssh2_userauth_authenticated.vi">
+        <title>SSH User Authentication Authenticated (libssh2_userauth_authenticated)</title>
+        <description>Get a value indicating if a session has been authenticated.</description>
+    </item>
+    <item path="libssh2/libssh2_userauth_banner.vi">
+        <title>SSH User Authentication Banner (libssh2_userauth_banner)</title>
+        <description>Get the banner that was sent by the server during user authentication.</description>
+    </item>
+    <item path="libssh2/libssh2_userauth_hostbased_fromfile_ex.vi">
+        <title>SSH User Authentication Host Based From File Extended (libssh2_userauth_hostbased_fromfile_ex)</title>
+        <description>Authenticate a session using host-based authentication with a public key file.</description>
+    </item>
+    <item path="libssh2/libssh2_userauth_keyboard_interactive_ex.vi">
+        <title>SSH User Authentication Keyboard Interactive Extended (libssh2_userauth_keyboard_interactive_ex)</title>
+        <description>Authenticate a session using keyboard-interactive authentication.</description>
+    </item>
+    <item path="libssh2/libssh2_userauth_list.vi">
+        <title>SSH User Authentication List (libssh2_userauth_list)</title>
+        <description>
+            Get a list of authentication methods that are available for a session.
+
+            Sends a SSH_USERAUTH_NONE request to the remote host. Unless the remote is configured to accept "none" as a viable authentication scheme, it will return SSH_USERAUTH_FAILURE along with a listing of what authentication schemes it does support. In the unlikely event that none-authentication succeeds, this method returns an empty string. This can be distinguished from a failing case by examining <B>libssh2_userauth_authenticated</B>.
+        </description>
+    </item>
+    <item path="libssh2/libssh2_userauth_password.vi">
+        <title>SSH User Authentication Password (libssh2_userauth_password)</title>
+        <description>Authenticate a session using a password.</description>
+    </item>
+    <item path="libssh2/libssh2_userauth_password_ex.vi">
+        <title>SSH User Authentication Password Extended (libssh2_userauth_password_ex)</title>
+        <description>Authenticate a session using a password with a custom password change callback.</description>
+    </item>
+    <item path="libssh2/libssh2_userauth_publickey.vi">
+        <title>SSH User Authentication Public Key (libssh2_userauth_publickey)</title>
+        <description>Authenticate a session using a public key and a custom signing function.</description>
+    </item>
+    <item path="libssh2/libssh2_userauth_publickey_fromfile_ex.vi">
+        <title>SSH User Authentication Public Key From File (libssh2_userauth_publickey_fromfile_ex)</title>
+        <description>Authenticate a session using a private and public key file.</description>
+    </item>
+    <item path="libssh2/libssh2_userauth_publickey_frommemory.vi">
+        <title>SSH User Authentication Public Key From Memory (libssh2_userauth_publickey_frommemory)</title>
+        <description>Authenticate a session using a private and public key from memory.</description>
+    </item>
+    <item path="libssh2/libssh2_version.vi">
+        <title>SSH Version (libssh2_version)</title>
+        <description>Get the version of libssh2.</description>
+    </item>
+    <item path="libssh2/Not An Agent.vi">
+        <title>Not An Agent</title>
+        <description>Returns TRUE if <B>agent</B> is not an agent. Otherwise, FALSE.</description>
+    </item>
+    <item path="libssh2/Not An Agent Public Key.vi">
+        <title>Not An Agent Public Key</title>
+        <description>Returns TRUE if <B>agent public key</B> is not an agent public key. Otherwise, FALSE.</description>
+    </item>
+    <item path="libssh2/Read Agent Public Key Data.vi">
+        <title>Read Agent Public Key Data</title>
+        <description>Read the data of an agent public key.</description>
+    </item>
+    <item path="libssh2/Release Agent Public Key.vi">
+        <title>Release Agent Public Key</title>
+        <description>Release the memory associated with an agent public key.</description>
+    </item>
+    <item path="libssh2/Not A Channel.vi">
+        <title>Not An Channel</title>
+        <description>Returns TRUE if <B>channel</B> is not a channel. Otherwise, FALSE.</description>
+    </item>
+    <item path="libssh2/Not A Known Host.vi">
+        <title>Not An Known Host</title>
+        <description>Returns TRUE if <B>known host</B> is not a known host. Otherwise, FALSE.</description>
+    </item>
+    <item path="libssh2/Read Known Host Data.vi">
+        <title>Read Known Host Data</title>
+        <description>Read the data of a known host.</description>
+    </item>
+    <item path="libssh2/Release Known Host.vi">
+        <title>Release Known Host</title>
+        <description>Release the memory associated with a known host.</description>
+    </item>
+    <item path="libssh2/Not A Known Host Collection.vi">
+        <title>Not An Known Host Collection</title>
+        <description>Returns TRUE if <B>known host collection</B> is not a known host collection. Otherwise, FALSE.</description>
+    </item>
+    <item path="libssh2/Not A Listener.vi">
+        <title>Not An Listener</title>
+        <description>Returns TRUE if <B>listener</B> is not a listener. Otherwise, FALSE.</description>
+    </item>
+    <item path="libssh2/Not A Session.vi">
+        <title>Not An Session</title>
+        <description>Returns TRUE if <B>session</B> is not a session. Otherwise, FALSE.</description>
+    </item>
+    <item path="libssh2/Not An SFTP Refnum.vi">
+        <title>Not An SFTP Refnum</title>
+        <description>Returns TRUE if <B>sftp</B> is not an SFTP refnum. Otherwise, FALSE.</description>
+    </item>
+    <item path="libssh2/Not An SFTP Handle Refnum.vi">
+        <title>Not An SFTP Handle Refnum</title>
+        <description>Returns TRUE if <B>sftp handle</B> is not an SFTP handle. Otherwise, FALSE.</description>
+    </item>
+    <item path="libssh2/From Unix Time.vi">
+        <title>From Unix Time</title>
+        <description>Convert Unix time to a LabVIEW timestamp.</description>
+    </item>
+    <item path="libssh2/To Unix Time.vi">
+        <title>To Unix Time</title>
+        <description>Convert a LabVIEW timestamp to Unix time.</description>
+    </item>
+    <item path="libssh2/Wait Socket.vi">
+        <title>Wait Socket</title>
+        <description>Wait for data on a socket in reading or writing direction as indicated by the session.</description>
+    </item>
+    <item path="libssh2/Wait Socket (Socket).vi">
+        <title>Wait Socket (Socket)</title>
+        <description>Wait for data on a TCP socket in reading or writing direction as indicated by the session.</description>
+    </item>
+    <item path="libssh2/Wait Socket (TCP).vi">
+        <title>Wait Socket (TCP)</title>
+        <description>Wait for data on a TCP connection in reading or writing direction as indicated by the session.</description>
+    </item>
+</library>
