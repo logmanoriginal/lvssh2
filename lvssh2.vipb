@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-11-02 16:41:01" Modified_Date="2024-04-07 20:23:23" Creator="pasca" Comments="" ID="595286ab46d509c15feecfb1951b1477">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-11-02 16:41:01" Modified_Date="2024-04-07 20:30:28" Creator="pasca" Comments="" ID="40eea16f188df235dea2ee3e09fd4eb6">
   <Library_General_Settings>
     <Package_File_Name>PNR_lib_lvssh2</Package_File_Name>
-    <Library_Version>0.1.0.75</Library_Version>
+    <Library_Version>0.1.0.76</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>..</Library_Output_Folder>
@@ -227,9 +227,9 @@ Although this project aims to provide complete bindings for libssh2, there are s
         <Syncing_MNU_file/>
       </Controls_Palette_Information>
       <Functions_Palette_Information>
-        <Virtual_Palette_Base_Path>Functions\Connectivity</Virtual_Palette_Base_Path>
-        <Palette_Disk_Base_Path>&lt;menus&gt;\Categories\Computer</Palette_Disk_Base_Path>
-        <Syncing_MNU_file>&lt;menus&gt;\Categories\Computer\dir.mnu</Syncing_MNU_file>
+        <Virtual_Palette_Base_Path>Functions\Data Communication</Virtual_Palette_Base_Path>
+        <Palette_Disk_Base_Path>&lt;menus&gt;\Categories\Data Communication</Palette_Disk_Base_Path>
+        <Syncing_MNU_file>&lt;menus&gt;\Categories\Data Communication\dir.mnu</Syncing_MNU_file>
       </Functions_Palette_Information>
       <Apply_Short_Names_to_VI_Titles>false</Apply_Short_Names_to_VI_Titles>
       <Apply_Short_Names_to_VI_Titles_2>false</Apply_Short_Names_to_VI_Titles_2>
