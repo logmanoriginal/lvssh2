@@ -18,7 +18,7 @@
 		<Item Name="Error if not an Agent.vi" Type="VI" URL="../Error if not an Agent.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
-		<Item Name="Not A Agent.vi" Type="VI" URL="../Not A Agent.vi"/>
+		<Item Name="Not An Agent.vi" Type="VI" URL="../Not An Agent.vi"/>
 		<Item Name="Read Agent Refnum.vi" Type="VI" URL="../Read Agent Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
@@ -34,7 +34,7 @@
 		<Item Name="Error if not a Agent Public Key.vi" Type="VI" URL="../Error if not a Agent Public Key.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
-		<Item Name="Not A Agent Public Key.vi" Type="VI" URL="../Not A Agent Public Key.vi"/>
+		<Item Name="Not An Agent Public Key.vi" Type="VI" URL="../Not An Agent Public Key.vi"/>
 		<Item Name="Read Agent Public Key Data.vi" Type="VI" URL="../Read Agent Public Key Data.vi"/>
 		<Item Name="Read Agent Public Key Refnum.vi" Type="VI" URL="../Read Agent Public Key Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
@@ -161,7 +161,7 @@
 		<Item Name="Error if not a SFTP Refnum.vi" Type="VI" URL="../Error if not a SFTP Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
-		<Item Name="Not a SFTP Refnum.vi" Type="VI" URL="../Not a SFTP Refnum.vi"/>
+		<Item Name="Not An SFTP Refnum.vi" Type="VI" URL="../Not An SFTP Refnum.vi"/>
 		<Item Name="Read SFTP Refnum.vi" Type="VI" URL="../Read SFTP Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
@@ -177,7 +177,7 @@
 		<Item Name="Error if not a SFTP Handle Refnum.vi" Type="VI" URL="../Error if not a SFTP Handle Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
-		<Item Name="Not a SFTP Handle Refnum.vi" Type="VI" URL="../Not a SFTP Handle Refnum.vi"/>
+		<Item Name="Not An SFTP Handle Refnum.vi" Type="VI" URL="../Not An SFTP Handle Refnum.vi"/>
 		<Item Name="Read SFTP Handle Refnum.vi" Type="VI" URL="../Read SFTP Handle Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
