@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-11-02 16:41:01" Modified_Date="2024-04-07 20:30:28" Creator="pasca" Comments="" ID="40eea16f188df235dea2ee3e09fd4eb6">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-11-02 16:41:01" Modified_Date="2024-04-08 09:02:02" Creator="pasca" Comments="" ID="d20f75c72609a65df96f9b57e97a9541">
   <Library_General_Settings>
     <Package_File_Name>PNR_lib_lvssh2</Package_File_Name>
-    <Library_Version>0.1.0.76</Library_Version>
+    <Library_Version>0.1.0.77</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>..</Library_Output_Folder>
@@ -33,12 +33,12 @@
 &lt;b&gt;Supported APIs&lt;/b&gt;
 
 - Agent
+- Authentication
 - Channel
 - Known Host
 - SCP
 - Session
 - SFTP
-- User Authentication
 
 The public key subsystem is not implemented due to a lack of support in OpenSSH and other major SSH servers.
 For more details see https://github.com/logmanoriginal/lvssh2/blob/main/docs/libssh2-api.md
@@ -467,7 +467,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
         <Path>SCP</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>70780EF034BC3F44AC072D3B77A6C76C</GUID>
+      <GUID>ED400F029C5FB30D9754ADAD0B68EB43</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -740,7 +740,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
         <Path>libssh2\libssh2_keepalive_send.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>78A2E7CD6C9D36CF9A005EFDFBED2AAC</GUID>
+      <GUID>CAE88BEF5AF683AAF6812239BAFB9F20</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -943,7 +943,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
         <Path>libssh2\libssh2_session_abstract.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>B1B93676DA35165171F34BFB92C1F68A</GUID>
+      <GUID>30108B8912073BD52B5816D6EF0D1675</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1370,7 +1370,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
         <Path>libssh2\libssh2_channel_signal_ex.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>1C1512931911C45D8001258E555DA12C</GUID>
+      <GUID>A7FCD0953EEC961B10F0238487937ABC</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>3</Parent_Palette_Index>
@@ -1531,7 +1531,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
         <Path>libssh2\libssh2_channel_receive_window_adjust2.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>9655A5A310A7B54ED2AAFC94ED764086</GUID>
+      <GUID>57AD04B64B38A505B944A17A90A95B1F</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1734,7 +1734,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
         <Path>libssh2\libssh2_knownhost_addc.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>11CFFB7AECAD3958A538770B59CE6E80</GUID>
+      <GUID>9378CAD7865843F22CEEF71160180F46</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>3</Parent_Palette_Index>
@@ -1825,7 +1825,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
         <Path>Advanced</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>39AE90B2B862253E94F41CB176B702E0</GUID>
+      <GUID>175A15192638F76DADB89DBB23D80558</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1930,7 +1930,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
         <Path>libssh2\libssh2_userauth_publickey_fromfile_ex.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E3D3F5FB1F0797CE614AD87D635511AA</GUID>
+      <GUID>EB947A0B11D1B37C7D2515712B0024C1</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>7</Parent_Palette_Index>
@@ -2021,7 +2021,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
         <Path>libssh2\libssh2_userauth_keyboard_interactive_ex.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>20643CD289F0B685CAAEA885CAC10741</GUID>
+      <GUID>96BD7C5769FCF01AE0D5A2F49B4BAD63</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -2224,7 +2224,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
         <Path>libssh2\Not An Agent Public Key.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E2705490881950C6E4A323B39A8F7BAC</GUID>
+      <GUID>6FA33BA6F0C9F01F327CCD93136D382C</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -2679,7 +2679,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
         <Path>libssh2\Not An SFTP Refnum.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>3A7BFB7E1BC11B6CF0E1672E119FDC3C</GUID>
+      <GUID>50762533DBF621F99AA037929D378694</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>10</Parent_Palette_Index>
@@ -2826,7 +2826,7 @@ Although this project aims to provide complete bindings for libssh2, there are s
         <Path>libssh2\libssh2_sftp_rename_ex.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>5ACAC9375442B15F478530B0BD4A05F9</GUID>
+      <GUID>5A3303F0BA38CB0C4B1A54BEA05C114A</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -2877,7 +2877,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
         <Path>libssh2\libssh2_trace_sethandler.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>16FFEA4B93AC4087579CB0C8455C972B</GUID>
+      <GUID>95674919B7F126DD46852F442478553F</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -2940,7 +2940,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
         <Path>libssh2\To Unix Time.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>90D14B8AAA49AABE4139E51A147C257B</GUID>
+      <GUID>1CFF25759005E53192B43B794A787BC4</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>6</Parent_Palette_Index>
@@ -2975,7 +2975,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
         <Path>libssh2\libssh2_channel_forward_listen_ex.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>658237A92951BD5FDAC6C7BB9ACA6DBB</GUID>
+      <GUID>E8CB1EE3F01B2E0FD5980E3EE328E964</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -3010,7 +3010,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
         <Path>libssh2\libssh2_free.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>CE878D00CBFB7BD097A48FCF6F45720E</GUID>
+      <GUID>4C5B907B206F2AE1AE0C4B8DEECD42A7</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -3059,7 +3059,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
         <Path>libssh2\libssh2_scp_send64.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>702C40A50975F4518CEFD68524D5F1DE</GUID>
+      <GUID>00B216130DD6F8917CEB9ADC36424630</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>

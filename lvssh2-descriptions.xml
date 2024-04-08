@@ -411,7 +411,11 @@
     </item>
     <item path="libssh2/libssh2_session_init_ex.vi">
         <title>SSH Session Init Extended (libssh2_session_init_ex)</title>
-        <description>Initialize a session with abstract data.</description>
+        <description>
+            Initialize a session with abstract data.
+
+            This function utilizes the lvssh2 extension library to register <B>abstract</B> function callbacks. You can disable the extension library by defining the LVSSH2_NO_EXTENSIONS conditional disable symbol with the value 'True' in the project properties. When the extension library is disabled, the <B>abstract</B> function callbacks are not registered.
+        </description>
     </item>
     <item path="libssh2/libssh2_session_last_errno.vi">
         <title>SSH Session Last Error Number (libssh2_session_last_errno)</title>
@@ -621,7 +625,13 @@
     </item>
     <item path="libssh2/libssh2_trace_sethandler.vi">
         <title>SSH Trace Set Handler (libssh2_trace_sethandler)</title>
-        <description>Set the trace handler for libssh2. This only works on debug build of libssh2.</description>
+        <description>
+            Set the trace handler for libssh2.
+
+            This only works on debug build of libssh2.
+
+            This function utilizes the lvssh2 extension library. You can disable the extension library by defining the LVSSH2_NO_EXTENSIONS conditional disable symbol with the value 'True' in the project properties. When the extension library is disabled, this function turns into a no-op.
+        </description>
     </item>
     <item path="libssh2/libssh2_userauth_authenticated.vi">
         <title>SSH User Authentication Authenticated (libssh2_userauth_authenticated)</title>
@@ -637,7 +647,11 @@
     </item>
     <item path="libssh2/libssh2_userauth_keyboard_interactive_ex.vi">
         <title>SSH User Authentication Keyboard Interactive Extended (libssh2_userauth_keyboard_interactive_ex)</title>
-        <description>Authenticate a session using keyboard-interactive authentication.</description>
+        <description>
+            Authenticate a session using keyboard-interactive authentication.
+
+            This function utilizes the lvssh2 extension library. You can disable the extension library by defining the LVSSH2_NO_EXTENSIONS conditional disable symbol with the value 'True' in the project properties. When the extension library is disabled, this function turns into a no-op.
+        </description>
     </item>
     <item path="libssh2/libssh2_userauth_list.vi">
         <title>SSH User Authentication List (libssh2_userauth_list)</title>
@@ -657,7 +671,11 @@
     </item>
     <item path="libssh2/libssh2_userauth_publickey.vi">
         <title>SSH User Authentication Public Key (libssh2_userauth_publickey)</title>
-        <description>Authenticate a session using a public key and a custom signing function.</description>
+        <description>
+            Authenticate a session using a public key and a custom signing function.
+
+            This function utilizes the lvssh2 extension library. You can disable the extension library by defining the LVSSH2_NO_EXTENSIONS conditional disable symbol with the value 'True' in the project properties. When the extension library is disabled, this function turns into a no-op.
+        </description>
     </item>
     <item path="libssh2/libssh2_userauth_publickey_fromfile_ex.vi">
         <title>SSH User Authentication Public Key From File (libssh2_userauth_publickey_fromfile_ex)</title>
