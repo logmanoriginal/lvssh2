@@ -47,8 +47,8 @@
 
     For 64-bit builds, rename `libssh2.dll` to `libssh2_64.dll`.
 
-    > [!TIP]
-    > You can place both, 32-bit and 64-bit versions, in the same directory.
-    > The library path for libssh2 is configured as `libssh2**.*`, which resolves to the appropriate version based on the platform and bitness.
-    > For example, `libssh2.dll` for 32-bit builds and `libssh2_64.dll` for 64-bit builds on Windows. On Linux, the library is named `libssh2.so` and `libssh2_64.so`, respectively.
-    > See [Configuring the Call Library Function Node](https://www.ni.com/docs/en-US/bundle/labview/page/configuring-the-call-library-function-node.html) for more information.
+> [!TIP]
+> You can place both, 32-bit and 64-bit versions, in the same directory.
+> The library path for libssh2 is configured as `libssh2**.*`, which resolves to the appropriate version based on the platform and bitness.
+> For example, `libssh2.dll` for 32-bit builds and `libssh2_64.dll` for 64-bit builds on Windows. On Linux, the library is named `libssh2.so` and `libssh2_64.so`, respectively.
+> See [Configuring the Call Library Function Node](https://www.ni.com/docs/en-US/bundle/labview/page/configuring-the-call-library-function-node.html) for more information.
