@@ -87,9 +87,14 @@ To get a local copy up and running follow these simple steps.
 ### Installation
 
 1. Clone the repo
+
    ```sh
    git clone https://github.com/logmanoriginal/lvssh2.git
    ```
+
+### Build Instructions
+
+* [Build instructions for libssh2](docs/libssh2-build-instructions.md)
 
 ## Usage
 
