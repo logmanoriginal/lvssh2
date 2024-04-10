@@ -58,41 +58,39 @@
 		</Item>
 	</Item>
 	<Item Name="Host Key" Type="Folder">
+		<Item Name="Create Host Key Refnum.vi" Type="VI" URL="../Create Host Key Refnum.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Delete Host Key Refnum.vi" Type="VI" URL="../Delete Host Key Refnum.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Error if not a Host Key.vi" Type="VI" URL="../Error if not a Host Key.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Host Key Check Result.ctl" Type="VI" URL="../Host Key Check Result.ctl"/>
+		<Item Name="Host Key File Type.ctl" Type="VI" URL="../Host Key File Type.ctl"/>
 		<Item Name="Host Key Hash Type.ctl" Type="VI" URL="../Host Key Hash Type.ctl"/>
+		<Item Name="Host Key Refnum.ctl" Type="VI" URL="../Host Key Refnum.ctl"/>
+		<Item Name="Not A Host Key.vi" Type="VI" URL="../Not A Host Key.vi"/>
+		<Item Name="Read Host Key Data.vi" Type="VI" URL="../Read Host Key Data.vi"/>
+		<Item Name="Read Host Key Refnum.vi" Type="VI" URL="../Read Host Key Refnum.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Release Host Key.vi" Type="VI" URL="../Release Host Key.vi"/>
 	</Item>
-	<Item Name="Known Host" Type="Folder">
-		<Item Name="Create Known Host Refnum.vi" Type="VI" URL="../Create Known Host Refnum.vi">
+	<Item Name="Host Key Database" Type="Folder">
+		<Item Name="Create Host Key Database Refnum.vi" Type="VI" URL="../Create Host Key Database Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
-		<Item Name="Delete Known Host Refnum.vi" Type="VI" URL="../Delete Known Host Refnum.vi">
+		<Item Name="Delete Host Key Database Refnum.vi" Type="VI" URL="../Delete Host Key Database Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
-		<Item Name="Error if not a Known Host.vi" Type="VI" URL="../Error if not a Known Host.vi">
+		<Item Name="Error if not a Host Key Database.vi" Type="VI" URL="../Error if not a Host Key Database.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
-		<Item Name="Known Host Check Result.ctl" Type="VI" URL="../Known Host Check Result.ctl"/>
-		<Item Name="Known Host File Type.ctl" Type="VI" URL="../Known Host File Type.ctl"/>
-		<Item Name="Known Host Refnum.ctl" Type="VI" URL="../Known Host Refnum.ctl"/>
-		<Item Name="Not A Known Host.vi" Type="VI" URL="../Not A Known Host.vi"/>
-		<Item Name="Read Known Host Data.vi" Type="VI" URL="../Read Known Host Data.vi"/>
-		<Item Name="Read Known Host Refnum.vi" Type="VI" URL="../Read Known Host Refnum.vi">
-			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-		</Item>
-		<Item Name="Release Known Host.vi" Type="VI" URL="../Release Known Host.vi"/>
-	</Item>
-	<Item Name="Known Host Collection" Type="Folder">
-		<Item Name="Create Known Host Collection Refnum.vi" Type="VI" URL="../Create Known Host Collection Refnum.vi">
-			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-		</Item>
-		<Item Name="Delete Known Host Collection Refnum.vi" Type="VI" URL="../Delete Known Host Collection Refnum.vi">
-			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-		</Item>
-		<Item Name="Error if not a Known Host Collection.vi" Type="VI" URL="../Error if not a Known Host Collection.vi">
-			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-		</Item>
-		<Item Name="Known Host Collection Refnum.ctl" Type="VI" URL="../Known Host Collection Refnum.ctl"/>
-		<Item Name="Not A Known Host Collection.vi" Type="VI" URL="../Not A Known Host Collection.vi"/>
-		<Item Name="Read Known Host Collection Refnum.vi" Type="VI" URL="../Read Known Host Collection Refnum.vi">
+		<Item Name="Host Key Database Refnum.ctl" Type="VI" URL="../Host Key Database Refnum.ctl"/>
+		<Item Name="Not A Host Key Database.vi" Type="VI" URL="../Not A Host Key Database.vi"/>
+		<Item Name="Read Host Key Database Refnum.vi" Type="VI" URL="../Read Host Key Database Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 	</Item>

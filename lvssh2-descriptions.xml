@@ -287,47 +287,47 @@
     </item>
     <item path="libssh2/libssh2_knownhost_addc.vi">
         <title>SSH Known Host Add (libssh2_knownhost_addc)</title>
-        <description>Add a host and its associated key to the collection of known hosts.</description>
+        <description>Add a host key to a host key database.</description>
     </item>
     <item path="libssh2/libssh2_knownhost_checkp.vi">
         <title>SSH Known Host Check (libssh2_knownhost_checkp)</title>
-        <description>Check if a host and its associated key are in the collection of known hosts.</description>
+        <description>Check if a host key is in a host key database.</description>
     </item>
     <item path="libssh2/libssh2_knownhost_del.vi">
         <title>SSH Known Host Delete (libssh2_knownhost_del)</title>
-        <description>Delete a host and its associated key from the collection of known hosts.</description>
+        <description>Delete a host key from from a host key database.</description>
     </item>
     <item path="libssh2/libssh2_knownhost_free.vi">
         <title>SSH Known Host Free (libssh2_knownhost_free)</title>
-        <description>Release memory associated with a known host collection.</description>
+        <description>Release memory associated with a host key database.</description>
     </item>
     <item path="libssh2/libssh2_knownhost_get.vi">
         <title>SSH Known Host Get (libssh2_knownhost_get)</title>
         <description>
-            Get a known host from the collection of known hosts. Returns the first known host in the collection when <B>previous</B> is unwired.
+            Get a host key from a host key database. Returns the first host key from the database when <B>previous</B> is unwired.
 
-            <B>end reached</B> is TRUE when the end of hosts is reached. Otherwise, FALSE.
+            <B>end reached</B> is TRUE when the final host key is reached. Otherwise, FALSE.
         </description>
     </item>
     <item path="libssh2/libssh2_knownhost_init.vi">
         <title>SSH Known Host Init (libssh2_knownhost_init)</title>
-        <description>Initialize a collection of known hosts.</description>
+        <description>Initialize a host key database.</description>
     </item>
     <item path="libssh2/libssh2_knownhost_readfile.vi">
         <title>SSH Known Host Read File (libssh2_knownhost_readfile)</title>
-        <description>Read known hosts from a file and add them to a collection of known hosts.</description>
+        <description>Read host keys from a file and add them to a host key database.</description>
     </item>
     <item path="libssh2/libssh2_knownhost_readline.vi">
         <title>SSH Known Host Read Line (libssh2_knownhost_readline)</title>
-        <description>Read a known host from a string and add it to a collection of known hosts.</description>
+        <description>Read a host key from a string and add it to a host key database.</description>
     </item>
     <item path="libssh2/libssh2_knownhost_writefile.vi">
         <title>SSH Known Host Write File (libssh2_knownhost_writefile)</title>
-        <description>Write a collection of known hosts to a file.</description>
+        <description>Write a host key database to a file.</description>
     </item>
     <item path="libssh2/libssh2_knownhost_writeline.vi">
         <title>SSH Known Host Write Line (libssh2_knownhost_writeline)</title>
-        <description>Write a known host to a string.</description>
+        <description>Write a host key to a string.</description>
     </item>
     <item path="libssh2/libssh2_scp_recv2.vi">
         <title>SSH SCP Receive (libssh2_scp_recv2)</title>
@@ -709,21 +709,21 @@
         <title>Not An Channel</title>
         <description>Returns TRUE if <B>channel</B> is not a channel. Otherwise, FALSE.</description>
     </item>
-    <item path="libssh2/Not A Known Host.vi">
-        <title>Not An Known Host</title>
-        <description>Returns TRUE if <B>known host</B> is not a known host. Otherwise, FALSE.</description>
+    <item path="libssh2/Not A Host Key.vi">
+        <title>Not A Host Key</title>
+        <description>Returns TRUE if <B>host key</B> is not a host key. Otherwise, FALSE.</description>
     </item>
-    <item path="libssh2/Read Known Host Data.vi">
-        <title>Read Known Host Data</title>
-        <description>Read the data of a known host.</description>
+    <item path="libssh2/Read Host Key Data.vi">
+        <title>Read Host Key Data</title>
+        <description>Read the data of a host key.</description>
     </item>
-    <item path="libssh2/Release Known Host.vi">
-        <title>Release Known Host</title>
-        <description>Release the memory associated with a known host.</description>
+    <item path="libssh2/Release Host Key.vi">
+        <title>Release Host Key</title>
+        <description>Release the memory associated with a host key.</description>
     </item>
-    <item path="libssh2/Not A Known Host Collection.vi">
-        <title>Not An Known Host Collection</title>
-        <description>Returns TRUE if <B>known host collection</B> is not a known host collection. Otherwise, FALSE.</description>
+    <item path="libssh2/Not A Host Key Database.vi">
+        <title>Not An Host Key Database</title>
+        <description>Returns TRUE if <B>host key database</B> is not a host key database. Otherwise, FALSE.</description>
     </item>
     <item path="libssh2/Not A Listener.vi">
         <title>Not An Listener</title>
