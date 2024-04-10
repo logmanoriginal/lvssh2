@@ -71,22 +71,22 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>..\libssh2</OutDir>
+    <OutDir>..\libssh2\</OutDir>
     <IntDir />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>..\libssh2</OutDir>
+    <OutDir>..\libssh2\</OutDir>
     <IntDir />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>..\libssh2</OutDir>
+    <OutDir>..\libssh2\</OutDir>
     <IntDir />
-    <TargetName>$(ProjectName)_x64</TargetName>
+    <TargetName>$(ProjectName)_64</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>..\libssh2</OutDir>
+    <OutDir>..\libssh2\</OutDir>
     <IntDir />
-    <TargetName>$(ProjectName)_x64</TargetName>
+    <TargetName>$(ProjectName)_64</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -145,7 +145,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\National Instruments\LabVIEW 2013\cintools</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files\National Instruments\LabVIEW 2013\cintools</AdditionalIncludeDirectories>
       <LanguageStandard_C>Default</LanguageStandard_C>
     </ClCompile>
     <Link>
@@ -154,7 +154,7 @@
       <EnableUAC>false</EnableUAC>
       <AdditionalLibraryDirectories>
       </AdditionalLibraryDirectories>
-      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);C:\Program Files (x86)\National Instruments\LabVIEW 2013\cintools\labview.lib</AdditionalDependencies>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);C:\Program Files\National Instruments\LabVIEW 2013\cintools\labview.lib</AdditionalDependencies>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
@@ -169,7 +169,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\National Instruments\LabVIEW 2013\cintools</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files\National Instruments\LabVIEW 2013\cintools</AdditionalIncludeDirectories>
       <LanguageStandard_C>Default</LanguageStandard_C>
     </ClCompile>
     <Link>
@@ -180,7 +180,7 @@
       <EnableUAC>false</EnableUAC>
       <AdditionalLibraryDirectories>
       </AdditionalLibraryDirectories>
-      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);C:\Program Files (x86)\National Instruments\LabVIEW 2013\cintools\labview.lib</AdditionalDependencies>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);C:\Program Files\National Instruments\LabVIEW 2013\cintools\labview.lib</AdditionalDependencies>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
