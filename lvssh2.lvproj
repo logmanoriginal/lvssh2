@@ -207,8 +207,9 @@
 				<Item Name="VI Scripting - Traverse.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/traverseref.llb/VI Scripting - Traverse.lvlib"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
-			<Item Name="libssh2.dll" Type="Document" URL="../libssh2/libssh2.dll"/>
+			<Item Name="libssh2_64.dll" Type="Document" URL="../libssh2/libssh2_64.dll"/>
 			<Item Name="lvssh2_extensions.dll" Type="Document" URL="../libssh2/lvssh2_extensions.dll"/>
+			<Item Name="lvssh2_extensions_64.dll" Type="Document" URL="../libssh2/lvssh2_extensions_64.dll"/>
 			<Item Name="TRef FinderCallback.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/traverseref.llb/TRef FinderCallback.vi"/>
 			<Item Name="Ws2_32.dll" Type="Document" URL="Ws2_32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
