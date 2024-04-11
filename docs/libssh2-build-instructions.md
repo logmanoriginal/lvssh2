@@ -33,6 +33,9 @@
 
     Use `-A x64` instead of `-A Win32` for 64-bit builds.
 
+    Optional:
+    - `-DENABLE_DEBUG_LOGGING=ON` enable debug logging.
+
 3. Build the library:
 
     ```sh
