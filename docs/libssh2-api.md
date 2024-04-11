@@ -153,190 +153,190 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 # Functions
 | libssh2                                                                                | lvssh2                                                            | 32-bit support | 64-bit support |
 | -------------------------------------------------------------------------------------- | ----------------------------------------------------------------- | :------------: | :------------: |
-| [`libssh2_agent_connect`][libssh2_agent_connect]                                       | `libssh2.lvlib:libssh2_agent_connect.vi`                          | Yes            |
-| [`libssh2_agent_disconnect`][libssh2_agent_disconnect]                                 | `libssh2.lvlib:libssh2_agent_disconnect.vi`                       | Yes            |
-| [`libssh2_agent_free`][libssh2_agent_free]                                             | `libssh2.lvlib:libssh2_agent_free.vi`                             | Yes            |
-| [`libssh2_agent_get_identity`][libssh2_agent_get_identity]                             | `libssh2.lvlib:libssh2_agent_get_identity.vi`                     | Yes            |
-| [`libssh2_agent_get_identity_path`][libssh2_agent_get_identity_path]                   | `libssh2.lvlib:libssh2_agent_get_identity_path.vi`                | Yes            |
-| [`libssh2_agent_init`][libssh2_agent_init]                                             | `libssh2.lvlib:libssh2_agent_init.vi`                             | Yes            |
-| [`libssh2_agent_list_identities`][libssh2_agent_list_identities]                       | `libssh2.lvlib:libssh2_agent_list_identities.vi`                  | Yes            |
-| [`libssh2_agent_set_identity_path`][libssh2_agent_set_identity_path]                   | `libssh2.lvlib:libssh2_agent_set_identity_path.vi`                | Yes            |
-| [`libssh2_agent_sign`][libssh2_agent_sign]                                             | `libssh2.lvlib:libssh2_agent_sign.vi`                             | Yes            |
-| [`libssh2_agent_userauth`][libssh2_agent_userauth]                                     | `libssh2.lvlib:libssh2_agent_userauth.vi`                         | Yes            |
-| [`libssh2_banner_set`][libssh2_banner_set]                                             | Deprecated. Use `libssh2_session_banner_set` instead!             |                |
-| [`libssh2_base64_decode`][libssh2_base64_decode]                                       | Deprecated. Use dedicated base64 library instead!                 |                |
-| [`libssh2_channel_close`][libssh2_channel_close]                                       | `libssh2.lvlib:libssh2_channel_close.vi`                          | Yes            |
-| [`libssh2_channel_direct_streamlocal_ex`][libssh2_channel_direct_streamlocal_ex]       |                                                                   |                |
-| [`libssh2_channel_direct_tcpip`][libssh2_channel_direct_tcpip]                         | `libssh2.lvlib:libssh2_channel_direct_tcpip.vi`                   | Yes            |
-| [`libssh2_channel_direct_tcpip_ex`][libssh2_channel_direct_tcpip_ex]                   | `libssh2.lvlib:libssh2_channel_direct_tcpip_ex.vi`                | Yes            |
-| [`libssh2_channel_eof`][libssh2_channel_eof]                                           | `libssh2.lvlib:libssh2_channel_eof.vi`                            | Yes            |
-| [`libssh2_channel_exec`][libssh2_channel_exec]                                         | `libssh2.lvlib:libssh2_channel_exec.vi`                           | Yes            |
-| [`libssh2_channel_flush`][libssh2_channel_flush]                                       | `libssh2.lvlib:libssh2_channel_flush.vi`                          | Yes            |
-| [`libssh2_channel_flush_ex`][libssh2_channel_flush_ex]                                 | `libssh2.lvlib:libssh2_channel_flush_ex.vi`                       | Yes            |
-| [`libssh2_channel_flush_stderr`][libssh2_channel_flush_stderr]                         | `libssh2.lvlib:libssh2_channel_flush_stderr.vi`                   | Yes            |
-| [`libssh2_channel_forward_accept`][libssh2_channel_forward_accept]                     | `libssh2.lvlib:libssh2_channel_forward_accept.vi`                 | Yes            |
-| [`libssh2_channel_forward_cancel`][libssh2_channel_forward_cancel]                     | `libssh2.lvlib:libssh2_channel_forward_cancel.vi`                 | Yes            |
-| [`libssh2_channel_forward_listen`][libssh2_channel_forward_listen]                     | `libssh2.lvlib:libssh2_channel_forward_listen.vi`                 | Yes            |
-| [`libssh2_channel_forward_listen_ex`][libssh2_channel_forward_listen_ex]               | `libssh2.lvlib:libssh2_channel_forward_listen_ex.vi`              | Yes            |
-| [`libssh2_channel_free`][libssh2_channel_free]                                         | `libssh2.lvlib:libssh2_channel_free.vi`                           | Yes            |
-| [`libssh2_channel_get_exit_signal`][libssh2_channel_get_exit_signal]                   | `libssh2.lvlib:libssh2_channel_get_exit_signal.vi`                | Yes            |
-| [`libssh2_channel_get_exit_status`][libssh2_channel_get_exit_status]                   | `libssh2.lvlib:libssh2_channel_get_exit_status.vi`                | Yes            |
-| [`libssh2_channel_handle_extended_data`][libssh2_channel_handle_extended_data]         | Deprecated. Use `libssh2_channel_handle_extended_data2` instead!  |                |
-| [`libssh2_channel_handle_extended_data2`][libssh2_channel_handle_extended_data2]       | `libssh2.lvlib:libssh2_channel_handle_extended_data2.vi`          | Yes            |
-| [`libssh2_channel_ignore_extended_data`][libssh2_channel_ignore_extended_data]         | Deprecated. Use `libssh2_channel_handle_extended_data2` instead!  |                |
-| [`libssh2_channel_open_ex`][libssh2_channel_open_ex]                                   | `libssh2.lvlib:libssh2_channel_open_ex.vi`                        | Yes            |
-| [`libssh2_channel_open_session`][libssh2_channel_open_session]                         | `libssh2.lvlib:libssh2_channel_open_session.vi`                   | Yes            |
-| [`libssh2_channel_process_startup`][libssh2_channel_process_startup]                   | `libssh2.lvlib:libssh2_channel_process_startup.vi`                | Yes            |
-| [`libssh2_channel_read`][libssh2_channel_read]                                         | `libssh2.lvlib:libssh2_channel_read.vi`                           | Yes            |
-| [`libssh2_channel_read_ex`][libssh2_channel_read_ex]                                   | `libssh2.lvlib:libssh2_channel_read_ex.vi`                        | Yes            |
-| [`libssh2_channel_read_stderr`][libssh2_channel_read_stderr]                           | `libssh2.lvlib:libssh2_channel_read_stderr.vi`                    | Yes            |
-| [`libssh2_channel_receive_window_adjust`][libssh2_channel_receive_window_adjust]       | Deprecated. Use `libssh2_channel_receive_window_adjust2` instead! |                |
-| [`libssh2_channel_receive_window_adjust2`][libssh2_channel_receive_window_adjust2]     | `libssh2.lvlib:libssh2_channel_receive_window_adjust2.vi`         | Yes            |
-| [`libssh2_channel_request_auth_agent`][libssh2_channel_request_auth_agent]             | `libssh2.lvlib:libssh2_channel_request_auth_agent.vi`             | Yes            |
-| [`libssh2_channel_request_pty`][libssh2_channel_request_pty]                           | `libssh2.lvlib:libssh2_channel_request_pty.vi`                    | Yes            |
-| [`libssh2_channel_request_pty_ex`][libssh2_channel_request_pty_ex]                     | `libssh2.lvlib:libssh2_channel_request_pty_ex.vi`                 | Yes            |
-| [`libssh2_channel_request_pty_size`][libssh2_channel_request_pty_size]                 | See `libssh2_channel_request_pty_size_ex`                         |                |
-| [`libssh2_channel_request_pty_size_ex`][libssh2_channel_request_pty_size_ex]           | `libssh2.lvlib:libssh2_channel_request_pty_size_ex.vi`            | Yes            |
-| [`libssh2_channel_send_eof`][libssh2_channel_send_eof]                                 | `libssh2.lvlib:libssh2_channel_send_eof.vi`                       | Yes            |
-| [`libssh2_channel_set_blocking`][libssh2_channel_set_blocking]                         | `libssh2.lvlib:libssh2_channel_set_blocking.vi`                   | Yes            |
-| [`libssh2_channel_setenv`][libssh2_channel_setenv]                                     | See `libssh2_channel_setenv_ex`                                   |                |
-| [`libssh2_channel_setenv_ex`][libssh2_channel_setenv_ex]                               | `libssh2.lvlib:libssh2_channel_setenv_ex.vi`                      | Yes            |
-| [`libssh2_channel_shell`][libssh2_channel_shell]                                       | `libssh2.lvlib:libssh2_channel_shell.vi`                          | Yes            |
-| [`libssh2_channel_signal`][libssh2_channel_signal]                                     | See `libssh2_channel_signal_ex`                                   |                |
-| [`libssh2_channel_signal_ex`][libssh2_channel_signal_ex]                               | `libssh2.lvlib:libssh2_channel_signal_ex.vi`                      | Yes            |
-| [`libssh2_channel_subsystem`][libssh2_channel_subsystem]                               | `libssh2.lvlib:libssh2_channel_subsystem.vi`                      | Yes            |
-| [`libssh2_channel_wait_closed`][libssh2_channel_wait_closed]                           | `libssh2.lvlib:libssh2_channel_wait_closed.vi`                    | Yes            |
-| [`libssh2_channel_wait_eof`][libssh2_channel_wait_eof]                                 | `libssh2.lvlib:libssh2_channel_wait_eof.vi`                       | Yes            |
-| [`libssh2_channel_window_read`][libssh2_channel_window_read]                           | See `libssh2_channel_window_read_ex`                              |                |
-| [`libssh2_channel_window_read_ex`][libssh2_channel_window_read_ex]                     | `libssh2.lvlib:libssh2_channel_window_read_ex.vi`                 | Yes            |
-| [`libssh2_channel_window_write`][libssh2_channel_window_write]                         | See `libssh2_channel_window_write_ex`                             |                |
-| [`libssh2_channel_window_write_ex`][libssh2_channel_window_write_ex]                   | `libssh2.lvlib:libssh2_channel_window_write_ex.vi`                | Yes            |
-| [`libssh2_channel_write`][libssh2_channel_write]                                       | `libssh2.lvlib:libssh2_channel_write.vi`                          | Yes            |
-| [`libssh2_channel_write_ex`][libssh2_channel_write_ex]                                 | `libssh2.lvlib:libssh2_channel_write_ex.vi`                       | Yes            |
-| [`libssh2_channel_write_stderr`][libssh2_channel_write_stderr]                         | `libssh2.lvlib:libssh2_channel_write_stderr.vi`                   | Yes            |
-| [`libssh2_channel_x11_req`][libssh2_channel_x11_req]                                   |                                                                   |                |
-| [`libssh2_channel_x11_req_ex`][libssh2_channel_x11_req_ex]                             |                                                                   |                |
-| [`libssh2_crypto_engine`][libssh2_crypto_engine]                                       | `libssh2.lvlib:libssh2_crypto_engine.vi`                          | Yes            |
-| [`libssh2_exit`][libssh2_exit]                                                         | `libssh2.lvlib:libssh2_exit.vi`                                   | Yes            |
-| [`libssh2_free`][libssh2_free]                                                         | `libssh2.lvlib:libssh2_free.vi`                                   | Yes            |
-| [`libssh2_hostkey_hash`][libssh2_hostkey_hash]                                         | `libssh2.lvlib:libssh2_hostkey_hash.vi`                           | Yes            |
-| [`libssh2_init`][libssh2_init]                                                         | `libssh2.lvlib:libssh2_init.vi`                                   | Yes            |
-| [`libssh2_keepalive_config`][libssh2_keepalive_config]                                 | `libssh2.lvlib:libssh2_keepalive_config.vi`                       | Yes            |
-| [`libssh2_keepalive_send`][libssh2_keepalive_send]                                     | `libssh2.lvlib:libssh2_keepalive_send.vi`                         | Yes            |
-| [`libssh2_knownhost_add`][libssh2_knownhost_add]                                       | Deprecated. Use `libssh2_knownhost_addc` instead!                 |                |
-| [`libssh2_knownhost_addc`][libssh2_knownhost_addc]                                     | `libssh2.lvlib:libssh2_knownhost_addc.vi`                         | Yes            |
-| [`libssh2_knownhost_check`][libssh2_knownhost_check]                                   | Deprecated. Use `libssh2_knownhost_checkp` instead!               |                |
-| [`libssh2_knownhost_checkp`][libssh2_knownhost_checkp]                                 | `libssh2.lvlib:libssh2_knownhost_checkp.vi`                       | Yes            |
-| [`libssh2_knownhost_del`][libssh2_knownhost_del]                                       | `libssh2.lvlib:libssh2_knownhost_del.vi`                          | Yes            |
-| [`libssh2_knownhost_free`][libssh2_knownhost_free]                                     | `libssh2.lvlib:libssh2_knownhost_free.vi`                         | Yes            |
-| [`libssh2_knownhost_get`][libssh2_knownhost_get]                                       | `libssh2.lvlib:libssh2_knownhost_get.vi`                          | Yes            |
-| [`libssh2_knownhost_init`][libssh2_knownhost_init]                                     | `libssh2.lvlib:libssh2_knownhost_init.vi`                         | Yes            |
-| [`libssh2_knownhost_readfile`][libssh2_knownhost_readfile]                             | `libssh2.lvlib:libssh2_knownhost_readfile.vi`                     | Yes            |
-| [`libssh2_knownhost_readline`][libssh2_knownhost_readline]                             | `libssh2.lvlib:libssh2_knownhost_readline.vi`                     | Yes            |
-| [`libssh2_knownhost_writefile`][libssh2_knownhost_writefile]                           | `libssh2.lvlib:libssh2_knownhost_writefile.vi`                    | Yes            |
-| [`libssh2_knownhost_writeline`][libssh2_knownhost_writeline]                           | `libssh2.lvlib:libssh2_knownhost_writeline.vi`                    | Yes            |
-| [`libssh2_poll`][libssh2_poll]                                                         | Deprecated. Use `select` or `poll` system calls instead!          |                |
-| [`libssh2_poll_channel_read`][libssh2_poll_channel_read]                               | Deprecated. Use `select` or `poll` system calls instead!          |                |
-| [`libssh2_publickey_add`][libssh2_publickey_add]                                       | Not implemented. See [README](../README.md) for more details.     |                |
-| [`libssh2_publickey_add_ex`][libssh2_publickey_add_ex]                                 | Not implemented. See [README](../README.md) for more details.     |                |
-| [`libssh2_publickey_init`][libssh2_publickey_init]                                     | Not implemented. See [README](../README.md) for more details.     |                |
-| [`libssh2_publickey_list_fetch`][libssh2_publickey_list_fetch]                         | Not implemented. See [README](../README.md) for more details.     |                |
-| [`libssh2_publickey_list_free`][libssh2_publickey_list_free]                           | Not implemented. See [README](../README.md) for more details.     |                |
-| [`libssh2_publickey_remove`][libssh2_publickey_remove]                                 | Not implemented. See [README](../README.md) for more details.     |                |
-| [`libssh2_publickey_remove_ex`][libssh2_publickey_remove_ex]                           | Not implemented. See [README](../README.md) for more details.     |                |
-| [`libssh2_publickey_shutdown`][libssh2_publickey_shutdown]                             | Not implemented. See [README](../README.md) for more details.     |                |
-| [`libssh2_scp_recv`][libssh2_scp_recv]                                                 | Deprecated. Use `libssh2_scp_recv2` instead!                      |                |
-| [`libssh2_scp_recv2`][libssh2_scp_recv2]                                               | `libssh2.lvlib:libssh2_scp_recv2.vi`                              | Yes            |
-| [`libssh2_scp_send`][libssh2_scp_send]                                                 | See `libssh2_scp_send_ex`                                         |                |
-| [`libssh2_scp_send64`][libssh2_scp_send64]                                             | `libssh2.lvlib:libssh2_scp_send64.vi`                             | Yes            |
-| [`libssh2_scp_send_ex`][libssh2_scp_send_ex]                                           | Deprecated. Use `libssh2_scp_send64` instead!                     |                |
-| [`libssh2_session_abstract`][libssh2_session_abstract]                                 | `libssh2.lvlib:libssh2_session_abstract.vi`                       | Yes            |
-| [`libssh2_session_banner_get`][libssh2_session_banner_get]                             | `libssh2.lvlib:libssh2_session_banner_get.vi`                     | Yes            |
-| [`libssh2_session_banner_set`][libssh2_session_banner_set]                             | `libssh2.lvlib:libssh2_session_banner_set.vi`                     | Yes            |
-| [`libssh2_session_block_directions`][libssh2_session_block_directions]                 | `libssh2.lvlib:libssh2_session_block_directions.vi`               | Yes            |
-| [`libssh2_session_callback_set`][libssh2_session_callback_set]                         | `libssh2.lvlib:libssh2_session_callback_set.vi`                   | Yes            |
-| [`libssh2_session_disconnect`][libssh2_session_disconnect]                             | `libssh2.lvlib:libssh2_session_disconnect.vi`                     | Yes            |
-| [`libssh2_session_disconnect_ex`][libssh2_session_disconnect_ex]                       | `libssh2.lvlib:libssh2_session_disconnect_ex.vi`                  | Yes            |
-| [`libssh2_session_flag`][libssh2_session_flag]                                         | `libssh2.lvlib:libssh2_session_flag.vi`                           | Yes            |
-| [`libssh2_session_free`][libssh2_session_free]                                         | `libssh2.lvlib:libssh2_session_free.vi`                           | Yes            |
-| [`libssh2_session_get_blocking`][libssh2_session_get_blocking]                         | `libssh2.lvlib:libssh2_session_get_blocking.vi`                   | Yes            |
-| [`libssh2_session_get_read_timeout`][libssh2_session_get_read_timeout]                 | `libssh2.lvlib:libssh2_session_get_read_timeout.vi`               | Yes            |
-| [`libssh2_session_get_timeout`][libssh2_session_get_timeout]                           | `libssh2.lvlib:libssh2_session_get_timeout.vi`                    | Yes            |
-| [`libssh2_session_handshake`][libssh2_session_handshake]                               | `libssh2.lvlib:libssh2_session_handshake.vi`                      | Yes            |
-| [`libssh2_session_hostkey`][libssh2_session_hostkey]                                   | `libssh2.lvlib:libssh2_session_hostkey.vi`                        | Yes            |
-| [`libssh2_session_init`][libssh2_session_init]                                         | `libssh2.lvlib:libssh2_session_init.vi`                           | Yes            |
-| [`libssh2_session_init_ex`][libssh2_session_init_ex]                                   | `libssh2.lvlib:libssh2_session_init_ex.vi`                        | Yes            |
-| [`libssh2_session_last_errno`][libssh2_session_last_errno]                             | `libssh2.lvlib:libssh2_session_last_errno.vi`                     | Yes            |
-| [`libssh2_session_last_error`][libssh2_session_last_error]                             | `libssh2.lvlib:libssh2_session_last_error.vi`                     | Yes            |
-| [`libssh2_session_method_pref`][libssh2_session_method_pref]                           | `libssh2.lvlib:libssh2_session_method_pref.vi`                    | Yes            |
-| [`libssh2_session_methods`][libssh2_session_methods]                                   | `libssh2.lvlib:libssh2_session_methods.vi`                        | Yes            |
-| [`libssh2_session_set_blocking`][libssh2_session_set_blocking]                         | `libssh2.lvlib:libssh2_session_set_blocking.vi`                   | Yes            |
-| [`libssh2_session_set_last_error`][libssh2_session_set_last_error]                     | `libssh2.lvlib:libssh2_session_set_last_error.vi`                 | Yes            |
-| [`libssh2_session_set_read_timeout`][libssh2_session_set_read_timeout]                 | `libssh2.lvlib:libssh2_session_set_read_timeout.vi`               | Yes            |
-| [`libssh2_session_set_timeout`][libssh2_session_set_timeout]                           | `libssh2.lvlib:libssh2_session_set_timeout.vi`                    | Yes            |
-| [`libssh2_session_startup`][libssh2_session_startup]                                   | Deprecated. Use `libssh2_session_handshake` instead!              |                |
-| [`libssh2_session_supported_algs`][libssh2_session_supported_algs]                     | `libssh2.lvlib:libssh2_session_supported_algs`                    | Yes            |
-| [`libssh2_sftp_close`][libssh2_sftp_close]                                             | `libssh2.lvlib:libssh2_sftp_close.vi`                             | Yes            |
-| [`libssh2_sftp_close_handle`][libssh2_sftp_close_handle]                               | `libssh2.lvlib:libssh2_sftp_close_handle.vi`                      | Yes            |
-| [`libssh2_sftp_closedir`][libssh2_sftp_closedir]                                       | `libssh2.lvlib:libssh2_sftp_closedir.vi`                          | Yes            |
-| [`libssh2_sftp_fsetstat`][libssh2_sftp_fsetstat]                                       | `libssh2.lvlib:libssh2_sftp_fsetstat.vi`                          | Yes            |
-| [`libssh2_sftp_fstat`][libssh2_sftp_fstat]                                             | `libssh2.lvlib:libssh2_sftp_fstat.vi`                             | Yes            |
-| [`libssh2_sftp_fstat_ex`][libssh2_sftp_fstat_ex]                                       | `libssh2.lvlib:libssh2_sftp_fstat_ex.vi`                          | Yes            |
-| [`libssh2_sftp_fstatvfs`][libssh2_sftp_fstatvfs]                                       | `libssh2.lvlib:libssh2_sftp_fstatvfs.vi`                          | Yes            |
-| [`libssh2_sftp_fsync`][libssh2_sftp_fsync]                                             | `libssh2.lvlib:libssh2_sftp_fsync.vi`                             | Yes            |
-| [`libssh2_sftp_get_channel`][libssh2_sftp_get_channel]                                 | `libssh2.lvlib:libssh2_sftp_get_channel.vi`                       | Yes            |
-| [`libssh2_sftp_init`][libssh2_sftp_init]                                               | `libssh2.lvlib:libssh2_sftp_init.vi`                              | Yes            |
-| [`libssh2_sftp_last_error`][libssh2_sftp_last_error]                                   | `libssh2.lvlib:libssh2_sftp_last_error.vi`                        | Yes            |
-| [`libssh2_sftp_lstat`][libssh2_sftp_lstat]                                             | `libssh2.lvlib:libssh2_sftp_lstat.vi`                             | Yes            |
-| [`libssh2_sftp_mkdir`][libssh2_sftp_mkdir]                                             | See `libssh2_sftp_mkdir_ex`                                       |                |
-| [`libssh2_sftp_mkdir_ex`][libssh2_sftp_mkdir_ex]                                       | `libssh2.lvlib:libssh2_sftp_mkdir_ex.vi`                          | Yes            |
-| [`libssh2_sftp_open`][libssh2_sftp_open]                                               | `libssh2.lvlib:libssh2_sftp_open.vi`                              | Yes            |
-| [`libssh2_sftp_open_ex`][libssh2_sftp_open_ex]                                         | `libssh2.lvlib:libssh2_sftp_open_ex.vi`                           | Yes            |
-| [`libssh2_sftp_open_ex_r`][libssh2_sftp_open_ex_r]                                     | `libssh2.lvlib:libssh2_sftp_open_ex_r.vi`                         | Yes            |
-| [`libssh2_sftp_open_r`][libssh2_sftp_open_r]                                           | `libssh2.lvlib:libssh2_sftp_open_r.vi`                            | Yes            |
-| [`libssh2_sftp_opendir`][libssh2_sftp_opendir]                                         | `libssh2.lvlib:libssh2_sftp_opendir.vi`                           | Yes            |
-| [`libssh2_sftp_read`][libssh2_sftp_read]                                               | `libssh2.lvlib:libssh2_sftp_read.vi`                              | Yes            |
-| [`libssh2_sftp_readdir`][libssh2_sftp_readdir]                                         | `libssh2.lvlib:libssh2_sftp_readdir.vi`                           | Yes            |
-| [`libssh2_sftp_readdir_ex`][libssh2_sftp_readdir_ex]                                   | `libssh2.lvlib:libssh2_sftp_readdir_ex.vi`                        | Yes            |
-| [`libssh2_sftp_readlink`][libssh2_sftp_readlink]                                       | `libssh2.lvlib:libssh2_sftp_readlink.vi`                          | Yes            |
-| [`libssh2_sftp_realpath`][libssh2_sftp_realpath]                                       | `libssh2.lvlib:libssh2_sftp_realpath.vi`                          | Yes            |
-| [`libssh2_sftp_rename`][libssh2_sftp_rename]                                           | `libssh2.lvlib:libssh2_sftp_rename.vi`                            | Yes            |
-| [`libssh2_sftp_rename_ex`][libssh2_sftp_rename_ex]                                     | `libssh2.lvlib:libssh2_sftp_rename_ex.vi`                         | Yes            |
-| [`libssh2_sftp_rewind`][libssh2_sftp_rewind]                                           | `libssh2.lvlib:libssh2_sftp_rewind.vi`                            | Yes            |
-| [`libssh2_sftp_rmdir`][libssh2_sftp_rmdir]                                             | See `libssh2_sftp_rmdir_ex`                                       |                |
-| [`libssh2_sftp_rmdir_ex`][libssh2_sftp_rmdir_ex]                                       | `libssh2.lvlib:libssh2_sftp_rmdir_ex.vi`                          | Yes            |
-| [`libssh2_sftp_seek`][libssh2_sftp_seek]                                               | Deprecated. Use `libssh2_sftp_seek64` instead!                    |                |
-| [`libssh2_sftp_seek64`][libssh2_sftp_seek64]                                           | `libssh2.lvlib:libssh2_sftp_seek64.vi`                            | Yes            |
-| [`libssh2_sftp_setstat`][libssh2_sftp_setstat]                                         | `libssh2.lvlib:libssh2_sftp_setstat.vi`                           | Yes            |
-| [`libssh2_sftp_shutdown`][libssh2_sftp_shutdown]                                       | `libssh2.lvlib:libssh2_sftp_shutdown.vi`                          | Yes            |
-| [`libssh2_sftp_stat`][libssh2_sftp_stat]                                               | `libssh2.lvlib:libssh2_sftp_stat.vi`                              | Yes            |
-| [`libssh2_sftp_stat_ex`][libssh2_sftp_stat_ex]                                         | `libssh2.lvlib:libssh2_sftp_stat_ex.vi`                           | Yes            |
-| [`libssh2_sftp_statvfs`][libssh2_sftp_statvfs]                                         | `libssh2.lvlib:libssh2_sftp_statvfs.vi`                           | Yes            |
-| [`libssh2_sftp_symlink`][libssh2_sftp_symlink]                                         | `libssh2.lvlib:libssh2_sftp_symlink.vi`                           | Yes            |
-| [`libssh2_sftp_symlink_ex`][libssh2_sftp_symlink_ex]                                   | `libssh2.lvlib:libssh2_sftp_symlink_ex.vi`                        | Yes            |
-| [`libssh2_sftp_tell`][libssh2_sftp_tell]                                               | Deprecated. Use `libssh2_sftp_tell64` instead!                    |                |
-| [`libssh2_sftp_tell64`][libssh2_sftp_tell64]                                           | `libssh2.lvlib:libssh2_sftp_tell64.vi`                            | Yes            |
-| [`libssh2_sftp_unlink`][libssh2_sftp_unlink]                                           | See `libssh2_sftp_unlink_ex`                                      |                |
-| [`libssh2_sftp_unlink_ex`][libssh2_sftp_unlink_ex]                                     | `libssh2.lvlib:libssh2_sftp_unlink_ex.vi`                         | Yes            |
-| [`libssh2_sftp_write`][libssh2_sftp_write]                                             | `libssh2.lvlib:libssh2_sftp_write.vi`                             | Yes            |
-| [`libssh2_sign_sk`][libssh2_sign_sk]                                                   |                                                                   |                |
-| [`libssh2_trace`][libssh2_trace]                                                       | `libssh2.lvlib:libssh2_trace.vi`                                  | Yes            |
-| [`libssh2_trace_sethandler`][libssh2_trace_sethandler]                                 | `libssh2.lvlib:libssh2_trace_sethandler.vi`                       | Yes            |
-| [`libssh2_userauth_authenticated`][libssh2_userauth_authenticated]                     | `libssh2.lvlib:libssh2_userauth_authenticated.vi`                 | Yes            |
-| [`libssh2_userauth_banner`][libssh2_userauth_banner]                                   | `libssh2.lvlib:libssh2_userauth_banner.vi`                        | Yes            |
-| [`libssh2_userauth_hostbased_fromfile`][libssh2_userauth_hostbased_fromfile]           | See `libssh2_userauth_hostbased_fromfile_ex`                      |                |
-| [`libssh2_userauth_hostbased_fromfile_ex`][libssh2_userauth_hostbased_fromfile_ex]     | `libssh2.lvlib:libssh2_userauth_hostbased_fromfile_ex.vi`         | Yes            |
-| [`libssh2_userauth_keyboard_interactive`][libssh2_userauth_keyboard_interactive]       | See `libssh2_userauth_keyboard_interactive_ex`                    |                |
-| [`libssh2_userauth_keyboard_interactive_ex`][libssh2_userauth_keyboard_interactive_ex] | `libssh2.lvlib:libssh2_userauth_keyboard_interactive_ex.vi`       | Yes            |
-| [`libssh2_userauth_list`][libssh2_userauth_list]                                       | `libssh2.lvlib:libssh2_userauth_list.vi`                          | Yes            |
-| [`libssh2_userauth_password`][libssh2_userauth_password]                               | `libssh2.lvlib:libssh2_userauth_password.vi`                      | Yes            |
-| [`libssh2_userauth_password_ex`][libssh2_userauth_password_ex]                         | `libssh2.lvlib:libssh2_userauth_password_ex.vi`                   | Yes            |
-| [`libssh2_userauth_publickey`][libssh2_userauth_publickey]                             | `libssh2.lvlib:libssh2_userauth_publickey.vi`                     | Yes            |
-| [`libssh2_userauth_publickey_fromfile`][libssh2_userauth_publickey_fromfile]           | See `libssh2_userauth_publickey_fromfile_ex`                      |                |
-| [`libssh2_userauth_publickey_fromfile_ex`][libssh2_userauth_publickey_fromfile_ex]     | `libssh2.lvlib:libssh2_userauth_publickey_fromfile_ex.vi`         | Yes            |
-| [`libssh2_userauth_publickey_frommemory`][libssh2_userauth_publickey_frommemory]       | `libssh2.lvlib:libssh2_userauth_publickey_frommemory.vi`          | Yes            |
-| [`libssh2_userauth_publickey_sk`][libssh2_userauth_publickey_sk]                       |                                                                   |                |
-| [`libssh2_version`][libssh2_version]                                                   | `libssh2.lvlib:libssh2_version.vi`                                | Yes            |
+| [`libssh2_agent_connect`][libssh2_agent_connect]                                       | `libssh2.lvlib:libssh2_agent_connect.vi`                          | Yes            | Yes            |
+| [`libssh2_agent_disconnect`][libssh2_agent_disconnect]                                 | `libssh2.lvlib:libssh2_agent_disconnect.vi`                       | Yes            | Yes            |
+| [`libssh2_agent_free`][libssh2_agent_free]                                             | `libssh2.lvlib:libssh2_agent_free.vi`                             | Yes            | Yes            |
+| [`libssh2_agent_get_identity`][libssh2_agent_get_identity]                             | `libssh2.lvlib:libssh2_agent_get_identity.vi`                     | Yes            | Yes            |
+| [`libssh2_agent_get_identity_path`][libssh2_agent_get_identity_path]                   | `libssh2.lvlib:libssh2_agent_get_identity_path.vi`                | Yes            | Yes            |
+| [`libssh2_agent_init`][libssh2_agent_init]                                             | `libssh2.lvlib:libssh2_agent_init.vi`                             | Yes            | Yes            |
+| [`libssh2_agent_list_identities`][libssh2_agent_list_identities]                       | `libssh2.lvlib:libssh2_agent_list_identities.vi`                  | Yes            | Yes            |
+| [`libssh2_agent_set_identity_path`][libssh2_agent_set_identity_path]                   | `libssh2.lvlib:libssh2_agent_set_identity_path.vi`                | Yes            | Yes            |
+| [`libssh2_agent_sign`][libssh2_agent_sign]                                             | `libssh2.lvlib:libssh2_agent_sign.vi`                             | Yes            | Yes            |
+| [`libssh2_agent_userauth`][libssh2_agent_userauth]                                     | `libssh2.lvlib:libssh2_agent_userauth.vi`                         | Yes            | Yes            |
+| [`libssh2_banner_set`][libssh2_banner_set]                                             | Deprecated. Use `libssh2_session_banner_set` instead!             |                |                |
+| [`libssh2_base64_decode`][libssh2_base64_decode]                                       | Deprecated. Use dedicated base64 library instead!                 |                |                |
+| [`libssh2_channel_close`][libssh2_channel_close]                                       | `libssh2.lvlib:libssh2_channel_close.vi`                          | Yes            | Yes            |
+| [`libssh2_channel_direct_streamlocal_ex`][libssh2_channel_direct_streamlocal_ex]       |                                                                   |                |                |
+| [`libssh2_channel_direct_tcpip`][libssh2_channel_direct_tcpip]                         | `libssh2.lvlib:libssh2_channel_direct_tcpip.vi`                   | Yes            | Yes            |
+| [`libssh2_channel_direct_tcpip_ex`][libssh2_channel_direct_tcpip_ex]                   | `libssh2.lvlib:libssh2_channel_direct_tcpip_ex.vi`                | Yes            | Yes            |
+| [`libssh2_channel_eof`][libssh2_channel_eof]                                           | `libssh2.lvlib:libssh2_channel_eof.vi`                            | Yes            | Yes            |
+| [`libssh2_channel_exec`][libssh2_channel_exec]                                         | `libssh2.lvlib:libssh2_channel_exec.vi`                           | Yes            | Yes            |
+| [`libssh2_channel_flush`][libssh2_channel_flush]                                       | `libssh2.lvlib:libssh2_channel_flush.vi`                          | Yes            | Yes            |
+| [`libssh2_channel_flush_ex`][libssh2_channel_flush_ex]                                 | `libssh2.lvlib:libssh2_channel_flush_ex.vi`                       | Yes            | Yes            |
+| [`libssh2_channel_flush_stderr`][libssh2_channel_flush_stderr]                         | `libssh2.lvlib:libssh2_channel_flush_stderr.vi`                   | Yes            | Yes            |
+| [`libssh2_channel_forward_accept`][libssh2_channel_forward_accept]                     | `libssh2.lvlib:libssh2_channel_forward_accept.vi`                 | Yes            | Yes            |
+| [`libssh2_channel_forward_cancel`][libssh2_channel_forward_cancel]                     | `libssh2.lvlib:libssh2_channel_forward_cancel.vi`                 | Yes            | Yes            |
+| [`libssh2_channel_forward_listen`][libssh2_channel_forward_listen]                     | `libssh2.lvlib:libssh2_channel_forward_listen.vi`                 | Yes            | Yes            |
+| [`libssh2_channel_forward_listen_ex`][libssh2_channel_forward_listen_ex]               | `libssh2.lvlib:libssh2_channel_forward_listen_ex.vi`              | Yes            | Yes            |
+| [`libssh2_channel_free`][libssh2_channel_free]                                         | `libssh2.lvlib:libssh2_channel_free.vi`                           | Yes            | Yes            |
+| [`libssh2_channel_get_exit_signal`][libssh2_channel_get_exit_signal]                   | `libssh2.lvlib:libssh2_channel_get_exit_signal.vi`                | Yes            | Yes            |
+| [`libssh2_channel_get_exit_status`][libssh2_channel_get_exit_status]                   | `libssh2.lvlib:libssh2_channel_get_exit_status.vi`                | Yes            | Yes            |
+| [`libssh2_channel_handle_extended_data`][libssh2_channel_handle_extended_data]         | Deprecated. Use `libssh2_channel_handle_extended_data2` instead!  |                |                |
+| [`libssh2_channel_handle_extended_data2`][libssh2_channel_handle_extended_data2]       | `libssh2.lvlib:libssh2_channel_handle_extended_data2.vi`          | Yes            | Yes            |
+| [`libssh2_channel_ignore_extended_data`][libssh2_channel_ignore_extended_data]         | Deprecated. Use `libssh2_channel_handle_extended_data2` instead!  |                |                |
+| [`libssh2_channel_open_ex`][libssh2_channel_open_ex]                                   | `libssh2.lvlib:libssh2_channel_open_ex.vi`                        | Yes            | Yes            |
+| [`libssh2_channel_open_session`][libssh2_channel_open_session]                         | `libssh2.lvlib:libssh2_channel_open_session.vi`                   | Yes            | Yes            |
+| [`libssh2_channel_process_startup`][libssh2_channel_process_startup]                   | `libssh2.lvlib:libssh2_channel_process_startup.vi`                | Yes            | Yes            |
+| [`libssh2_channel_read`][libssh2_channel_read]                                         | `libssh2.lvlib:libssh2_channel_read.vi`                           | Yes            | Yes            |
+| [`libssh2_channel_read_ex`][libssh2_channel_read_ex]                                   | `libssh2.lvlib:libssh2_channel_read_ex.vi`                        | Yes            | Yes            |
+| [`libssh2_channel_read_stderr`][libssh2_channel_read_stderr]                           | `libssh2.lvlib:libssh2_channel_read_stderr.vi`                    | Yes            | Yes            |
+| [`libssh2_channel_receive_window_adjust`][libssh2_channel_receive_window_adjust]       | Deprecated. Use `libssh2_channel_receive_window_adjust2` instead! |                |                |
+| [`libssh2_channel_receive_window_adjust2`][libssh2_channel_receive_window_adjust2]     | `libssh2.lvlib:libssh2_channel_receive_window_adjust2.vi`         | Yes            | Yes            |
+| [`libssh2_channel_request_auth_agent`][libssh2_channel_request_auth_agent]             | `libssh2.lvlib:libssh2_channel_request_auth_agent.vi`             | Yes            | Yes            |
+| [`libssh2_channel_request_pty`][libssh2_channel_request_pty]                           | `libssh2.lvlib:libssh2_channel_request_pty.vi`                    | Yes            | Yes            |
+| [`libssh2_channel_request_pty_ex`][libssh2_channel_request_pty_ex]                     | `libssh2.lvlib:libssh2_channel_request_pty_ex.vi`                 | Yes            | Yes            |
+| [`libssh2_channel_request_pty_size`][libssh2_channel_request_pty_size]                 | See `libssh2_channel_request_pty_size_ex`                         |                |                |
+| [`libssh2_channel_request_pty_size_ex`][libssh2_channel_request_pty_size_ex]           | `libssh2.lvlib:libssh2_channel_request_pty_size_ex.vi`            | Yes            | Yes            |
+| [`libssh2_channel_send_eof`][libssh2_channel_send_eof]                                 | `libssh2.lvlib:libssh2_channel_send_eof.vi`                       | Yes            | Yes            |
+| [`libssh2_channel_set_blocking`][libssh2_channel_set_blocking]                         | `libssh2.lvlib:libssh2_channel_set_blocking.vi`                   | Yes            | Yes            |
+| [`libssh2_channel_setenv`][libssh2_channel_setenv]                                     | See `libssh2_channel_setenv_ex`                                   |                |                |
+| [`libssh2_channel_setenv_ex`][libssh2_channel_setenv_ex]                               | `libssh2.lvlib:libssh2_channel_setenv_ex.vi`                      | Yes            | Yes            |
+| [`libssh2_channel_shell`][libssh2_channel_shell]                                       | `libssh2.lvlib:libssh2_channel_shell.vi`                          | Yes            | Yes            |
+| [`libssh2_channel_signal`][libssh2_channel_signal]                                     | See `libssh2_channel_signal_ex`                                   |                |                |
+| [`libssh2_channel_signal_ex`][libssh2_channel_signal_ex]                               | `libssh2.lvlib:libssh2_channel_signal_ex.vi`                      | Yes            | Yes            |
+| [`libssh2_channel_subsystem`][libssh2_channel_subsystem]                               | `libssh2.lvlib:libssh2_channel_subsystem.vi`                      | Yes            | Yes            |
+| [`libssh2_channel_wait_closed`][libssh2_channel_wait_closed]                           | `libssh2.lvlib:libssh2_channel_wait_closed.vi`                    | Yes            | Yes            |
+| [`libssh2_channel_wait_eof`][libssh2_channel_wait_eof]                                 | `libssh2.lvlib:libssh2_channel_wait_eof.vi`                       | Yes            | Yes            |
+| [`libssh2_channel_window_read`][libssh2_channel_window_read]                           | See `libssh2_channel_window_read_ex`                              |                |                |
+| [`libssh2_channel_window_read_ex`][libssh2_channel_window_read_ex]                     | `libssh2.lvlib:libssh2_channel_window_read_ex.vi`                 | Yes            | Yes            |
+| [`libssh2_channel_window_write`][libssh2_channel_window_write]                         | See `libssh2_channel_window_write_ex`                             |                |                |
+| [`libssh2_channel_window_write_ex`][libssh2_channel_window_write_ex]                   | `libssh2.lvlib:libssh2_channel_window_write_ex.vi`                | Yes            | Yes            |
+| [`libssh2_channel_write`][libssh2_channel_write]                                       | `libssh2.lvlib:libssh2_channel_write.vi`                          | Yes            | Yes            |
+| [`libssh2_channel_write_ex`][libssh2_channel_write_ex]                                 | `libssh2.lvlib:libssh2_channel_write_ex.vi`                       | Yes            | Yes            |
+| [`libssh2_channel_write_stderr`][libssh2_channel_write_stderr]                         | `libssh2.lvlib:libssh2_channel_write_stderr.vi`                   | Yes            | Yes            |
+| [`libssh2_channel_x11_req`][libssh2_channel_x11_req]                                   |                                                                   |                |                |
+| [`libssh2_channel_x11_req_ex`][libssh2_channel_x11_req_ex]                             |                                                                   |                |                |
+| [`libssh2_crypto_engine`][libssh2_crypto_engine]                                       | `libssh2.lvlib:libssh2_crypto_engine.vi`                          | Yes            | Yes            |
+| [`libssh2_exit`][libssh2_exit]                                                         | `libssh2.lvlib:libssh2_exit.vi`                                   | Yes            | Yes            |
+| [`libssh2_free`][libssh2_free]                                                         | `libssh2.lvlib:libssh2_free.vi`                                   | Yes            | Yes            |
+| [`libssh2_hostkey_hash`][libssh2_hostkey_hash]                                         | `libssh2.lvlib:libssh2_hostkey_hash.vi`                           | Yes            | Yes            |
+| [`libssh2_init`][libssh2_init]                                                         | `libssh2.lvlib:libssh2_init.vi`                                   | Yes            | Yes            |
+| [`libssh2_keepalive_config`][libssh2_keepalive_config]                                 | `libssh2.lvlib:libssh2_keepalive_config.vi`                       | Yes            | Yes            |
+| [`libssh2_keepalive_send`][libssh2_keepalive_send]                                     | `libssh2.lvlib:libssh2_keepalive_send.vi`                         | Yes            | Yes            |
+| [`libssh2_knownhost_add`][libssh2_knownhost_add]                                       | Deprecated. Use `libssh2_knownhost_addc` instead!                 |                |                |
+| [`libssh2_knownhost_addc`][libssh2_knownhost_addc]                                     | `libssh2.lvlib:libssh2_knownhost_addc.vi`                         | Yes            | Yes            |
+| [`libssh2_knownhost_check`][libssh2_knownhost_check]                                   | Deprecated. Use `libssh2_knownhost_checkp` instead!               |                |                |
+| [`libssh2_knownhost_checkp`][libssh2_knownhost_checkp]                                 | `libssh2.lvlib:libssh2_knownhost_checkp.vi`                       | Yes            | Yes            |
+| [`libssh2_knownhost_del`][libssh2_knownhost_del]                                       | `libssh2.lvlib:libssh2_knownhost_del.vi`                          | Yes            | Yes            |
+| [`libssh2_knownhost_free`][libssh2_knownhost_free]                                     | `libssh2.lvlib:libssh2_knownhost_free.vi`                         | Yes            | Yes            |
+| [`libssh2_knownhost_get`][libssh2_knownhost_get]                                       | `libssh2.lvlib:libssh2_knownhost_get.vi`                          | Yes            | Yes            |
+| [`libssh2_knownhost_init`][libssh2_knownhost_init]                                     | `libssh2.lvlib:libssh2_knownhost_init.vi`                         | Yes            | Yes            |
+| [`libssh2_knownhost_readfile`][libssh2_knownhost_readfile]                             | `libssh2.lvlib:libssh2_knownhost_readfile.vi`                     | Yes            | Yes            |
+| [`libssh2_knownhost_readline`][libssh2_knownhost_readline]                             | `libssh2.lvlib:libssh2_knownhost_readline.vi`                     | Yes            | Yes            |
+| [`libssh2_knownhost_writefile`][libssh2_knownhost_writefile]                           | `libssh2.lvlib:libssh2_knownhost_writefile.vi`                    | Yes            | Yes            |
+| [`libssh2_knownhost_writeline`][libssh2_knownhost_writeline]                           | `libssh2.lvlib:libssh2_knownhost_writeline.vi`                    | Yes            | Yes            |
+| [`libssh2_poll`][libssh2_poll]                                                         | Deprecated. Use `select` or `poll` system calls instead!          |                |                |
+| [`libssh2_poll_channel_read`][libssh2_poll_channel_read]                               | Deprecated. Use `select` or `poll` system calls instead!          |                |                |
+| [`libssh2_publickey_add`][libssh2_publickey_add]                                       | Not implemented. See [README](../README.md) for more details.     |                |                |
+| [`libssh2_publickey_add_ex`][libssh2_publickey_add_ex]                                 | Not implemented. See [README](../README.md) for more details.     |                |                |
+| [`libssh2_publickey_init`][libssh2_publickey_init]                                     | Not implemented. See [README](../README.md) for more details.     |                |                |
+| [`libssh2_publickey_list_fetch`][libssh2_publickey_list_fetch]                         | Not implemented. See [README](../README.md) for more details.     |                |                |
+| [`libssh2_publickey_list_free`][libssh2_publickey_list_free]                           | Not implemented. See [README](../README.md) for more details.     |                |                |
+| [`libssh2_publickey_remove`][libssh2_publickey_remove]                                 | Not implemented. See [README](../README.md) for more details.     |                |                |
+| [`libssh2_publickey_remove_ex`][libssh2_publickey_remove_ex]                           | Not implemented. See [README](../README.md) for more details.     |                |                |
+| [`libssh2_publickey_shutdown`][libssh2_publickey_shutdown]                             | Not implemented. See [README](../README.md) for more details.     |                |                |
+| [`libssh2_scp_recv`][libssh2_scp_recv]                                                 | Deprecated. Use `libssh2_scp_recv2` instead!                      |                |                |
+| [`libssh2_scp_recv2`][libssh2_scp_recv2]                                               | `libssh2.lvlib:libssh2_scp_recv2.vi`                              | Yes            | Yes            |
+| [`libssh2_scp_send`][libssh2_scp_send]                                                 | See `libssh2_scp_send_ex`                                         |                |                |
+| [`libssh2_scp_send64`][libssh2_scp_send64]                                             | `libssh2.lvlib:libssh2_scp_send64.vi`                             | Yes            | Yes            |
+| [`libssh2_scp_send_ex`][libssh2_scp_send_ex]                                           | Deprecated. Use `libssh2_scp_send64` instead!                     |                |                |
+| [`libssh2_session_abstract`][libssh2_session_abstract]                                 | `libssh2.lvlib:libssh2_session_abstract.vi`                       | Yes            | Yes            |
+| [`libssh2_session_banner_get`][libssh2_session_banner_get]                             | `libssh2.lvlib:libssh2_session_banner_get.vi`                     | Yes            | Yes            |
+| [`libssh2_session_banner_set`][libssh2_session_banner_set]                             | `libssh2.lvlib:libssh2_session_banner_set.vi`                     | Yes            | Yes            |
+| [`libssh2_session_block_directions`][libssh2_session_block_directions]                 | `libssh2.lvlib:libssh2_session_block_directions.vi`               | Yes            | Yes            |
+| [`libssh2_session_callback_set`][libssh2_session_callback_set]                         | `libssh2.lvlib:libssh2_session_callback_set.vi`                   | Yes            | Yes            |
+| [`libssh2_session_disconnect`][libssh2_session_disconnect]                             | `libssh2.lvlib:libssh2_session_disconnect.vi`                     | Yes            | Yes            |
+| [`libssh2_session_disconnect_ex`][libssh2_session_disconnect_ex]                       | `libssh2.lvlib:libssh2_session_disconnect_ex.vi`                  | Yes            | Yes            |
+| [`libssh2_session_flag`][libssh2_session_flag]                                         | `libssh2.lvlib:libssh2_session_flag.vi`                           | Yes            | Yes            |
+| [`libssh2_session_free`][libssh2_session_free]                                         | `libssh2.lvlib:libssh2_session_free.vi`                           | Yes            | Yes            |
+| [`libssh2_session_get_blocking`][libssh2_session_get_blocking]                         | `libssh2.lvlib:libssh2_session_get_blocking.vi`                   | Yes            | Yes            |
+| [`libssh2_session_get_read_timeout`][libssh2_session_get_read_timeout]                 | `libssh2.lvlib:libssh2_session_get_read_timeout.vi`               | Yes            | Yes            |
+| [`libssh2_session_get_timeout`][libssh2_session_get_timeout]                           | `libssh2.lvlib:libssh2_session_get_timeout.vi`                    | Yes            | Yes            |
+| [`libssh2_session_handshake`][libssh2_session_handshake]                               | `libssh2.lvlib:libssh2_session_handshake.vi`                      | Yes            | Yes            |
+| [`libssh2_session_hostkey`][libssh2_session_hostkey]                                   | `libssh2.lvlib:libssh2_session_hostkey.vi`                        | Yes            | Yes            |
+| [`libssh2_session_init`][libssh2_session_init]                                         | `libssh2.lvlib:libssh2_session_init.vi`                           | Yes            | Yes            |
+| [`libssh2_session_init_ex`][libssh2_session_init_ex]                                   | `libssh2.lvlib:libssh2_session_init_ex.vi`                        | Yes            | Partial        |
+| [`libssh2_session_last_errno`][libssh2_session_last_errno]                             | `libssh2.lvlib:libssh2_session_last_errno.vi`                     | Yes            | Yes            |
+| [`libssh2_session_last_error`][libssh2_session_last_error]                             | `libssh2.lvlib:libssh2_session_last_error.vi`                     | Yes            | Yes            |
+| [`libssh2_session_method_pref`][libssh2_session_method_pref]                           | `libssh2.lvlib:libssh2_session_method_pref.vi`                    | Yes            | Yes            |
+| [`libssh2_session_methods`][libssh2_session_methods]                                   | `libssh2.lvlib:libssh2_session_methods.vi`                        | Yes            | Yes            |
+| [`libssh2_session_set_blocking`][libssh2_session_set_blocking]                         | `libssh2.lvlib:libssh2_session_set_blocking.vi`                   | Yes            | Yes            |
+| [`libssh2_session_set_last_error`][libssh2_session_set_last_error]                     | `libssh2.lvlib:libssh2_session_set_last_error.vi`                 | Yes            | Yes            |
+| [`libssh2_session_set_read_timeout`][libssh2_session_set_read_timeout]                 | `libssh2.lvlib:libssh2_session_set_read_timeout.vi`               | Yes            | Yes            |
+| [`libssh2_session_set_timeout`][libssh2_session_set_timeout]                           | `libssh2.lvlib:libssh2_session_set_timeout.vi`                    | Yes            | Yes            |
+| [`libssh2_session_startup`][libssh2_session_startup]                                   | Deprecated. Use `libssh2_session_handshake` instead!              |                |                |
+| [`libssh2_session_supported_algs`][libssh2_session_supported_algs]                     | `libssh2.lvlib:libssh2_session_supported_algs`                    | Yes            | Yes            |
+| [`libssh2_sftp_close`][libssh2_sftp_close]                                             | `libssh2.lvlib:libssh2_sftp_close.vi`                             | Yes            | Yes            |
+| [`libssh2_sftp_close_handle`][libssh2_sftp_close_handle]                               | `libssh2.lvlib:libssh2_sftp_close_handle.vi`                      | Yes            | Yes            |
+| [`libssh2_sftp_closedir`][libssh2_sftp_closedir]                                       | `libssh2.lvlib:libssh2_sftp_closedir.vi`                          | Yes            | Yes            |
+| [`libssh2_sftp_fsetstat`][libssh2_sftp_fsetstat]                                       | `libssh2.lvlib:libssh2_sftp_fsetstat.vi`                          | Yes            | Yes            |
+| [`libssh2_sftp_fstat`][libssh2_sftp_fstat]                                             | `libssh2.lvlib:libssh2_sftp_fstat.vi`                             | Yes            | Yes            |
+| [`libssh2_sftp_fstat_ex`][libssh2_sftp_fstat_ex]                                       | `libssh2.lvlib:libssh2_sftp_fstat_ex.vi`                          | Yes            | Yes            |
+| [`libssh2_sftp_fstatvfs`][libssh2_sftp_fstatvfs]                                       | `libssh2.lvlib:libssh2_sftp_fstatvfs.vi`                          | Yes            | Yes            |
+| [`libssh2_sftp_fsync`][libssh2_sftp_fsync]                                             | `libssh2.lvlib:libssh2_sftp_fsync.vi`                             | Yes            | Yes            |
+| [`libssh2_sftp_get_channel`][libssh2_sftp_get_channel]                                 | `libssh2.lvlib:libssh2_sftp_get_channel.vi`                       | Yes            | Yes            |
+| [`libssh2_sftp_init`][libssh2_sftp_init]                                               | `libssh2.lvlib:libssh2_sftp_init.vi`                              | Yes            | Yes            |
+| [`libssh2_sftp_last_error`][libssh2_sftp_last_error]                                   | `libssh2.lvlib:libssh2_sftp_last_error.vi`                        | Yes            | Yes            |
+| [`libssh2_sftp_lstat`][libssh2_sftp_lstat]                                             | `libssh2.lvlib:libssh2_sftp_lstat.vi`                             | Yes            | Yes            |
+| [`libssh2_sftp_mkdir`][libssh2_sftp_mkdir]                                             | See `libssh2_sftp_mkdir_ex`                                       |                |                |
+| [`libssh2_sftp_mkdir_ex`][libssh2_sftp_mkdir_ex]                                       | `libssh2.lvlib:libssh2_sftp_mkdir_ex.vi`                          | Yes            | Yes            |
+| [`libssh2_sftp_open`][libssh2_sftp_open]                                               | `libssh2.lvlib:libssh2_sftp_open.vi`                              | Yes            | Yes            |
+| [`libssh2_sftp_open_ex`][libssh2_sftp_open_ex]                                         | `libssh2.lvlib:libssh2_sftp_open_ex.vi`                           | Yes            | Yes            |
+| [`libssh2_sftp_open_ex_r`][libssh2_sftp_open_ex_r]                                     | `libssh2.lvlib:libssh2_sftp_open_ex_r.vi`                         | Yes            | Yes            |
+| [`libssh2_sftp_open_r`][libssh2_sftp_open_r]                                           | `libssh2.lvlib:libssh2_sftp_open_r.vi`                            | Yes            | Yes            |
+| [`libssh2_sftp_opendir`][libssh2_sftp_opendir]                                         | `libssh2.lvlib:libssh2_sftp_opendir.vi`                           | Yes            | Yes            |
+| [`libssh2_sftp_read`][libssh2_sftp_read]                                               | `libssh2.lvlib:libssh2_sftp_read.vi`                              | Yes            | Yes            |
+| [`libssh2_sftp_readdir`][libssh2_sftp_readdir]                                         | `libssh2.lvlib:libssh2_sftp_readdir.vi`                           | Yes            | Yes            |
+| [`libssh2_sftp_readdir_ex`][libssh2_sftp_readdir_ex]                                   | `libssh2.lvlib:libssh2_sftp_readdir_ex.vi`                        | Yes            | Yes            |
+| [`libssh2_sftp_readlink`][libssh2_sftp_readlink]                                       | `libssh2.lvlib:libssh2_sftp_readlink.vi`                          | Yes            | Yes            |
+| [`libssh2_sftp_realpath`][libssh2_sftp_realpath]                                       | `libssh2.lvlib:libssh2_sftp_realpath.vi`                          | Yes            | Yes            |
+| [`libssh2_sftp_rename`][libssh2_sftp_rename]                                           | `libssh2.lvlib:libssh2_sftp_rename.vi`                            | Yes            | Yes            |
+| [`libssh2_sftp_rename_ex`][libssh2_sftp_rename_ex]                                     | `libssh2.lvlib:libssh2_sftp_rename_ex.vi`                         | Yes            | Yes            |
+| [`libssh2_sftp_rewind`][libssh2_sftp_rewind]                                           | `libssh2.lvlib:libssh2_sftp_rewind.vi`                            | Yes            | Yes            |
+| [`libssh2_sftp_rmdir`][libssh2_sftp_rmdir]                                             | See `libssh2_sftp_rmdir_ex`                                       |                |                |
+| [`libssh2_sftp_rmdir_ex`][libssh2_sftp_rmdir_ex]                                       | `libssh2.lvlib:libssh2_sftp_rmdir_ex.vi`                          | Yes            | Yes            |
+| [`libssh2_sftp_seek`][libssh2_sftp_seek]                                               | Deprecated. Use `libssh2_sftp_seek64` instead!                    |                |                |
+| [`libssh2_sftp_seek64`][libssh2_sftp_seek64]                                           | `libssh2.lvlib:libssh2_sftp_seek64.vi`                            | Yes            | Yes            |
+| [`libssh2_sftp_setstat`][libssh2_sftp_setstat]                                         | `libssh2.lvlib:libssh2_sftp_setstat.vi`                           | Yes            | Yes            |
+| [`libssh2_sftp_shutdown`][libssh2_sftp_shutdown]                                       | `libssh2.lvlib:libssh2_sftp_shutdown.vi`                          | Yes            | Yes            |
+| [`libssh2_sftp_stat`][libssh2_sftp_stat]                                               | `libssh2.lvlib:libssh2_sftp_stat.vi`                              | Yes            | Yes            |
+| [`libssh2_sftp_stat_ex`][libssh2_sftp_stat_ex]                                         | `libssh2.lvlib:libssh2_sftp_stat_ex.vi`                           | Yes            | Yes            |
+| [`libssh2_sftp_statvfs`][libssh2_sftp_statvfs]                                         | `libssh2.lvlib:libssh2_sftp_statvfs.vi`                           | Yes            | Yes            |
+| [`libssh2_sftp_symlink`][libssh2_sftp_symlink]                                         | `libssh2.lvlib:libssh2_sftp_symlink.vi`                           | Yes            | Yes            |
+| [`libssh2_sftp_symlink_ex`][libssh2_sftp_symlink_ex]                                   | `libssh2.lvlib:libssh2_sftp_symlink_ex.vi`                        | Yes            | Yes            |
+| [`libssh2_sftp_tell`][libssh2_sftp_tell]                                               | Deprecated. Use `libssh2_sftp_tell64` instead!                    |                |                |
+| [`libssh2_sftp_tell64`][libssh2_sftp_tell64]                                           | `libssh2.lvlib:libssh2_sftp_tell64.vi`                            | Yes            | Yes            |
+| [`libssh2_sftp_unlink`][libssh2_sftp_unlink]                                           | See `libssh2_sftp_unlink_ex`                                      |                |                |
+| [`libssh2_sftp_unlink_ex`][libssh2_sftp_unlink_ex]                                     | `libssh2.lvlib:libssh2_sftp_unlink_ex.vi`                         | Yes            | Yes            |
+| [`libssh2_sftp_write`][libssh2_sftp_write]                                             | `libssh2.lvlib:libssh2_sftp_write.vi`                             | Yes            | Yes            |
+| [`libssh2_sign_sk`][libssh2_sign_sk]                                                   |                                                                   |                |                |
+| [`libssh2_trace`][libssh2_trace]                                                       | `libssh2.lvlib:libssh2_trace.vi`                                  | Yes            | Yes            |
+| [`libssh2_trace_sethandler`][libssh2_trace_sethandler]                                 | `libssh2.lvlib:libssh2_trace_sethandler.vi`                       | Yes            | Yes            |
+| [`libssh2_userauth_authenticated`][libssh2_userauth_authenticated]                     | `libssh2.lvlib:libssh2_userauth_authenticated.vi`                 | Yes            | Yes            |
+| [`libssh2_userauth_banner`][libssh2_userauth_banner]                                   | `libssh2.lvlib:libssh2_userauth_banner.vi`                        | Yes            | Yes            |
+| [`libssh2_userauth_hostbased_fromfile`][libssh2_userauth_hostbased_fromfile]           | See `libssh2_userauth_hostbased_fromfile_ex`                      |                |                |
+| [`libssh2_userauth_hostbased_fromfile_ex`][libssh2_userauth_hostbased_fromfile_ex]     | `libssh2.lvlib:libssh2_userauth_hostbased_fromfile_ex.vi`         | Yes            | Yes            |
+| [`libssh2_userauth_keyboard_interactive`][libssh2_userauth_keyboard_interactive]       | See `libssh2_userauth_keyboard_interactive_ex`                    |                |                |
+| [`libssh2_userauth_keyboard_interactive_ex`][libssh2_userauth_keyboard_interactive_ex] | `libssh2.lvlib:libssh2_userauth_keyboard_interactive_ex.vi`       | Yes            | Yes            |
+| [`libssh2_userauth_list`][libssh2_userauth_list]                                       | `libssh2.lvlib:libssh2_userauth_list.vi`                          | Yes            | Yes            |
+| [`libssh2_userauth_password`][libssh2_userauth_password]                               | `libssh2.lvlib:libssh2_userauth_password.vi`                      | Yes            | Yes            |
+| [`libssh2_userauth_password_ex`][libssh2_userauth_password_ex]                         | `libssh2.lvlib:libssh2_userauth_password_ex.vi`                   | Yes            | Yes            |
+| [`libssh2_userauth_publickey`][libssh2_userauth_publickey]                             | `libssh2.lvlib:libssh2_userauth_publickey.vi`                     | Yes            | Yes            |
+| [`libssh2_userauth_publickey_fromfile`][libssh2_userauth_publickey_fromfile]           | See `libssh2_userauth_publickey_fromfile_ex`                      |                |                |
+| [`libssh2_userauth_publickey_fromfile_ex`][libssh2_userauth_publickey_fromfile_ex]     | `libssh2.lvlib:libssh2_userauth_publickey_fromfile_ex.vi`         | Yes            | Yes            |
+| [`libssh2_userauth_publickey_frommemory`][libssh2_userauth_publickey_frommemory]       | `libssh2.lvlib:libssh2_userauth_publickey_frommemory.vi`          | Yes            | Yes            |
+| [`libssh2_userauth_publickey_sk`][libssh2_userauth_publickey_sk]                       |                                                                   |                |                |
+| [`libssh2_version`][libssh2_version]                                                   | `libssh2.lvlib:libssh2_version.vi`                                | Yes            | Yes            |
 
 <!-- Link definitions -->
 [libssh2_agent_connect]: https://libssh2.org/libssh2_agent_connect.html
