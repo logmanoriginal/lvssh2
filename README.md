@@ -45,9 +45,6 @@ See [libssh2-api](docs/libssh2-api.md) for API coverage.
 
 ### Limitations
 
-> [!WARNING]
-> Support for LabVIEW 64-bit is experimental and incomplete.
-
 > [!NOTE]
 > There is currently no built-in support for Linux and macOS.
 > Users need to build the libssh2 shared library for these platforms themselves.

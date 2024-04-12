@@ -265,7 +265,7 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_session_handshake`][libssh2_session_handshake]                               | `libssh2.lvlib:libssh2_session_handshake.vi`                      | Yes            | Yes            |
 | [`libssh2_session_hostkey`][libssh2_session_hostkey]                                   | `libssh2.lvlib:libssh2_session_hostkey.vi`                        | Yes            | Yes            |
 | [`libssh2_session_init`][libssh2_session_init]                                         | `libssh2.lvlib:libssh2_session_init.vi`                           | Yes            | Yes            |
-| [`libssh2_session_init_ex`][libssh2_session_init_ex]                                   | `libssh2.lvlib:libssh2_session_init_ex.vi`                        | Yes            | Partial        |
+| [`libssh2_session_init_ex`][libssh2_session_init_ex]                                   | `libssh2.lvlib:libssh2_session_init_ex.vi`                        | Yes            | Yes            |
 | [`libssh2_session_last_errno`][libssh2_session_last_errno]                             | `libssh2.lvlib:libssh2_session_last_errno.vi`                     | Yes            | Yes            |
 | [`libssh2_session_last_error`][libssh2_session_last_error]                             | `libssh2.lvlib:libssh2_session_last_error.vi`                     | Yes            | Yes            |
 | [`libssh2_session_method_pref`][libssh2_session_method_pref]                           | `libssh2.lvlib:libssh2_session_method_pref.vi`                    | Yes            | Yes            |

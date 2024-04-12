@@ -138,14 +138,26 @@
 		<Item Name="lvssh2_session_callback_receive_function_input_args_32.ctl" Type="VI" URL="../lvssh2_session_callback_receive_function_input_args_32.ctl">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
+		<Item Name="lvssh2_session_callback_receive_function_input_args_64.ctl" Type="VI" URL="../lvssh2_session_callback_receive_function_input_args_64.ctl">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="lvssh2_session_callback_receive_handler_32.vi" Type="VI" URL="../lvssh2_session_callback_receive_handler_32.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="lvssh2_session_callback_receive_handler_64.vi" Type="VI" URL="../lvssh2_session_callback_receive_handler_64.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 		<Item Name="lvssh2_session_callback_send.vit" Type="VI" URL="../lvssh2_session_callback_send.vit"/>
 		<Item Name="lvssh2_session_callback_send_function_input_args_32.ctl" Type="VI" URL="../lvssh2_session_callback_send_function_input_args_32.ctl">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
+		<Item Name="lvssh2_session_callback_send_function_input_args_64.ctl" Type="VI" URL="../lvssh2_session_callback_send_function_input_args_64.ctl">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="lvssh2_session_callback_send_handler_32.vi" Type="VI" URL="../lvssh2_session_callback_send_handler_32.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="lvssh2_session_callback_send_handler_64.vi" Type="VI" URL="../lvssh2_session_callback_send_handler_64.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 	</Item>
@@ -187,16 +199,26 @@
 		<Item Name="lvssh2_userauth_keyboard_interactive_response_function_handler_32.vi" Type="VI" URL="../lvssh2_userauth_keyboard_interactive_response_function_handler_32.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
+		<Item Name="lvssh2_userauth_keyboard_interactive_response_function_handler_64.vi" Type="VI" URL="../lvssh2_userauth_keyboard_interactive_response_function_handler_64.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="lvssh2_userauth_keyboard_interactive_response_function_input_args_32.ctl" Type="VI" URL="../lvssh2_userauth_keyboard_interactive_response_function_input_args_32.ctl">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="lvssh2_userauth_keyboard_interactive_response_function_input_args_64.ctl" Type="VI" URL="../lvssh2_userauth_keyboard_interactive_response_function_input_args_64.ctl">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 		<Item Name="lvssh2_userauth_publickey_sign_function.vit" Type="VI" URL="../lvssh2_userauth_publickey_sign_function.vit"/>
 		<Item Name="lvssh2_userauth_publickey_sign_function_handler_32.vi" Type="VI" URL="../lvssh2_userauth_publickey_sign_function_handler_32.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
+		<Item Name="lvssh2_userauth_publickey_sign_function_handler_64.vi" Type="VI" URL="../lvssh2_userauth_publickey_sign_function_handler_64.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="lvssh2_userauth_publickey_sign_function_input_args_32.ctl" Type="VI" URL="../lvssh2_userauth_publickey_sign_function_input_args_32.ctl">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
+		<Item Name="lvssh2_userauth_publickey_sign_function_input_args_64.ctl" Type="VI" URL="../lvssh2_userauth_publickey_sign_function_input_args_64.ctl"/>
 	</Item>
 	<Item Name="Utitlity" Type="Folder">
 		<Item Name="From Unix Time.vi" Type="VI" URL="../From Unix Time.vi"/>
