@@ -67,8 +67,11 @@
 			<Item Name="userauth_publickey_frommemory.vi" Type="VI" URL="../examples/userauth_publickey_frommemory.vi"/>
 			<Item Name="userauth_publickey_sign.vi" Type="VI" URL="../examples/userauth_publickey_sign.vi"/>
 		</Item>
+		<Item Name="tests" Type="Folder">
+			<Item Name="libssh2_integration_tests.lvlib" Type="Library" URL="../tests/libssh2_integration_tests/libssh2_integration_tests.lvlib"/>
+			<Item Name="libssh2_tests.lvlib" Type="Library" URL="../tests/libssh2_tests/libssh2_tests.lvlib"/>
+		</Item>
 		<Item Name="libssh2.lvlib" Type="Library" URL="../libssh2/libssh2.lvlib"/>
-		<Item Name="libssh2_tests.lvlib" Type="Library" URL="../tests/libssh2_tests/libssh2_tests.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="96D64E02C3F47849182DC8639B93F2ADArray Size(s)__ogtk.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/_Caraya_internal_deps/96D64E02C3F47849182DC8639B93F2ADArray Size(s)__ogtk.vi"/>
@@ -126,8 +129,11 @@
 				<Item Name="96D64E02C3F47849182DC8639B93F2ADUnwrap VVariant__ogtk.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/_Caraya_internal_deps/96D64E02C3F47849182DC8639B93F2ADUnwrap VVariant__ogtk.vi"/>
 				<Item Name="96D64E02C3F47849182DC8639B93F2ADValid Path - Traditional__ogtk.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/_Caraya_internal_deps/96D64E02C3F47849182DC8639B93F2ADValid Path - Traditional__ogtk.vi"/>
 				<Item Name="96D64E02C3F47849182DC8639B93F2ADVariant to Header Info__ogtk.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/_Caraya_internal_deps/96D64E02C3F47849182DC8639B93F2ADVariant to Header Info__ogtk.vi"/>
+				<Item Name="177-MalformedXmlAttribute.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/test-issue177/177-MalformedXmlAttribute.vi"/>
+				<Item Name="178-malformedtimeAttribute.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/test-issue178/178-malformedtimeAttribute.vi"/>
 				<Item Name="Add State(s) to Queue__jki_lib_state_machine.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/State Machine/_JKI_lib_State_Machine.llb/Add State(s) to Queue__jki_lib_state_machine.vi"/>
 				<Item Name="Application Directory.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Application Directory.vi"/>
+				<Item Name="Assert Test SubVI.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/asserts/Assert Test SubVI.vi"/>
 				<Item Name="BuildHelpPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/BuildHelpPath.vi"/>
 				<Item Name="Caraya Interactive Menu.rtm" Type="Document" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/menu/Caraya Interactive Menu.rtm"/>
 				<Item Name="Caraya.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/Caraya.lvlib"/>
@@ -151,6 +157,7 @@
 				<Item Name="Format Message String.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Format Message String.vi"/>
 				<Item Name="General Error Handler CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler CORE.vi"/>
 				<Item Name="General Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler.vi"/>
+				<Item Name="Generate Temporary File Path.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Generate Temporary File Path.vi"/>
 				<Item Name="Get File Extension.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Get File Extension.vi"/>
 				<Item Name="Get File System Separator.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/sysinfo.llb/Get File System Separator.vi"/>
 				<Item Name="Get LV Class Name.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/LVClass/Get LV Class Name.vi"/>
@@ -170,6 +177,11 @@
 				<Item Name="List Directory and LLBs.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/List Directory and LLBs.vi"/>
 				<Item Name="Longest Line Length in Pixels.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Longest Line Length in Pixels.vi"/>
 				<Item Name="LVBoundsTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVBoundsTypeDef.ctl"/>
+				<Item Name="MD5Checksum core.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/MD5Checksum.llb/MD5Checksum core.vi"/>
+				<Item Name="MD5Checksum format message-digest.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/MD5Checksum.llb/MD5Checksum format message-digest.vi"/>
+				<Item Name="MD5Checksum pad.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/MD5Checksum.llb/MD5Checksum pad.vi"/>
+				<Item Name="MD5Checksum string.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/MD5Checksum.llb/MD5Checksum string.vi"/>
+				<Item Name="New Test (Caraya).vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/classes/Assert/New Test (Caraya).vi"/>
 				<Item Name="NI_FileType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/lvfile.llb/NI_FileType.lvlib"/>
 				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
 				<Item Name="Not Found Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Not Found Dialog.vi"/>
@@ -190,10 +202,36 @@
 				<Item Name="Space Constant.vi" Type="VI" URL="/&lt;vilib&gt;/dlg_ctls.llb/Space Constant.vi"/>
 				<Item Name="subFile Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/express/express input/FileDialogBlock.llb/subFile Dialog.vi"/>
 				<Item Name="System Directory Type.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/sysdir.llb/System Directory Type.ctl"/>
+				<Item Name="System Exec.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/system.llb/System Exec.vi"/>
 				<Item Name="TagReturnType.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/TagReturnType.ctl"/>
 				<Item Name="TCP Get Raw Net Object.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tcp.llb/TCP Get Raw Net Object.vi"/>
 				<Item Name="TD_Get MDT Information.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/GetType.llb/TD_Get MDT Information.vi"/>
 				<Item Name="TD_MDTFlavor.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/GetType.llb/TD_MDTFlavor.ctl"/>
+				<Item Name="Test Assert Almost Equal (Float).vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/asserts/Test Assert Almost Equal (Float).vi"/>
+				<Item Name="Test Assert Equal (Float Units).vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/asserts/Test Assert Equal (Float Units).vi"/>
+				<Item Name="Test Assert Equal - deprecated.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/asserts/Test Assert Equal - deprecated.vi"/>
+				<Item Name="Test Assert Equal Type.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/asserts/Test Assert Equal Type.vi"/>
+				<Item Name="Test Assert Equal Value (Arrays).vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/asserts/Test Assert Equal Value (Arrays).vi"/>
+				<Item Name="Test Assert Equal Value (Typedef).vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/asserts/Test Assert Equal Value (Typedef).vi"/>
+				<Item Name="Test Assert Equal Value and Type.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/asserts/Test Assert Equal Value and Type.vi"/>
+				<Item Name="Test Assert Equal Value.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/asserts/Test Assert Equal Value.vi"/>
+				<Item Name="Test Assert Error.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/asserts/Test Assert Error.vi"/>
+				<Item Name="Test Assert False.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/asserts/Test Assert False.vi"/>
+				<Item Name="Test Assert Greater Or Equal.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/asserts/Test Assert Greater Or Equal.vi"/>
+				<Item Name="Test Assert Greater.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/asserts/Test Assert Greater.vi"/>
+				<Item Name="Test Assert In Assert Wrapper.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/asserts/Test Assert In Assert Wrapper.vi"/>
+				<Item Name="Test Assert In SubVI.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/asserts/Test Assert In SubVI.vi"/>
+				<Item Name="Test Assert Less Or Equal.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/asserts/Test Assert Less Or Equal.vi"/>
+				<Item Name="Test Assert Less.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/asserts/Test Assert Less.vi"/>
+				<Item Name="Test Assert Not Equal - deprecated.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/asserts/Test Assert Not Equal - deprecated.vi"/>
+				<Item Name="Test Assert Not Equal Type.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/asserts/Test Assert Not Equal Type.vi"/>
+				<Item Name="Test Assert Not Equal Value (Typedef).vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/asserts/Test Assert Not Equal Value (Typedef).vi"/>
+				<Item Name="Test Assert Not Equal Value and Type.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/asserts/Test Assert Not Equal Value and Type.vi"/>
+				<Item Name="Test Assert Not Equal Value.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/asserts/Test Assert Not Equal Value.vi"/>
+				<Item Name="Test Assert Not Error.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/asserts/Test Assert Not Error.vi"/>
+				<Item Name="Test Assert True.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/asserts/Test Assert True.vi"/>
+				<Item Name="Test Asserts.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/classes/Assert/Test Asserts.vi"/>
+				<Item Name="test-lvlib.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/test-lvlib/test-lvlib.lvlib"/>
 				<Item Name="Three Button Dialog CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog CORE.vi"/>
 				<Item Name="Three Button Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog.vi"/>
 				<Item Name="TRef Traverse for References.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/traverseref.llb/TRef Traverse for References.vi"/>
@@ -202,13 +240,22 @@
 				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
 				<Item Name="Type Descriptor I16 Array.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/GetType.llb/Type Descriptor I16 Array.ctl"/>
 				<Item Name="Type Descriptor I16.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/GetType.llb/Type Descriptor I16.ctl"/>
+				<Item Name="Unit Tests for Runner.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/test-runner/UnitTest For Runner/Unit Tests for Runner.lvclass"/>
 				<Item Name="Unset Busy.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/cursorutil.llb/Unset Busy.vi"/>
 				<Item Name="VariantType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/VariantDataType/VariantType.lvlib"/>
 				<Item Name="VI Scripting - Traverse.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/traverseref.llb/VI Scripting - Traverse.lvlib"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
+				<Item Name="Wrapper For Assert True.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/asserts/Wrapper For Assert True.vi"/>
+				<Item Name="Wrapper For TypeSpecificAssert.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/tests/asserts/Wrapper For TypeSpecificAssert.vi"/>
 			</Item>
 			<Item Name="libssh2_64.dll" Type="Document" URL="../libssh2/libssh2_64.dll"/>
 			<Item Name="lvssh2_extensions_64.dll" Type="Document" URL="../libssh2/lvssh2_extensions_64.dll"/>
+			<Item Name="mscorlib" Type="VI" URL="mscorlib">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="System" Type="VI" URL="System">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
 			<Item Name="TRef FinderCallback.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/traverseref.llb/TRef FinderCallback.vi"/>
 			<Item Name="Ws2_32.dll" Type="Document" URL="Ws2_32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
