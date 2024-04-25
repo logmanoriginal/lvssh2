@@ -1,8 +1,8 @@
 #include "lvssh2_extensions.h"
 
 void lvssh2_trace_handler_function(LIBSSH2_SESSION* session, LVUserEventRef* event, const char* data, size_t length) {
-	LStrHandle message = (LStrHandle)DSNewHClr(sizeof(int32) + length + sizeof(uChar));
-	LStrPrintf(message, (CStr)"%s", data);
+	LStrHandle message = nullptr;
+	data_buffer_to_LStrHandle(data, length, &message);
 
 	PostLVUserEvent(*event, &message);
 
@@ -13,8 +13,6 @@ int lvssh2_userauth_publickey_sign_function(LIBSSH2_SESSION* session, unsigned c
 	lvssh2_userauth_publickey_sign_function_input_args* payload = (lvssh2_userauth_publickey_sign_function_input_args*)malloc(sizeof(lvssh2_userauth_publickey_sign_function_input_args));
 	payload->data = (unsigned char*)data;
 	payload->data_len = data_len;
-
-
 
 	lvssh2_userauth_publickey_sign_return_value = { 0 };
 
@@ -91,11 +89,11 @@ void lvssh2_userauth_keyboard_interactive_response_function(
 		return;
 	}
 
-	LStrHandle lv_name = (LStrHandle)DSNewHClr(sizeof(int32) + name_len + sizeof(uChar));
-	LStrPrintf(lv_name, (CStr)"%s", name);
+	LStrHandle lv_name = 0;
+	data_buffer_to_LStrHandle(name, name_len, &lv_name);
 
-	LStrHandle lv_instruction = (LStrHandle)DSNewHClr(sizeof(int32) + instruction_len + sizeof(uChar));
-	LStrPrintf(lv_instruction, (CStr)"%s", instruction);
+	LStrHandle lv_instruction = 0;
+	data_buffer_to_LStrHandle(instruction, instruction_len, &lv_instruction);
 
 	lvssh2_userauth_keyboard_interactive_response_function_input_args* payload = (lvssh2_userauth_keyboard_interactive_response_function_input_args*)malloc(sizeof(lvssh2_userauth_keyboard_interactive_response_function_input_args));
 	payload->name = lv_name;
@@ -123,4 +121,13 @@ void lvssh2_userauth_keyboard_interactive_add_response(const char* text, unsigne
 
 	lvssh2_userauth_keyboard_interactive_response_return_value[lvssh2_userauth_keyboard_interactive_response_return_value_count] = response;
 	lvssh2_userauth_keyboard_interactive_response_return_value_count++;
+}
+
+void data_buffer_to_LStrHandle(const char* data, size_t data_length, LStrHandle* string_handle_ptr) {
+	// size handle to fit
+	NumericArrayResize(uB, 1, (UHandle*)(string_handle_ptr), data_length);
+	// copy data
+	MoveBlock(data, LHStrBuf(*string_handle_ptr), data_length);
+	// set the handle's string-length
+	(**string_handle_ptr)->cnt = data_length;
 }

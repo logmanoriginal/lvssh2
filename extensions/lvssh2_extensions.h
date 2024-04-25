@@ -3,7 +3,7 @@
 #include "extcode.h"
 #include "libssh2/libssh2.h"
 
-#pragma pack(push, 1)
+#include "lv_prolog.h"
 
 typedef struct {
 	unsigned char* data;
@@ -47,9 +47,11 @@ LVUserEventRef* lvssh2_userauth_keyboard_interactive_response_event = { 0 };
 LIBSSH2_USERAUTH_KBDINT_RESPONSE* lvssh2_userauth_keyboard_interactive_response_return_value = { 0 };
 int lvssh2_userauth_keyboard_interactive_response_return_value_count = 0;
 
-#pragma pack(pop)
-
 lvssh2_userauth_publickey_sign_function_output_args lvssh2_userauth_publickey_sign_return_value = { 0 };
+
+#include "lv_epilog.h"
+
+void data_buffer_to_LStrHandle(const char*, size_t, LStrHandle*);
 
 void lvssh2_trace_handler_function(LIBSSH2_SESSION* session, LVUserEventRef* event, const char* data, size_t length);
 int lvssh2_userauth_publickey_sign_function(LIBSSH2_SESSION* session, unsigned char** signature, size_t* signature_len, const unsigned char* data, size_t data_len, LVUserEventRef* event);
