@@ -68,6 +68,7 @@
 			<Item Name="userauth_publickey_sign.vi" Type="VI" URL="../examples/userauth_publickey_sign.vi"/>
 		</Item>
 		<Item Name="tests" Type="Folder">
+			<Item Name="Assert Extensions.lvclass" Type="LVClass" URL="../tests/Assert Extensions/Assert Extensions.lvclass"/>
 			<Item Name="libssh2_integration_tests.lvlib" Type="Library" URL="../tests/libssh2_integration_tests/libssh2_integration_tests.lvlib"/>
 			<Item Name="libssh2_tests.lvlib" Type="Library" URL="../tests/libssh2_tests/libssh2_tests.lvlib"/>
 		</Item>
