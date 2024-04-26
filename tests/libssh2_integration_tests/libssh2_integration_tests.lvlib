@@ -16,4 +16,5 @@
 	<Item Name="test_libssh2_session_banner_get.vi" Type="VI" URL="../test_libssh2_session_banner_get.vi"/>
 	<Item Name="test_libssh2_session_blocking.vi" Type="VI" URL="../test_libssh2_session_blocking.vi"/>
 	<Item Name="test_libssh2_session_handshake.vi" Type="VI" URL="../test_libssh2_session_handshake.vi"/>
+	<Item Name="test_libssh2_session_timeout.vi" Type="VI" URL="../test_libssh2_session_timeout.vi"/>
 </Library>
