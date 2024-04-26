@@ -7,11 +7,12 @@
 	<Item Name="Server Fixture.lvclass" Type="LVClass" URL="../Server Fixture/Server Fixture.lvclass">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
-	<Item Name="session_handshake.vi" Type="VI" URL="../session_handshake.vi"/>
 	<Item Name="setUp.vi" Type="VI" URL="../setUp.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
 	<Item Name="tearDown.vi" Type="VI" URL="../tearDown.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
+	<Item Name="test_libssh2_session_banner_get.vi" Type="VI" URL="../test_libssh2_session_banner_get.vi"/>
+	<Item Name="test_libssh2_session_handshake.vi" Type="VI" URL="../test_libssh2_session_handshake.vi"/>
 </Library>
