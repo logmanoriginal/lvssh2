@@ -18,6 +18,7 @@
 	<Item Name="test_libssh2_session_handshake.vi" Type="VI" URL="../test_libssh2_session_handshake.vi"/>
 	<Item Name="test_libssh2_session_last_errno.vi" Type="VI" URL="../test_libssh2_session_last_errno.vi"/>
 	<Item Name="test_libssh2_session_last_error.vi" Type="VI" URL="../test_libssh2_session_last_error.vi"/>
+	<Item Name="test_libssh2_session_methods.vi" Type="VI" URL="../test_libssh2_session_methods.vi"/>
 	<Item Name="test_libssh2_session_read_timeout.vi" Type="VI" URL="../test_libssh2_session_read_timeout.vi"/>
 	<Item Name="test_libssh2_session_supported_algs.vi" Type="VI" URL="../test_libssh2_session_supported_algs.vi"/>
 	<Item Name="test_libssh2_session_timeout.vi" Type="VI" URL="../test_libssh2_session_timeout.vi"/>
