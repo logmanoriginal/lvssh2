@@ -4,6 +4,18 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">318799872</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Item Name="callback_recv.vi" Type="VI" URL="../callback_recv.vi">
+		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+	</Item>
+	<Item Name="callback_recv_queue_obtain.vi" Type="VI" URL="../callback_recv_queue_obtain.vi">
+		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+	</Item>
+	<Item Name="callback_send.vi" Type="VI" URL="../callback_send.vi">
+		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+	</Item>
+	<Item Name="callback_send_queue_obtain.vi" Type="VI" URL="../callback_send_queue_obtain.vi">
+		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+	</Item>
 	<Item Name="Server Fixture.lvclass" Type="LVClass" URL="../Server Fixture/Server Fixture.lvclass">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
@@ -17,6 +29,8 @@
 	<Item Name="test_libssh2_session_blocking.vi" Type="VI" URL="../test_libssh2_session_blocking.vi"/>
 	<Item Name="test_libssh2_session_handshake.vi" Type="VI" URL="../test_libssh2_session_handshake.vi"/>
 	<Item Name="test_libssh2_session_hostkey.vi" Type="VI" URL="../test_libssh2_session_hostkey.vi"/>
+	<Item Name="test_libssh2_session_init_ex (recv callback).vi" Type="VI" URL="../test_libssh2_session_init_ex (recv callback).vi"/>
+	<Item Name="test_libssh2_session_init_ex (send callback).vi" Type="VI" URL="../test_libssh2_session_init_ex (send callback).vi"/>
 	<Item Name="test_libssh2_session_last_errno.vi" Type="VI" URL="../test_libssh2_session_last_errno.vi"/>
 	<Item Name="test_libssh2_session_last_error.vi" Type="VI" URL="../test_libssh2_session_last_error.vi"/>
 	<Item Name="test_libssh2_session_methods.vi" Type="VI" URL="../test_libssh2_session_methods.vi"/>
