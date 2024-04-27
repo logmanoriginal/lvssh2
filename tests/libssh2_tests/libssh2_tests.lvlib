@@ -15,11 +15,14 @@
 	<Item Name="libssh2_knownhost_readfile - invalid file - returns error.vi" Type="VI" URL="../libssh2_knownhost_readfile - invalid file - returns error.vi"/>
 	<Item Name="libssh2_knownhost_readfile - invalid known hosts collection - returns zero.vi" Type="VI" URL="../libssh2_knownhost_readfile - invalid known hosts collection - returns zero.vi"/>
 	<Item Name="libssh2_knownhost_readfile - valid file - returns number of hosts.vi" Type="VI" URL="../libssh2_knownhost_readfile - valid file - returns number of hosts.vi"/>
-	<Item Name="libssh2_session_get_blocking - blocking - returns true.vi" Type="VI" URL="../libssh2_session_get_blocking - blocking - returns true.vi"/>
-	<Item Name="libssh2_session_get_blocking - non-blocking - returns false.vi" Type="VI" URL="../libssh2_session_get_blocking - non-blocking - returns false.vi"/>
-	<Item Name="libssh2_version - no required version - returns version number.vi" Type="VI" URL="../libssh2_version - no required version - returns version number.vi"/>
-	<Item Name="libssh2_version - required version to high - returns empty string.vi" Type="VI" URL="../libssh2_version - required version to high - returns empty string.vi"/>
 	<Item Name="Not A Session - invalid session - returns true.vi" Type="VI" URL="../Not A Session - invalid session - returns true.vi"/>
 	<Item Name="Not A Session - valid session - returns false.vi" Type="VI" URL="../Not A Session - valid session - returns false.vi"/>
 	<Item Name="Test no error 1097.vi" Type="VI" URL="../Test no error 1097.vi"/>
+	<Item Name="test_libssh2_session_blocking.vi" Type="VI" URL="../test_libssh2_session_blocking.vi"/>
+	<Item Name="test_libssh2_session_last_errno.vi" Type="VI" URL="../test_libssh2_session_last_errno.vi"/>
+	<Item Name="test_libssh2_session_last_error.vi" Type="VI" URL="../test_libssh2_session_last_error.vi"/>
+	<Item Name="test_libssh2_session_read_timeout.vi" Type="VI" URL="../test_libssh2_session_read_timeout.vi"/>
+	<Item Name="test_libssh2_session_supported_algs.vi" Type="VI" URL="../test_libssh2_session_supported_algs.vi"/>
+	<Item Name="test_libssh2_session_timeout.vi" Type="VI" URL="../test_libssh2_session_timeout.vi"/>
+	<Item Name="test_libssh2_version.vi" Type="VI" URL="../test_libssh2_version.vi"/>
 </Library>

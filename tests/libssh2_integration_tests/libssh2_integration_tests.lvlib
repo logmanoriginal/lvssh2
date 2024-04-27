@@ -26,15 +26,9 @@
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
 	<Item Name="test_libssh2_session_banner_get.vi" Type="VI" URL="../test_libssh2_session_banner_get.vi"/>
-	<Item Name="test_libssh2_session_blocking.vi" Type="VI" URL="../test_libssh2_session_blocking.vi"/>
 	<Item Name="test_libssh2_session_handshake.vi" Type="VI" URL="../test_libssh2_session_handshake.vi"/>
 	<Item Name="test_libssh2_session_hostkey.vi" Type="VI" URL="../test_libssh2_session_hostkey.vi"/>
 	<Item Name="test_libssh2_session_init_ex (recv callback).vi" Type="VI" URL="../test_libssh2_session_init_ex (recv callback).vi"/>
 	<Item Name="test_libssh2_session_init_ex (send callback).vi" Type="VI" URL="../test_libssh2_session_init_ex (send callback).vi"/>
-	<Item Name="test_libssh2_session_last_errno.vi" Type="VI" URL="../test_libssh2_session_last_errno.vi"/>
-	<Item Name="test_libssh2_session_last_error.vi" Type="VI" URL="../test_libssh2_session_last_error.vi"/>
 	<Item Name="test_libssh2_session_methods.vi" Type="VI" URL="../test_libssh2_session_methods.vi"/>
-	<Item Name="test_libssh2_session_read_timeout.vi" Type="VI" URL="../test_libssh2_session_read_timeout.vi"/>
-	<Item Name="test_libssh2_session_supported_algs.vi" Type="VI" URL="../test_libssh2_session_supported_algs.vi"/>
-	<Item Name="test_libssh2_session_timeout.vi" Type="VI" URL="../test_libssh2_session_timeout.vi"/>
 </Library>
