@@ -27,6 +27,7 @@
 	</Item>
 	<Item Name="test_libssh2_channel_exec.vi" Type="VI" URL="../test_libssh2_channel_exec.vi"/>
 	<Item Name="test_libssh2_channel_open_session.vi" Type="VI" URL="../test_libssh2_channel_open_session.vi"/>
+	<Item Name="test_libssh2_channel_window_read_ex.vi" Type="VI" URL="../test_libssh2_channel_window_read_ex.vi"/>
 	<Item Name="test_libssh2_hostkey_hash.vi" Type="VI" URL="../test_libssh2_hostkey_hash.vi"/>
 	<Item Name="test_libssh2_session_banner_get.vi" Type="VI" URL="../test_libssh2_session_banner_get.vi"/>
 	<Item Name="test_libssh2_session_handshake.vi" Type="VI" URL="../test_libssh2_session_handshake.vi"/>
