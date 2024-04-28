@@ -28,6 +28,7 @@
 	<Item Name="test_libssh2_channel_exec.vi" Type="VI" URL="../test_libssh2_channel_exec.vi"/>
 	<Item Name="test_libssh2_channel_open_session.vi" Type="VI" URL="../test_libssh2_channel_open_session.vi"/>
 	<Item Name="test_libssh2_channel_receive_window_adjust2.vi" Type="VI" URL="../test_libssh2_channel_receive_window_adjust2.vi"/>
+	<Item Name="test_libssh2_channel_set_blocking.vi" Type="VI" URL="../test_libssh2_channel_set_blocking.vi"/>
 	<Item Name="test_libssh2_channel_setenv_ex.vi" Type="VI" URL="../test_libssh2_channel_setenv_ex.vi"/>
 	<Item Name="test_libssh2_channel_window_read_ex.vi" Type="VI" URL="../test_libssh2_channel_window_read_ex.vi"/>
 	<Item Name="test_libssh2_channel_window_write_ex.vi" Type="VI" URL="../test_libssh2_channel_window_write_ex.vi"/>
