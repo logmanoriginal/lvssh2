@@ -28,6 +28,7 @@
 	<Item Name="test_libssh2_channel_exec.vi" Type="VI" URL="../test_libssh2_channel_exec.vi"/>
 	<Item Name="test_libssh2_channel_get_exit_signal.vi" Type="VI" URL="../test_libssh2_channel_get_exit_signal.vi"/>
 	<Item Name="test_libssh2_channel_get_exit_status.vi" Type="VI" URL="../test_libssh2_channel_get_exit_status.vi"/>
+	<Item Name="test_libssh2_channel_handle_extended_data2.vi" Type="VI" URL="../test_libssh2_channel_handle_extended_data2.vi"/>
 	<Item Name="test_libssh2_channel_open_session.vi" Type="VI" URL="../test_libssh2_channel_open_session.vi"/>
 	<Item Name="test_libssh2_channel_read.vi" Type="VI" URL="../test_libssh2_channel_read.vi"/>
 	<Item Name="test_libssh2_channel_receive_window_adjust2.vi" Type="VI" URL="../test_libssh2_channel_receive_window_adjust2.vi"/>
