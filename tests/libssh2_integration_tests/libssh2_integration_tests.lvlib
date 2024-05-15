@@ -4,6 +4,13 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">318799872</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Item Name="Common" Type="Folder">
+		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		<Item Name="Exec ssh-keygen.vi" Type="VI" URL="../Exec ssh-keygen.vi"/>
+		<Item Name="Find Exe Path.vi" Type="VI" URL="../Find Exe Path.vi"/>
+		<Item Name="Path To Unix Path.vi" Type="VI" URL="../Path To Unix Path.vi"/>
+	</Item>
+	<Item Name="Agent Fixture.lvclass" Type="LVClass" URL="../Agent Fixture/Agent Fixture.lvclass"/>
 	<Item Name="callback_recv.vi" Type="VI" URL="../callback_recv.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
@@ -25,6 +32,7 @@
 	<Item Name="tearDown.vi" Type="VI" URL="../tearDown.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
+	<Item Name="test_libssh2_agent_get_identity.vi" Type="VI" URL="../test_libssh2_agent_get_identity.vi"/>
 	<Item Name="test_libssh2_channel_exec.vi" Type="VI" URL="../test_libssh2_channel_exec.vi"/>
 	<Item Name="test_libssh2_channel_get_exit_signal.vi" Type="VI" URL="../test_libssh2_channel_get_exit_signal.vi"/>
 	<Item Name="test_libssh2_channel_get_exit_status.vi" Type="VI" URL="../test_libssh2_channel_get_exit_status.vi"/>
