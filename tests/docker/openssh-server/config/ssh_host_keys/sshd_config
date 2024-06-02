@@ -119,3 +119,8 @@ Subsystem	sftp	internal-sftp
 #	AllowTcpForwarding no
 #	PermitTTY no
 #	ForceCommand cvs server
+
+# Disable diffie-hellman-group-exchange-sha256 to prevent
+# error "dh key pair generation failed" when using libssh2
+# with WINCNG. This is a workaround for libssh2 bug #1370
+KexAlgorithms -diffie-hellman-group-exchange-sha256
