@@ -1,0 +1,17 @@
+---
+services:
+  openssh-server:
+    # https://hub.docker.com/r/linuxserver/openssh-server
+    image: linuxserver/openssh-server:latest
+    container_name: openssh-server
+    hostname: openssh-server
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - PASSWORD_ACCESS=true
+      - USER_NAME=openssh
+      - USER_PASSWORD=openssh
+    volumes:
+      - ./openssh-server/config:/config
+    ports:
+      - 22:2222
