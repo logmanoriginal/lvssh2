@@ -4,13 +4,6 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">318799872</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
-	<Item Name="Common" Type="Folder">
-		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-		<Item Name="Exec ssh-keygen.vi" Type="VI" URL="../Exec ssh-keygen.vi"/>
-		<Item Name="Find Exe Path.vi" Type="VI" URL="../Find Exe Path.vi"/>
-		<Item Name="Path To Unix Path.vi" Type="VI" URL="../Path To Unix Path.vi"/>
-	</Item>
-	<Item Name="Agent Fixture.lvclass" Type="LVClass" URL="../Agent Fixture/Agent Fixture.lvclass"/>
 	<Item Name="callback_recv.vi" Type="VI" URL="../callback_recv.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
@@ -23,7 +16,10 @@
 	<Item Name="callback_send_queue_obtain.vi" Type="VI" URL="../callback_send_queue_obtain.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
-	<Item Name="Server Fixture.lvclass" Type="LVClass" URL="../Server Fixture/Server Fixture.lvclass">
+	<Item Name="Login.vi" Type="VI" URL="../Login.vi">
+		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+	</Item>
+	<Item Name="Open Connection.vi" Type="VI" URL="../Open Connection.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
 	<Item Name="setUp.vi" Type="VI" URL="../setUp.vi">
