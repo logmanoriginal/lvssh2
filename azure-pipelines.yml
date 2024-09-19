@@ -6,6 +6,9 @@ pool:
   demands: LabVIEW
 
 steps:
+- script: docker compose up -d --force-recreate
+  displayName: 'Start SSH server'
+  workingDirectory: '$(Build.SourcesDirectory)/docker'
 - task: CmdLine@2
   displayName: 'Restore packages'
   inputs:
