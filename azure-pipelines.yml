@@ -17,7 +17,7 @@ steps:
 - task: CmdLine@2
   displayName: 'Run tests'
   inputs:
-    script: 'LabVIEWCLI -LabVIEWPath "%LabVIEW%\LabVIEW.exe" -AdditionalOperationDirectory "$(Build.SourcesDirectory)\Toolchain" -OperationName Test -Project "$(Build.SourcesDirectory)\lvssh2.lvproj" -ResultsFolder "$(System.DefaultWorkingDirectory)\TestResults" -ExcludedTests "$(System.DefaultWorkingDirectory)\tests\libssh2_integration_tests"'
+    script: 'LabVIEWCLI -LabVIEWPath "%LabVIEW%\LabVIEW.exe" -AdditionalOperationDirectory "$(Build.SourcesDirectory)\Toolchain" -OperationName Test -Project "$(Build.SourcesDirectory)\lvssh2.lvproj" -ResultsFolder "$(System.DefaultWorkingDirectory)\TestResults"'
     workingDirectory: '$(Build.SourcesDirectory)'
 - task: PublishTestResults@2
   displayName: 'Publish test results'
