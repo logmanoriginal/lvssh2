@@ -28,7 +28,6 @@
 	<Item Name="tearDown.vi" Type="VI" URL="../tearDown.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
-	<Item Name="test_libssh2_agent_get_identity.vi" Type="VI" URL="../test_libssh2_agent_get_identity.vi"/>
 	<Item Name="test_libssh2_channel_eof.vi" Type="VI" URL="../test_libssh2_channel_eof.vi"/>
 	<Item Name="test_libssh2_channel_exec.vi" Type="VI" URL="../test_libssh2_channel_exec.vi"/>
 	<Item Name="test_libssh2_channel_get_exit_signal.vi" Type="VI" URL="../test_libssh2_channel_get_exit_signal.vi"/>
