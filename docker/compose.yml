@@ -13,5 +13,6 @@ services:
       - USER_PASSWORD=openssh
     volumes:
       - ./openssh-server/config:/config
+      - ./openssh-server/lvssh2:/lvssh2
     ports:
       - 22:2222

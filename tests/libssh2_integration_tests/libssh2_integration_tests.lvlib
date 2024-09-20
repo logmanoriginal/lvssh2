@@ -48,4 +48,29 @@
 	<Item Name="test_libssh2_session_init_ex (recv callback).vi" Type="VI" URL="../test_libssh2_session_init_ex (recv callback).vi"/>
 	<Item Name="test_libssh2_session_init_ex (send callback).vi" Type="VI" URL="../test_libssh2_session_init_ex (send callback).vi"/>
 	<Item Name="test_libssh2_session_methods.vi" Type="VI" URL="../test_libssh2_session_methods.vi"/>
+	<Item Name="test_libssh2_sftp_close_handle.vi" Type="VI" URL="../test_libssh2_sftp_close_handle.vi"/>
+	<Item Name="test_libssh2_sftp_closedir.vi" Type="VI" URL="../test_libssh2_sftp_closedir.vi"/>
+	<Item Name="test_libssh2_sftp_fsetstat.vi" Type="VI" URL="../test_libssh2_sftp_fsetstat.vi"/>
+	<Item Name="test_libssh2_sftp_fstat.vi" Type="VI" URL="../test_libssh2_sftp_fstat.vi"/>
+	<Item Name="test_libssh2_sftp_fstatvfs.vi" Type="VI" URL="../test_libssh2_sftp_fstatvfs.vi"/>
+	<Item Name="test_libssh2_sftp_fsync.vi" Type="VI" URL="../test_libssh2_sftp_fsync.vi"/>
+	<Item Name="test_libssh2_sftp_init.vi" Type="VI" URL="../test_libssh2_sftp_init.vi"/>
+	<Item Name="test_libssh2_sftp_mkdir_ex.vi" Type="VI" URL="../test_libssh2_sftp_mkdir_ex.vi"/>
+	<Item Name="test_libssh2_sftp_open_ex (create).vi" Type="VI" URL="../test_libssh2_sftp_open_ex (create).vi"/>
+	<Item Name="test_libssh2_sftp_opendir.vi" Type="VI" URL="../test_libssh2_sftp_opendir.vi"/>
+	<Item Name="test_libssh2_sftp_read.vi" Type="VI" URL="../test_libssh2_sftp_read.vi"/>
+	<Item Name="test_libssh2_sftp_readdir.vi" Type="VI" URL="../test_libssh2_sftp_readdir.vi"/>
+	<Item Name="test_libssh2_sftp_readlink.vi" Type="VI" URL="../test_libssh2_sftp_readlink.vi"/>
+	<Item Name="test_libssh2_sftp_realpath.vi" Type="VI" URL="../test_libssh2_sftp_realpath.vi"/>
+	<Item Name="test_libssh2_sftp_rename.vi" Type="VI" URL="../test_libssh2_sftp_rename.vi"/>
+	<Item Name="test_libssh2_sftp_rmdir_ex.vi" Type="VI" URL="../test_libssh2_sftp_rmdir_ex.vi"/>
+	<Item Name="test_libssh2_sftp_seek64.vi" Type="VI" URL="../test_libssh2_sftp_seek64.vi"/>
+	<Item Name="test_libssh2_sftp_setstat.vi" Type="VI" URL="../test_libssh2_sftp_setstat.vi"/>
+	<Item Name="test_libssh2_sftp_shutdown.vi" Type="VI" URL="../test_libssh2_sftp_shutdown.vi"/>
+	<Item Name="test_libssh2_sftp_stat.vi" Type="VI" URL="../test_libssh2_sftp_stat.vi"/>
+	<Item Name="test_libssh2_sftp_statvfs.vi" Type="VI" URL="../test_libssh2_sftp_statvfs.vi"/>
+	<Item Name="test_libssh2_sftp_symlink.vi" Type="VI" URL="../test_libssh2_sftp_symlink.vi"/>
+	<Item Name="test_libssh2_sftp_tell64.vi" Type="VI" URL="../test_libssh2_sftp_tell64.vi"/>
+	<Item Name="test_libssh2_sftp_unlink_ex.vi" Type="VI" URL="../test_libssh2_sftp_unlink_ex.vi"/>
+	<Item Name="test_libssh2_sftp_write.vi" Type="VI" URL="../test_libssh2_sftp_write.vi"/>
 </Library>

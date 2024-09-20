@@ -18,6 +18,9 @@ sshd.pid
 ssh_host_*_key
 ssh_host_*_key.pub
 
+# Generated test data
+/docker/openssh-server/lvssh2/
+
 # Authorized keys
 authorized_keys
 
