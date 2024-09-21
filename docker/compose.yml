@@ -15,4 +15,5 @@ services:
       - ./openssh-server/config:/config
       - ./openssh-server/lvssh2:/lvssh2
     ports:
-      - 22:2222
+      - 22:2222 # SSH port
+      - 44:4444 # Gateway port for remote forwarding

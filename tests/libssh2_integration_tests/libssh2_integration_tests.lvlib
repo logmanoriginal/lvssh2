@@ -31,18 +31,36 @@
 	<Item Name="tearDown.vi" Type="VI" URL="../tearDown.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
+	<Item Name="test_libssh2_channel_close.vi" Type="VI" URL="../test_libssh2_channel_close.vi"/>
+	<Item Name="test_libssh2_channel_direct_tcpip_ex.vi" Type="VI" URL="../test_libssh2_channel_direct_tcpip_ex.vi"/>
 	<Item Name="test_libssh2_channel_eof.vi" Type="VI" URL="../test_libssh2_channel_eof.vi"/>
 	<Item Name="test_libssh2_channel_exec.vi" Type="VI" URL="../test_libssh2_channel_exec.vi"/>
+	<Item Name="test_libssh2_channel_flush.vi" Type="VI" URL="../test_libssh2_channel_flush.vi"/>
+	<Item Name="test_libssh2_channel_flush_stderr.vi" Type="VI" URL="../test_libssh2_channel_flush_stderr.vi"/>
+	<Item Name="test_libssh2_channel_forward_accept.vi" Type="VI" URL="../test_libssh2_channel_forward_accept.vi"/>
+	<Item Name="test_libssh2_channel_forward_cancel.vi" Type="VI" URL="../test_libssh2_channel_forward_cancel.vi"/>
+	<Item Name="test_libssh2_channel_forward_listen.vi" Type="VI" URL="../test_libssh2_channel_forward_listen.vi"/>
+	<Item Name="test_libssh2_channel_free.vi" Type="VI" URL="../test_libssh2_channel_free.vi"/>
 	<Item Name="test_libssh2_channel_get_exit_signal.vi" Type="VI" URL="../test_libssh2_channel_get_exit_signal.vi"/>
 	<Item Name="test_libssh2_channel_get_exit_status.vi" Type="VI" URL="../test_libssh2_channel_get_exit_status.vi"/>
 	<Item Name="test_libssh2_channel_handle_extended_data2.vi" Type="VI" URL="../test_libssh2_channel_handle_extended_data2.vi"/>
 	<Item Name="test_libssh2_channel_open_session.vi" Type="VI" URL="../test_libssh2_channel_open_session.vi"/>
 	<Item Name="test_libssh2_channel_read.vi" Type="VI" URL="../test_libssh2_channel_read.vi"/>
+	<Item Name="test_libssh2_channel_read_stderr.vi" Type="VI" URL="../test_libssh2_channel_read_stderr.vi"/>
 	<Item Name="test_libssh2_channel_receive_window_adjust2.vi" Type="VI" URL="../test_libssh2_channel_receive_window_adjust2.vi"/>
+	<Item Name="test_libssh2_channel_request_auth_agent.vi" Type="VI" URL="../test_libssh2_channel_request_auth_agent.vi"/>
+	<Item Name="test_libssh2_channel_request_pty.vi" Type="VI" URL="../test_libssh2_channel_request_pty.vi"/>
+	<Item Name="test_libssh2_channel_request_pty_size_ex.vi" Type="VI" URL="../test_libssh2_channel_request_pty_size_ex.vi"/>
+	<Item Name="test_libssh2_channel_send_eof.vi" Type="VI" URL="../test_libssh2_channel_send_eof.vi"/>
 	<Item Name="test_libssh2_channel_set_blocking.vi" Type="VI" URL="../test_libssh2_channel_set_blocking.vi"/>
 	<Item Name="test_libssh2_channel_setenv_ex.vi" Type="VI" URL="../test_libssh2_channel_setenv_ex.vi"/>
+	<Item Name="test_libssh2_channel_signal_ex.vi" Type="VI" URL="../test_libssh2_channel_signal_ex.vi"/>
+	<Item Name="test_libssh2_channel_wait_closed.vi" Type="VI" URL="../test_libssh2_channel_wait_closed.vi"/>
+	<Item Name="test_libssh2_channel_wait_eof.vi" Type="VI" URL="../test_libssh2_channel_wait_eof.vi"/>
 	<Item Name="test_libssh2_channel_window_read_ex.vi" Type="VI" URL="../test_libssh2_channel_window_read_ex.vi"/>
 	<Item Name="test_libssh2_channel_window_write_ex.vi" Type="VI" URL="../test_libssh2_channel_window_write_ex.vi"/>
+	<Item Name="test_libssh2_channel_write.vi" Type="VI" URL="../test_libssh2_channel_write.vi"/>
+	<Item Name="test_libssh2_channel_write_stderr.vi" Type="VI" URL="../test_libssh2_channel_write_stderr.vi"/>
 	<Item Name="test_libssh2_hostkey_hash.vi" Type="VI" URL="../test_libssh2_hostkey_hash.vi"/>
 	<Item Name="test_libssh2_session_banner_get.vi" Type="VI" URL="../test_libssh2_session_banner_get.vi"/>
 	<Item Name="test_libssh2_session_handshake.vi" Type="VI" URL="../test_libssh2_session_handshake.vi"/>
