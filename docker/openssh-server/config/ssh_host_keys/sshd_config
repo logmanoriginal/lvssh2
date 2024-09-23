@@ -108,7 +108,7 @@ PidFile /config/sshd.pid
 #VersionAddendum none
 
 # no default banner path
-#Banner none
+Banner /config/banner
 
 # override default of no subsystems
 Subsystem	sftp	internal-sftp
