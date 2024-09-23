@@ -359,7 +359,11 @@
     </item>
     <item path="libssh2/libssh2_session_callback_set.vi">
         <title>SSH Session Callback Set (libssh2_session_callback_set)</title>
-        <description>Set a callback handler for a session. Callbacks are triggered by the receipt of special packets at the transport layer. To disable the callback, set it to NULL.</description>
+        <description>
+            Set a callback handler for a session. Callbacks are triggered by the receipt of special packets at the transport layer.
+
+            Set <B>callback</B> to 0 to to use the built-in default callback handler of lvssh2 (only available when the extension library is enabled). When the extension library is disabled, setting <B>callback</B> to 0 will disable the callback handler.
+        </description>
     </item>
     <item path="libssh2/libssh2_session_disconnect.vi">
         <title>SSH Session Disconnect (libssh2_session_disconnect)</title>
