@@ -70,9 +70,9 @@
 		<Item Name="tests" Type="Folder">
 			<Item Name="Assert Extensions.lvclass" Type="LVClass" URL="../tests/Assert Extensions/Assert Extensions.lvclass"/>
 			<Item Name="bug_reports.lvlib" Type="Library" URL="../tests/bug_reports/bug_reports.lvlib"/>
-			<Item Name="libssh2_integration_tests.lvlib" Type="Library" URL="../tests/libssh2_integration_tests/libssh2_integration_tests.lvlib"/>
-			<Item Name="libssh2_tests.lvlib" Type="Library" URL="../tests/libssh2_tests/libssh2_tests.lvlib"/>
+			<Item Name="integration_tests.lvlib" Type="Library" URL="../tests/integration_tests/integration_tests.lvlib"/>
 			<Item Name="support.lvlib" Type="Library" URL="../tests/support/support.lvlib"/>
+			<Item Name="unit_tests.lvlib" Type="Library" URL="../tests/unit_tests/unit_tests.lvlib"/>
 		</Item>
 		<Item Name="libssh2.lvlib" Type="Library" URL="../libssh2/libssh2.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
