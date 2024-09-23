@@ -4,9 +4,6 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">318799872</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
-	<Item Name="bug reports" Type="Folder">
-		<Item Name="4-libssh2_sftp_read-binary data truncated.vi" Type="VI" URL="../4-libssh2_sftp_read-binary data truncated.vi"/>
-	</Item>
 	<Item Name="test_libssh2_channel_close.vi" Type="VI" URL="../test_libssh2_channel_close.vi"/>
 	<Item Name="test_libssh2_channel_direct_tcpip_ex.vi" Type="VI" URL="../test_libssh2_channel_direct_tcpip_ex.vi"/>
 	<Item Name="test_libssh2_channel_eof.vi" Type="VI" URL="../test_libssh2_channel_eof.vi"/>
