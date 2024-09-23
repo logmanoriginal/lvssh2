@@ -22,6 +22,7 @@
 	<Item Name="test_libssh2_session_abstract.vi" Type="VI" URL="../test_libssh2_session_abstract.vi"/>
 	<Item Name="test_libssh2_session_blocking.vi" Type="VI" URL="../test_libssh2_session_blocking.vi"/>
 	<Item Name="test_libssh2_session_flag.vi" Type="VI" URL="../test_libssh2_session_flag.vi"/>
+	<Item Name="test_libssh2_session_free.vi" Type="VI" URL="../test_libssh2_session_free.vi"/>
 	<Item Name="test_libssh2_session_init.vi" Type="VI" URL="../test_libssh2_session_init.vi"/>
 	<Item Name="test_libssh2_session_last_errno.vi" Type="VI" URL="../test_libssh2_session_last_errno.vi"/>
 	<Item Name="test_libssh2_session_last_error.vi" Type="VI" URL="../test_libssh2_session_last_error.vi"/>
