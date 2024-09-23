@@ -65,6 +65,7 @@
 	<Item Name="test_libssh2_session_banner_get.vi" Type="VI" URL="../test_libssh2_session_banner_get.vi"/>
 	<Item Name="test_libssh2_session_banner_set.vi" Type="VI" URL="../test_libssh2_session_banner_set.vi"/>
 	<Item Name="test_libssh2_session_block_directions.vi" Type="VI" URL="../test_libssh2_session_block_directions.vi"/>
+	<Item Name="test_libssh2_session_callback_set.vi" Type="VI" URL="../test_libssh2_session_callback_set.vi"/>
 	<Item Name="test_libssh2_session_handshake.vi" Type="VI" URL="../test_libssh2_session_handshake.vi"/>
 	<Item Name="test_libssh2_session_hostkey.vi" Type="VI" URL="../test_libssh2_session_hostkey.vi"/>
 	<Item Name="test_libssh2_session_init_ex (recv callback).vi" Type="VI" URL="../test_libssh2_session_init_ex (recv callback).vi"/>
