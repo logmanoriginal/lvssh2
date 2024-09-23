@@ -19,6 +19,7 @@
 	<Item Name="Not A Session - valid session - returns false.vi" Type="VI" URL="../Not A Session - valid session - returns false.vi"/>
 	<Item Name="Test no error 1097.vi" Type="VI" URL="../Test no error 1097.vi"/>
 	<Item Name="test_libssh2_crypto_engine.vi" Type="VI" URL="../test_libssh2_crypto_engine.vi"/>
+	<Item Name="test_libssh2_session_abstract.vi" Type="VI" URL="../test_libssh2_session_abstract.vi"/>
 	<Item Name="test_libssh2_session_blocking.vi" Type="VI" URL="../test_libssh2_session_blocking.vi"/>
 	<Item Name="test_libssh2_session_last_errno.vi" Type="VI" URL="../test_libssh2_session_last_errno.vi"/>
 	<Item Name="test_libssh2_session_last_error.vi" Type="VI" URL="../test_libssh2_session_last_error.vi"/>
