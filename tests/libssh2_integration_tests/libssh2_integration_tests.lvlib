@@ -7,33 +7,6 @@
 	<Item Name="bug reports" Type="Folder">
 		<Item Name="4-libssh2_sftp_read-binary data truncated.vi" Type="VI" URL="../4-libssh2_sftp_read-binary data truncated.vi"/>
 	</Item>
-	<Item Name="callback_lvssh2_userauth_keyboard_interactive_response_function.vi" Type="VI" URL="../callback_lvssh2_userauth_keyboard_interactive_response_function.vi">
-		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-	</Item>
-	<Item Name="callback_recv.vi" Type="VI" URL="../callback_recv.vi">
-		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-	</Item>
-	<Item Name="callback_recv_queue_obtain.vi" Type="VI" URL="../callback_recv_queue_obtain.vi">
-		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-	</Item>
-	<Item Name="callback_send.vi" Type="VI" URL="../callback_send.vi">
-		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-	</Item>
-	<Item Name="callback_send_queue_obtain.vi" Type="VI" URL="../callback_send_queue_obtain.vi">
-		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-	</Item>
-	<Item Name="Login.vi" Type="VI" URL="../Login.vi">
-		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-	</Item>
-	<Item Name="Open Connection.vi" Type="VI" URL="../Open Connection.vi">
-		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-	</Item>
-	<Item Name="setUp.vi" Type="VI" URL="../setUp.vi">
-		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-	</Item>
-	<Item Name="tearDown.vi" Type="VI" URL="../tearDown.vi">
-		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-	</Item>
 	<Item Name="test_libssh2_channel_close.vi" Type="VI" URL="../test_libssh2_channel_close.vi"/>
 	<Item Name="test_libssh2_channel_direct_tcpip_ex.vi" Type="VI" URL="../test_libssh2_channel_direct_tcpip_ex.vi"/>
 	<Item Name="test_libssh2_channel_eof.vi" Type="VI" URL="../test_libssh2_channel_eof.vi"/>
