@@ -7,6 +7,9 @@
 	<Item Name="bug reports" Type="Folder">
 		<Item Name="4-libssh2_sftp_read-binary data truncated.vi" Type="VI" URL="../4-libssh2_sftp_read-binary data truncated.vi"/>
 	</Item>
+	<Item Name="callback_lvssh2_userauth_keyboard_interactive_response_function.vi" Type="VI" URL="../callback_lvssh2_userauth_keyboard_interactive_response_function.vi">
+		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+	</Item>
 	<Item Name="callback_recv.vi" Type="VI" URL="../callback_recv.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
@@ -97,6 +100,7 @@
 	<Item Name="test_libssh2_sftp_tell64.vi" Type="VI" URL="../test_libssh2_sftp_tell64.vi"/>
 	<Item Name="test_libssh2_sftp_unlink_ex.vi" Type="VI" URL="../test_libssh2_sftp_unlink_ex.vi"/>
 	<Item Name="test_libssh2_sftp_write.vi" Type="VI" URL="../test_libssh2_sftp_write.vi"/>
+	<Item Name="test_libssh2_userauth_keyboard_interactive_ex.vi" Type="VI" URL="../test_libssh2_userauth_keyboard_interactive_ex.vi"/>
 	<Item Name="test_libssh2_userauth_list.vi" Type="VI" URL="../test_libssh2_userauth_list.vi"/>
 	<Item Name="test_libssh2_userauth_password.vi" Type="VI" URL="../test_libssh2_userauth_password.vi"/>
 </Library>
