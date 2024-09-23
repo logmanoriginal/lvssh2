@@ -104,4 +104,5 @@
 	<Item Name="test_libssh2_userauth_list.vi" Type="VI" URL="../test_libssh2_userauth_list.vi"/>
 	<Item Name="test_libssh2_userauth_password.vi" Type="VI" URL="../test_libssh2_userauth_password.vi"/>
 	<Item Name="test_libssh2_userauth_publickey_fromfile.vi" Type="VI" URL="../test_libssh2_userauth_publickey_fromfile.vi"/>
+	<Item Name="test_libssh2_userauth_publickey_frommemory.vi" Type="VI" URL="../test_libssh2_userauth_publickey_frommemory.vi"/>
 </Library>
