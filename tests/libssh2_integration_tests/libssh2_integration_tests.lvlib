@@ -98,4 +98,5 @@
 	<Item Name="test_libssh2_sftp_unlink_ex.vi" Type="VI" URL="../test_libssh2_sftp_unlink_ex.vi"/>
 	<Item Name="test_libssh2_sftp_write.vi" Type="VI" URL="../test_libssh2_sftp_write.vi"/>
 	<Item Name="test_libssh2_userauth_list.vi" Type="VI" URL="../test_libssh2_userauth_list.vi"/>
+	<Item Name="test_libssh2_userauth_password.vi" Type="VI" URL="../test_libssh2_userauth_password.vi"/>
 </Library>
