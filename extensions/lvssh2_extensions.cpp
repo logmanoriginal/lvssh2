@@ -11,13 +11,15 @@ void lvssh2_trace_handler_function(LIBSSH2_SESSION* session, LVUserEventRef* eve
 
 int lvssh2_userauth_publickey_sign_function(LIBSSH2_SESSION* session, unsigned char** signature, size_t* signature_len, const unsigned char* data, size_t data_len, LVUserEventRef* event) {
 	lvssh2_userauth_publickey_sign_function_input_args* payload = (lvssh2_userauth_publickey_sign_function_input_args*)malloc(sizeof(lvssh2_userauth_publickey_sign_function_input_args));
-	payload->data = (unsigned char*)data;
-	payload->data_len = data_len;
+	payload->data = 0;
+
+	data_buffer_to_LStrHandle(data, data_len, &payload->data);
 
 	lvssh2_userauth_publickey_sign_return_value = { 0 };
 
 	PostLVUserEvent(*event, payload);
 
+	DSDisposeHandle(payload->data);
 	free(payload);
 
 	*signature = lvssh2_userauth_publickey_sign_return_value.signature;
@@ -119,7 +121,7 @@ void lvssh2_userauth_keyboard_interactive_add_response(LIBSSH2_USERAUTH_KBDINT_R
 	responses[index] = *response;
 }
 
-void data_buffer_to_LStrHandle(const char* data, size_t data_length, LStrHandle* string_handle_ptr) {
+void data_buffer_to_LStrHandle(const void* data, size_t data_length, LStrHandle* string_handle_ptr) {
 	// size handle to fit
 	NumericArrayResize(uB, 1, (UHandle*)(string_handle_ptr), data_length);
 	// copy data
