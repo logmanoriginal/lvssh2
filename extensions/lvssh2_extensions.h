@@ -6,8 +6,7 @@
 #include "lv_prolog.h"
 
 typedef struct {
-	unsigned char* data;
-	size_t data_len;
+	LStrHandle data;
 } lvssh2_userauth_publickey_sign_function_input_args;
 
 typedef struct {
@@ -50,7 +49,7 @@ lvssh2_userauth_publickey_sign_function_output_args lvssh2_userauth_publickey_si
 
 #include "lv_epilog.h"
 
-void data_buffer_to_LStrHandle(const char*, size_t, LStrHandle*);
+void data_buffer_to_LStrHandle(const void*, size_t, LStrHandle*);
 
 void lvssh2_trace_handler_function(LIBSSH2_SESSION* session, LVUserEventRef* event, const char* data, size_t length);
 int lvssh2_userauth_publickey_sign_function(LIBSSH2_SESSION* session, unsigned char** signature, size_t* signature_len, const unsigned char* data, size_t data_len, LVUserEventRef* event);
