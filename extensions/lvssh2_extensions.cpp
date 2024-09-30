@@ -10,7 +10,14 @@ void lvssh2_trace_handler_function(LIBSSH2_SESSION* session, LVUserEventRef* eve
 }
 
 int lvssh2_userauth_publickey_sign_function(LIBSSH2_SESSION* session, unsigned char** signature, size_t* signature_len, const unsigned char* data, size_t data_len, LVUserEventRef* event) {
+	*signature = nullptr;
+	*signature_len = 0;
+	
 	lvssh2_userauth_publickey_sign_function_input_args* payload = (lvssh2_userauth_publickey_sign_function_input_args*)malloc(sizeof(lvssh2_userauth_publickey_sign_function_input_args));
+	if (payload == NULL) {
+		return LIBSSH2_ERROR_ALLOC;
+	}
+
 	payload->data = 0;
 
 	LStrHandle lv_signature = 0;
@@ -33,6 +40,10 @@ int lvssh2_userauth_publickey_sign_function(LIBSSH2_SESSION* session, unsigned c
 
 ssize_t lvssh2_session_callback_send_function(libssh2_socket_t socket, const void* buffer, size_t length, int flags, lvssh2_abstract** abstract) {
 	lvssh2_session_callback_send_function_input_args* payload = (lvssh2_session_callback_send_function_input_args*)malloc(sizeof(lvssh2_session_callback_send_function_input_args));
+	if (payload == NULL) {
+		return LIBSSH2_ERROR_ALLOC;
+	}
+	
 	payload->socket = socket;
 	payload->buffer = 0;
 	payload->flags = flags;
@@ -52,6 +63,10 @@ ssize_t lvssh2_session_callback_send_function(libssh2_socket_t socket, const voi
 
 ssize_t lvssh2_session_callback_recv_function(libssh2_socket_t socket, void* buffer, size_t length, int flags, lvssh2_abstract** abstract) {
 	lvssh2_session_callback_recv_function_input_args* payload = (lvssh2_session_callback_recv_function_input_args*)malloc(sizeof(lvssh2_session_callback_recv_function_input_args));
+	if (payload == NULL) {
+		return LIBSSH2_ERROR_ALLOC;
+	}
+	
 	payload->socket = socket;
 	payload->buffer = buffer;
 	payload->length = length;
@@ -80,6 +95,11 @@ void lvssh2_userauth_keyboard_interactive_response_function(
 	if (num_prompts == 0) {
 		return;
 	}
+	
+	lvssh2_userauth_keyboard_interactive_response_function_input_args* payload = (lvssh2_userauth_keyboard_interactive_response_function_input_args*)malloc(sizeof(lvssh2_userauth_keyboard_interactive_response_function_input_args));
+	if (payload == NULL) {
+		return;
+	}
 
 	LStrHandle lv_name = 0;
 	data_buffer_to_LStrHandle(name, name_len, &lv_name);
@@ -87,7 +107,6 @@ void lvssh2_userauth_keyboard_interactive_response_function(
 	LStrHandle lv_instruction = 0;
 	data_buffer_to_LStrHandle(instruction, instruction_len, &lv_instruction);
 
-	lvssh2_userauth_keyboard_interactive_response_function_input_args* payload = (lvssh2_userauth_keyboard_interactive_response_function_input_args*)malloc(sizeof(lvssh2_userauth_keyboard_interactive_response_function_input_args));
 	payload->name = lv_name;
 	payload->instruction = lv_instruction;
 	payload->num_prompts = num_prompts;
@@ -103,8 +122,16 @@ void lvssh2_userauth_keyboard_interactive_response_function(
 
 void lvssh2_userauth_keyboard_interactive_add_response(LIBSSH2_USERAUTH_KBDINT_RESPONSE* responses, int index, const char* text, unsigned int text_len) {
 	LIBSSH2_USERAUTH_KBDINT_RESPONSE* response = (LIBSSH2_USERAUTH_KBDINT_RESPONSE*)malloc(sizeof(LIBSSH2_USERAUTH_KBDINT_RESPONSE));
+	if (response == NULL) {
+		return;
+	}
 
 	response->text = (char*)malloc(text_len);
+	if (response->text == NULL) {
+		free(response);
+		return;
+	}
+
 	memcpy(response->text, text, text_len);
 	response->length = text_len;
 
@@ -112,10 +139,7 @@ void lvssh2_userauth_keyboard_interactive_add_response(LIBSSH2_USERAUTH_KBDINT_R
 }
 
 void data_buffer_to_LStrHandle(const void* data, size_t data_length, LStrHandle* string_handle_ptr) {
-	// size handle to fit
 	NumericArrayResize(uB, 1, (UHandle*)(string_handle_ptr), data_length);
-	// copy data
 	MoveBlock(data, LHStrBuf(*string_handle_ptr), data_length);
-	// set the handle's string-length
-	(**string_handle_ptr)->cnt = data_length;
+	LStrLen(**string_handle_ptr) = data_length;
 }
