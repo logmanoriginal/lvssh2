@@ -7,12 +7,8 @@
 
 typedef struct {
 	LStrHandle data;
+	LStrHandle* signature;
 } lvssh2_userauth_publickey_sign_function_input_args;
-
-typedef struct {
-	unsigned char* signature;
-	size_t signature_len;
-} lvssh2_userauth_publickey_sign_function_output_args;
 
 typedef struct {
 	LVUserEventRef send;
@@ -44,8 +40,6 @@ typedef struct {
 
 LVUserEventRef* lvssh2_userauth_keyboard_interactive_response_event = { 0 };
 
-lvssh2_userauth_publickey_sign_function_output_args lvssh2_userauth_publickey_sign_return_value = { 0 };
-
 #include "lv_epilog.h"
 
 void data_buffer_to_LStrHandle(const void*, size_t, LStrHandle*);
@@ -75,5 +69,3 @@ extern "C" __declspec(dllexport) void* get_lvssh2_session_callback_recv_function
 extern "C" __declspec(dllexport) void* get_lvssh2_userauth_keyboard_interactive_response_function() { return lvssh2_userauth_keyboard_interactive_response_function; }
 extern "C" __declspec(dllexport) void set_lvssh2_userauth_keyboard_interactive_response_callback(LVUserEventRef* event) { lvssh2_userauth_keyboard_interactive_response_event = event; }
 extern "C" __declspec(dllexport) void lvssh2_userauth_keyboard_interactive_add_response(LIBSSH2_USERAUTH_KBDINT_RESPONSE* responses, int index, const char* text, unsigned int text_len);
-
-extern "C" __declspec(dllexport) void lvssh2_userauth_publickey_sign_function_return(unsigned char* signature, size_t signature_len);

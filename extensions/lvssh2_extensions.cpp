@@ -13,28 +13,22 @@ int lvssh2_userauth_publickey_sign_function(LIBSSH2_SESSION* session, unsigned c
 	lvssh2_userauth_publickey_sign_function_input_args* payload = (lvssh2_userauth_publickey_sign_function_input_args*)malloc(sizeof(lvssh2_userauth_publickey_sign_function_input_args));
 	payload->data = 0;
 
+	LStrHandle lv_signature = 0;
+	payload->signature = &lv_signature;
+
 	data_buffer_to_LStrHandle(data, data_len, &payload->data);
 
-	lvssh2_userauth_publickey_sign_return_value = { 0 };
-
 	PostLVUserEvent(*event, payload);
+
+	*signature = (unsigned char*)malloc(LHStrLen(lv_signature) * sizeof(unsigned char*));
+	memcpy(*signature, LHStrBuf(lv_signature), LHStrLen(lv_signature));
+
+	*signature_len = LHStrLen(lv_signature);
 
 	DSDisposeHandle(payload->data);
 	free(payload);
 
-	*signature = lvssh2_userauth_publickey_sign_return_value.signature;
-	*signature_len = lvssh2_userauth_publickey_sign_return_value.signature_len;
-
 	return 0;
-}
-
-void lvssh2_userauth_publickey_sign_function_return(unsigned char* signature, size_t signature_len) {
-
-	unsigned char* signature_copy = (unsigned char*)malloc(signature_len);
-	memcpy(signature_copy, signature, signature_len);
-
-	lvssh2_userauth_publickey_sign_return_value.signature = signature_copy;
-	lvssh2_userauth_publickey_sign_return_value.signature_len = signature_len;
 }
 
 ssize_t lvssh2_session_callback_send_function(libssh2_socket_t socket, const void* buffer, size_t length, int flags, lvssh2_abstract** abstract) {
