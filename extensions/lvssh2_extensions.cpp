@@ -40,14 +40,16 @@ void lvssh2_userauth_publickey_sign_function_return(unsigned char* signature, si
 ssize_t lvssh2_session_callback_send_function(libssh2_socket_t socket, const void* buffer, size_t length, int flags, lvssh2_abstract** abstract) {
 	lvssh2_session_callback_send_function_input_args* payload = (lvssh2_session_callback_send_function_input_args*)malloc(sizeof(lvssh2_session_callback_send_function_input_args));
 	payload->socket = socket;
-	payload->buffer = (void*)buffer;
-	payload->length = length;
+	payload->buffer = 0;
 	payload->flags = flags;
+
+	data_buffer_to_LStrHandle(buffer, length, &payload->buffer);
 
 	lvssh2_session_callback_send_return_value = 0;
 
 	PostLVUserEvent((*abstract)->send, payload);
 
+	DSDisposeHandle(payload->buffer);
 	free(payload);
 
 	return lvssh2_session_callback_send_return_value;

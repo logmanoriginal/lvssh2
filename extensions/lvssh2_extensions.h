@@ -21,8 +21,7 @@ typedef struct {
 
 typedef struct {
 	UINT_PTR socket;
-	void* buffer;
-	size_t length;
+	LStrHandle buffer;
 	int32_t flags;
 } lvssh2_session_callback_send_function_input_args;
 
