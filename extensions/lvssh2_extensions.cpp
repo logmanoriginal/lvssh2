@@ -63,17 +63,14 @@ ssize_t lvssh2_session_callback_recv_function(libssh2_socket_t socket, void* buf
 	payload->length = length;
 	payload->flags = flags;
 
-	lvssh2_session_callback_recv_return_value = 0;
+	ssize_t bytes_received = 0;
+	payload->bytes_received = &bytes_received;
 
 	PostLVUserEvent((*abstract)->recv, payload);
 
 	free(payload);
 
-	return lvssh2_session_callback_recv_return_value;
-}
-
-void lvssh2_session_callback_recv_function_return(ssize_t bytes_received) {
-	lvssh2_session_callback_recv_return_value = bytes_received;
+	return bytes_received;
 }
 
 void lvssh2_userauth_keyboard_interactive_response_function(

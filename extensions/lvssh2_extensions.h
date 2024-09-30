@@ -31,6 +31,7 @@ typedef struct {
 	void* buffer;
 	size_t length;
 	int flags;
+	ssize_t* bytes_received;
 } lvssh2_session_callback_recv_function_input_args;
 
 typedef struct {
@@ -41,7 +42,6 @@ typedef struct {
 	LIBSSH2_USERAUTH_KBDINT_RESPONSE* responses;
 } lvssh2_userauth_keyboard_interactive_response_function_input_args;
 
-ssize_t lvssh2_session_callback_recv_return_value = 0;
 LVUserEventRef* lvssh2_userauth_keyboard_interactive_response_event = { 0 };
 
 lvssh2_userauth_publickey_sign_function_output_args lvssh2_userauth_publickey_sign_return_value = { 0 };
@@ -75,7 +75,5 @@ extern "C" __declspec(dllexport) void* get_lvssh2_session_callback_recv_function
 extern "C" __declspec(dllexport) void* get_lvssh2_userauth_keyboard_interactive_response_function() { return lvssh2_userauth_keyboard_interactive_response_function; }
 extern "C" __declspec(dllexport) void set_lvssh2_userauth_keyboard_interactive_response_callback(LVUserEventRef* event) { lvssh2_userauth_keyboard_interactive_response_event = event; }
 extern "C" __declspec(dllexport) void lvssh2_userauth_keyboard_interactive_add_response(LIBSSH2_USERAUTH_KBDINT_RESPONSE* responses, int index, const char* text, unsigned int text_len);
-
-extern "C" __declspec(dllexport) void lvssh2_session_callback_recv_function_return(ssize_t bytes_received);
 
 extern "C" __declspec(dllexport) void lvssh2_userauth_publickey_sign_function_return(unsigned char* signature, size_t signature_len);
