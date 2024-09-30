@@ -22,14 +22,14 @@ typedef struct {
 typedef struct {
 	UINT_PTR socket;
 	LStrHandle buffer;
-	int32_t flags;
+	int flags;
 } lvssh2_session_callback_send_function_input_args;
 
 typedef struct {
 	UINT_PTR socket;
 	void* buffer;
 	size_t length;
-	int32_t flags;
+	int flags;
 } lvssh2_session_callback_recv_function_input_args;
 
 typedef struct {
