@@ -13,71 +13,55 @@ int lvssh2_userauth_publickey_sign_function(LIBSSH2_SESSION* session, unsigned c
 	*signature = nullptr;
 	*signature_len = 0;
 	
-	lvssh2_userauth_publickey_sign_function_input_args* payload = (lvssh2_userauth_publickey_sign_function_input_args*)malloc(sizeof(lvssh2_userauth_publickey_sign_function_input_args));
-	if (payload == NULL) {
-		return LIBSSH2_ERROR_ALLOC;
-	}
-
-	payload->data = 0;
+	lvssh2_userauth_publickey_sign_function_input_args payload = { 0 };
+	payload.data = 0;
 
 	LStrHandle lv_signature = 0;
-	payload->signature = &lv_signature;
+	payload.signature = &lv_signature;
 
-	data_buffer_to_LStrHandle(data, data_len, &payload->data);
+	data_buffer_to_LStrHandle(data, data_len, &payload.data);
 
-	PostLVUserEvent(*event, payload);
+	PostLVUserEvent(*event, &payload);
 
 	*signature = (unsigned char*)malloc(LHStrLen(lv_signature) * sizeof(unsigned char*));
 	memcpy(*signature, LHStrBuf(lv_signature), LHStrLen(lv_signature));
 
 	*signature_len = LHStrLen(lv_signature);
 
-	DSDisposeHandle(payload->data);
-	free(payload);
+	DSDisposeHandle(payload.data);
 
 	return 0;
 }
 
 ssize_t lvssh2_session_callback_send_function(libssh2_socket_t socket, const void* buffer, size_t length, int flags, lvssh2_abstract** abstract) {
-	lvssh2_session_callback_send_function_input_args* payload = (lvssh2_session_callback_send_function_input_args*)malloc(sizeof(lvssh2_session_callback_send_function_input_args));
-	if (payload == NULL) {
-		return LIBSSH2_ERROR_ALLOC;
-	}
-	
-	payload->socket = socket;
-	payload->buffer = 0;
-	payload->flags = flags;
+	lvssh2_session_callback_send_function_input_args payload = { 0 };
+	payload.socket = socket;
+	payload.buffer = 0;
+	payload.flags = flags;
 
 	ssize_t bytes_send = 0;
-	payload->bytes_send = &bytes_send;
+	payload.bytes_send = &bytes_send;
 
-	data_buffer_to_LStrHandle(buffer, length, &payload->buffer);
+	data_buffer_to_LStrHandle(buffer, length, &payload.buffer);
 
-	PostLVUserEvent((*abstract)->send, payload);
+	PostLVUserEvent((*abstract)->send, &payload);
 
-	DSDisposeHandle(payload->buffer);
-	free(payload);
+	DSDisposeHandle(payload.buffer);
 
 	return bytes_send;
 }
 
 ssize_t lvssh2_session_callback_recv_function(libssh2_socket_t socket, void* buffer, size_t length, int flags, lvssh2_abstract** abstract) {
-	lvssh2_session_callback_recv_function_input_args* payload = (lvssh2_session_callback_recv_function_input_args*)malloc(sizeof(lvssh2_session_callback_recv_function_input_args));
-	if (payload == NULL) {
-		return LIBSSH2_ERROR_ALLOC;
-	}
-	
-	payload->socket = socket;
-	payload->buffer = buffer;
-	payload->length = length;
-	payload->flags = flags;
+	lvssh2_session_callback_recv_function_input_args payload = { 0 };
+	payload.socket = socket;
+	payload.buffer = buffer;
+	payload.length = length;
+	payload.flags = flags;
 
 	ssize_t bytes_received = 0;
-	payload->bytes_received = &bytes_received;
+	payload.bytes_received = &bytes_received;
 
-	PostLVUserEvent((*abstract)->recv, payload);
-
-	free(payload);
+	PostLVUserEvent((*abstract)->recv, &payload);
 
 	return bytes_received;
 }
@@ -95,11 +79,6 @@ void lvssh2_userauth_keyboard_interactive_response_function(
 	if (num_prompts == 0) {
 		return;
 	}
-	
-	lvssh2_userauth_keyboard_interactive_response_function_input_args* payload = (lvssh2_userauth_keyboard_interactive_response_function_input_args*)malloc(sizeof(lvssh2_userauth_keyboard_interactive_response_function_input_args));
-	if (payload == NULL) {
-		return;
-	}
 
 	LStrHandle lv_name = 0;
 	data_buffer_to_LStrHandle(name, name_len, &lv_name);
@@ -107,15 +86,15 @@ void lvssh2_userauth_keyboard_interactive_response_function(
 	LStrHandle lv_instruction = 0;
 	data_buffer_to_LStrHandle(instruction, instruction_len, &lv_instruction);
 
-	payload->name = lv_name;
-	payload->instruction = lv_instruction;
-	payload->num_prompts = num_prompts;
-	payload->prompts = prompts;
-	payload->responses = responses;
+	lvssh2_userauth_keyboard_interactive_response_function_input_args payload = { 0 };
+	payload.name = lv_name;
+	payload.instruction = lv_instruction;
+	payload.num_prompts = num_prompts;
+	payload.prompts = prompts;
+	payload.responses = responses;
 
-	PostLVUserEvent(*lvssh2_userauth_keyboard_interactive_response_event, payload);
+	PostLVUserEvent(*lvssh2_userauth_keyboard_interactive_response_event, &payload);
 
-	free(payload);
 	DSDisposeHandle(lv_name);
 	DSDisposeHandle(lv_instruction);
 }
