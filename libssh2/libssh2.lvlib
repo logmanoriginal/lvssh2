@@ -218,7 +218,9 @@
 		<Item Name="lvssh2_userauth_publickey_sign_function_input_args_32.ctl" Type="VI" URL="../lvssh2_userauth_publickey_sign_function_input_args_32.ctl">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
-		<Item Name="lvssh2_userauth_publickey_sign_function_input_args_64.ctl" Type="VI" URL="../lvssh2_userauth_publickey_sign_function_input_args_64.ctl"/>
+		<Item Name="lvssh2_userauth_publickey_sign_function_input_args_64.ctl" Type="VI" URL="../lvssh2_userauth_publickey_sign_function_input_args_64.ctl">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 	</Item>
 	<Item Name="Utitlity" Type="Folder">
 		<Item Name="From Unix Time.vi" Type="VI" URL="../From Unix Time.vi"/>
