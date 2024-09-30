@@ -43,20 +43,17 @@ ssize_t lvssh2_session_callback_send_function(libssh2_socket_t socket, const voi
 	payload->buffer = 0;
 	payload->flags = flags;
 
-	data_buffer_to_LStrHandle(buffer, length, &payload->buffer);
+	ssize_t bytes_send = 0;
+	payload->bytes_send = &bytes_send;
 
-	lvssh2_session_callback_send_return_value = 0;
+	data_buffer_to_LStrHandle(buffer, length, &payload->buffer);
 
 	PostLVUserEvent((*abstract)->send, payload);
 
 	DSDisposeHandle(payload->buffer);
 	free(payload);
 
-	return lvssh2_session_callback_send_return_value;
-}
-
-void lvssh2_session_callback_send_function_return(ssize_t bytes_send) {
-	lvssh2_session_callback_send_return_value = bytes_send;
+	return bytes_send;
 }
 
 ssize_t lvssh2_session_callback_recv_function(libssh2_socket_t socket, void* buffer, size_t length, int flags, lvssh2_abstract** abstract) {
