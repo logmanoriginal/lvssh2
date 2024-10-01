@@ -68,4 +68,4 @@ extern "C" __declspec(dllexport) void* get_lvssh2_session_callback_recv_function
 
 extern "C" __declspec(dllexport) void* get_lvssh2_userauth_keyboard_interactive_response_function() { return lvssh2_userauth_keyboard_interactive_response_function; }
 extern "C" __declspec(dllexport) void set_lvssh2_userauth_keyboard_interactive_response_callback(LVUserEventRef* event) { lvssh2_userauth_keyboard_interactive_response_event = event; }
-extern "C" __declspec(dllexport) void lvssh2_userauth_keyboard_interactive_add_response(LIBSSH2_USERAUTH_KBDINT_RESPONSE* responses, int index, const char* text, unsigned int text_len);
+extern "C" __declspec(dllexport) void lvssh2_userauth_keyboard_interactive_add_response(LIBSSH2_USERAUTH_KBDINT_RESPONSE* responses, int index, const LStrHandle text);
