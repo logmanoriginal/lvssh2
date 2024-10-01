@@ -80,6 +80,8 @@ void lvssh2_userauth_keyboard_interactive_response_function(
 		return;
 	}
 
+	LStrHandle* lv_responses = (LStrHandle*)malloc(num_prompts * sizeof(LStrHandle));
+
 	LStrHandle lv_name = 0;
 	data_buffer_to_LStrHandle(name, name_len, &lv_name);
 
@@ -91,30 +93,30 @@ void lvssh2_userauth_keyboard_interactive_response_function(
 	payload.instruction = lv_instruction;
 	payload.num_prompts = num_prompts;
 	payload.prompts = prompts;
-	payload.responses = responses;
+	payload.responses = lv_responses;
 
 	PostLVUserEvent(*lvssh2_userauth_keyboard_interactive_response_event, &payload);
 
+	for (int i = 0; i < num_prompts; i++) {
+		LIBSSH2_USERAUTH_KBDINT_RESPONSE* response = (LIBSSH2_USERAUTH_KBDINT_RESPONSE*)malloc(sizeof(LIBSSH2_USERAUTH_KBDINT_RESPONSE));
+		if (response) {
+			response->text = (char*)malloc(LHStrLen(lv_responses[i]));
+			if (response->text) {
+				memcpy(response->text, LHStrBuf(lv_responses[i]), LHStrLen(lv_responses[i]));
+				response->length = LHStrLen(lv_responses[i]);
+
+				responses[i] = *response;
+			}
+			else {
+				free(response);
+			}
+		}
+	}
+
+	free(lv_responses);
+
 	DSDisposeHandle(lv_name);
 	DSDisposeHandle(lv_instruction);
-}
-
-void lvssh2_userauth_keyboard_interactive_add_response(LIBSSH2_USERAUTH_KBDINT_RESPONSE* responses, int index, const LStrHandle text) {
-	LIBSSH2_USERAUTH_KBDINT_RESPONSE* response = (LIBSSH2_USERAUTH_KBDINT_RESPONSE*)malloc(sizeof(LIBSSH2_USERAUTH_KBDINT_RESPONSE));
-	if (response == NULL) {
-		return;
-	}
-
-	response->text = (char*)malloc(LHStrLen(text));
-	if (response->text == NULL) {
-		free(response);
-		return;
-	}
-
-	memcpy(response->text, LHStrBuf(text), LHStrLen(text));
-	response->length = LHStrLen(text);
-
-	responses[index] = *response;
 }
 
 void data_buffer_to_LStrHandle(const void* data, size_t data_length, LStrHandle* string_handle_ptr) {
