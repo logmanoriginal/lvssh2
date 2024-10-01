@@ -99,20 +99,20 @@ void lvssh2_userauth_keyboard_interactive_response_function(
 	DSDisposeHandle(lv_instruction);
 }
 
-void lvssh2_userauth_keyboard_interactive_add_response(LIBSSH2_USERAUTH_KBDINT_RESPONSE* responses, int index, const char* text, unsigned int text_len) {
+void lvssh2_userauth_keyboard_interactive_add_response(LIBSSH2_USERAUTH_KBDINT_RESPONSE* responses, int index, const LStrHandle text) {
 	LIBSSH2_USERAUTH_KBDINT_RESPONSE* response = (LIBSSH2_USERAUTH_KBDINT_RESPONSE*)malloc(sizeof(LIBSSH2_USERAUTH_KBDINT_RESPONSE));
 	if (response == NULL) {
 		return;
 	}
 
-	response->text = (char*)malloc(text_len);
+	response->text = (char*)malloc(LHStrLen(text));
 	if (response->text == NULL) {
 		free(response);
 		return;
 	}
 
-	memcpy(response->text, text, text_len);
-	response->length = text_len;
+	memcpy(response->text, LHStrBuf(text), LHStrLen(text));
+	response->length = LHStrLen(text);
 
 	responses[index] = *response;
 }
