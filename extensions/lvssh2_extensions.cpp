@@ -68,7 +68,9 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 	payload.prompts = prompts;
 	payload.responses = lv_responses;
 
-	PostLVUserEvent(*lvssh2_userauth_keyboard_interactive_response_event, &payload);
+	lvssh2_abstract** lv_abstract = (lvssh2_abstract**)abstract;
+
+	PostLVUserEvent((*lv_abstract)->kbdint_response, &payload);
 
 	for (int i = 0; i < num_prompts; i++) {
 		LIBSSH2_USERAUTH_KBDINT_RESPONSE* response = (LIBSSH2_USERAUTH_KBDINT_RESPONSE*)malloc(sizeof(LIBSSH2_USERAUTH_KBDINT_RESPONSE));

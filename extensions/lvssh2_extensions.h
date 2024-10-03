@@ -13,6 +13,7 @@ typedef struct {
 typedef struct {
 	LVUserEventRef send;
 	LVUserEventRef recv;
+	LVUserEventRef kbdint_response;
 } lvssh2_abstract;
 
 typedef struct {
@@ -37,8 +38,6 @@ typedef struct {
 	const LIBSSH2_USERAUTH_KBDINT_PROMPT* prompts;
 	LStrHandle* responses;
 } lvssh2_userauth_keyboard_interactive_response_function_input_args;
-
-LVUserEventRef* lvssh2_userauth_keyboard_interactive_response_event = { 0 };
 
 // Function pointer for the userauth publickey sign function
 typedef LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC((*LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC_PTR));
@@ -71,4 +70,3 @@ extern "C" __declspec(dllexport) LIBSSH2_SEND_FUNC_PTR get_lvssh2_session_callba
 extern "C" __declspec(dllexport) LIBSSH2_RECV_FUNC_PTR get_lvssh2_session_callback_recv_function() { return lvssh2_session_callback_recv_function; }
 
 extern "C" __declspec(dllexport) LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC_PTR get_lvssh2_userauth_keyboard_interactive_response_function() { return lvssh2_userauth_keyboard_interactive_response_function; }
-extern "C" __declspec(dllexport) void set_lvssh2_userauth_keyboard_interactive_response_callback(LVUserEventRef* event) { lvssh2_userauth_keyboard_interactive_response_event = event; }
