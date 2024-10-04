@@ -54,6 +54,9 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 	}
 
 	LStrHandle* lv_responses = (LStrHandle*)malloc(num_prompts * sizeof(LStrHandle));
+	if (!lv_responses) {
+		return;
+	}
 
 	LStrHandle lv_name = 0;
 	data_buffer_to_LStrHandle(name, name_len, &lv_name);
