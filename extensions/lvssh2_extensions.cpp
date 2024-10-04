@@ -113,7 +113,7 @@ LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC(lvssh2_userauth_publickey_sign_function) {
 
 	PostLVUserEvent(*e, &payload);
 
-	*sig = (unsigned char*)malloc(LHStrLen(lv_signature) * sizeof(unsigned char*));
+	*sig = (unsigned char*)malloc(LHStrLen(lv_signature) * sizeof(unsigned char));
 	memcpy(*sig, LHStrBuf(lv_signature), LHStrLen(lv_signature));
 
 	*sig_len = LHStrLen(lv_signature);
