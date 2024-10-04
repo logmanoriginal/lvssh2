@@ -1,8 +1,15 @@
 #include "lvssh2_extensions.h"
+#include <assert.h>
+
+// This macro asserts that the given value is less than or equal to INT32_MAX
+// This is used to ensure that the length of a buffer is within the limits of LabVIEW
+#define ASSERT_LABVIEW_MAXLEN(x) assert((x) <= INT32_MAX)
 
 void lvssh2_trace_handler_function(LIBSSH2_SESSION* session, void* context, const char* data, size_t length) {
+	ASSERT_LABVIEW_MAXLEN(length);
+
 	LStrHandle message = nullptr;
-	data_buffer_to_LStrHandle(data, length, &message);
+	data_buffer_to_LStrHandle(data, static_cast<int32>(length), &message);
 
 	LVUserEventRef* e = (LVUserEventRef*)context;
 
@@ -12,6 +19,8 @@ void lvssh2_trace_handler_function(LIBSSH2_SESSION* session, void* context, cons
 }
 
 LIBSSH2_SEND_FUNC(lvssh2_session_callback_send_function) {
+	ASSERT_LABVIEW_MAXLEN(length);
+
 	lvssh2_session_callback_send_function_input_args payload = { 0 };
 	payload.socket = socket;
 	payload.buffer = 0;
@@ -20,7 +29,7 @@ LIBSSH2_SEND_FUNC(lvssh2_session_callback_send_function) {
 	ssize_t bytes_send = 0;
 	payload.bytes_send = &bytes_send;
 
-	data_buffer_to_LStrHandle(buffer, length, &payload.buffer);
+	data_buffer_to_LStrHandle(buffer, static_cast<int32>(length), &payload.buffer);
 
 	lvssh2_abstract** lv_abstract = (lvssh2_abstract**)abstract;
 
@@ -49,6 +58,9 @@ LIBSSH2_RECV_FUNC(lvssh2_session_callback_recv_function) {
 }
 
 LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_response_function) {
+	ASSERT_LABVIEW_MAXLEN(name_len);
+	ASSERT_LABVIEW_MAXLEN(instruction_len);
+
 	if (num_prompts == 0) {
 		return;
 	}
@@ -59,10 +71,10 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 	}
 
 	LStrHandle lv_name = 0;
-	data_buffer_to_LStrHandle(name, name_len, &lv_name);
+	data_buffer_to_LStrHandle(name, (int32)name_len, &lv_name);
 
 	LStrHandle lv_instruction = 0;
-	data_buffer_to_LStrHandle(instruction, instruction_len, &lv_instruction);
+	data_buffer_to_LStrHandle(instruction, (int32)instruction_len, &lv_instruction);
 
 	lvssh2_userauth_keyboard_interactive_response_function_input_args payload = { 0 };
 	payload.name = lv_name;
@@ -98,6 +110,8 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 }
 
 LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC(lvssh2_userauth_publickey_sign_function) {
+	ASSERT_LABVIEW_MAXLEN(data_len);
+
 	*sig = nullptr;
 	*sig_len = 0;
 
@@ -107,7 +121,7 @@ LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC(lvssh2_userauth_publickey_sign_function) {
 	LStrHandle lv_signature = 0;
 	payload.signature = &lv_signature;
 
-	data_buffer_to_LStrHandle(data, data_len, &payload.data);
+	data_buffer_to_LStrHandle(data, static_cast<int32>(data_len), &payload.data);
 
 	LVUserEventRef* e = (LVUserEventRef*)abstract;
 
@@ -120,11 +134,16 @@ LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC(lvssh2_userauth_publickey_sign_function) {
 
 	DSDisposeHandle(payload.data);
 
-	return 0;
+	return LIBSSH2_ERROR_NONE;
 }
 
-void data_buffer_to_LStrHandle(const void* data, size_t data_length, LStrHandle* string_handle_ptr) {
+void data_buffer_to_LStrHandle(const void* data, int32 data_length, LStrHandle* string_handle_ptr) {
 	NumericArrayResize(uB, 1, (UHandle*)(string_handle_ptr), data_length);
+
+	if (!*string_handle_ptr) {
+		return;
+	}
+
 	MoveBlock(data, LHStrBuf(*string_handle_ptr), data_length);
 	LStrLen(**string_handle_ptr) = data_length;
 }
