@@ -53,7 +53,7 @@ typedef LIBSSH2_RECV_FUNC((*LIBSSH2_RECV_FUNC_PTR));
 
 #include "lv_epilog.h"
 
-void data_buffer_to_LStrHandle(const void*, size_t, LStrHandle*);
+void data_buffer_to_LStrHandle(const void*, int32, LStrHandle*);
 
 void lvssh2_trace_handler_function(LIBSSH2_SESSION* session, void* context, const char* data, size_t length);
 
