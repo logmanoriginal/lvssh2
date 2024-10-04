@@ -99,6 +99,7 @@
       </PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>C:\Program Files (x86)\National Instruments\LabVIEW 2013\cintools</AdditionalIncludeDirectories>
       <LanguageStandard_C>Default</LanguageStandard_C>
+      <CompileAs>CompileAsC</CompileAs>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -123,6 +124,7 @@
       </PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>C:\Program Files (x86)\National Instruments\LabVIEW 2013\cintools</AdditionalIncludeDirectories>
       <LanguageStandard_C>Default</LanguageStandard_C>
+      <CompileAs>CompileAsC</CompileAs>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -147,6 +149,7 @@
       </PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>C:\Program Files\National Instruments\LabVIEW 2013\cintools</AdditionalIncludeDirectories>
       <LanguageStandard_C>Default</LanguageStandard_C>
+      <CompileAs>CompileAsC</CompileAs>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -171,6 +174,7 @@
       </PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>C:\Program Files\National Instruments\LabVIEW 2013\cintools</AdditionalIncludeDirectories>
       <LanguageStandard_C>Default</LanguageStandard_C>
+      <CompileAs>CompileAsC</CompileAs>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -185,7 +189,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="lvssh2_extensions.cpp" />
+    <ClCompile Include="lvssh2_extensions.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="libssh2\libssh2.h" />

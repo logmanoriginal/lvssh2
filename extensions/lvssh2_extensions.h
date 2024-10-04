@@ -63,10 +63,10 @@ LIBSSH2_RECV_FUNC(lvssh2_session_callback_recv_function);
 LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_response_function);
 LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC(lvssh2_userauth_publickey_sign_function);
 
-extern "C" __declspec(dllexport) libssh2_trace_handler_func get_lvssh2_trace_handler_function() { return lvssh2_trace_handler_function; }
-extern "C" __declspec(dllexport) LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC_PTR get_lvssh2_userauth_publickey_sign_function() { return lvssh2_userauth_publickey_sign_function; }
+__declspec(dllexport) libssh2_trace_handler_func get_lvssh2_trace_handler_function(void) { return lvssh2_trace_handler_function; }
+__declspec(dllexport) LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC_PTR get_lvssh2_userauth_publickey_sign_function(void) { return lvssh2_userauth_publickey_sign_function; }
 
-extern "C" __declspec(dllexport) LIBSSH2_SEND_FUNC_PTR get_lvssh2_session_callback_send_function() { return lvssh2_session_callback_send_function; }
-extern "C" __declspec(dllexport) LIBSSH2_RECV_FUNC_PTR get_lvssh2_session_callback_recv_function() { return lvssh2_session_callback_recv_function; }
+__declspec(dllexport) LIBSSH2_SEND_FUNC_PTR get_lvssh2_session_callback_send_function(void) { return lvssh2_session_callback_send_function; }
+__declspec(dllexport) LIBSSH2_RECV_FUNC_PTR get_lvssh2_session_callback_recv_function(void) { return lvssh2_session_callback_recv_function; }
 
-extern "C" __declspec(dllexport) LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC_PTR get_lvssh2_userauth_keyboard_interactive_response_function() { return lvssh2_userauth_keyboard_interactive_response_function; }
+__declspec(dllexport) LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC_PTR get_lvssh2_userauth_keyboard_interactive_response_function(void) { return lvssh2_userauth_keyboard_interactive_response_function; }
