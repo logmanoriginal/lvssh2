@@ -8,11 +8,10 @@
 void lvssh2_trace_handler_function(LIBSSH2_SESSION* session, void* context, const char* data, size_t length) {
 	ASSERT_LABVIEW_MAXLEN(length);
 
-	LStrHandle message = nullptr;
-	data_buffer_to_LStrHandle(data, static_cast<int32>(length), &message);
+	LStrHandle message = NULL;
+	data_buffer_to_LStrHandle(data, (int32)length, &message);
 
 	LVUserEventRef* e = (LVUserEventRef*)context;
-
 	PostLVUserEvent(*e, &message);
 
 	DSDisposeHandle(message);
@@ -23,17 +22,16 @@ LIBSSH2_SEND_FUNC(lvssh2_session_callback_send_function) {
 
 	lvssh2_session_callback_send_function_input_args payload = { 0 };
 	payload.socket = socket;
-	payload.buffer = 0;
+	payload.buffer = NULL;
 	payload.flags = flags;
 
 	ssize_t bytes_send = 0;
 	payload.bytes_send = &bytes_send;
 
-	data_buffer_to_LStrHandle(buffer, static_cast<int32>(length), &payload.buffer);
+	data_buffer_to_LStrHandle(buffer, (int32)length, &payload.buffer);
 
-	lvssh2_abstract** lv_abstract = (lvssh2_abstract**)abstract;
-
-	PostLVUserEvent((*lv_abstract)->send, &payload);
+	lvssh2_abstract* lv_abstract = *(lvssh2_abstract**)abstract;
+	PostLVUserEvent(lv_abstract->send, &payload);
 
 	DSDisposeHandle(payload.buffer);
 
@@ -50,9 +48,9 @@ LIBSSH2_RECV_FUNC(lvssh2_session_callback_recv_function) {
 	ssize_t bytes_received = 0;
 	payload.bytes_received = &bytes_received;
 
-	lvssh2_abstract** lv_abstract = (lvssh2_abstract**)abstract;
+	lvssh2_abstract* lv_abstract = *(lvssh2_abstract**)abstract;
 
-	PostLVUserEvent((*lv_abstract)->recv, &payload);
+	PostLVUserEvent(lv_abstract->recv, &payload);
 
 	return bytes_received;
 }
@@ -70,10 +68,10 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 		return;
 	}
 
-	LStrHandle lv_name = 0;
+	LStrHandle lv_name = NULL;
 	data_buffer_to_LStrHandle(name, (int32)name_len, &lv_name);
 
-	LStrHandle lv_instruction = 0;
+	LStrHandle lv_instruction = NULL;
 	data_buffer_to_LStrHandle(instruction, (int32)instruction_len, &lv_instruction);
 
 	lvssh2_userauth_keyboard_interactive_response_function_input_args payload = { 0 };
@@ -83,9 +81,9 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 	payload.prompts = prompts;
 	payload.responses = lv_responses;
 
-	lvssh2_abstract** lv_abstract = (lvssh2_abstract**)abstract;
+	lvssh2_abstract* lv_abstract = *(lvssh2_abstract**)abstract;
 
-	PostLVUserEvent((*lv_abstract)->kbdint_response, &payload);
+	PostLVUserEvent(lv_abstract->kbdint_response, &payload);
 
 	for (int i = 0; i < num_prompts; i++) {
 		LIBSSH2_USERAUTH_KBDINT_RESPONSE* response = (LIBSSH2_USERAUTH_KBDINT_RESPONSE*)malloc(sizeof(LIBSSH2_USERAUTH_KBDINT_RESPONSE));
@@ -112,16 +110,16 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC(lvssh2_userauth_publickey_sign_function) {
 	ASSERT_LABVIEW_MAXLEN(data_len);
 
-	*sig = nullptr;
+	*sig = NULL;
 	*sig_len = 0;
 
 	lvssh2_userauth_publickey_sign_function_input_args payload = { 0 };
 	payload.data = 0;
 
-	LStrHandle lv_signature = 0;
+	LStrHandle lv_signature = NULL;
 	payload.signature = &lv_signature;
 
-	data_buffer_to_LStrHandle(data, static_cast<int32>(data_len), &payload.data);
+	data_buffer_to_LStrHandle(data, (int32)data_len, &payload.data);
 
 	LVUserEventRef* e = (LVUserEventRef*)abstract;
 
