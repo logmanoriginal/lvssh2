@@ -38,6 +38,7 @@
 	<Item Name="test_libssh2_session_banner_get.vi" Type="VI" URL="../test_libssh2_session_banner_get.vi"/>
 	<Item Name="test_libssh2_session_banner_set.vi" Type="VI" URL="../test_libssh2_session_banner_set.vi"/>
 	<Item Name="test_libssh2_session_block_directions.vi" Type="VI" URL="../test_libssh2_session_block_directions.vi"/>
+	<Item Name="test_libssh2_session_callback_set - no handler.vi" Type="VI" URL="../test_libssh2_session_callback_set - no handler.vi"/>
 	<Item Name="test_libssh2_session_callback_set.vi" Type="VI" URL="../test_libssh2_session_callback_set.vi"/>
 	<Item Name="test_libssh2_session_disconnect.vi" Type="VI" URL="../test_libssh2_session_disconnect.vi"/>
 	<Item Name="test_libssh2_session_handshake.vi" Type="VI" URL="../test_libssh2_session_handshake.vi"/>
@@ -72,6 +73,7 @@
 	<Item Name="test_libssh2_sftp_write.vi" Type="VI" URL="../test_libssh2_sftp_write.vi"/>
 	<Item Name="test_libssh2_userauth_authenticated.vi" Type="VI" URL="../test_libssh2_userauth_authenticated.vi"/>
 	<Item Name="test_libssh2_userauth_banner.vi" Type="VI" URL="../test_libssh2_userauth_banner.vi"/>
+	<Item Name="test_libssh2_userauth_keyboard_interactive_ex - no handler.vi" Type="VI" URL="../test_libssh2_userauth_keyboard_interactive_ex - no handler.vi"/>
 	<Item Name="test_libssh2_userauth_keyboard_interactive_ex.vi" Type="VI" URL="../test_libssh2_userauth_keyboard_interactive_ex.vi"/>
 	<Item Name="test_libssh2_userauth_list.vi" Type="VI" URL="../test_libssh2_userauth_list.vi"/>
 	<Item Name="test_libssh2_userauth_password.vi" Type="VI" URL="../test_libssh2_userauth_password.vi"/>

@@ -20,6 +20,12 @@ void lvssh2_trace_handler_function(LIBSSH2_SESSION* session, void* context, cons
 LIBSSH2_SEND_FUNC(lvssh2_session_callback_send_function) {
 	ASSERT_LABVIEW_MAXLEN(length);
 
+	lvssh2_abstract* lv_abstract = *(lvssh2_abstract**)abstract;
+	if (!lv_abstract->send)
+	{
+		return LIBSSH2_ERROR_BAD_USE;
+	}
+
 	lvssh2_session_callback_send_function_input_args payload = { 0 };
 	payload.socket = socket;
 	payload.buffer = NULL;
@@ -30,7 +36,6 @@ LIBSSH2_SEND_FUNC(lvssh2_session_callback_send_function) {
 
 	data_buffer_to_LStrHandle(buffer, (int32)length, &payload.buffer);
 
-	lvssh2_abstract* lv_abstract = *(lvssh2_abstract**)abstract;
 	PostLVUserEvent(lv_abstract->send, &payload);
 
 	DSDisposeHandle(payload.buffer);
@@ -39,6 +44,12 @@ LIBSSH2_SEND_FUNC(lvssh2_session_callback_send_function) {
 }
 
 LIBSSH2_RECV_FUNC(lvssh2_session_callback_recv_function) {
+	lvssh2_abstract* lv_abstract = *(lvssh2_abstract**)abstract;
+	if (!lv_abstract->recv)
+	{
+		return LIBSSH2_ERROR_BAD_USE;
+	}
+
 	lvssh2_session_callback_recv_function_input_args payload = { 0 };
 	payload.socket = socket;
 	payload.buffer = buffer;
@@ -47,8 +58,6 @@ LIBSSH2_RECV_FUNC(lvssh2_session_callback_recv_function) {
 
 	ssize_t bytes_received = 0;
 	payload.bytes_received = &bytes_received;
-
-	lvssh2_abstract* lv_abstract = *(lvssh2_abstract**)abstract;
 
 	PostLVUserEvent(lv_abstract->recv, &payload);
 
@@ -60,6 +69,12 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 	ASSERT_LABVIEW_MAXLEN(instruction_len);
 
 	if (num_prompts == 0) {
+		return;
+	}
+
+	lvssh2_abstract* lv_abstract = *(lvssh2_abstract**)abstract;
+	if (!lv_abstract->kbdint_response)
+	{
 		return;
 	}
 
@@ -80,8 +95,6 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 	payload.num_prompts = num_prompts;
 	payload.prompts = prompts;
 	payload.responses = lv_responses;
-
-	lvssh2_abstract* lv_abstract = *(lvssh2_abstract**)abstract;
 
 	PostLVUserEvent(lv_abstract->kbdint_response, &payload);
 

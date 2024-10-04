@@ -124,6 +124,9 @@
 		<Item Name="Read Session Refnum.vi" Type="VI" URL="../Read Session Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
+		<Item Name="Session Refnum Data.ctl" Type="VI" URL="../Session Refnum Data.ctl">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="Session Refnum.ctl" Type="VI" URL="../Session Refnum.ctl"/>
 	</Item>
 	<Item Name="Session Callback" Type="Folder">
@@ -133,7 +136,9 @@
 		<Item Name="lvssh2_session_callback_events_init.vi" Type="VI" URL="../lvssh2_session_callback_events_init.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
-		<Item Name="lvssh2_session_callback_get_function.vi" Type="VI" URL="../lvssh2_session_callback_get_function.vi"/>
+		<Item Name="lvssh2_session_callback_get_function.vi" Type="VI" URL="../lvssh2_session_callback_get_function.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="lvssh2_session_callback_receive.vit" Type="VI" URL="../lvssh2_session_callback_receive.vit"/>
 		<Item Name="lvssh2_session_callback_receive_function_input_args_32.ctl" Type="VI" URL="../lvssh2_session_callback_receive_function_input_args_32.ctl">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
@@ -145,6 +150,24 @@
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 		<Item Name="lvssh2_session_callback_receive_handler_64.vi" Type="VI" URL="../lvssh2_session_callback_receive_handler_64.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="lvssh2_session_callback_register_kbdint_response_32.vi" Type="VI" URL="../lvssh2_session_callback_register_kbdint_response_32.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="lvssh2_session_callback_register_kbdint_response_64.vi" Type="VI" URL="../lvssh2_session_callback_register_kbdint_response_64.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="lvssh2_session_callback_register_receive_32.vi" Type="VI" URL="../lvssh2_session_callback_register_receive_32.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="lvssh2_session_callback_register_receive_64.vi" Type="VI" URL="../lvssh2_session_callback_register_receive_64.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="lvssh2_session_callback_register_send_32.vi" Type="VI" URL="../lvssh2_session_callback_register_send_32.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="lvssh2_session_callback_register_send_64.vi" Type="VI" URL="../lvssh2_session_callback_register_send_64.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 		<Item Name="lvssh2_session_callback_send.vit" Type="VI" URL="../lvssh2_session_callback_send.vit"/>
