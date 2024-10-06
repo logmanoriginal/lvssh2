@@ -197,6 +197,9 @@
 		</Item>
 	</Item>
 	<Item Name="SFTP" Type="Folder">
+		<Item Name="Acquire SFTP.vi" Type="VI" URL="../Acquire SFTP.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="Create SFTP Refnum.vi" Type="VI" URL="../Create SFTP Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
@@ -210,12 +213,18 @@
 		<Item Name="Read SFTP Refnum.vi" Type="VI" URL="../Read SFTP Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
+		<Item Name="Release SFTP.vi" Type="VI" URL="../Release SFTP.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="SFTP Refnum Data.ctl" Type="VI" URL="../SFTP Refnum Data.ctl">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 		<Item Name="SFTP Refnum.ctl" Type="VI" URL="../SFTP Refnum.ctl"/>
 	</Item>
 	<Item Name="SFTP Handle" Type="Folder">
+		<Item Name="Acquire SFTP Handle.vi" Type="VI" URL="../Acquire SFTP Handle.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="Create SFTP Handle Refnum.vi" Type="VI" URL="../Create SFTP Handle Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
@@ -227,6 +236,9 @@
 		</Item>
 		<Item Name="Not An SFTP Handle Refnum.vi" Type="VI" URL="../Not An SFTP Handle Refnum.vi"/>
 		<Item Name="Read SFTP Handle Refnum.vi" Type="VI" URL="../Read SFTP Handle Refnum.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Release SFTP Handle.vi" Type="VI" URL="../Release SFTP Handle.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 		<Item Name="SFTP Handle Refnum Data.ctl" Type="VI" URL="../SFTP Handle Refnum Data.ctl">
