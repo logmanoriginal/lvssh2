@@ -42,6 +42,9 @@
 		<Item Name="Release Agent Public Key.vi" Type="VI" URL="../Release Agent Public Key.vi"/>
 	</Item>
 	<Item Name="Channel" Type="Folder">
+		<Item Name="Channel Refnum Data.ctl" Type="VI" URL="../Channel Refnum Data.ctl">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="Channel Refnum.ctl" Type="VI" URL="../Channel Refnum.ctl"/>
 		<Item Name="Create Channel Refnum.vi" Type="VI" URL="../Create Channel Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
