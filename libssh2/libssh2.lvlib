@@ -42,6 +42,9 @@
 		<Item Name="Release Agent Public Key.vi" Type="VI" URL="../Release Agent Public Key.vi"/>
 	</Item>
 	<Item Name="Channel" Type="Folder">
+		<Item Name="Acquire Channel.vi" Type="VI" URL="../Acquire Channel.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="Channel Refnum Data.ctl" Type="VI" URL="../Channel Refnum Data.ctl">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
@@ -57,6 +60,9 @@
 		</Item>
 		<Item Name="Not A Channel.vi" Type="VI" URL="../Not A Channel.vi"/>
 		<Item Name="Read Channel Refnum.vi" Type="VI" URL="../Read Channel Refnum.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Release Channel.vi" Type="VI" URL="../Release Channel.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 	</Item>
@@ -98,6 +104,9 @@
 		</Item>
 	</Item>
 	<Item Name="Listener" Type="Folder">
+		<Item Name="Acquire Listener.vi" Type="VI" URL="../Acquire Listener.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="Create Listener Refnum.vi" Type="VI" URL="../Create Listener Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
@@ -113,6 +122,9 @@
 		<Item Name="Listener Refnum.ctl" Type="VI" URL="../Listener Refnum.ctl"/>
 		<Item Name="Not A Listener.vi" Type="VI" URL="../Not A Listener.vi"/>
 		<Item Name="Read Listener Refnum.vi" Type="VI" URL="../Read Listener Refnum.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Release Listener.vi" Type="VI" URL="../Release Listener.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 	</Item>
