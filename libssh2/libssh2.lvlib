@@ -79,6 +79,9 @@
 		<Item Name="Host Key Check Result.ctl" Type="VI" URL="../Host Key Check Result.ctl"/>
 		<Item Name="Host Key File Type.ctl" Type="VI" URL="../Host Key File Type.ctl"/>
 		<Item Name="Host Key Hash Type.ctl" Type="VI" URL="../Host Key Hash Type.ctl"/>
+		<Item Name="Host Key Refnum Data.ctl" Type="VI" URL="../Host Key Refnum Data.ctl">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="Host Key Refnum.ctl" Type="VI" URL="../Host Key Refnum.ctl"/>
 		<Item Name="Not A Host Key.vi" Type="VI" URL="../Not A Host Key.vi"/>
 		<Item Name="Read Host Key Data.vi" Type="VI" URL="../Read Host Key Data.vi"/>
