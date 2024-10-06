@@ -67,6 +67,9 @@
 		</Item>
 	</Item>
 	<Item Name="Host Key" Type="Folder">
+		<Item Name="Acquire Host Key Refnum.vi" Type="VI" URL="../Acquire Host Key Refnum.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="Create Host Key Refnum.vi" Type="VI" URL="../Create Host Key Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
@@ -86,6 +89,9 @@
 		<Item Name="Not A Host Key.vi" Type="VI" URL="../Not A Host Key.vi"/>
 		<Item Name="Read Host Key Data.vi" Type="VI" URL="../Read Host Key Data.vi"/>
 		<Item Name="Read Host Key Refnum.vi" Type="VI" URL="../Read Host Key Refnum.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Release Host Key Refnum.vi" Type="VI" URL="../Release Host Key Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 		<Item Name="Release Host Key.vi" Type="VI" URL="../Release Host Key.vi"/>
