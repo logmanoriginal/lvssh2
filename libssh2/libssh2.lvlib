@@ -8,6 +8,9 @@
 
 </Property>
 	<Item Name="Agent" Type="Folder">
+		<Item Name="Agent Refnum Data.ctl" Type="VI" URL="../Agent Refnum Data.ctl">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="Agent Refnum.ctl" Type="VI" URL="../Agent Refnum.ctl"/>
 		<Item Name="Create Agent Refnum.vi" Type="VI" URL="../Create Agent Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
@@ -24,6 +27,9 @@
 		</Item>
 	</Item>
 	<Item Name="Agent Public Key" Type="Folder">
+		<Item Name="Agent Public Key Refnum Data.ctl" Type="VI" URL="../Agent Public Key Refnum Data.ctl">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="Agent Public Key Refnum.ctl" Type="VI" URL="../Agent Public Key Refnum.ctl"/>
 		<Item Name="Create Agent Public Key Refnum.vi" Type="VI" URL="../Create Agent Public Key Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
