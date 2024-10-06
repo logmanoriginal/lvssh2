@@ -229,6 +229,9 @@
 		<Item Name="Read SFTP Handle Refnum.vi" Type="VI" URL="../Read SFTP Handle Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
+		<Item Name="SFTP Handle Refnum Data.ctl" Type="VI" URL="../SFTP Handle Refnum Data.ctl">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="SFTP Handle Refnum.ctl" Type="VI" URL="../SFTP Handle Refnum.ctl"/>
 	</Item>
 	<Item Name="Userauth Callback" Type="Folder">
