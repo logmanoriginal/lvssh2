@@ -111,6 +111,9 @@
 		</Item>
 	</Item>
 	<Item Name="Session" Type="Folder">
+		<Item Name="Acquire Session.vi" Type="VI" URL="../Acquire Session.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="Create Session Refnum.vi" Type="VI" URL="../Create Session Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
@@ -122,6 +125,9 @@
 		</Item>
 		<Item Name="Not A Session.vi" Type="VI" URL="../Not A Session.vi"/>
 		<Item Name="Read Session Refnum.vi" Type="VI" URL="../Read Session Refnum.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Release Session.vi" Type="VI" URL="../Release Session.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 		<Item Name="Session Refnum Data.ctl" Type="VI" URL="../Session Refnum Data.ctl">
