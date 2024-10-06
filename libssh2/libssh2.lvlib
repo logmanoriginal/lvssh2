@@ -8,6 +8,9 @@
 
 </Property>
 	<Item Name="Agent" Type="Folder">
+		<Item Name="Acquire Agent.vi" Type="VI" URL="../Acquire Agent.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="Agent Refnum Data.ctl" Type="VI" URL="../Agent Refnum Data.ctl">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
@@ -25,8 +28,14 @@
 		<Item Name="Read Agent Refnum.vi" Type="VI" URL="../Read Agent Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
+		<Item Name="Release Agent.vi" Type="VI" URL="../Release Agent.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 	</Item>
 	<Item Name="Agent Public Key" Type="Folder">
+		<Item Name="Acquire Agent Public Key Refnum.vi" Type="VI" URL="../Acquire Agent Public Key Refnum.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="Agent Public Key Refnum Data.ctl" Type="VI" URL="../Agent Public Key Refnum Data.ctl">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
@@ -43,6 +52,9 @@
 		<Item Name="Not An Agent Public Key.vi" Type="VI" URL="../Not An Agent Public Key.vi"/>
 		<Item Name="Read Agent Public Key Data.vi" Type="VI" URL="../Read Agent Public Key Data.vi"/>
 		<Item Name="Read Agent Public Key Refnum.vi" Type="VI" URL="../Read Agent Public Key Refnum.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Release Agent Public Key Refnum.vi" Type="VI" URL="../Release Agent Public Key Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 		<Item Name="Release Agent Public Key.vi" Type="VI" URL="../Release Agent Public Key.vi"/>
