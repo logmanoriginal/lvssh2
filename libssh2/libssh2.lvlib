@@ -88,6 +88,9 @@
 		<Item Name="Release Host Key.vi" Type="VI" URL="../Release Host Key.vi"/>
 	</Item>
 	<Item Name="Host Key Database" Type="Folder">
+		<Item Name="Acquire Host Key Database.vi" Type="VI" URL="../Acquire Host Key Database.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="Create Host Key Database Refnum.vi" Type="VI" URL="../Create Host Key Database Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
@@ -103,6 +106,9 @@
 		<Item Name="Host Key Database Refnum.ctl" Type="VI" URL="../Host Key Database Refnum.ctl"/>
 		<Item Name="Not A Host Key Database.vi" Type="VI" URL="../Not A Host Key Database.vi"/>
 		<Item Name="Read Host Key Database Refnum.vi" Type="VI" URL="../Read Host Key Database Refnum.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Release Host Key Database.vi" Type="VI" URL="../Release Host Key Database.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 	</Item>
