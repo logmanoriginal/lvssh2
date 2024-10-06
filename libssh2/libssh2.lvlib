@@ -210,6 +210,9 @@
 		<Item Name="Read SFTP Refnum.vi" Type="VI" URL="../Read SFTP Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
+		<Item Name="SFTP Refnum Data.ctl" Type="VI" URL="../SFTP Refnum Data.ctl">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="SFTP Refnum.ctl" Type="VI" URL="../SFTP Refnum.ctl"/>
 	</Item>
 	<Item Name="SFTP Handle" Type="Folder">
