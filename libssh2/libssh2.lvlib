@@ -97,6 +97,9 @@
 		<Item Name="Error if not a Host Key Database.vi" Type="VI" URL="../Error if not a Host Key Database.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
+		<Item Name="Host Key Database Refnum Data.ctl" Type="VI" URL="../Host Key Database Refnum Data.ctl">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="Host Key Database Refnum.ctl" Type="VI" URL="../Host Key Database Refnum.ctl"/>
 		<Item Name="Not A Host Key Database.vi" Type="VI" URL="../Not A Host Key Database.vi"/>
 		<Item Name="Read Host Key Database Refnum.vi" Type="VI" URL="../Read Host Key Database Refnum.vi">
