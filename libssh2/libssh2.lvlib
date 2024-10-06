@@ -107,6 +107,9 @@
 		<Item Name="Error if not a Listener.vi" Type="VI" URL="../Error if not a Listener.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
+		<Item Name="Listener Refnum Data.ctl" Type="VI" URL="../Listener Refnum Data.ctl">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
 		<Item Name="Listener Refnum.ctl" Type="VI" URL="../Listener Refnum.ctl"/>
 		<Item Name="Not A Listener.vi" Type="VI" URL="../Not A Listener.vi"/>
 		<Item Name="Read Listener Refnum.vi" Type="VI" URL="../Read Listener Refnum.vi">
