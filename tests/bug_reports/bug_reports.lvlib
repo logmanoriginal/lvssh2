@@ -5,4 +5,5 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="4-libssh2_sftp_read-binary data truncated.vi" Type="VI" URL="../4-libssh2_sftp_read-binary data truncated.vi"/>
+	<Item Name="9-libssh2_channel_shell error when pty requested.vi" Type="VI" URL="../9-libssh2_channel_shell error when pty requested.vi"/>
 </Library>
