@@ -7,65 +7,86 @@
 </nicomment>
 <nierror code="6000">
 libssh2-sftp: (Hex 0x1770) 1, LIBSSH2_FX_EOF
+An attempt to read past the end-of-file was made; or, there are no more directory entries to return.
 </nierror>
 <nierror code="6001">
 libssh2-sftp: (Hex 0x1771) 2, LIBSSH2_FX_NO_SUCH_FILE
+The file referenced by the request does not exist.
 </nierror>
 <nierror code="6002">
 libssh2-sftp: (Hex 0x1772) 3, LIBSSH2_FX_PERMISSION_DENIED
+The user does not have sufficient permissions to perform the operation.
 </nierror>
 <nierror code="6003">
 libssh2-sftp: (Hex 0x1773) 4, LIBSSH2_FX_FAILURE
+An error occurred, but no specific error code exists to describe the failure.
 </nierror>
 <nierror code="6004">
 libssh2-sftp: (Hex 0x1774) 5, LIBSSH2_FX_BAD_MESSAGE
+A badly formatted packet or other SFTP protocol incompatibility was detected.
 </nierror>
 <nierror code="6005">
 libssh2-sftp: (Hex 0x1775) 6, LIBSSH2_FX_NO_CONNECTION
+There is no connection to the server.
 </nierror>
 <nierror code="6006">
 libssh2-sftp: (Hex 0x1776) 7, LIBSSH2_FX_CONNECTION_LOST
+The connection to the server was lost.
 </nierror>
 <nierror code="6007">
 libssh2-sftp: (Hex 0x1777) 8, LIBSSH2_FX_OP_UNSUPPORTED
+The requested operation is not supported by the server.
 </nierror>
 <nierror code="6008">
 libssh2-sftp: (Hex 0x1778) 9, LIBSSH2_FX_INVALID_HANDLE
+An invalid handle was specified.
 </nierror>
 <nierror code="6009">
 libssh2-sftp: (Hex 0x1779) 10, LIBSSH2_FX_NO_SUCH_PATH
+The file referenced by the request does not exist.
 </nierror>
 <nierror code="6010">
 libssh2-sftp: (Hex 0x177A) 11, LIBSSH2_FX_FILE_ALREADY_EXISTS
+The file already exists.
 </nierror>
 <nierror code="6011">
 libssh2-sftp: (Hex 0x177B) 12, LIBSSH2_FX_WRITE_PROTECT
+The file is on read-only media, or the media is write protected.
 </nierror>
 <nierror code="6012">
 libssh2-sftp: (Hex 0x177C) 13, LIBSSH2_FX_NO_MEDIA
+The requested operation cannot be completed because there is no media available in the drive.
 </nierror>
 <nierror code="6013">
 libssh2-sftp: (Hex 0x177D) 14, LIBSSH2_FX_NO_SPACE_ON_FILESYSTEM
+The requested operation cannot be completed because there is no space left on the filesystem.
 </nierror>
 <nierror code="6014">
 libssh2-sftp: (Hex 0x177E) 15, LIBSSH2_FX_QUOTA_EXCEEDED
+The operation cannot be completed because it would exceed the user's storage quota.
 </nierror>
 <nierror code="6015">
 libssh2-sftp: (Hex 0x177F) 16, LIBSSH2_FX_UNKNOWN_PRINCIPAL
+The operation cannot be completed because the user is not recognized by the server.
 </nierror>
 <nierror code="6016">
 libssh2-sftp: (Hex 0x1780) 17, LIBSSH2_FX_LOCK_CONFLICT
+The requested operation cannot be completed because it would cause a lock conflict.
 </nierror>
 <nierror code="6017">
 libssh2-sftp: (Hex 0x1781) 18, LIBSSH2_FX_DIR_NOT_EMPTY
+The requested operation cannot be completed because the directory is not empty.
 </nierror>
 <nierror code="6018">
 libssh2-sftp: (Hex 0x1782) 19, LIBSSH2_FX_NOT_A_DIRECTORY
+The requested operation cannot be completed because the file is not a directory.
 </nierror>
 <nierror code="6019">
 libssh2-sftp: (Hex 0x1783) 20, LIBSSH2_FX_INVALID_FILENAME
+The requested operation cannot be completed because the filename is invalid.
 </nierror>
 <nierror code="6020">
 libssh2-sftp: (Hex 0x1784) 21, LIBSSH2_FX_LINK_LOOP
+The requested operation cannot be completed because it would cause a loop in symbolic links.
 </nierror>
 </nidocument>

@@ -7,155 +7,206 @@
 </nicomment>
 <nierror code="5000">
 libssh2: (Hex 0x1388) -1, LIBSSH2_ERROR_SOCKET_NONE
+No socket is available or has been provided for the SSH session.
 </nierror>
 <nierror code="5001">
 libssh2: (Hex 0x1389) -2, LIBSSH2_ERROR_BANNER_RECV
+There was an error receiving the banner from the remote host.
 </nierror>
 <nierror code="5002">
 libssh2: (Hex 0x138A) -3, LIBSSH2_ERROR_BANNER_SEND
+There was an error sending the banner to the remote host.
 </nierror>
 <nierror code="5003">
 libssh2: (Hex 0x138B) -4, LIBSSH2_ERROR_INVALID_MAC
+The message authentication code is invalid.
 </nierror>
 <nierror code="5004">
 libssh2: (Hex 0x138C) -5, LIBSSH2_ERROR_KEX_FAILURE
+The key exchange process failed.
 </nierror>
 <nierror code="5005">
 libssh2: (Hex 0x138D) -6, LIBSSH2_ERROR_ALLOC
+An internal memory allocation call failed.
 </nierror>
 <nierror code="5006">
 libssh2: (Hex 0x138E) -7, LIBSSH2_ERROR_SOCKET_SEND
+There was an error sending data on the socket.
 </nierror>
 <nierror code="5007">
 libssh2: (Hex 0x138F) -8, LIBSSH2_ERROR_KEY_EXCHANGE_FAILURE
+The key exchange process failed.
 </nierror>
 <nierror code="5008">
 libssh2: (Hex 0x1390) -9, LIBSSH2_ERROR_TIMEOUT
+The operation timed out.
 </nierror>
 <nierror code="5009">
 libssh2: (Hex 0x1391) -10, LIBSSH2_ERROR_HOSTKEY_INIT
+The host key initialization failed.
 </nierror>
 <nierror code="5010">
 libssh2: (Hex 0x1392) -11, LIBSSH2_ERROR_HOSTKEY_SIGN
+The host key signing failed.
 </nierror>
 <nierror code="5011">
 libssh2: (Hex 0x1393) -12, LIBSSH2_ERROR_DECRYPT
+The decryption process failed.
 </nierror>
 <nierror code="5012">
 libssh2: (Hex 0x1394) -13, LIBSSH2_ERROR_SOCKET_DISCONNECT
+The socket was disconnected.
 </nierror>
 <nierror code="5013">
 libssh2: (Hex 0x1395) -14, LIBSSH2_ERROR_PROTO
+An error occurred in the SSH protocol.
 </nierror>
 <nierror code="5014">
 libssh2: (Hex 0x1396) -15, LIBSSH2_ERROR_PASSWORD_EXPIRED
+The password has expired.
 </nierror>
 <nierror code="5015">
 libssh2: (Hex 0x1397) -16, LIBSSH2_ERROR_FILE
+An error occurred while working with a file.
 </nierror>
 <nierror code="5016">
 libssh2: (Hex 0x1398) -17, LIBSSH2_ERROR_METHOD_NONE
+The authentication method is not supported.
 </nierror>
 <nierror code="5017">
 libssh2: (Hex 0x1399) -18, LIBSSH2_ERROR_AUTHENTICATION_FAILED
+The authentication process failed.
 </nierror>
 <nierror code="5018">
 libssh2: (Hex 0x139A) -19, LIBSSH2_ERROR_PUBLICKEY_UNVERIFIED
+The public key is unverified.
 </nierror>
 <nierror code="5019">
 libssh2: (Hex 0x139B) -20, LIBSSH2_ERROR_CHANNEL_OUTOFORDER
+The channel is out of order.
 </nierror>
 <nierror code="5020">
 libssh2: (Hex 0x139C) -21, LIBSSH2_ERROR_CHANNEL_FAILURE
+The channel failed.
 </nierror>
 <nierror code="5021">
 libssh2: (Hex 0x139D) -22, LIBSSH2_ERROR_CHANNEL_REQUEST_DENIED
+The channel request was denied.
 </nierror>
 <nierror code="5022">
 libssh2: (Hex 0x139E) -23, LIBSSH2_ERROR_CHANNEL_UNKNOWN
+The channel is unknown.
 </nierror>
 <nierror code="5023">
 libssh2: (Hex 0x139F) -24, LIBSSH2_ERROR_CHANNEL_WINDOW_EXCEEDED
+The channel window was exceeded.
 </nierror>
 <nierror code="5024">
 libssh2: (Hex 0x13A0) -25, LIBSSH2_ERROR_CHANNEL_PACKET_EXCEEDED
+The channel packet was exceeded.
 </nierror>
 <nierror code="5025">
 libssh2: (Hex 0x13A1) -26, LIBSSH2_ERROR_CHANNEL_CLOSED
+The channel was closed.
 </nierror>
 <nierror code="5026">
 libssh2: (Hex 0x13A2) -27, LIBSSH2_ERROR_CHANNEL_EOF_SENT
+The channel end-of-file was sent.
 </nierror>
 <nierror code="5027">
 libssh2: (Hex 0x13A3) -28, LIBSSH2_ERROR_SCP_PROTOCOL
+An error occurred in the SCP protocol.
 </nierror>
 <nierror code="5028">
 libssh2: (Hex 0x13A4) -29, LIBSSH2_ERROR_ZLIB
+An error occurred in the ZLIB compression.
 </nierror>
 <nierror code="5029">
 libssh2: (Hex 0x13A5) -30, LIBSSH2_ERROR_SOCKET_TIMEOUT
+The socket timed out.
 </nierror>
 <nierror code="5030">
 libssh2: (Hex 0x13A6) -31, LIBSSH2_ERROR_SFTP_PROTOCOL
+An error occurred in the SFTP protocol.
 </nierror>
 <nierror code="5031">
 libssh2: (Hex 0x13A7) -32, LIBSSH2_ERROR_REQUEST_DENIED
+The request was denied.
 </nierror>
 <nierror code="5032">
 libssh2: (Hex 0x13A8) -33, LIBSSH2_ERROR_METHOD_NOT_SUPPORTED
+The method is not supported.
 </nierror>
 <nierror code="5033">
 libssh2: (Hex 0x13A9) -34, LIBSSH2_ERROR_INVAL
+An invalid value was provided.
 </nierror>
 <nierror code="5034">
 libssh2: (Hex 0x13AA) -35, LIBSSH2_ERROR_INVALID_POLL_TYPE
+The poll type is invalid.
 </nierror>
 <nierror code="5035">
 libssh2: (Hex 0x13AB) -36, LIBSSH2_ERROR_PUBLICKEY_PROTOCOL
+An error occurred in the public key protocol.
 </nierror>
 <nierror code="5036">
 libssh2: (Hex 0x13AC) -37, LIBSSH2_ERROR_EAGAIN
+The operation would block. Repeat the call when it would not block.
 </nierror>
 <nierror code="5037">
 libssh2: (Hex 0x13AD) -38, LIBSSH2_ERROR_BUFFER_TOO_SMALL
+The buffer is too small.
 </nierror>
 <nierror code="5038">
 libssh2: (Hex 0x13AE) -39, LIBSSH2_ERROR_BAD_USE
+The function was used incorrectly.
 </nierror>
 <nierror code="5039">
 libssh2: (Hex 0x13AF) -40, LIBSSH2_ERROR_COMPRESS
+An error occurred during compression.
 </nierror>
 <nierror code="5040">
 libssh2: (Hex 0x13B0) -41, LIBSSH2_ERROR_OUT_OF_BOUNDARY
+The package size exceeds the boundary.
 </nierror>
 <nierror code="5041">
 libssh2: (Hex 0x13B1) -42, LIBSSH2_ERROR_AGENT_PROTOCOL
+An error occurred in the agent protocol.
 </nierror>
 <nierror code="5042">
 libssh2: (Hex 0x13B2) -43, LIBSSH2_ERROR_SOCKET_RECV
+There was an error receiving data on the socket.
 </nierror>
 <nierror code="5043">
 libssh2: (Hex 0x13B3) -44, LIBSSH2_ERROR_ENCRYPT
+An error occurred during encryption.
 </nierror>
 <nierror code="5044">
 libssh2: (Hex 0x13B4) -45, LIBSSH2_ERROR_BAD_SOCKET
+The socket is invalid.
 </nierror>
 <nierror code="5045">
 libssh2: (Hex 0x13B5) -46, LIBSSH2_ERROR_KNOWN_HOSTS
+An error occurred when parsing the known hosts file.
 </nierror>
 <nierror code="5046">
 libssh2: (Hex 0x13B6) -47, LIBSSH2_ERROR_CHANNEL_WINDOW_FULL
+The channel window is full.
 </nierror>
 <nierror code="5047">
 libssh2: (Hex 0x13B7) -48, LIBSSH2_ERROR_KEYFILE_AUTH_FAILED
+The key file authentication failed.
 </nierror>
 <nierror code="5048">
 libssh2: (Hex 0x13B8) -49, LIBSSH2_ERROR_RANDGEN
+An error occurred in the random number generator.
 </nierror>
 <nierror code="5049">
 libssh2: (Hex 0x13B9) -50, LIBSSH2_ERROR_MISSING_USERAUTH_BANNER
+The user authentication banner is missing.
 </nierror>
 <nierror code="5050">
 libssh2: (Hex 0x13BA) -51, LIBSSH2_ERROR_ALGO_UNSUPPORTED
+
 </nierror>
 </nidocument>
