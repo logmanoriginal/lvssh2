@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-11-02 16:41:01" Modified_Date="2024-09-23 15:39:19" Creator="pasca" Comments="" ID="16fb30b1401317116b596fc7a002d388">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-11-02 16:41:01" Modified_Date="2024-10-11 07:44:49" Creator="pasca" Comments="" ID="d017088ba7fc0c52f2d0c6759e3dbd92">
   <Library_General_Settings>
     <Package_File_Name>PNR_lib_lvssh2</Package_File_Name>
-    <Library_Version>0.2.0.88</Library_Version>
+    <Library_Version>0.3.0.91</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>..</Library_Output_Folder>
@@ -58,14 +58,23 @@ Although this project aims to provide complete bindings for libssh2, there are s
       <Copyright>Copyright (c) 2023-2024, Pascal Neuperger</Copyright>
       <Packager>Pascal Neuperger</Packager>
       <URL>https://github.com/logmanoriginal/lvssh2</URL>
-      <Release_Notes>This release contains the following changes:
+      <Release_Notes>* Fixed a bug in libssh2_userauth_keyboard_interactive_ex() that resulted in a crash when called in 64-bit environments
+* [#3] lvssh_extensions Multi-thread Safety and Memory Allocation
+  * Fixed byte-packing and moved to NumericResizeArray for LStrHandle allocation
+  * Refactored the extensions library to utilize LabVIEW native types, libssh2 macros, and pure C-style syntax
+  * Made the extensions library thread-safe
+* Fixed an infinite loop when enabling callbacks without handlers
+* Enabled reentrant execution with thread-safe locking for all functions
+* Fixed truncated description in channel_request_pty
+* Improved error messages
+  * Error messages now also contain libssh2 error numbers
+  * Error messages now also include a short error description
+* [#9] Error 5042 when using libssh2_channel_shell.vi
+  * Fixed unexpected bytes remain after decoding in libssh2_channel_process_startup
 
-- Added a callback input to libssh2_callback_set
-- Fixed an issue in libssh2_flush_ex that resulted in a crash when the function is called.
-- Fixed an issue in libssh2_sftp_read that resulted in truncated data when the source file contains null-byte characters. [#4] (@sanch3z)
-- Fixed an issue in libssh2_session_abstract that could result in a crash on 32-bit platforms.
+This release includes Windows binaries for libssh2 version 1.11.0.
 
-This release includes Windows binaries for libssh2 version 1.11.0.</Release_Notes>
+https://github.com/logmanoriginal/lvssh2/releases/tag/0.3.0</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -473,7 +482,7 @@ This release includes Windows binaries for libssh2 version 1.11.0.</Release_Note
         <Path>SCP</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F17944103304C78B79D67F88B03ECA8D</GUID>
+      <GUID>6DCFCF6C77969E854B1B9FE8B6450E46</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -746,7 +755,7 @@ This release includes Windows binaries for libssh2 version 1.11.0.</Release_Note
         <Path>libssh2\libssh2_keepalive_send.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>5505083F5863A4DFB1A277EB2AC740EB</GUID>
+      <GUID>64C406627A0CC0111CCA933595622DD9</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -949,7 +958,7 @@ This release includes Windows binaries for libssh2 version 1.11.0.</Release_Note
         <Path>libssh2\libssh2_session_abstract.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>3F03A1B4DAC51F20A3202DCD87EE1824</GUID>
+      <GUID>98CBBB439DBB1F4C54675B2A4C8A4A18</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1376,7 +1385,7 @@ This release includes Windows binaries for libssh2 version 1.11.0.</Release_Note
         <Path>libssh2\libssh2_channel_signal_ex.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>4B0DCAECE319C0DBB9278A3382DAB1BE</GUID>
+      <GUID>AE992DF80AD59FEB7DD365FECB635B46</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>3</Parent_Palette_Index>
@@ -1537,7 +1546,7 @@ This release includes Windows binaries for libssh2 version 1.11.0.</Release_Note
         <Path>libssh2\libssh2_channel_receive_window_adjust2.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>253D4ABFBF67D3E9BA3373935F0A69AA</GUID>
+      <GUID>3C620B038D76C9AD566F00AC3334467D</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1754,7 +1763,7 @@ This release includes Windows binaries for libssh2 version 1.11.0.</Release_Note
         <Path>libssh2\libssh2_knownhost_del.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>64FE6A26AF8BF585ABA377CAC97CCAEE</GUID>
+      <GUID>0D9B34C6ECE1B70A552C2B28B6E1ACFB</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>3</Parent_Palette_Index>
@@ -1845,7 +1854,7 @@ This release includes Windows binaries for libssh2 version 1.11.0.</Release_Note
         <Path>Advanced</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>FE76435CD29DF52B1451EA9B5E861895</GUID>
+      <GUID>9F18C524D41984BD785E996BAFD471B9</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1950,7 +1959,7 @@ This release includes Windows binaries for libssh2 version 1.11.0.</Release_Note
         <Path>libssh2\libssh2_userauth_publickey_fromfile_ex.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>52ACD9FD288596113954152FD4ADD477</GUID>
+      <GUID>C04AE4813EE796222EF1B4229A9C7168</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>7</Parent_Palette_Index>
@@ -2041,7 +2050,7 @@ This release includes Windows binaries for libssh2 version 1.11.0.</Release_Note
         <Path>libssh2\libssh2_userauth_keyboard_interactive_ex.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>B7DD00E754E98DDC61588D827B434086</GUID>
+      <GUID>F41FE2CF56FBCED4B0FBBB1000CA0391</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -2244,7 +2253,7 @@ This release includes Windows binaries for libssh2 version 1.11.0.</Release_Note
         <Path>libssh2\Not An Agent Public Key.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>D5732F0E035F93D588FAAA6562333959</GUID>
+      <GUID>26B7D21BEC9B53AF7ADE6DC1B42EA2A8</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -2699,7 +2708,7 @@ This release includes Windows binaries for libssh2 version 1.11.0.</Release_Note
         <Path>libssh2\Not An SFTP Refnum.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>956D8F883215EBFF09132B9F1C449BDB</GUID>
+      <GUID>9D1C032959264DDCA0A905372BE83318</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>10</Parent_Palette_Index>
@@ -2846,7 +2855,7 @@ This release includes Windows binaries for libssh2 version 1.11.0.</Release_Note
         <Path>libssh2\libssh2_sftp_rename_ex.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>5131832CA4F6D93763AC17ED18067C2D</GUID>
+      <GUID>CB7D273ABCA4CA381CA7235C7091BEA7</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -2897,7 +2906,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
         <Path>libssh2\libssh2_trace_sethandler.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>7098C863FC0B7615564F214EA94BAEB6</GUID>
+      <GUID>E61E236E4CCC3D3AF7F2E45B15757026</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -2960,7 +2969,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
         <Path>libssh2\To Unix Time.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>08DE1E3F4EDE22717B738D9B10D350BE</GUID>
+      <GUID>6224F0E520D8C2E80B43F3210D105E0F</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>6</Parent_Palette_Index>
@@ -2995,7 +3004,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
         <Path>libssh2\libssh2_channel_forward_listen_ex.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>BA8BEED6C96399D4BF85385B09F94964</GUID>
+      <GUID>81F89A29CBC26F6F59130C29A1CA228C</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -3030,7 +3039,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
         <Path>libssh2\libssh2_free.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>56779C7C2E6556B2D2469842C2E87712</GUID>
+      <GUID>311B9CEA0A15DAD953673B3C42A33B37</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -3079,7 +3088,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
         <Path>libssh2\libssh2_scp_send64.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F0F8F163185A93A15C68FEAE89BEED05</GUID>
+      <GUID>68C6324938177CF2A652811EAD8B77D8</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
