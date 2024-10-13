@@ -1,9 +1,21 @@
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.18)
 project(lvssh2_extensions C)
 
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_STANDARD_REQUIRED YES)
 set(CMAKE_C_EXTENSIONS OFF)
+
+# Get libssh2 source code
+include(FetchContent)
+
+FetchContent_Declare(
+  libssh2
+  GIT_REPOSITORY https://github.com/libssh2/libssh2.git
+  GIT_TAG libssh2-1.11.0
+  SOURCE_SUBDIR include
+)
+
+FetchContent_MakeAvailable(libssh2)
 
 if(CMAKE_SIZEOF_VOID_P EQUAL 8)
   message(STATUS "64-bit build")
@@ -53,7 +65,7 @@ add_library(${PROJECT_NAME} SHARED
 )
 
 include_directories(${LABVIEW_CINTOOLS_DIR})
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/libssh2)
+include_directories(${libssh2_SOURCE_DIR}/include)
 
 target_link_libraries(${PROJECT_NAME} ${LABVIEW_CINTOOLS_DIR}/labview.lib)
 
