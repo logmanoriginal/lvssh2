@@ -1,7 +1,22 @@
-This folder contains the source files for `lvssh2_extensions.dll`.
+This folder contains the source files for the extensions library.
 
-`lvssh2_extensions.dll` is written in C using Visual Studio 2022.
+## Build Instructions
+To build the extensions library, run the following commands from the root of the repository:
 
-You may need to add `<LabVIEW>/cintools` to your include path in order to compile the project (required for "extcode.h"). The version and bitness of LabVIEW doesn't matter.
+```bash
+mkdir build
+cd build
+cmake ../extensions
+cmake --build . --config MinSizeRel
+```
 
-After building the solution, copy `lvssh2_extensions.dll` to `libssh2` under root.
+Configurations:
+- `Release`: Build the library with optimizations enabled.
+- `Debug`: Build the library with debugging information enabled.
+- `MinSizeRel`: Build the library with optimizations for size enabled.
+- `RelWithDebInfo`: Build the library with optimizations enabled and debugging information enabled.
+
+> [!IMPORTANT]
+> When building the extensions library with debugging enabled, libssh2 must also be built with debugging enabled.
+
+The build will produce a static library named `lvssh2_extensions` (or `lvssh2_extensions_64` on 64-bit systems). These files must be copied to the `libssh2` folder.
