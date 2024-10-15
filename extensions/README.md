@@ -8,7 +8,7 @@ cmake -B build -S . -G "Visual Studio 17 2022" -A Win32
 cmake --build build --config Release
 ```
 
-This will produce a 32-bit static library named `lvssh2_extensions` in the build directory.
+This will produce a 32-bit static library named `lvssh2_extensions` in the `libssh2` directory.
 
 Replace `-G "Visual Studio 17 2022"` with the appropriate generator for your version of Visual Studio.
 
