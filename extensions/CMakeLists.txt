@@ -17,26 +17,25 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(libssh2)
 
+# Determine if the build is 32-bit or 64-bit
 if(CMAKE_SIZEOF_VOID_P EQUAL 8)
-  message(STATUS "64-bit build")
   set(OUTPUT_NAME_SUFFIX "_64") # Append "_64" to the output name for 64-bit builds
-  if(CMAKE_HOST_WIN32)
-    message(STATUS "Windows build")
+else()
+  set(OUTPUT_NAME_SUFFIX "") # No suffix for 32-bit builds
+endif()
+
+# Set LabVIEW base path based on the platform
+if(CMAKE_HOST_WIN32)
+  message(STATUS "Windows build")
+  if(CMAKE_SIZEOF_VOID_P EQUAL 8)
     set(LABVIEW_BASE_PATH "C:/Program Files/National Instruments")
   else()
-    message(FATAL_ERROR "Unsupported platform")
-  endif()
-else()
-  message(STATUS "32-bit build")
-  set(OUTPUT_NAME_SUFFIX "") # No suffix for 32-bit builds
-  if(CMAKE_HOST_WIN32)
-    message(STATUS "Windows build")
     # SAFESH:NO is required to prevent linker errors when building with Visual Studio
     add_link_options(/SAFESEH:NO)
     set(LABVIEW_BASE_PATH "C:/Program Files (x86)/National Instruments")
-  else()
-    message(FATAL_ERROR "Unsupported platform")
   endif()
+else()
+  message(FATAL_ERROR "Unsupported platform")
 endif()
 
 # Generate list of CINTOOLS directories
