@@ -70,3 +70,38 @@ target_link_libraries(${PROJECT_NAME} "${LABVIEW_CINTOOLS_DIR}/labview.lib")
 set_target_properties(${PROJECT_NAME} PROPERTIES
   OUTPUT_NAME "${PROJECT_NAME}${OUTPUT_NAME_SUFFIX}"
 )
+
+include(ExternalProject)
+
+ExternalProject_Add(
+  libssh2
+  GIT_REPOSITORY https://github.com/libssh2/libssh2.git
+  GIT_TAG libssh2-1.11.0
+  CMAKE_ARGS
+    -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE=$<1:${CMAKE_BINARY_DIR}>
+    -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG=$<1:${CMAKE_BINARY_DIR}>
+    -DBUILD_STATIC_LIBS=OFF
+    -DBUILD_EXAMPLES=OFF
+    -DBUILD_TESTING=OFF
+  INSTALL_COMMAND ""
+)
+
+# Custom command to rename the DLL
+add_custom_command(
+  TARGET libssh2
+  POST_BUILD
+  COMMAND ${CMAKE_COMMAND} -E rename
+    ${CMAKE_BINARY_DIR}/libssh2.dll
+    ${CMAKE_BINARY_DIR}/libssh2${OUTPUT_NAME_SUFFIX}.dll
+  COMMENT "Renaming libssh2.dll to libssh2${OUTPUT_NAME_SUFFIX}.dll"
+)
+
+# Custom command to move the DLL to the libssh2 directory
+add_custom_command(
+  TARGET libssh2
+  POST_BUILD
+  COMMAND ${CMAKE_COMMAND} -E copy
+    ${CMAKE_BINARY_DIR}/libssh2${OUTPUT_NAME_SUFFIX}.dll
+    ${CMAKE_SOURCE_DIR}/libssh2
+  COMMENT "Copying libssh2${OUTPUT_NAME_SUFFIX}.dll to libssh2 directory"
+)
