@@ -4,6 +4,7 @@
 
 .vscode/
 
+libssh2/*.dll
 libssh2/*.exp
 libssh2/*.lib
 
