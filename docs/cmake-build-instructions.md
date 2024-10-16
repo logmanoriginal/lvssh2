@@ -1,3 +1,13 @@
+_TLDR;_ -- Run the following commands from the root of the repository:
+```bash
+cmake -B build/x32 -S . -G "Visual Studio 17 2022" -A Win32
+cmake -B build/x64 -S . -G "Visual Studio 17 2022" -A x64
+cmake --build build/x32 --config Release
+cmake --build build/x64 --config Release
+```
+
+---
+
 # CMake Build Instructions
 This project uses CMake to build shared libraries needed for lvssh2. This includes an extensions library that provides additional functionality that cannot otherwise be implemented in LabVIEW and libssh2, which is at the core of the project.
 
