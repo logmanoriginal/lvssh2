@@ -23,6 +23,9 @@ The CMake files are configured to place the output libraries in the correct loca
     - Visual Studio 2022 or later
         - Make sure to install the "Desktop development with C++" workload, which includes the MSVC compiler and CMake.
 
+> [!IMPORTANT]
+> To build the libraries, both 32 and 64-bit versions of LabVIEW must be installed on the system.
+
 ## Build Instructions
 
 Run the following commands from the root of the repository:
