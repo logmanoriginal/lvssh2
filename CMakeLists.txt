@@ -32,22 +32,22 @@ FetchContent_MakeAvailable(libssh2)
 # Set LabVIEW base path based on the platform
 if(CMAKE_HOST_WIN32)
   message(STATUS "Windows build")
-  if(CMAKE_SIZEOF_VOID_P EQUAL 8)
-    set(LABVIEW_BASE_PATH "C:/Program Files/National Instruments")
-  else()
+  set(LABVIEW_BASE_PATH_32 "C:/Program Files/National Instruments")
+  set(LABVIEW_BASE_PATH_64 "C:/Program Files (x86)/National Instruments")
+  if(CMAKE_SIZEOF_VOID_P EQUAL 4)
     # SAFESH:NO is required to prevent linker errors when building with Visual Studio
     add_link_options(/SAFESEH:NO)
-    set(LABVIEW_BASE_PATH "C:/Program Files (x86)/National Instruments")
   endif()
 else()
   message(FATAL_ERROR "Unsupported platform")
 endif()
 
-# Generate list of CINTOOLS directories
+# Generate list of potential CINTOOLS directories for both 32-bit and 64-bit LabVIEW
 set(LABVIEW_PATHS "")
 string(TIMESTAMP CURRENT_YEAR "%Y")
 foreach(YEAR RANGE 2013 ${CURRENT_YEAR})
-  list(APPEND LABVIEW_PATHS "${LABVIEW_BASE_PATH}/LabVIEW ${YEAR}/cintools")
+  list(APPEND LABVIEW_PATHS "${LABVIEW_BASE_PATH_32}/LabVIEW ${YEAR}/cintools")
+  list(APPEND LABVIEW_PATHS "${LABVIEW_BASE_PATH_64}/LabVIEW ${YEAR}/cintools")
 endforeach()
 
 # Find the first existing CINTOOLS directory
