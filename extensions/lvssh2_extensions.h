@@ -1,7 +1,7 @@
 #pragma once
 
 #include "extcode.h"
-#include "libssh2/libssh2.h"
+#include "libssh2.h"
 
 #include "lv_prolog.h"
 

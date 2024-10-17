@@ -78,9 +78,11 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-* LabVIEW&trade; 2013 or later
-* Visual Studio 2022 or later (for building the extension library)
-* VI Package Manager
+* [LabVIEW&trade;](https://ni.com/labview) 2013 or later
+* [VI Package Manager](https://vipm.io/download/)
+* [CMake](https://cmake.org/download/) 3.18 or later
+* Windows:
+  * [Visual Studio](https://visualstudio.microsoft.com/download/) 2022 or later (or any compatible C compiler)
 
 ### Installation
 
@@ -92,7 +94,7 @@ To get a local copy up and running follow these simple steps.
 
 ### Build Instructions
 
-* [Build instructions for libssh2](docs/libssh2-build-instructions.md)
+* See [Build Instructions](docs/cmake-build-instructions.md)
 
 ## Usage
 
