@@ -6,7 +6,7 @@ set(CMAKE_C_STANDARD_REQUIRED YES)
 set(CMAKE_C_EXTENSIONS OFF)
 
 set(
-  LIBSSH2_COMMIT_HASH "1c3f1b7da588f2652260285529ec3c1f1125eb4e"
+  LIBSSH2_COMMIT_HASH "a312b43325e3383c865a87bb1d26cb52e3292641"
   CACHE STRING "Commit hash of the libssh2 repository. Also accepts branch names and tags. The use of commit hashes is strongly recommended to avoid pulling malicious code."
 )
 
