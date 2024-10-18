@@ -5,6 +5,13 @@ set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_STANDARD_REQUIRED YES)
 set(CMAKE_C_EXTENSIONS OFF)
 
+set(
+  LIBSSH2_COMMIT_HASH "1c3f1b7da588f2652260285529ec3c1f1125eb4e"
+  CACHE STRING "Commit hash of the libssh2 repository. Also accepts branch names and tags. The use of commit hashes is strongly recommended to avoid pulling malicious code."
+)
+
+message(STATUS "LIBSSH2_COMMIT_HASH: ${LIBSSH2_COMMIT_HASH}")
+
 # Set output directory to libssh2
 # $<1:...> is used to prevent Visual Studio from appending a configuration name to the output directory
 #          see: https://discourse.cmake.org/t/changing-output-directories/8829/2
@@ -23,7 +30,7 @@ include(FetchContent)
 FetchContent_Declare(
   libssh2
   GIT_REPOSITORY https://github.com/libssh2/libssh2.git
-  GIT_TAG libssh2-1.11.0
+  GIT_TAG ${LIBSSH2_COMMIT_HASH}
   SOURCE_SUBDIR include
 )
 
@@ -76,7 +83,7 @@ include(ExternalProject)
 ExternalProject_Add(
   libssh2
   GIT_REPOSITORY https://github.com/libssh2/libssh2.git
-  GIT_TAG libssh2-1.11.0
+  GIT_TAG ${LIBSSH2_COMMIT_HASH}
   CMAKE_ARGS
     -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE=$<1:${CMAKE_BINARY_DIR}>
     -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG=$<1:${CMAKE_BINARY_DIR}>

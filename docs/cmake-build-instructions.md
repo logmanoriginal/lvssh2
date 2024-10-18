@@ -55,3 +55,10 @@ This will build the libraries and place them in the appropriate directories for 
 
 > [!TIP]
 > Both 32-bit and 64-bit libraries can coexist in the same directory. LabVIEW will automatically choose the appropriate library based on the bitness of LabVIEW. See [Configuring the Call Library Function Node](https://www.ni.com/docs/en-US/bundle/labview/page/configuring-the-call-library-function-node.html) for more information.
+
+## Options
+These options provide additional customization of the build process. They can be set using the `-D` flag when running `cmake`.
+
+| Option | Description |
+| ------ | ----------- |
+| `LIBSSH2_COMMIT_HASH` | Commit hash of the libssh2 repository. Also accepts branch names and tags. The use of commit hashes is **strongly recommended** to avoid pulling malicious code. |
