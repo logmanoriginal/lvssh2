@@ -11,6 +11,7 @@
 	<Item Name="callback_send_queue_obtain.vi" Type="VI" URL="../callback_send_queue_obtain.vi"/>
 	<Item Name="callback_userauth_publickey_sign_function.vi" Type="VI" URL="../callback_userauth_publickey_sign_function.vi"/>
 	<Item Name="callback_userauth_publickey_sign_function_queue_obtain.vi" Type="VI" URL="../callback_userauth_publickey_sign_function_queue_obtain.vi"/>
+	<Item Name="Handle KEX Failure.vi" Type="VI" URL="../Handle KEX Failure.vi"/>
 	<Item Name="Login.vi" Type="VI" URL="../Login.vi"/>
 	<Item Name="Open Connection.vi" Type="VI" URL="../Open Connection.vi"/>
 	<Item Name="setUp.vi" Type="VI" URL="../setUp.vi"/>
