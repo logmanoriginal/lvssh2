@@ -121,6 +121,9 @@ Standard error codes are mapped to error range 5000 through 5999 (0x1388 through
 | `LIBSSH2_ERROR_RANDGEN`                 | `libssh2: (Hex 0x13B8) LIBSSH2_ERROR_RANDGEN`                 |
 | `LIBSSH2_ERROR_MISSING_USERAUTH_BANNER` | `libssh2: (Hex 0x13B9) LIBSSH2_ERROR_MISSING_USERAUTH_BANNER` |
 | `LIBSSH2_ERROR_ALGO_UNSUPPORTED`        | `libssh2: (Hex 0x13BA) LIBSSH2_ERROR_ALGO_UNSUPPORTED`        |
+| `LIBSSH2_ERROR_MAC_FAILURE`             | `libssh2: (Hex 0x13BB) LIBSSH2_ERROR_MAC_FAILURE`             |
+| `LIBSSH2_ERROR_HASH_INIT`               | `libssh2: (Hex 0x13BC) LIBSSH2_ERROR_HASH_INIT`               |
+| `LIBSSH2_ERROR_HASH_CALC`               | `libssh2: (Hex 0x13BD) LIBSSH2_ERROR_HASH_CALC`               |
 
 # SFTP Error Codes
 SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1B57)
