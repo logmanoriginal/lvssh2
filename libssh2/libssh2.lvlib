@@ -424,6 +424,7 @@
 	<Item Name="libssh2_session_block_direction.ctl" Type="VI" URL="../libssh2_session_block_direction.ctl"/>
 	<Item Name="libssh2_session_block_directions.vi" Type="VI" URL="../libssh2_session_block_directions.vi"/>
 	<Item Name="libssh2_session_callback_set.vi" Type="VI" URL="../libssh2_session_callback_set.vi"/>
+	<Item Name="libssh2_session_callback_set2.vi" Type="VI" URL="../libssh2_session_callback_set2.vi"/>
 	<Item Name="libssh2_session_callback_type.ctl" Type="VI" URL="../libssh2_session_callback_type.ctl"/>
 	<Item Name="libssh2_session_disconnect.vi" Type="VI" URL="../libssh2_session_disconnect.vi"/>
 	<Item Name="libssh2_session_disconnect_ex.vi" Type="VI" URL="../libssh2_session_disconnect_ex.vi"/>

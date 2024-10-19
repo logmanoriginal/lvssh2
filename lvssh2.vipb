@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-11-02 16:41:01" Modified_Date="2024-10-11 07:44:49" Creator="pasca" Comments="" ID="d017088ba7fc0c52f2d0c6759e3dbd92">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-11-02 16:41:01" Modified_Date="2024-10-19 14:43:22" Creator="pasca" Comments="" ID="e41579ec62d5d933757a7ca727fa5423">
   <Library_General_Settings>
     <Package_File_Name>PNR_lib_lvssh2</Package_File_Name>
     <Library_Version>0.3.0.91</Library_Version>
@@ -482,7 +482,7 @@ https://github.com/logmanoriginal/lvssh2/releases/tag/0.3.0</Release_Notes>
         <Path>SCP</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>6DCFCF6C77969E854B1B9FE8B6450E46</GUID>
+      <GUID>6330AB5258A0F57CC90160286F42CCB7</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -755,7 +755,7 @@ https://github.com/logmanoriginal/lvssh2/releases/tag/0.3.0</Release_Notes>
         <Path>libssh2\libssh2_keepalive_send.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>64C406627A0CC0111CCA933595622DD9</GUID>
+      <GUID>4419088A37FE7D31A438F6DBD83F8A9A</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -933,20 +933,6 @@ https://github.com/logmanoriginal/lvssh2/releases/tag/0.3.0</Release_Notes>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>SSH Session Callback Set (libssh2_session_callback_set)</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>5</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>libssh2\libssh2_session_callback_set.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
         <NameSub_Menu_Name>SSH Session Abstract (libssh2_session_abstract)</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
@@ -958,7 +944,21 @@ https://github.com/logmanoriginal/lvssh2/releases/tag/0.3.0</Release_Notes>
         <Path>libssh2\libssh2_session_abstract.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>98CBBB439DBB1F4C54675B2A4C8A4A18</GUID>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>SSH Session Callback Set (libssh2_session_callback_set2)</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>5</Row>
+          <Column>1</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>libssh2\libssh2_session_callback_set2.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <GUID>D9901A559E160EB02EC4F8C6D0F0D33E</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1385,7 +1385,7 @@ https://github.com/logmanoriginal/lvssh2/releases/tag/0.3.0</Release_Notes>
         <Path>libssh2\libssh2_channel_signal_ex.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>AE992DF80AD59FEB7DD365FECB635B46</GUID>
+      <GUID>D2413F09E17DC4F4124205413F863A93</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>3</Parent_Palette_Index>
@@ -1546,7 +1546,7 @@ https://github.com/logmanoriginal/lvssh2/releases/tag/0.3.0</Release_Notes>
         <Path>libssh2\libssh2_channel_receive_window_adjust2.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>3C620B038D76C9AD566F00AC3334467D</GUID>
+      <GUID>49090EA3FA4540D885846FBCE49D33CE</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1763,7 +1763,7 @@ https://github.com/logmanoriginal/lvssh2/releases/tag/0.3.0</Release_Notes>
         <Path>libssh2\libssh2_knownhost_del.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>0D9B34C6ECE1B70A552C2B28B6E1ACFB</GUID>
+      <GUID>264A0932E6514906412B3C91DC765631</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>3</Parent_Palette_Index>
@@ -1854,7 +1854,7 @@ https://github.com/logmanoriginal/lvssh2/releases/tag/0.3.0</Release_Notes>
         <Path>Advanced</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>9F18C524D41984BD785E996BAFD471B9</GUID>
+      <GUID>9006D3AFC5F0AC8F3E993BB4C0267743</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1959,7 +1959,7 @@ https://github.com/logmanoriginal/lvssh2/releases/tag/0.3.0</Release_Notes>
         <Path>libssh2\libssh2_userauth_publickey_fromfile_ex.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>C04AE4813EE796222EF1B4229A9C7168</GUID>
+      <GUID>C5C792B3E26903779E391E459E809D09</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>7</Parent_Palette_Index>
@@ -2050,7 +2050,7 @@ https://github.com/logmanoriginal/lvssh2/releases/tag/0.3.0</Release_Notes>
         <Path>libssh2\libssh2_userauth_keyboard_interactive_ex.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F41FE2CF56FBCED4B0FBBB1000CA0391</GUID>
+      <GUID>20046FB25DA2AA0F19B8CCE0F013577E</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -2253,7 +2253,7 @@ https://github.com/logmanoriginal/lvssh2/releases/tag/0.3.0</Release_Notes>
         <Path>libssh2\Not An Agent Public Key.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>26B7D21BEC9B53AF7ADE6DC1B42EA2A8</GUID>
+      <GUID>EE6B1246EEE08EE414D3C9E262FD0AB2</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -2708,7 +2708,7 @@ https://github.com/logmanoriginal/lvssh2/releases/tag/0.3.0</Release_Notes>
         <Path>libssh2\Not An SFTP Refnum.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>9D1C032959264DDCA0A905372BE83318</GUID>
+      <GUID>0AEFFF7A6930B527468FF6BA5F76EC8A</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>10</Parent_Palette_Index>
@@ -2855,7 +2855,7 @@ https://github.com/logmanoriginal/lvssh2/releases/tag/0.3.0</Release_Notes>
         <Path>libssh2\libssh2_sftp_rename_ex.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>CB7D273ABCA4CA381CA7235C7091BEA7</GUID>
+      <GUID>5E13ABB0F4394CFE1111F666CCF8FD67</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -2906,7 +2906,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
         <Path>libssh2\libssh2_trace_sethandler.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E61E236E4CCC3D3AF7F2E45B15757026</GUID>
+      <GUID>F8BE407DEE93E3A3D4F0CA483D97F806</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -2969,7 +2969,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
         <Path>libssh2\To Unix Time.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>6224F0E520D8C2E80B43F3210D105E0F</GUID>
+      <GUID>A78BACA63521707B29AB3FBC701BFB11</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>6</Parent_Palette_Index>
@@ -3004,7 +3004,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
         <Path>libssh2\libssh2_channel_forward_listen_ex.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>81F89A29CBC26F6F59130C29A1CA228C</GUID>
+      <GUID>A5992DDCF1719AB677176EC0514F4074</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -3039,7 +3039,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
         <Path>libssh2\libssh2_free.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>311B9CEA0A15DAD953673B3C42A33B37</GUID>
+      <GUID>7DFB009071106D1531B7E50800EB6404</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -3088,7 +3088,7 @@ This only works when libssh2 is compiled with ENABLE_DEBUG_LOGGING=ON .</Descrip
         <Path>libssh2\libssh2_scp_send64.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>68C6324938177CF2A652811EAD8B77D8</GUID>
+      <GUID>D51FB49F61F50FBF2624C3A2BB3F2874</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
