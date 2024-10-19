@@ -360,6 +360,8 @@
     <item path="libssh2/libssh2_session_callback_set.vi">
         <title>SSH Session Callback Set (libssh2_session_callback_set)</title>
         <description>
+            <B>DEPRECATED</B> (libssh2-1.11.1, use libssh2_session_callback_set2.vi)
+
             Set a callback handler for a session. Callbacks are triggered by the receipt of special packets at the transport layer.
 
             Set <B>callback</B> to 0 to to use the built-in default callback handler of lvssh2 (only available when the extension library is enabled). When the extension library is disabled, setting <B>callback</B> to 0 will disable the callback handler.

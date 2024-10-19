@@ -506,4 +506,7 @@
 	<Item Name="SFTP Error Status.vi" Type="VI" URL="../SFTP Error Status.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
+	<Item Name="Warn Deprecated.vi" Type="VI" URL="../Warn Deprecated.vi">
+		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+	</Item>
 </Library>
