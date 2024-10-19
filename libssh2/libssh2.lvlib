@@ -84,6 +84,17 @@
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 	</Item>
+	<Item Name="Deprecation" Type="Folder">
+		<Item Name="Warn Deprecated (LIBSSH2_KNOWNHOST_KEY_SSHDSS).vi" Type="VI" URL="../Warn Deprecated (LIBSSH2_KNOWNHOST_KEY_SSHDSS).vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Warn Deprecated VI.vi" Type="VI" URL="../Warn Deprecated VI.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Warn Deprecated.vi" Type="VI" URL="../Warn Deprecated.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+	</Item>
 	<Item Name="Host Key" Type="Folder">
 		<Item Name="Acquire Host Key Refnum.vi" Type="VI" URL="../Acquire Host Key Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
@@ -505,9 +516,6 @@
 	<Item Name="libssh2_userauth_publickey_frommemory.vi" Type="VI" URL="../libssh2_userauth_publickey_frommemory.vi"/>
 	<Item Name="libssh2_version.vi" Type="VI" URL="../libssh2_version.vi"/>
 	<Item Name="SFTP Error Status.vi" Type="VI" URL="../SFTP Error Status.vi">
-		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-	</Item>
-	<Item Name="Warn Deprecated.vi" Type="VI" URL="../Warn Deprecated.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
 </Library>
