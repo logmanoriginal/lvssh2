@@ -56,6 +56,7 @@
 	<Item Name="test_libssh2_sftp_mkdir_ex.vi" Type="VI" URL="../test_libssh2_sftp_mkdir_ex.vi"/>
 	<Item Name="test_libssh2_sftp_open_ex (create).vi" Type="VI" URL="../test_libssh2_sftp_open_ex (create).vi"/>
 	<Item Name="test_libssh2_sftp_opendir.vi" Type="VI" URL="../test_libssh2_sftp_opendir.vi"/>
+	<Item Name="test_libssh2_sftp_posix_rename_ex.vi" Type="VI" URL="../test_libssh2_sftp_posix_rename_ex.vi"/>
 	<Item Name="test_libssh2_sftp_read.vi" Type="VI" URL="../test_libssh2_sftp_read.vi"/>
 	<Item Name="test_libssh2_sftp_readdir.vi" Type="VI" URL="../test_libssh2_sftp_readdir.vi"/>
 	<Item Name="test_libssh2_sftp_readlink.vi" Type="VI" URL="../test_libssh2_sftp_readlink.vi"/>

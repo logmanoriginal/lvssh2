@@ -299,6 +299,8 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_sftp_open_ex_r`][libssh2_sftp_open_ex_r]                                     | `libssh2.lvlib:libssh2_sftp_open_ex_r.vi`                         |      Yes       |      Yes       |
 | [`libssh2_sftp_open_r`][libssh2_sftp_open_r]                                           | `libssh2.lvlib:libssh2_sftp_open_r.vi`                            |      Yes       |      Yes       |
 | [`libssh2_sftp_opendir`][libssh2_sftp_opendir]                                         | `libssh2.lvlib:libssh2_sftp_opendir.vi`                           |      Yes       |      Yes       |
+| [`libssh2_sftp_posix_rename`][libssh2_sftp_posix_rename]                               | See `libssh2_sftp_posix_rename_ex`                                |                |                |
+| [`libssh2_sftp_posix_rename_ex`][libssh2_sftp_posix_rename_ex]                         | `libssh2.lvlib:libssh2_sftp_posix_rename_ex.vi`                   |      Yes       |      Yes       |
 | [`libssh2_sftp_read`][libssh2_sftp_read]                                               | `libssh2.lvlib:libssh2_sftp_read.vi`                              |      Yes       |      Yes       |
 | [`libssh2_sftp_readdir`][libssh2_sftp_readdir]                                         | `libssh2.lvlib:libssh2_sftp_readdir.vi`                           |      Yes       |      Yes       |
 | [`libssh2_sftp_readdir_ex`][libssh2_sftp_readdir_ex]                                   | `libssh2.lvlib:libssh2_sftp_readdir_ex.vi`                        |      Yes       |      Yes       |
@@ -486,6 +488,8 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 [libssh2_sftp_open_ex_r]: https://github.com/libssh2/libssh2/blob/master/docs/libssh2_sftp_open_ex_r.3
 [libssh2_sftp_open_r]: https://github.com/libssh2/libssh2/blob/master/docs/libssh2_sftp_open_r.3
 [libssh2_sftp_opendir]: https://libssh2.org/libssh2_sftp_opendir.html
+[libssh2_sftp_posix_rename]: https://github.com/libssh2/libssh2/blob/master/docs/libssh2_sftp_posix_rename.3
+[libssh2_sftp_posix_rename_ex]: https://github.com/libssh2/libssh2/blob/master/docs/libssh2_sftp_posix_rename_ex.3
 [libssh2_sftp_read]: https://libssh2.org/libssh2_sftp_read.html
 [libssh2_sftp_readdir]: https://libssh2.org/libssh2_sftp_readdir.html
 [libssh2_sftp_readdir_ex]: https://libssh2.org/libssh2_sftp_readdir_ex.html
