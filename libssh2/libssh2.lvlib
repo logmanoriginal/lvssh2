@@ -84,6 +84,17 @@
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
 	</Item>
+	<Item Name="Deprecation" Type="Folder">
+		<Item Name="Warn Deprecated (LIBSSH2_KNOWNHOST_KEY_SSHDSS).vi" Type="VI" URL="../Warn Deprecated (LIBSSH2_KNOWNHOST_KEY_SSHDSS).vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Warn Deprecated VI.vi" Type="VI" URL="../Warn Deprecated VI.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+		<Item Name="Warn Deprecated.vi" Type="VI" URL="../Warn Deprecated.vi">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		</Item>
+	</Item>
 	<Item Name="Host Key" Type="Folder">
 		<Item Name="Acquire Host Key Refnum.vi" Type="VI" URL="../Acquire Host Key Refnum.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
@@ -424,6 +435,7 @@
 	<Item Name="libssh2_session_block_direction.ctl" Type="VI" URL="../libssh2_session_block_direction.ctl"/>
 	<Item Name="libssh2_session_block_directions.vi" Type="VI" URL="../libssh2_session_block_directions.vi"/>
 	<Item Name="libssh2_session_callback_set.vi" Type="VI" URL="../libssh2_session_callback_set.vi"/>
+	<Item Name="libssh2_session_callback_set2.vi" Type="VI" URL="../libssh2_session_callback_set2.vi"/>
 	<Item Name="libssh2_session_callback_type.ctl" Type="VI" URL="../libssh2_session_callback_type.ctl"/>
 	<Item Name="libssh2_session_disconnect.vi" Type="VI" URL="../libssh2_session_disconnect.vi"/>
 	<Item Name="libssh2_session_disconnect_ex.vi" Type="VI" URL="../libssh2_session_disconnect_ex.vi"/>
@@ -466,6 +478,7 @@
 	<Item Name="libssh2_sftp_open_ex_r.vi" Type="VI" URL="../libssh2_sftp_open_ex_r.vi"/>
 	<Item Name="libssh2_sftp_open_r.vi" Type="VI" URL="../libssh2_sftp_open_r.vi"/>
 	<Item Name="libssh2_sftp_opendir.vi" Type="VI" URL="../libssh2_sftp_opendir.vi"/>
+	<Item Name="libssh2_sftp_posix_rename_ex.vi" Type="VI" URL="../libssh2_sftp_posix_rename_ex.vi"/>
 	<Item Name="libssh2_sftp_read.vi" Type="VI" URL="../libssh2_sftp_read.vi"/>
 	<Item Name="libssh2_sftp_readdir.vi" Type="VI" URL="../libssh2_sftp_readdir.vi"/>
 	<Item Name="libssh2_sftp_readdir_ex.vi" Type="VI" URL="../libssh2_sftp_readdir_ex.vi"/>

@@ -207,6 +207,18 @@ The user authentication banner is missing.
 </nierror>
 <nierror code="5050">
 libssh2: (Hex 0x13BA) -51, LIBSSH2_ERROR_ALGO_UNSUPPORTED
-
+The algorithm is not supported.
+</nierror>
+<nierror code="5051">
+libssh2: (Hex 0x13BB) -52, LIBSSH2_ERROR_MAC_FAILURE
+Failed to calculate the message authentication code.
+</nierror>
+<nierror code="5052">
+libssh2: (Hex 0x13BC) -53, LIBSSH2_ERROR_HASH_INIT
+Unalbe to initialize hash context.
+</nierror>
+<nierror code="5053">
+libssh2: (Hex 0x13BD) -54, LIBSSH2_ERROR_HASH_CALC
+Failed to calculate hash.
 </nierror>
 </nidocument>

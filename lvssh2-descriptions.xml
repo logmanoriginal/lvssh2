@@ -360,6 +360,16 @@
     <item path="libssh2/libssh2_session_callback_set.vi">
         <title>SSH Session Callback Set (libssh2_session_callback_set)</title>
         <description>
+            <B>DEPRECATED</B> (libssh2-1.11.1, use libssh2_session_callback_set2.vi)
+
+            Set a callback handler for a session. Callbacks are triggered by the receipt of special packets at the transport layer.
+
+            Set <B>callback</B> to 0 to to use the built-in default callback handler of lvssh2 (only available when the extension library is enabled). When the extension library is disabled, setting <B>callback</B> to 0 will disable the callback handler.
+        </description>
+    </item>
+    <item path="libssh2/libssh2_session_callback_set2.vi">
+        <title>SSH Session Callback Set (libssh2_session_callback_set2)</title>
+        <description>
             Set a callback handler for a session. Callbacks are triggered by the receipt of special packets at the transport layer.
 
             Set <B>callback</B> to 0 to to use the built-in default callback handler of lvssh2 (only available when the extension library is enabled). When the extension library is disabled, setting <B>callback</B> to 0 will disable the callback handler.
@@ -543,6 +553,17 @@
         <title>SSH SFTP Open Directory (libssh2_sftp_opendir)</title>
         <description>Open a directory handle.</description>
     </item>
+    <item path="libssh2/libssh2_sftp_posix_rename_ex.vi">
+        <title>SSH SFTP POSIX Rename Extended (libssh2_sftp_posix_rename_ex)</title>
+        <description>
+            Rename a file or directory using POSIX semantics.
+
+            Performs a true rename operation, making it appear as if the file or directory has been moved to a new location.
+
+            <B>Remarks</B>
+            This function is not supported by all SFTP servers.
+        </description>
+    </item>
     <item path="libssh2/libssh2_sftp_read.vi">
         <title>SSH SFTP Read (libssh2_sftp_read)</title>
         <description>Read data from a file handle.</description>
@@ -565,11 +586,22 @@
     </item>
     <item path="libssh2/libssh2_sftp_rename_ex.vi">
         <title>SSH SFTP Rename Extended (libssh2_sftp_rename_ex)</title>
-        <description>Rename a file or directory with custom flags.</description>
+        <description>
+            Rename a file or directory with custom flags.
+
+            Creates a hard link to the file or directory at the new location and then removes the original file or directory.
+
+            <B>Remarks</B>
+            Services that watch for file changes may not detect the rename operation. Use <B>libssh2_sftp_posix_rename_ex</B> for a true rename operation.
+        </description>
     </item>
     <item path="libssh2/libssh2_sftp_rename.vi">
         <title>SSH SFTP Rename (libssh2_sftp_rename)</title>
-        <description>Rename a file or directory.</description>
+        <description>
+            Rename a file or directory.
+
+            This function is equivalent to <B>libssh2_sftp_rename_ex</B> with <B>flags</B> set to OVERWRITE | ATOMIC | NATIVE.
+        </description>
     </item>
     <item path="libssh2/libssh2_sftp_rewind.vi">
         <title>SSH SFTP Rewind (libssh2_sftp_rewind)</title>
