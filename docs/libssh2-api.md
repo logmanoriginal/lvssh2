@@ -257,7 +257,8 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | [`libssh2_session_banner_get`][libssh2_session_banner_get]                             | `libssh2.lvlib:libssh2_session_banner_get.vi`                     | Yes            | Yes            |
 | [`libssh2_session_banner_set`][libssh2_session_banner_set]                             | `libssh2.lvlib:libssh2_session_banner_set.vi`                     | Yes            | Yes            |
 | [`libssh2_session_block_directions`][libssh2_session_block_directions]                 | `libssh2.lvlib:libssh2_session_block_directions.vi`               | Yes            | Yes            |
-| [`libssh2_session_callback_set`][libssh2_session_callback_set]                         | `libssh2.lvlib:libssh2_session_callback_set.vi`                   | Yes            | Yes            |
+| [`libssh2_session_callback_set`][libssh2_session_callback_set]                         | Deprecated. Use `libssh2_session_callback_set2` instead!          | _Yes_          | _Yes_          |
+| [`libssh2_session_callback_set2`][libssh2_session_callback_set2]                       | `libssh2.lvlib:libssh2_session_callback_set2.vi`                  | Yes            | Yes            |
 | [`libssh2_session_disconnect`][libssh2_session_disconnect]                             | `libssh2.lvlib:libssh2_session_disconnect.vi`                     | Yes            | Yes            |
 | [`libssh2_session_disconnect_ex`][libssh2_session_disconnect_ex]                       | `libssh2.lvlib:libssh2_session_disconnect_ex.vi`                  | Yes            | Yes            |
 | [`libssh2_session_flag`][libssh2_session_flag]                                         | `libssh2.lvlib:libssh2_session_flag.vi`                           | Yes            | Yes            |
@@ -444,6 +445,7 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 [libssh2_session_banner_set]: https://libssh2.org/libssh2_session_banner_set.html
 [libssh2_session_block_directions]: https://libssh2.org/libssh2_session_block_directions.html
 [libssh2_session_callback_set]: https://libssh2.org/libssh2_session_callback_set.html
+[libssh2_session_callback_set2]: https://github.com/libssh2/libssh2/blob/master/docs/libssh2_session_callback_set2.3
 [libssh2_session_disconnect]: https://libssh2.org/libssh2_session_disconnect.html
 [libssh2_session_disconnect_ex]: https://libssh2.org/libssh2_session_disconnect_ex.html
 [libssh2_session_flag]: https://libssh2.org/libssh2_session_flag.html
