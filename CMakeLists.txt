@@ -6,11 +6,25 @@ set(CMAKE_C_STANDARD_REQUIRED YES)
 set(CMAKE_C_EXTENSIONS OFF)
 
 set(
+  LIBSSH2_SOURCE "GitHub"
+  CACHE STRING "Source of the libssh2 library."
+)
+set_property(CACHE LIBSSH2_SOURCE PROPERTY STRINGS "GitHub" "Tarball")
+
+set(
   LIBSSH2_COMMIT_HASH "a312b43325e3383c865a87bb1d26cb52e3292641"
-  CACHE STRING "Commit hash of the libssh2 repository. Also accepts branch names and tags. The use of commit hashes is strongly recommended to avoid pulling malicious code."
+  CACHE STRING "Commit hash of the libssh2 repository. Also accepts branch names and tags. The use of commit hashes is strongly recommended to avoid pulling malicious code. Only used when LIBSSH2_SOURCE is GitHub."
 )
 
-message(STATUS "LIBSSH2_COMMIT_HASH: ${LIBSSH2_COMMIT_HASH}")
+set(
+  LIBSSH2_URL "https://libssh2.org/download/libssh2-1.11.1.tar.gz"
+  CACHE STRING "URL of the libssh2 tarball. Only used when LIBSSH2_SOURCE is Tarball."
+)
+
+set(
+  LIBSSH2_URL_SIG "https://libssh2.org/download/libssh2-1.11.1.tar.gz.asc"
+  CACHE STRING "URL of the libssh2 tarball PGP signature. Only used when LIBSSH2_SOURCE is Tarball."
+)
 
 # Set output directory to libssh2
 # $<1:...> is used to prevent Visual Studio from appending a configuration name to the output directory
@@ -27,14 +41,45 @@ endif()
 # Get libssh2 source code
 include(FetchContent)
 
-FetchContent_Declare(
-  libssh2
-  GIT_REPOSITORY https://github.com/libssh2/libssh2.git
-  GIT_TAG ${LIBSSH2_COMMIT_HASH}
-  SOURCE_SUBDIR include
-)
+if(${LIBSSH2_SOURCE} STREQUAL "GitHub")
+  FetchContent_Declare(
+    libssh2
+    GIT_REPOSITORY https://github.com/libssh2/libssh2.git
+    GIT_TAG ${LIBSSH2_COMMIT_HASH}
+    SOURCE_SUBDIR include
+  )
+elseif(${LIBSSH2_SOURCE} STREQUAL "Tarball")
+  # Download the tarball and its PGP signature
+  file(DOWNLOAD ${LIBSSH2_URL} ${CMAKE_BINARY_DIR}/libssh2.tar.gz)
+  file(DOWNLOAD ${LIBSSH2_URL_SIG} ${CMAKE_BINARY_DIR}/libssh2.tar.gz.sig)
+
+  # Verify the PGP signature
+  execute_process(
+    COMMAND gpg --verify ${CMAKE_BINARY_DIR}/libssh2.tar.gz.sig ${CMAKE_BINARY_DIR}/libssh2.tar.gz
+    RESULT_VARIABLE GPG_RESULT
+    OUTPUT_VARIABLE GPG_OUTPUT
+    ERROR_VARIABLE GPG_ERROR
+  )
+
+  if(NOT GPG_RESULT EQUAL 0)
+    message(FATAL_ERROR "PGP signature verification failed: ${GPG_ERROR}")
+  else()
+    message(STATUS "PGP signature verification succeeded.")
+  endif()
+
+  # Use the verified tarball
+  FetchContent_Declare(
+    libssh2
+    URL file://${CMAKE_BINARY_DIR}/libssh2.tar.gz
+    SOURCE_SUBDIR include
+    DOWNLOAD_EXTRACT_TIMESTAMP ON
+  )
+else()
+  message(FATAL_ERROR "Invalid value for LIBSSH2_SOURCE: ${LIBSSH2_SOURCE}")
+endif()
 
 FetchContent_MakeAvailable(libssh2)
+FetchContent_GetProperties(libssh2)
 
 # Set LabVIEW base path based on the platform
 if(CMAKE_HOST_WIN32)
@@ -82,8 +127,7 @@ include(ExternalProject)
 
 ExternalProject_Add(
   libssh2
-  GIT_REPOSITORY https://github.com/libssh2/libssh2.git
-  GIT_TAG ${LIBSSH2_COMMIT_HASH}
+  SOURCE_DIR ${libssh2_SOURCE_DIR}
   CMAKE_ARGS
     -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE=$<1:${CMAKE_BINARY_DIR}>
     -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG=$<1:${CMAKE_BINARY_DIR}>

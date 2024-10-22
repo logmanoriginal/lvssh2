@@ -61,4 +61,7 @@ These options provide additional customization of the build process. They can be
 
 | Option | Description |
 | ------ | ----------- |
-| `LIBSSH2_COMMIT_HASH` | Commit hash of the libssh2 repository. Also accepts branch names and tags. The use of commit hashes is **strongly recommended** to avoid pulling malicious code. |
+| `LIBSSH2_SOURCE` | Source of the libssh2 library. Available options are: "GitHub" and "Tarball". Default is "GitHub". |
+| `LIBSSH2_COMMIT_HASH` | Requires `LIBSSH2_SOURCE=GitHub`.<br><br> Commit hash of the libssh2 repository. Also accepts branch names and tags. The use of commit hashes is **strongly recommended** to avoid pulling malicious code. |
+| `LIBSSH2_URL` | Requires `LIBSSH2_SOURCE=Tarball`.<br><br> URL of the libssh2 tarball. See https://libssh2.org/ |
+| `LIBSSH2_URL_SIG` | Requires `LIBSSH2_SOURCE=Tarball`.<br><br> URL of the libssh2 tarball signature. The public key used to verify the signature must be available on the system prior to building. |
