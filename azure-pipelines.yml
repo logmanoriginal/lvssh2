@@ -5,21 +5,24 @@ pool:
   name: Default
   demands: LabVIEW
 
-variables:
-  libssh2.CommitHash: 'a312b43325e3383c865a87bb1d26cb52e3292641' # libssh2-1.11.1
+strategy:
+  matrix:
+    'libssh2-1.11.1-x86':
+      architecture: 'Win32'
+      source: 'GitHub'
+      commit: 'a312b43325e3383c865a87bb1d26cb52e3292641'
+      config: 'Debug'
 
 steps:
 - task: CmdLine@2
   displayName: 'Prepare build configurations'
   inputs:
-    script: cmake -B build/x32 -S . -G "Visual Studio 17 2022" -A Win32 -DLIBSSH2_COMMIT_HASH=$(libssh2.CommitHash)
-            && cmake -B build/x64 -S . -G "Visual Studio 17 2022" -A x64 -DLIBSSH2_COMMIT_HASH=$(libssh2.CommitHash)
+    script: cmake -B build/$(architecture) -S . -G "Visual Studio 17 2022" -A $(architecture) -DLIBSSH2_SOURCE=$(source) -DLIBSSH2_COMMIT_HASH=$(commit)
     workingDirectory: '$(Build.SourcesDirectory)'
 - task: CmdLine@2
   displayName: 'Build libraries'
   inputs:
-    script: cmake --build build/x32 --config Debug
-            && cmake --build build/x64 --config Debug
+    script: cmake --build build/$(architecture) --config $(config)
     workingDirectory: '$(Build.SourcesDirectory)'
 - script: docker compose up -d --force-recreate
   displayName: 'Start SSH server'
