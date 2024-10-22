@@ -5,13 +5,22 @@ pool:
   name: Default
   demands: LabVIEW
 
+variables:
+  libssh2.version: '1.11.1'
+  libssh2.commit: 'a312b43325e3383c865a87bb1d26cb52e3292641'
+
 strategy:
   matrix:
-    'libssh2-1.11.1-x86':
+    'libssh2-1.11.1-x86-debug':
       architecture: 'Win32'
       source: 'GitHub'
-      commit: 'a312b43325e3383c865a87bb1d26cb52e3292641'
+      commit: $(libssh2.commit)
       config: 'Debug'
+    'libssh2-1.11.1-x86-release':
+      architecture: 'Win32'
+      source: 'GitHub'
+      commit: $(libssh2.commit)
+      config: 'Release'
 
 steps:
 - task: CmdLine@2
