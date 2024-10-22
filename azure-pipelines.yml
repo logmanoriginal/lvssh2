@@ -51,7 +51,7 @@ steps:
   workingDirectory: '$(Build.SourcesDirectory)/docker'
 - publish: '$(System.DefaultWorkingDirectory)/docker/openssh-server/config/logs/openssh/current'
   displayName: 'Publish SSH server logs'
-  artifact: SSH server logs
+  artifact: server-log-($(Agent.JobName))
 - task: PublishTestResults@2
   displayName: 'Publish test results'
   inputs:
