@@ -1,5 +1,12 @@
 #pragma once
 
+#ifdef _WIN32
+#  define LVSSH2_API __declspec(dllexport)
+#else
+#  define LVSSH2_API
+#endif
+
+#include <stdint.h>
 #include "extcode.h"
 #include "libssh2.h"
 
@@ -17,14 +24,14 @@ typedef struct {
 } lvssh2_abstract;
 
 typedef struct {
-	UINT_PTR socket;
+	uintptr_t socket;
 	LStrHandle buffer;
 	int flags;
 	ssize_t* bytes_send;
 } lvssh2_session_callback_send_function_input_args;
 
 typedef struct {
-	UINT_PTR socket;
+	uintptr_t socket;
 	void* buffer;
 	size_t length;
 	int flags;
@@ -57,10 +64,10 @@ LIBSSH2_RECV_FUNC(lvssh2_session_callback_recv_function);
 LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_response_function);
 LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC(lvssh2_userauth_publickey_sign_function);
 
-__declspec(dllexport) libssh2_trace_handler_func get_lvssh2_trace_handler_function(void) { return lvssh2_trace_handler_function; }
-__declspec(dllexport) LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC_PTR get_lvssh2_userauth_publickey_sign_function(void) { return lvssh2_userauth_publickey_sign_function; }
+LVSSH2_API libssh2_trace_handler_func get_lvssh2_trace_handler_function(void) { return lvssh2_trace_handler_function; }
+LVSSH2_API LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC_PTR get_lvssh2_userauth_publickey_sign_function(void) { return lvssh2_userauth_publickey_sign_function; }
 
-__declspec(dllexport) libssh2_cb_generic* get_lvssh2_session_callback_send_function(void) { return (libssh2_cb_generic*)lvssh2_session_callback_send_function; }
-__declspec(dllexport) libssh2_cb_generic* get_lvssh2_session_callback_recv_function(void) { return (libssh2_cb_generic*)lvssh2_session_callback_recv_function; }
+LVSSH2_API libssh2_cb_generic* get_lvssh2_session_callback_send_function(void) { return (libssh2_cb_generic*)lvssh2_session_callback_send_function; }
+LVSSH2_API libssh2_cb_generic* get_lvssh2_session_callback_recv_function(void) { return (libssh2_cb_generic*)lvssh2_session_callback_recv_function; }
 
-__declspec(dllexport) LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC_PTR get_lvssh2_userauth_keyboard_interactive_response_function(void) { return lvssh2_userauth_keyboard_interactive_response_function; }
+LVSSH2_API LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC_PTR get_lvssh2_userauth_keyboard_interactive_response_function(void) { return lvssh2_userauth_keyboard_interactive_response_function; }
