@@ -54,20 +54,12 @@ typedef LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC((*LIBSSH2_USERAUTH_KBDINT_RESPONSE
 
 #include "lv_epilog.h"
 
-void data_buffer_to_LStrHandle(const void*, int32, LStrHandle*);
+LVSSH2_API libssh2_trace_handler_func get_lvssh2_trace_handler_function(void);
 
-void lvssh2_trace_handler_function(LIBSSH2_SESSION* session, void* context, const char* data, size_t length);
+LVSSH2_API libssh2_cb_generic* get_lvssh2_session_callback_send_function(void);
 
-LIBSSH2_SEND_FUNC(lvssh2_session_callback_send_function);
-LIBSSH2_RECV_FUNC(lvssh2_session_callback_recv_function);
+LVSSH2_API libssh2_cb_generic* get_lvssh2_session_callback_recv_function(void);
 
-LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_response_function);
-LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC(lvssh2_userauth_publickey_sign_function);
+LVSSH2_API LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC_PTR get_lvssh2_userauth_keyboard_interactive_response_function(void);
 
-LVSSH2_API libssh2_trace_handler_func get_lvssh2_trace_handler_function(void) { return lvssh2_trace_handler_function; }
-LVSSH2_API LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC_PTR get_lvssh2_userauth_publickey_sign_function(void) { return lvssh2_userauth_publickey_sign_function; }
-
-LVSSH2_API libssh2_cb_generic* get_lvssh2_session_callback_send_function(void) { return (libssh2_cb_generic*)lvssh2_session_callback_send_function; }
-LVSSH2_API libssh2_cb_generic* get_lvssh2_session_callback_recv_function(void) { return (libssh2_cb_generic*)lvssh2_session_callback_recv_function; }
-
-LVSSH2_API LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC_PTR get_lvssh2_userauth_keyboard_interactive_response_function(void) { return lvssh2_userauth_keyboard_interactive_response_function; }
+LVSSH2_API LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC_PTR get_lvssh2_userauth_publickey_sign_function(void);
