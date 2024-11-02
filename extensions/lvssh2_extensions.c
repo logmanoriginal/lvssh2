@@ -5,6 +5,17 @@
 // This is used to ensure that the length of a buffer is within the limits of LabVIEW
 #define ASSERT_LABVIEW_MAXLEN(x) assert((x) <= INT32_MAX)
 
+void data_buffer_to_LStrHandle(const void* data, int32 data_length, LStrHandle* string_handle_ptr) {
+	NumericArrayResize(uB, 1, (UHandle*)(string_handle_ptr), data_length);
+
+	if (!*string_handle_ptr) {
+		return;
+	}
+
+	MoveBlock(data, LHStrBuf(*string_handle_ptr), data_length);
+	LStrLen(**string_handle_ptr) = data_length;
+}
+
 void lvssh2_trace_handler_function(LIBSSH2_SESSION* session, void* context, const char* data, size_t length) {
 	ASSERT_LABVIEW_MAXLEN(length);
 
@@ -15,6 +26,10 @@ void lvssh2_trace_handler_function(LIBSSH2_SESSION* session, void* context, cons
 	PostLVUserEvent(*e, &message);
 
 	DSDisposeHandle(message);
+}
+
+libssh2_trace_handler_func get_lvssh2_trace_handler_function(void) {
+	return lvssh2_trace_handler_function;
 }
 
 LIBSSH2_SEND_FUNC(lvssh2_session_callback_send_function) {
@@ -43,6 +58,10 @@ LIBSSH2_SEND_FUNC(lvssh2_session_callback_send_function) {
 	return bytes_send;
 }
 
+libssh2_cb_generic* get_lvssh2_session_callback_send_function(void) {
+	return (libssh2_cb_generic*)lvssh2_session_callback_send_function;
+}
+
 LIBSSH2_RECV_FUNC(lvssh2_session_callback_recv_function) {
 	lvssh2_abstract* lv_abstract = *(lvssh2_abstract**)abstract;
 	if (!lv_abstract->recv)
@@ -62,6 +81,10 @@ LIBSSH2_RECV_FUNC(lvssh2_session_callback_recv_function) {
 	PostLVUserEvent(lv_abstract->recv, &payload);
 
 	return bytes_received;
+}
+
+libssh2_cb_generic* get_lvssh2_session_callback_recv_function(void) {
+	return (libssh2_cb_generic*)lvssh2_session_callback_recv_function;
 }
 
 LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_response_function) {
@@ -120,6 +143,10 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 	DSDisposeHandle(lv_instruction);
 }
 
+LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC_PTR get_lvssh2_userauth_keyboard_interactive_response_function(void) {
+	return lvssh2_userauth_keyboard_interactive_response_function;
+}
+
 LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC(lvssh2_userauth_publickey_sign_function) {
 	ASSERT_LABVIEW_MAXLEN(data_len);
 
@@ -148,13 +175,6 @@ LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC(lvssh2_userauth_publickey_sign_function) {
 	return LIBSSH2_ERROR_NONE;
 }
 
-void data_buffer_to_LStrHandle(const void* data, int32 data_length, LStrHandle* string_handle_ptr) {
-	NumericArrayResize(uB, 1, (UHandle*)(string_handle_ptr), data_length);
-
-	if (!*string_handle_ptr) {
-		return;
-	}
-
-	MoveBlock(data, LHStrBuf(*string_handle_ptr), data_length);
-	LStrLen(**string_handle_ptr) = data_length;
+LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC_PTR get_lvssh2_userauth_publickey_sign_function(void) {
+	return lvssh2_userauth_publickey_sign_function;
 }
