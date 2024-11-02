@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.18)
 project(lvssh2_extensions C)
 
+# Suppress "lib" prefix on libraries
+set(CMAKE_SHARED_LIBRARY_PREFIX "")
+
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_STANDARD_REQUIRED YES)
 set(CMAKE_C_EXTENSIONS OFF)
