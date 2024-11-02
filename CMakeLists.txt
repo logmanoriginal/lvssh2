@@ -95,6 +95,9 @@ if(CMAKE_HOST_WIN32)
     add_link_options(/SAFESEH:NO)
     set(LABVIEW_BASE_PATH "C:/Program Files (x86)/National Instruments")
   endif()
+elseif(CMAKE_HOST_LINUX)
+  message(STATUS "Linux build")
+  set(LABVIEW_BASE_PATH "/usr/local/natinst")
 else()
   message(FATAL_ERROR "Unsupported platform")
 endif()
@@ -102,13 +105,30 @@ endif()
 # Generate list of CINTOOLS directories
 set(LABVIEW_PATHS "")
 string(TIMESTAMP CURRENT_YEAR "%Y")
-foreach(YEAR RANGE 2013 ${CURRENT_YEAR})
-  list(APPEND LABVIEW_PATHS "${LABVIEW_BASE_PATH}/LabVIEW ${YEAR}/cintools")
-endforeach()
+if(CMAKE_HOST_WIN32)
+  foreach(YEAR RANGE 2013 ${CURRENT_YEAR})
+    list(APPEND LABVIEW_PATHS "${LABVIEW_BASE_PATH}/LabVIEW ${YEAR}/cintools")
+  endforeach()
+elseif(CMAKE_HOST_LINUX)
+  foreach(YEAR RANGE 2017 ${CURRENT_YEAR})
+    if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+      list(APPEND LABVIEW_PATHS "${LABVIEW_BASE_PATH}/LabVIEW-${YEAR}-64/cintools")
+    else()
+      list(APPEND LABVIEW_PATHS "${LABVIEW_BASE_PATH}/LabVIEW-${YEAR}/cintools")
+    endif()
+  endforeach()
+endif()
+
+set(LABVIEW_NAMES "")
+if(CMAKE_HOST_WIN32)
+  list(APPEND LABVIEW_NAMES "extcode.h" "labview.lib")
+elseif(CMAKE_HOST_LINUX)
+  list(APPEND LABVIEW_NAMES "extcode.h" "liblv.so")
+endif()
 
 # Find the first existing CINTOOLS directory
 find_path(LABVIEW_CINTOOLS_DIR
-  NAMES "extcode.h" "labview.lib"
+  NAMES ${LABVIEW_NAMES}
   PATHS ${LABVIEW_PATHS}
   NO_DEFAULT_PATH
 )
@@ -121,7 +141,11 @@ endif()
 
 add_subdirectory(extensions)
 
-target_link_libraries(${PROJECT_NAME} "${LABVIEW_CINTOOLS_DIR}/labview.lib")
+if(CMAKE_HOST_WIN32)
+  target_link_libraries(${PROJECT_NAME} "${LABVIEW_CINTOOLS_DIR}/labview.lib")
+elseif(CMAKE_HOST_LINUX)
+  target_link_libraries(${PROJECT_NAME} "${LABVIEW_CINTOOLS_DIR}/liblv.so")
+endif()
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
   OUTPUT_NAME "${PROJECT_NAME}${OUTPUT_NAME_SUFFIX}"
