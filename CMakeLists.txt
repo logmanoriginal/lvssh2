@@ -33,6 +33,7 @@ set(
 # $<1:...> is used to prevent Visual Studio from appending a configuration name to the output directory
 #          see: https://discourse.cmake.org/t/changing-output-directories/8829/2
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "$<1:${CMAKE_SOURCE_DIR}/libssh2>")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "$<1:${CMAKE_SOURCE_DIR}/libssh2>")
 
 # Determine if the build is 32-bit or 64-bit
 if(CMAKE_SIZEOF_VOID_P EQUAL 8)
@@ -134,6 +135,7 @@ ExternalProject_Add(
   CMAKE_ARGS
     -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE=$<1:${CMAKE_BINARY_DIR}>
     -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG=$<1:${CMAKE_BINARY_DIR}>
+    -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=$<1:${CMAKE_BINARY_DIR}>
     -DBUILD_STATIC_LIBS=OFF
     -DBUILD_EXAMPLES=OFF
     -DBUILD_TESTING=OFF
