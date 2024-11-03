@@ -123,17 +123,21 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 	PostLVUserEvent(lv_abstract->kbdint_response, &payload);
 
 	for (int i = 0; i < num_prompts; i++) {
-		LIBSSH2_USERAUTH_KBDINT_RESPONSE* response = (LIBSSH2_USERAUTH_KBDINT_RESPONSE*)malloc(sizeof(LIBSSH2_USERAUTH_KBDINT_RESPONSE));
-		if (response) {
-			response->text = (char*)malloc(LHStrLen(lv_responses[i]));
-			if (response->text) {
-				memcpy(response->text, LHStrBuf(lv_responses[i]), LHStrLen(lv_responses[i]));
-				response->length = LHStrLen(lv_responses[i]);
+		size_t response_length = LHStrLen(lv_responses[i]);
+		const char* response_buffer = LHStrBuf(lv_responses[i]);
+		if (response_buffer) {
+			LIBSSH2_USERAUTH_KBDINT_RESPONSE* response = (LIBSSH2_USERAUTH_KBDINT_RESPONSE*)malloc(sizeof(LIBSSH2_USERAUTH_KBDINT_RESPONSE));
+			if (response) {
+				response->text = (char*)malloc(response_length);
+				if (response->text) {
+					memcpy(response->text, response_buffer, response_length);
+					response->length = response_length;
 
-				responses[i] = *response;
-			}
-			else {
-				free(response);
+					responses[i] = *response;
+				}
+				else {
+					free(response);
+				}
 			}
 		}
 	}
@@ -163,13 +167,19 @@ LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC(lvssh2_userauth_publickey_sign_function) {
 	data_buffer_to_LStrHandle(data, (int32)data_len, &payload.data);
 
 	LVUserEventRef* e = (LVUserEventRef*)abstract;
-
 	PostLVUserEvent(*e, &payload);
 
-	*sig = (unsigned char*)malloc(LHStrLen(lv_signature) * sizeof(unsigned char));
-	memcpy(*sig, LHStrBuf(lv_signature), LHStrLen(lv_signature));
+	size_t signature_length = LHStrLen(lv_signature);
+	const char* signature_buffer = LHStrBuf(lv_signature);
+	if (signature_buffer) {
+		*sig = (unsigned char*)malloc(signature_length * sizeof(unsigned char));
+		if (*sig)
+		{
+			memcpy(*sig, signature_buffer, signature_length);
+		}
 
-	*sig_len = LHStrLen(lv_signature);
+		*sig_len = signature_length;
+	}
 
 	DSDisposeHandle(payload.data);
 
