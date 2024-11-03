@@ -3,7 +3,7 @@
 #ifdef _WIN32
 #  define LVSSH2_API __declspec(dllexport)
 #else
-#  define LVSSH2_API
+#  define LVSSH2_API __attribute__((visibility("default")))
 #endif
 
 #include <stdint.h>
