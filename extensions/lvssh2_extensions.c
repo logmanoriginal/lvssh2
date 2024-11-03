@@ -1,5 +1,6 @@
 #include "lvssh2_extensions.h"
 #include <assert.h>
+#include <stdlib.h>
 
 // This macro asserts that the given value is less than or equal to INT32_MAX
 // This is used to ensure that the length of a buffer is within the limits of LabVIEW
