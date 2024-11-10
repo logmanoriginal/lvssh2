@@ -347,6 +347,9 @@
 	<Item Name="Error Status.vi" Type="VI" URL="../Error Status.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
+	<Item Name="Get Library Path.vi" Type="VI" URL="../Get Library Path.vi">
+		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+	</Item>
 	<Item Name="Global Settings.vi" Type="VI" URL="../Global Settings.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
