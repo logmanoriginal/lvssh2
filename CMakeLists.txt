@@ -1,5 +1,8 @@
-cmake_minimum_required(VERSION 3.18)
+cmake_minimum_required(VERSION 3.22)
 project(lvssh2_extensions C)
+
+# Suppress "lib" prefix on libraries
+set(CMAKE_SHARED_LIBRARY_PREFIX "")
 
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_STANDARD_REQUIRED YES)
@@ -30,6 +33,7 @@ set(
 # $<1:...> is used to prevent Visual Studio from appending a configuration name to the output directory
 #          see: https://discourse.cmake.org/t/changing-output-directories/8829/2
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "$<1:${CMAKE_SOURCE_DIR}/libssh2>")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "$<1:${CMAKE_SOURCE_DIR}/libssh2>")
 
 # Determine if the build is 32-bit or 64-bit
 if(CMAKE_SIZEOF_VOID_P EQUAL 8)
@@ -82,7 +86,7 @@ FetchContent_MakeAvailable(libssh2)
 FetchContent_GetProperties(libssh2)
 
 # Set LabVIEW base path based on the platform
-if(CMAKE_HOST_WIN32)
+if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows")
   message(STATUS "Windows build")
   if(CMAKE_SIZEOF_VOID_P EQUAL 8)
     set(LABVIEW_BASE_PATH "C:/Program Files/National Instruments")
@@ -91,6 +95,9 @@ if(CMAKE_HOST_WIN32)
     add_link_options(/SAFESEH:NO)
     set(LABVIEW_BASE_PATH "C:/Program Files (x86)/National Instruments")
   endif()
+elseif(CMAKE_HOST_SYSTEM_NAME STREQUAL "Linux")
+  message(STATUS "Linux build")
+  set(LABVIEW_BASE_PATH "/usr/local/natinst")
 else()
   message(FATAL_ERROR "Unsupported platform")
 endif()
@@ -98,13 +105,30 @@ endif()
 # Generate list of CINTOOLS directories
 set(LABVIEW_PATHS "")
 string(TIMESTAMP CURRENT_YEAR "%Y")
-foreach(YEAR RANGE 2013 ${CURRENT_YEAR})
-  list(APPEND LABVIEW_PATHS "${LABVIEW_BASE_PATH}/LabVIEW ${YEAR}/cintools")
-endforeach()
+if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows")
+  foreach(YEAR RANGE 2013 ${CURRENT_YEAR})
+    list(APPEND LABVIEW_PATHS "${LABVIEW_BASE_PATH}/LabVIEW ${YEAR}/cintools")
+  endforeach()
+elseif(CMAKE_HOST_SYSTEM_NAME STREQUAL "Linux")
+  foreach(YEAR RANGE 2017 ${CURRENT_YEAR})
+    if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+      list(APPEND LABVIEW_PATHS "${LABVIEW_BASE_PATH}/LabVIEW-${YEAR}-64/cintools")
+    else()
+      list(APPEND LABVIEW_PATHS "${LABVIEW_BASE_PATH}/LabVIEW-${YEAR}/cintools")
+    endif()
+  endforeach()
+endif()
+
+set(LABVIEW_NAMES "")
+if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows")
+  list(APPEND LABVIEW_NAMES "extcode.h" "labview.lib")
+elseif(CMAKE_HOST_SYSTEM_NAME STREQUAL "Linux")
+  list(APPEND LABVIEW_NAMES "extcode.h" "liblv.so")
+endif()
 
 # Find the first existing CINTOOLS directory
 find_path(LABVIEW_CINTOOLS_DIR
-  NAMES "extcode.h" "labview.lib"
+  NAMES ${LABVIEW_NAMES}
   PATHS ${LABVIEW_PATHS}
   NO_DEFAULT_PATH
 )
@@ -117,7 +141,11 @@ endif()
 
 add_subdirectory(extensions)
 
-target_link_libraries(${PROJECT_NAME} "${LABVIEW_CINTOOLS_DIR}/labview.lib")
+if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows")
+  target_link_libraries(${PROJECT_NAME} "${LABVIEW_CINTOOLS_DIR}/labview.lib")
+elseif(CMAKE_HOST_SYSTEM_NAME STREQUAL "Linux")
+  target_link_libraries(${PROJECT_NAME} "${LABVIEW_CINTOOLS_DIR}/liblv.so")
+endif()
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
   OUTPUT_NAME "${PROJECT_NAME}${OUTPUT_NAME_SUFFIX}"
@@ -131,6 +159,7 @@ ExternalProject_Add(
   CMAKE_ARGS
     -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE=$<1:${CMAKE_BINARY_DIR}>
     -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG=$<1:${CMAKE_BINARY_DIR}>
+    -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=$<1:${CMAKE_BINARY_DIR}>
     -DBUILD_STATIC_LIBS=OFF
     -DBUILD_EXAMPLES=OFF
     -DBUILD_TESTING=OFF
@@ -144,9 +173,9 @@ add_custom_command(
   TARGET libssh2
   POST_BUILD
   COMMAND ${CMAKE_COMMAND} -E rename
-    ${CMAKE_BINARY_DIR}/libssh2.dll
-    ${CMAKE_BINARY_DIR}/libssh2${OUTPUT_NAME_SUFFIX}.dll
-  COMMENT "Renaming libssh2.dll to libssh2${OUTPUT_NAME_SUFFIX}.dll"
+    ${CMAKE_BINARY_DIR}/libssh2${CMAKE_SHARED_LIBRARY_SUFFIX}
+    ${CMAKE_BINARY_DIR}/libssh2${OUTPUT_NAME_SUFFIX}${CMAKE_SHARED_LIBRARY_SUFFIX}
+  COMMENT "Renaming libssh2${CMAKE_SHARED_LIBRARY_SUFFIX} to libssh2${OUTPUT_NAME_SUFFIX}${CMAKE_SHARED_LIBRARY_SUFFIX}"
 )
 
 # Custom command to move the DLL to the libssh2 directory
@@ -154,7 +183,7 @@ add_custom_command(
   TARGET libssh2
   POST_BUILD
   COMMAND ${CMAKE_COMMAND} -E copy
-    ${CMAKE_BINARY_DIR}/libssh2${OUTPUT_NAME_SUFFIX}.dll
+    ${CMAKE_BINARY_DIR}/libssh2${OUTPUT_NAME_SUFFIX}${CMAKE_SHARED_LIBRARY_SUFFIX}
     ${CMAKE_SOURCE_DIR}/libssh2
-  COMMENT "Copying libssh2${OUTPUT_NAME_SUFFIX}.dll to libssh2 directory"
+  COMMENT "Copying libssh2${OUTPUT_NAME_SUFFIX}${CMAKE_SHARED_LIBRARY_SUFFIX} to libssh2 directory"
 )
