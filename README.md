@@ -78,7 +78,7 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-* [LabVIEW&trade;](https://ni.com/labview) 2013 or later
+* [LabVIEW&trade;](https://ni.com/labview) 2017 or later
 * [VI Package Manager](https://vipm.io/download/)
 * [CMake](https://cmake.org/download/) 3.18 or later
 * Windows:
