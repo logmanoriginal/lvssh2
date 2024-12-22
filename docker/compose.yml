@@ -13,7 +13,7 @@ services:
       - USER_PASSWORD=openssh
       - PUBLIC_KEY_FILE=/authorized_keys/lvssh2_rsa.pub
     volumes:
-      - ./openssh-server/config:/config
+      - ./openssh-server/config/sshd/sshd_config:/config/sshd/sshd_config
       - ./openssh-server/lvssh2:/lvssh2
       - ./openssh-server/authorized_keys:/authorized_keys
     ports:
