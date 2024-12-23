@@ -27,9 +27,9 @@ for arch in "${build_archs[@]}"; do
         cmake_cmd+=" -DLIBSSH2_URL=https://libssh2.org/download/libssh2-1.11.1.tar.gz"
         cmake_cmd+=" -DLIBSSH2_URL_SIG=https://libssh2.org/download/libssh2-1.11.1.tar.gz.asc"
     else
+        cmake_cmd+=" -DCMAKE_BUILD_TYPE=Debug"
         cmake_cmd+=" -DLIBSSH2_SOURCE=GitHub"
         cmake_cmd+=" -DLIBSSH2_COMMIT_HASH=libssh2-1.11.1"
-
     fi
 
     eval $cmake_cmd
