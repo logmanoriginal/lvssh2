@@ -5,6 +5,7 @@
 // This macro asserts that the given value is less than or equal to INT32_MAX
 // This is used to ensure that the length of a buffer is within the limits of LabVIEW
 #define ASSERT_LABVIEW_MAXLEN(x) assert((x) <= INT32_MAX)
+#define ASSERT_NO_ERROR(x) assert((x) == mgNoErr)
 
 void data_buffer_to_LStrHandle(const void* data, int32 data_length, LStrHandle* string_handle_ptr) {
 	NumericArrayResize(uB, 1, (UHandle*)(string_handle_ptr), data_length);
@@ -24,7 +25,8 @@ void lvssh2_trace_handler_function(LIBSSH2_SESSION* session, void* context, cons
 	data_buffer_to_LStrHandle(data, (int32)length, &message);
 
 	LVUserEventRef* e = (LVUserEventRef*)context;
-	PostLVUserEvent(*e, &message);
+	MgErr error = PostLVUserEvent(*e, &message);
+	ASSERT_NO_ERROR(error);
 
 	DSDisposeHandle(message);
 }
@@ -52,7 +54,8 @@ LIBSSH2_SEND_FUNC(lvssh2_session_callback_send_function) {
 
 	data_buffer_to_LStrHandle(buffer, (int32)length, &payload.buffer);
 
-	PostLVUserEvent(lv_abstract->send, &payload);
+	MgErr error = PostLVUserEvent(lv_abstract->send, &payload);
+	ASSERT_NO_ERROR(error);
 
 	DSDisposeHandle(payload.buffer);
 
@@ -79,7 +82,8 @@ LIBSSH2_RECV_FUNC(lvssh2_session_callback_recv_function) {
 	ssize_t bytes_received = 0;
 	payload.bytes_received = &bytes_received;
 
-	PostLVUserEvent(lv_abstract->recv, &payload);
+	MgErr error = PostLVUserEvent(lv_abstract->recv, &payload);
+	ASSERT_NO_ERROR(error);
 
 	return bytes_received;
 }
@@ -120,7 +124,8 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 	payload.prompts = prompts;
 	payload.responses = lv_responses;
 
-	PostLVUserEvent(lv_abstract->kbdint_response, &payload);
+	MgErr error = PostLVUserEvent(lv_abstract->kbdint_response, &payload);
+	ASSERT_NO_ERROR(error);
 
 	for (int i = 0; i < num_prompts; i++) {
 		size_t response_length = LHStrLen(lv_responses[i]);
@@ -167,7 +172,8 @@ LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC(lvssh2_userauth_publickey_sign_function) {
 	data_buffer_to_LStrHandle(data, (int32)data_len, &payload.data);
 
 	LVUserEventRef* e = (LVUserEventRef*)abstract;
-	PostLVUserEvent(*e, &payload);
+	MgErr error = PostLVUserEvent(*e, &payload);
+	ASSERT_NO_ERROR(error);
 
 	size_t signature_length = LHStrLen(lv_signature);
 	const char* signature_buffer = LHStrBuf(lv_signature);
