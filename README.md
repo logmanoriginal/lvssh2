@@ -46,8 +46,7 @@ See [libssh2-api](docs/libssh2-api.md) for API coverage.
 ### Limitations
 
 > [!NOTE]
-> There is currently no built-in support for Linux and macOS.
-> Users need to build the libssh2 shared library for these platforms themselves.
+> There is currently no built-in support for macOS.
 
 Although this project aims to provide complete bindings for libssh2, there are several limitations users need to be aware of:
 
