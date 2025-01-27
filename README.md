@@ -129,7 +129,7 @@ Keep in mind that LabVIEW&trade; VIs are binary files, which are difficult to me
 - Send VI Snippets (via issues) instead of pull requests when possible.
 
 > [!NOTE]
-> This project contains C++ code that is compiled into a shared library (see [extensions](/extensions/)). If you are familiar with C++ and want to contribute to the project, please consider contributing to the C++ code as well.
+> This project contains C code that is compiled into a shared library (see [extensions](/extensions/)). If you are familiar with C and want to contribute to the project, please consider contributing to the C code as well.
 
 ## License
 
