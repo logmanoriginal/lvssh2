@@ -101,6 +101,12 @@ Here is an example that uses lvssh2 to execute a command on a remote SSH server.
 
 ![Example](images/example.png)
 
+> [!NOTE]
+> There are many more examples in the [examples](/examples) folder.
+> These examples are also available in Example Finder in directory view under `PNR/lvssh2`.
+
+![Example Finder](images/example-finder.png)
+
 ## Roadmap
 
 See the [open issues](https://github.com/logmanoriginal/labview-composition/issues) for a list of proposed features (and known issues).
