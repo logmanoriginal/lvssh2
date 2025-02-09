@@ -46,6 +46,8 @@ set(
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "$<1:${CMAKE_SOURCE_DIR}/libssh2>")
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "$<1:${CMAKE_SOURCE_DIR}/libssh2>")
 
+set(LIBSSH2_PUBLIC_KEY 27EDEAF22F3ABCEB50DB9A125CC908FDB71E12C2)
+
 # Determine if the build is 32-bit or 64-bit
 if(CMAKE_SIZEOF_VOID_P EQUAL 8)
   set(OUTPUT_NAME_SUFFIX "_64") # Append "_64" to the output name for 64-bit builds
@@ -73,6 +75,20 @@ elseif(${LIBSSH2_SOURCE} STREQUAL "Tarball")
   # Download the tarball and its PGP signature
   file(DOWNLOAD ${LIBSSH2_URL} ${CMAKE_BINARY_DIR}/libssh2.tar.gz)
   file(DOWNLOAD ${LIBSSH2_URL_SIG} ${CMAKE_BINARY_DIR}/libssh2.tar.gz.sig)
+
+  # Import the public key
+  execute_process(
+    COMMAND gpg --keyserver hkp://keyserver.ubuntu.com --recv-keys ${LIBSSH2_PUBLIC_KEY}
+    RESULT_VARIABLE GPG_IMPORT_RESULT
+    OUTPUT_VARIABLE GPG_IMPORT_OUTPUT
+    ERROR_VARIABLE GPG_IMPORT_ERROR
+  )
+
+  if(NOT GPG_IMPORT_RESULT EQUAL 0)
+    message(FATAL_ERROR "Failed to import public key: ${GPG_IMPORT_ERROR}")
+  else()
+    message(STATUS "Public key imported successfully.")
+  endif()
 
   # Verify the PGP signature
   execute_process(
