@@ -15,25 +15,29 @@ pool:
 variables:
   libssh2.version: '1.11.1'
   libssh2.commit: 'a312b43325e3383c865a87bb1d26cb52e3292641'
+  openssl.version: '3.4.0'
+  openssl.commit: '98acb6b02839c609ef5b837794e08d906d965335'
 
 strategy:
   matrix:
-    'libssh2-1.11.1-x86-debug':
+    'x86-win-wincng-debug':
       architecture: 'Win32'
-      source: 'GitHub'
-      commit: $(libssh2.commit)
+      backend: 'WinCNG'
       config: 'Debug'
-    'libssh2-1.11.1-x86-release':
+    'x86-win-openssl-debug':
       architecture: 'Win32'
-      source: 'GitHub'
-      commit: $(libssh2.commit)
+      backend: 'OpenSSL'
+      config: 'Debug'
+    'x86-win-openssl-release':
+      architecture: 'Win32'
+      backend: 'OpenSSL'
       config: 'Release'
 
 steps:
 - task: CmdLine@2
   displayName: 'Prepare build configurations'
   inputs:
-    script: cmake -B build/$(architecture) -S . -G "Visual Studio 17 2022" -A $(architecture) -DLIBSSH2_SOURCE=$(source) -DLIBSSH2_COMMIT_HASH=$(commit)
+    script: cmake -B build/$(architecture) -S . -G "Visual Studio 17 2022" -A $(architecture) -DLIBSSH2_SOURCE=GitHub -DLIBSSH2_COMMIT_HASH=$(libssh2.commit) -DCRYPTO_BACKEND=$(backend) -DOPENSSL_COMMIT_HASH=$(openssl.commit)
     workingDirectory: '$(Build.SourcesDirectory)'
 - task: CmdLine@2
   displayName: 'Build libraries'
