@@ -29,6 +29,17 @@ set(
   CACHE STRING "URL of the libssh2 tarball PGP signature. Only used when LIBSSH2_SOURCE is Tarball."
 )
 
+set(
+  CRYPTO_BACKEND "OpenSSL"
+  CACHE STRING "Crypto backend to use"
+)
+set_property(CACHE CRYPTO_BACKEND PROPERTY STRINGS "OpenSSL" "WinCNG")
+
+set(
+  OPENSSL_COMMIT_HASH "98acb6b02839c609ef5b837794e08d906d965335"
+  CACHE STRING "Commit hash of the openssl repository. Also accepts branch names and tags. The use of commit hashes is strongly recommended to avoid pulling malicious code. Only used when CRYPTO_BACKEND is OpenSSL."
+)
+
 # Set output directory to libssh2
 # $<1:...> is used to prevent Visual Studio from appending a configuration name to the output directory
 #          see: https://discourse.cmake.org/t/changing-output-directories/8829/2
@@ -38,8 +49,14 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "$<1:${CMAKE_SOURCE_DIR}/libssh2>")
 # Determine if the build is 32-bit or 64-bit
 if(CMAKE_SIZEOF_VOID_P EQUAL 8)
   set(OUTPUT_NAME_SUFFIX "_64") # Append "_64" to the output name for 64-bit builds
+  set(OPENSSL_CONFIGURE_COMMAND perl Configure VC-WIN64A)
+  set(OPENSSL_LIBCRYPTO_FILE libcrypto-3-x64.dll)
+  set(OPENSSL_LIBSSL_FILE libssl-3-x64.dll)
 else()
   set(OUTPUT_NAME_SUFFIX "") # No suffix for 32-bit builds
+  set(OPENSSL_CONFIGURE_COMMAND perl Configure VC-WIN32)
+  set(OPENSSL_LIBCRYPTO_FILE libcrypto-3${CMAKE_SHARED_LIBRARY_SUFFIX})
+  set(OPENSSL_LIBSSL_FILE libssl-3${CMAKE_SHARED_LIBRARY_SUFFIX})
 endif()
 
 # Get libssh2 source code
@@ -153,20 +170,82 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 
 include(ExternalProject)
 
-ExternalProject_Add(
-  libssh2
-  SOURCE_DIR ${libssh2_SOURCE_DIR}
-  CMAKE_ARGS
-    -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE=$<1:${CMAKE_BINARY_DIR}>
-    -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG=$<1:${CMAKE_BINARY_DIR}>
-    -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=$<1:${CMAKE_BINARY_DIR}>
-    -DBUILD_STATIC_LIBS=OFF
-    -DBUILD_EXAMPLES=OFF
-    -DBUILD_TESTING=OFF
-    -DLIBSSH2_NO_DEPRECATED=ON
-    -DENABLE_ECDSA_WINCNG=ON
-  INSTALL_COMMAND ""
-)
+if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows" AND CRYPTO_BACKEND STREQUAL "OpenSSL")
+  set(OPENSSL_INSTALL_DIR ${CMAKE_BINARY_DIR}/openssl)
+  set(OPENSSL_INCLUDE_DIR ${OPENSSL_INSTALL_DIR}/include)
+
+  ExternalProject_Add(
+    openssl
+    GIT_REPOSITORY https://github.com/openssl/openssl.git
+    GIT_TAG ${OPENSSL_COMMIT_HASH}
+    CONFIGURE_COMMAND
+      ${OPENSSL_CONFIGURE_COMMAND}
+      --prefix=${OPENSSL_INSTALL_DIR}
+      --openssldir=${OPENSSL_INSTALL_DIR}
+    BUILD_COMMAND nmake
+    BUILD_IN_SOURCE 1
+    INSTALL_COMMAND nmake install
+    INSTALL_DIR ${OPENSSL_INSTALL_DIR}
+  )
+
+  # Custom command to copy OpenSSL DLLs to the libssh2 directory
+  add_custom_command(
+    TARGET openssl
+    POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy
+      ${OPENSSL_INSTALL_DIR}/bin/${OPENSSL_LIBCRYPTO_FILE}
+      ${CMAKE_SOURCE_DIR}/libssh2
+    COMMAND ${CMAKE_COMMAND} -E copy
+      ${OPENSSL_INSTALL_DIR}/bin/${OPENSSL_LIBSSL_FILE}
+      ${CMAKE_SOURCE_DIR}/libssh2
+    COMMENT "Copying OpenSSL DLLs to the libssh2 directory"
+  )
+
+  add_library(OpenSSL::SSL STATIC IMPORTED GLOBAL)
+  set_property(TARGET OpenSSL::SSL PROPERTY IMPORTED_LOCATION ${OPENSSL_INSTALL_DIR}/lib/libssl.lib)
+  set_property(TARGET OpenSSL::SSL PROPERTY INTERFACE_INCLUDE_DIRECTORIES ${OPENSSL_INCLUDE_DIR})
+  add_dependencies(OpenSSL::SSL OpenSSL)
+
+  add_library(OpenSSL::Crypto STATIC IMPORTED GLOBAL)
+  set_property(TARGET OpenSSL::Crypto PROPERTY IMPORTED_LOCATION ${OPENSSL_INSTALL_DIR}/lib/libcrypto.lib)
+  set_property(TARGET OpenSSL::Crypto PROPERTY INTERFACE_INCLUDE_DIRECTORIES ${OPENSSL_INCLUDE_DIR})
+  add_dependencies(OpenSSL::Crypto OpenSSL)
+
+  ExternalProject_Add(
+    libssh2
+    DEPENDS openssl
+    SOURCE_DIR ${libssh2_SOURCE_DIR}
+    CMAKE_ARGS
+      -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE=$<1:${CMAKE_BINARY_DIR}>
+      -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG=$<1:${CMAKE_BINARY_DIR}>
+      -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=$<1:${CMAKE_BINARY_DIR}>
+      -DBUILD_STATIC_LIBS=OFF
+      -DBUILD_EXAMPLES=OFF
+      -DBUILD_TESTING=OFF
+      -DLIBSSH2_NO_DEPRECATED=ON
+      -DCRYPTO_BACKEND=OpenSSL
+      -DOPENSSL_ROOT_DIR=${OPENSSL_INSTALL_DIR}
+      -DOPENSSL_INCLUDE_DIR=${OPENSSL_INCLUDE_DIR}
+      -DOPENSSL_CRYPTO_LIBRARY=${OPENSSL_INSTALL_DIR}/lib/libcrypto.lib
+      -DOPENSSL_SSL_LIBRARY=${OPENSSL_INSTALL_DIR}/lib/libssl.lib
+    INSTALL_COMMAND ""
+  )
+else()
+  ExternalProject_Add(
+    libssh2
+    SOURCE_DIR ${libssh2_SOURCE_DIR}
+    CMAKE_ARGS
+      -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE=$<1:${CMAKE_BINARY_DIR}>
+      -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG=$<1:${CMAKE_BINARY_DIR}>
+      -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=$<1:${CMAKE_BINARY_DIR}>
+      -DBUILD_STATIC_LIBS=OFF
+      -DBUILD_EXAMPLES=OFF
+      -DBUILD_TESTING=OFF
+      -DLIBSSH2_NO_DEPRECATED=ON
+      -DCRYPTO_BACKEND=${CRYPTO_BACKEND}
+    INSTALL_COMMAND ""
+  )
+endif()
 
 # Custom command to rename the DLL
 add_custom_command(
