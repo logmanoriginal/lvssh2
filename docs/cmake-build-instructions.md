@@ -1,8 +1,8 @@
 _TLDR;_ -- Run the following commands from the root of the repository:
 ```bash
-cmake -B build/x32 -S . -G "Visual Studio 17 2022" -A Win32
+cmake -B build/Win32 -S . -G "Visual Studio 17 2022" -A Win32
 cmake -B build/x64 -S . -G "Visual Studio 17 2022" -A x64
-cmake --build build/x32 --config Release
+cmake --build build/Win32 --config Release
 cmake --build build/x64 --config Release
 ```
 
@@ -49,9 +49,13 @@ This will build the libraries and place them in the appropriate directories for 
 - 32-bit:
     - `libssh2_extensions.dll` (Windows) or `libssh2_extensions.so` (Linux)
     - `libssh2.dll` (Windows) or `libssh2.so` (Linux)
+    - `libssl-3.dll` (Windows, OpenSSL)
+    - `libcrypto-3.dll` (Windows, OpenSSL)
 - 64-bit:
     - `libssh2_extensions_64.dll` (Windows) or `libssh2_extensions_64.so` (Linux)
     - `libssh2_64.dll` (Windows) or `libssh2_64.so` (Linux)
+    - `libssl-3-64.dll` (Windows, OpenSSL)
+    - `libcrypto-3-64.dll` (Windows, OpenSSL)
 
 > [!TIP]
 > Both 32-bit and 64-bit libraries can coexist in the same directory. LabVIEW will automatically choose the appropriate library based on the bitness of LabVIEW. See [Configuring the Call Library Function Node](https://www.ni.com/docs/en-US/bundle/labview/page/configuring-the-call-library-function-node.html) for more information.
@@ -65,3 +69,5 @@ These options provide additional customization of the build process. They can be
 | `LIBSSH2_COMMIT_HASH` | Requires `LIBSSH2_SOURCE=GitHub`.<br><br> Commit hash of the libssh2 repository. Also accepts branch names and tags. The use of commit hashes is **strongly recommended** to avoid pulling malicious code. |
 | `LIBSSH2_URL` | Requires `LIBSSH2_SOURCE=Tarball`.<br><br> URL of the libssh2 tarball. See https://libssh2.org/ |
 | `LIBSSH2_URL_SIG` | Requires `LIBSSH2_SOURCE=Tarball`.<br><br> URL of the libssh2 tarball signature. The public key used to verify the signature must be available on the system prior to building. |
+| `CRYPTO_BACKEND` | Crypto backend to use. Available options are: "OpenSSL" and "WinCNG". Default is "OpenSSL". |
+| `OPENSSL_COMMIT_HASH` | Requires `CRYPTO_BACKEND=OpenSSL`.<br><br> Commit hash of the OpenSSL repository. Also accepts branch names and tags. The use of commit hashes is **strongly recommended** to avoid pulling malicious code. |
