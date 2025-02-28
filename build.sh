@@ -32,13 +32,13 @@ for arch in "${build_archs[@]}"; do
     else
         cmake_cmd+=" -DCMAKE_BUILD_TYPE=Debug"
         cmake_cmd+=" -DLIBSSH2_SOURCE=GitHub"
-        cmake_cmd+=" -DLIBSSH2_COMMIT_HASH=libssh2-1.11.1"
+        cmake_cmd+=" -DLIBSSH2_COMMIT_HASH=a312b43325e3383c865a87bb1d26cb52e3292641"
     fi
 
     cmake_cmd+=" -DCRYPTO_BACKEND=$crypto_backend"
 
     if [[ "$crypto_backend" == "OpenSSL" ]]; then
-        cmake_cmd+=" -DOPENSSL_COMMIT_HASH=openssl-3.4.0"
+        cmake_cmd+=" -DOPENSSL_COMMIT_HASH=a26d85337dbdcd33c971f38eb3fa5150e75cea87"
     fi
 
     eval $cmake_cmd
