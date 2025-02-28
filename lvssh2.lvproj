@@ -232,7 +232,11 @@
 			<Item Name="libc.so.6" Type="Document" URL="libc.so.6">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="libcrypto-3-x64.dll" Type="Document" URL="../libssh2/libcrypto-3-x64.dll"/>
+			<Item Name="libcrypto-3.dll" Type="Document" URL="../libssh2/libcrypto-3.dll"/>
 			<Item Name="libssh2_64.dll" Type="Document" URL="../libssh2/libssh2_64.dll"/>
+			<Item Name="libssl-3-x64.dll" Type="Document" URL="../libssh2/libssl-3-x64.dll"/>
+			<Item Name="libssl-3.dll" Type="Document" URL="../libssh2/libssl-3.dll"/>
 			<Item Name="lvssh2_extensions_64.dll" Type="Document" URL="../libssh2/lvssh2_extensions_64.dll"/>
 			<Item Name="ws2_32.dll" Type="Document" URL="ws2_32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
