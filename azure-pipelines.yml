@@ -20,10 +20,6 @@ variables:
 
 strategy:
   matrix:
-    'x86-win-wincng-debug':
-      architecture: 'Win32'
-      backend: 'WinCNG'
-      config: 'Debug'
     'x86-win-openssl-debug':
       architecture: 'Win32'
       backend: 'OpenSSL'
