@@ -275,6 +275,8 @@
 		<Item Name="Release SFTP.vi" Type="VI" URL="../Release SFTP.vi">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>
+		<Item Name="SFTP File Type.ctl" Type="VI" URL="../SFTP File Type.ctl"/>
+		<Item Name="SFTP File Type.vi" Type="VI" URL="../SFTP File Type.vi"/>
 		<Item Name="SFTP Refnum Data.ctl" Type="VI" URL="../SFTP Refnum Data.ctl">
 			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		</Item>

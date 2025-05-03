@@ -797,4 +797,8 @@
         <title>Wait Socket (TCP)</title>
         <description>Wait for data on a TCP connection in reading or writing direction as indicated by the session.</description>
     </item>
+    <item path="libssh2/SFTP File Type.vi">
+        <title>SFTP File Type</title>
+        <description>Returns the type of a file from the specified permissions.</description>
+    </item>
 </library>

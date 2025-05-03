@@ -17,6 +17,8 @@
 	<Item Name="libssh2_knownhost_readfile - valid file - returns number of hosts.vi" Type="VI" URL="../libssh2_knownhost_readfile - valid file - returns number of hosts.vi"/>
 	<Item Name="Not A Session - invalid session - returns true.vi" Type="VI" URL="../Not A Session - invalid session - returns true.vi"/>
 	<Item Name="Not A Session - valid session - returns false.vi" Type="VI" URL="../Not A Session - valid session - returns false.vi"/>
+	<Item Name="SFTP File Type - invalid file type - returns Unknown.vi" Type="VI" URL="../SFTP File Type - invalid file type - returns Unknown.vi"/>
+	<Item Name="SFTP File Type - valid file type - returns file type.vi" Type="VI" URL="../SFTP File Type - valid file type - returns file type.vi"/>
 	<Item Name="Test no error 1097.vi" Type="VI" URL="../Test no error 1097.vi"/>
 	<Item Name="test_libssh2_crypto_engine.vi" Type="VI" URL="../test_libssh2_crypto_engine.vi"/>
 	<Item Name="test_libssh2_session_abstract.vi" Type="VI" URL="../test_libssh2_session_abstract.vi"/>

@@ -153,6 +153,25 @@ SFTP error codes are mapped to error range 6000 through 6999 (0x1770 through 0x1
 | `LIBSSH2_FX_INVALID_FILENAME`       | `libssh2-sftp: (Hex 0x1783) LIBSSH2_FX_INVALID_FILENAME`       |
 | `LIBSSH2_FX_LINK_LOOP`              | `libssh2-sftp: (Hex 0x1784) LIBSSH2_FX_LINK_LOOP`              |
 
+# Macros
+| libssh2                 | lvssh2                             |
+| ----------------------- | ---------------------------------- |
+| `LIBSSH2_SFTP_S_IFMT`   | `libssh2.lvlib:SFTP File Type.ctl` |
+| `LIBSSH2_SFTP_S_IFIFO`  | `libssh2.lvlib:SFTP File Type.ctl` |
+| `LIBSSH2_SFTP_S_IFCHR`  | `libssh2.lvlib:SFTP File Type.ctl` |
+| `LIBSSH2_SFTP_S_IFDIR`  | `libssh2.lvlib:SFTP File Type.ctl` |
+| `LIBSSH2_SFTP_S_IFBLK`  | `libssh2.lvlib:SFTP File Type.ctl` |
+| `LIBSSH2_SFTP_S_IFREG`  | `libssh2.lvlib:SFTP File Type.ctl` |
+| `LIBSSH2_SFTP_S_IFLNK`  | `libssh2.lvlib:SFTP File Type.ctl` |
+| `LIBSSH2_SFTP_S_IFSOCK` | `libssh2.lvlib:SFTP File Type.ctl` |
+| `LIBSSH2_SFTP_S_ISLNK`  | `libssh2.lvlib:SFTP File Type.vi`  |
+| `LIBSSH2_SFTP_S_ISREG`  | `libssh2.lvlib:SFTP File Type.vi`  |
+| `LIBSSH2_SFTP_S_ISDIR`  | `libssh2.lvlib:SFTP File Type.vi`  |
+| `LIBSSH2_SFTP_S_ISCHR`  | `libssh2.lvlib:SFTP File Type.vi`  |
+| `LIBSSH2_SFTP_S_ISBLK`  | `libssh2.lvlib:SFTP File Type.vi`  |
+| `LIBSSH2_SFTP_S_ISFIFO` | `libssh2.lvlib:SFTP File Type.vi`  |
+| `LIBSSH2_SFTP_S_ISSOCK` | `libssh2.lvlib:SFTP File Type.vi`  |
+
 # Functions
 | libssh2                                                                                | lvssh2                                                            | 32-bit support | 64-bit support |
 | -------------------------------------------------------------------------------------- | ----------------------------------------------------------------- | :------------: | :------------: |
