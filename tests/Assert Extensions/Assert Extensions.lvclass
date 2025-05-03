@@ -25,8 +25,8 @@
 	<Item Name="Assert Extensions.ctl" Type="Class Private Data" URL="Assert Extensions.ctl">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
-	<Item Name="Assert Contains.vi" Type="VI" URL="../Assert Contains.vi">
-		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!$\!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!!Z!-0````]&amp;4'&amp;C:7Q!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!11$$`````"F.U=GFO:Q!!%E"!!!(`````!!=&amp;18*S98E!$E!Q`````Q2*&gt;'6N!!"5!0!!$!!$!!1!"!!%!!1!"!!%!!5!"A!%!!A!#1-!!(A!!!E!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!%+!!!!#!!!!!!!!!)1!!!!%!!!!!!"!!I!!!!!</Property>
+	<Item Name="Assert Contains.vim" Type="VI" URL="../Assert Contains.vim">
+		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!$T!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!!Z!-0````]&amp;4'&amp;C:7Q!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!-1&amp;-(6G&amp;S;7&amp;O&gt;!!31%!!!@````]!"Q6"=H*B?1!+1&amp;-%382F&lt;1!!6!$Q!!Q!!Q!%!!1!"!!%!!1!"!!&amp;!!9!"!!)!!E$!!"Y!!!*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"#A!!!!A!!!!!!!!#%!!!!")!!!!!!1!+!!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 		<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
 		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
