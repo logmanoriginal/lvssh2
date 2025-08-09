@@ -38,7 +38,7 @@ for arch in "${build_archs[@]}"; do
     cmake_cmd+=" -DCRYPTO_BACKEND=$crypto_backend"
 
     if [[ "$crypto_backend" == "OpenSSL" ]]; then
-        cmake_cmd+=" -DOPENSSL_COMMIT_HASH=636dfadc70ce26f2473870570bfd9ec352806b1d"
+        cmake_cmd+=" -DOPENSSL_COMMIT_HASH=0893a62353583343eb712adef6debdfbe597c227"
     fi
 
     eval $cmake_cmd
