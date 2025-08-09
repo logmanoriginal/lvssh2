@@ -5,5 +5,4 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="test_examples.vi" Type="VI" URL="../test_examples.vi"/>
-	<Item Name="TestData.json" Type="Document" URL="../TestData.json"/>
 </Library>

@@ -1,0 +1,56 @@
+[
+    {
+        "name": "mode=normal, stdout",
+        "data": {
+            "mode": 0,
+            "stdin": "echo Hello, World!",
+            "stdout": "Hello, World!\n",
+            "stderr": ""
+        }
+    },
+    {
+        "name": "mode=normal, stderr",
+        "data": {
+            "mode": 0,
+            "stdin": "echo Hello, World! >&2",
+            "stdout": "",
+            "stderr": "Hello, World!\n"
+        }
+    },
+    {
+        "name": "mode=ignore, no stderr",
+        "data": {
+            "mode": 1,
+            "stdin": "echo Hello, World!",
+            "stdout": "Hello, World!\n",
+            "stderr": ""
+        }
+    },
+    {
+        "name": "mode=ignore, no stdout and stderr",
+        "data": {
+            "mode": 1,
+            "stdin": "echo Hello, World! >&2",
+            "stdout": "",
+            "stderr": ""
+        }
+    },
+    {
+        "name": "mode=merge, stdout",
+        "data": {
+            "mode": 2,
+            "stdin": "echo Hello, World!",
+            "stdout": "Hello, World!\n",
+            "stderr": ""
+        }
+    },
+    {
+        "name": "mode=merge, stderr",
+        "data": {
+            "mode": 2,
+            "stdin": "echo Hello, World! >&2",
+            "stdout": "Hello, World!\n",
+            "stderr": ""
+        }
+    }
+]
