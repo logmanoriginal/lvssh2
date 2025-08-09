@@ -15,8 +15,8 @@ pool:
 variables:
   libssh2.version: '1.11.1'
   libssh2.commit: 'a312b43325e3383c865a87bb1d26cb52e3292641'
-  openssl.version: '3.5.0'
-  openssl.commit: '636dfadc70ce26f2473870570bfd9ec352806b1d'
+  openssl.version: '3.5.2'
+  openssl.commit: '0893a62353583343eb712adef6debdfbe597c227'
 
 strategy:
   matrix:
