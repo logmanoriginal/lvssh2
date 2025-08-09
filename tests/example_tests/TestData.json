@@ -23,7 +23,7 @@
             },
             {
                 "label": "server banner",
-                "value": "SSH-2.0-OpenSSH_9.9"
+                "value": "SSH-2.0-OpenSSH_10.0"
             }
         ]
     },
