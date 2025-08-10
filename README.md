@@ -153,6 +153,7 @@ Project Link: [https://github.com/logmanoriginal/lvssh2](https://github.com/logm
 * [Caraya Unit Test Framework](https://github.com/JKISoftware/Caraya)
 * [Code Capture Tool](https://lavag.org/files/file/63-code-capture-tool)
 * [JSONtext](https://bitbucket.org/drjdpowell/jsontext)
+* [Transparent Assertions](https://github.com/logmanoriginal/TransparentAssertions)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
