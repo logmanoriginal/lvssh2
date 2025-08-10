@@ -266,22 +266,12 @@ else()
   )
 endif()
 
-# Custom command to rename the DLL
-add_custom_command(
-  TARGET libssh2
-  POST_BUILD
-  COMMAND ${CMAKE_COMMAND} -E rename
-    ${CMAKE_BINARY_DIR}/libssh2${CMAKE_SHARED_LIBRARY_SUFFIX}
-    ${CMAKE_BINARY_DIR}/libssh2${OUTPUT_NAME_SUFFIX}${CMAKE_SHARED_LIBRARY_SUFFIX}
-  COMMENT "Renaming libssh2${CMAKE_SHARED_LIBRARY_SUFFIX} to libssh2${OUTPUT_NAME_SUFFIX}${CMAKE_SHARED_LIBRARY_SUFFIX}"
-)
-
 # Custom command to move the DLL to the libssh2 directory
 add_custom_command(
   TARGET libssh2
   POST_BUILD
   COMMAND ${CMAKE_COMMAND} -E copy
-    ${CMAKE_BINARY_DIR}/libssh2${OUTPUT_NAME_SUFFIX}${CMAKE_SHARED_LIBRARY_SUFFIX}
-    ${CMAKE_SOURCE_DIR}/libssh2
+    ${CMAKE_BINARY_DIR}/libssh2${CMAKE_SHARED_LIBRARY_SUFFIX}
+    ${CMAKE_SOURCE_DIR}/libssh2/libssh2${OUTPUT_NAME_SUFFIX}${CMAKE_SHARED_LIBRARY_SUFFIX}
   COMMENT "Copying libssh2${OUTPUT_NAME_SUFFIX}${CMAKE_SHARED_LIBRARY_SUFFIX} to libssh2 directory"
 )
