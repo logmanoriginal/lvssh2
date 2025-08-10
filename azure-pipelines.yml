@@ -65,3 +65,8 @@ steps:
     testResultsFormat: 'JUnit'
     testResultsFiles: '**/TEST-*.xml'
     failTaskOnFailedTests: true
+- task: PublishCodeCoverageResults@2
+  inputs:
+    summaryFileLocation: '**/COVERAGE-*.xml'
+    pathToSources: '$(System.DefaultWorkingDirectory)/src'
+    failIfCoverageEmpty: true
