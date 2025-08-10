@@ -198,6 +198,9 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows" AND CRYPTO_BACKEND STREQUAL "OpenSS
       ${OPENSSL_CONFIGURE_COMMAND}
       --prefix=${OPENSSL_INSTALL_DIR}
       --openssldir=${OPENSSL_INSTALL_DIR}
+      no-apps
+      no-docs
+      no-tests
     BUILD_COMMAND nmake
     BUILD_IN_SOURCE 1
     INSTALL_COMMAND nmake install
