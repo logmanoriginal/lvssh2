@@ -7,6 +7,11 @@ pr:
   branches:
     include:
     - main
+    exclude:
+    - docs/*
+    - images/*
+    - '*.md'
+    - '*.txt'
 
 pool:
   name: Default
