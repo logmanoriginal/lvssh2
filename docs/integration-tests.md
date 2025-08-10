@@ -18,7 +18,7 @@ cd docker
 docker-compose up -d
 ```
 
-2. Run the integration tests using Caraya (run all tests in the project)
+2. Run the integration tests using LVUnit (run all tests in the project)
 
 > [!NOTE]
 > Integration tests can softlock LabVIEW when a failure occurs. Make sure to save your work before running the tests. If LabVIEW becomes unresponsive, force close it and restart.

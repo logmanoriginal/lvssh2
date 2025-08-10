@@ -1,0 +1,51 @@
+[
+    {
+        "name": "Named Pipe (FIFO)",
+        "data": {
+            "permissions": 4096,
+            "type": "Named Pipe (FIFO)"
+        }
+    },
+    {
+        "name": "Character Special File",
+        "data": {
+            "permissions": 8192,
+            "type": "Character Special File"
+        }
+    },
+    {
+        "name": "Directory",
+        "data": {
+            "permissions": 16384,
+            "type": "Directory"
+        }
+    },
+    {
+        "name": "Block Special File",
+        "data": {
+            "permissions": 24576,
+            "type": "Block Special File"
+        }
+    },
+    {
+        "name": "Regular File",
+        "data": {
+            "permissions": 32768,
+            "type": "Regular File"
+        }
+    },
+    {
+        "name": "Symbolic Link",
+        "data": {
+            "permissions": 40960,
+            "type": "Symbolic Link"
+        }
+    },
+    {
+        "name": "Socket",
+        "data": {
+            "permissions": 49152,
+            "type": "Socket"
+        }
+    }
+]
