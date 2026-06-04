@@ -190,6 +190,18 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows" AND CRYPTO_BACKEND STREQUAL "OpenSS
   set(OPENSSL_INSTALL_DIR ${CMAKE_BINARY_DIR}/openssl)
   set(OPENSSL_INCLUDE_DIR ${OPENSSL_INSTALL_DIR}/include)
 
+  include(ProcessorCount)
+  ProcessorCount(CPU_COUNT)
+
+  # Enable parallel build with jom if available. Use nmake as fallback.
+  # Install jom into PATH from https://download.qt.io/official_releases/jom/
+  find_program(JOM_EXECUTABLE jom)
+  if(JOM_EXECUTABLE AND CPU_COUNT GREATER 1)
+    set(OPENSSL_BUILD_COMMAND ${CMAKE_COMMAND} -E env "CL=/FS" ${JOM_EXECUTABLE} /j${CPU_COUNT})
+  else()
+    set(OPENSSL_BUILD_COMMAND nmake)
+  endif()
+
   ExternalProject_Add(
     openssl
     GIT_REPOSITORY https://github.com/openssl/openssl.git
@@ -241,9 +253,9 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows" AND CRYPTO_BACKEND STREQUAL "OpenSS
       no-rmd160 # RIPEMD-16 (optional in libssh2)
       no-blake2
       no-scrypt
-    BUILD_COMMAND nmake
+    BUILD_COMMAND ${OPENSSL_BUILD_COMMAND}
     BUILD_IN_SOURCE 1
-    INSTALL_COMMAND nmake install
+    INSTALL_COMMAND ${OPENSSL_BUILD_COMMAND} install
     INSTALL_DIR ${OPENSSL_INSTALL_DIR}
   )
 
