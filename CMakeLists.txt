@@ -218,6 +218,26 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows" AND CRYPTO_BACKEND STREQUAL "OpenSS
       no-ct
       no-rfc3779
       no-http
+      no-aria
+      no-bf # Blowfish (deprecated; optional in libssh2)
+      no-cast
+      no-idea
+      no-rc2
+      no-rc4
+      no-seed
+      no-sm2
+      no-sm3
+      no-sm4
+      no-ocb
+      no-siv
+      no-gost
+      no-ec2m
+      no-md4
+      no-mdc2
+      no-whirlpool
+      no-rmd160 # RIPEMD-16 (optional in libssh2)
+      no-blake2
+      no-scrypt
     BUILD_COMMAND nmake
     BUILD_IN_SOURCE 1
     INSTALL_COMMAND nmake install
