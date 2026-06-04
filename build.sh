@@ -6,7 +6,7 @@
 build_type=${1:-Release}
 crypto_backend=${2:-OpenSSL}
 
-if [[ "$OSTYPE" == "msys"* ]]; then
+if [[ "$OSTYPE" == "msys"* || "$OSTYPE" == "cygwin"* ]]; then
     generator="Visual Studio 17 2022"
     build_archs=("Win32" "x64")
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
