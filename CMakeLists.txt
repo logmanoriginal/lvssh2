@@ -201,6 +201,9 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows" AND CRYPTO_BACKEND STREQUAL "OpenSS
       no-apps
       no-docs
       no-tests
+      no-module
+      no-legacy
+      no-makedepend
       no-quic
       no-dgram
       no-comp
