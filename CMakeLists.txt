@@ -201,6 +201,16 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows" AND CRYPTO_BACKEND STREQUAL "OpenSS
       no-apps
       no-docs
       no-tests
+      no-quic
+      no-dgram
+      no-comp
+      no-srp
+      no-srtp
+      no-psk
+      no-nextprotoneg
+      no-ech
+      no-ssl-trace
+      no-multiblock
     BUILD_COMMAND nmake
     BUILD_IN_SOURCE 1
     INSTALL_COMMAND nmake install
