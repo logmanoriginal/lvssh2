@@ -190,6 +190,18 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows" AND CRYPTO_BACKEND STREQUAL "OpenSS
   set(OPENSSL_INSTALL_DIR ${CMAKE_BINARY_DIR}/openssl)
   set(OPENSSL_INCLUDE_DIR ${OPENSSL_INSTALL_DIR}/include)
 
+  include(ProcessorCount)
+  ProcessorCount(CPU_COUNT)
+
+  # Enable parallel build with jom if available. Use nmake as fallback.
+  # Install jom into PATH from https://download.qt.io/official_releases/jom/
+  find_program(JOM_EXECUTABLE jom)
+  if(JOM_EXECUTABLE AND CPU_COUNT GREATER 1)
+    set(OPENSSL_BUILD_COMMAND ${CMAKE_COMMAND} -E env "CL=/FS" ${JOM_EXECUTABLE} /j${CPU_COUNT})
+  else()
+    set(OPENSSL_BUILD_COMMAND nmake)
+  endif()
+
   ExternalProject_Add(
     openssl
     GIT_REPOSITORY https://github.com/openssl/openssl.git
@@ -201,9 +213,49 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows" AND CRYPTO_BACKEND STREQUAL "OpenSS
       no-apps
       no-docs
       no-tests
-    BUILD_COMMAND nmake
+      no-module
+      no-legacy
+      no-makedepend
+      no-quic
+      no-dgram
+      no-comp
+      no-srp
+      no-srtp
+      no-psk
+      no-nextprotoneg
+      no-ech
+      no-ssl-trace
+      no-multiblock
+      no-cms
+      no-cmp
+      no-ocsp
+      no-ts
+      no-ct
+      no-rfc3779
+      no-http
+      no-aria
+      no-bf # Blowfish (deprecated; optional in libssh2)
+      no-cast
+      no-idea
+      no-rc2
+      no-rc4
+      no-seed
+      no-sm2
+      no-sm3
+      no-sm4
+      no-ocb
+      no-siv
+      no-gost
+      no-ec2m
+      no-md4
+      no-mdc2
+      no-whirlpool
+      no-rmd160 # RIPEMD-16 (optional in libssh2)
+      no-blake2
+      no-scrypt
+    BUILD_COMMAND ${OPENSSL_BUILD_COMMAND}
     BUILD_IN_SOURCE 1
-    INSTALL_COMMAND nmake install
+    INSTALL_COMMAND ${OPENSSL_BUILD_COMMAND} install
     INSTALL_DIR ${OPENSSL_INSTALL_DIR}
   )
 
@@ -247,6 +299,7 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows" AND CRYPTO_BACKEND STREQUAL "OpenSS
       -DOPENSSL_INCLUDE_DIR=${OPENSSL_INCLUDE_DIR}
       -DOPENSSL_CRYPTO_LIBRARY=${OPENSSL_INSTALL_DIR}/lib/libcrypto.lib
       -DOPENSSL_SSL_LIBRARY=${OPENSSL_INSTALL_DIR}/lib/libssl.lib
+      -DDLL_LIBCRYPTO=${CMAKE_SOURCE_DIR}/libssh2/${OPENSSL_LIBCRYPTO_FILE} # Do not rely on libssh2 discovery
     INSTALL_COMMAND ""
   )
 else()
