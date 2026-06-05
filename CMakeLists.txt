@@ -36,7 +36,7 @@ set(
 set_property(CACHE CRYPTO_BACKEND PROPERTY STRINGS "OpenSSL" "WinCNG")
 
 set(
-  OPENSSL_COMMIT_HASH "98acb6b02839c609ef5b837794e08d906d965335"
+  OPENSSL_COMMIT_HASH "11b7b6ea3b65a584e1d31408ed1bdb139465cffd"
   CACHE STRING "Commit hash of the openssl repository. Also accepts branch names and tags. The use of commit hashes is strongly recommended to avoid pulling malicious code. Only used when CRYPTO_BACKEND is OpenSSL."
 )
 
@@ -52,13 +52,13 @@ set(LIBSSH2_PUBLIC_KEY 27EDEAF22F3ABCEB50DB9A125CC908FDB71E12C2)
 if(CMAKE_SIZEOF_VOID_P EQUAL 8)
   set(OUTPUT_NAME_SUFFIX "_64") # Append "_64" to the output name for 64-bit builds
   set(OPENSSL_CONFIGURE_COMMAND perl Configure VC-WIN64A)
-  set(OPENSSL_LIBCRYPTO_FILE libcrypto-3-x64.dll)
-  set(OPENSSL_LIBSSL_FILE libssl-3-x64.dll)
+  set(OPENSSL_LIBCRYPTO_FILE libcrypto-4-x64.dll)
+  set(OPENSSL_LIBSSL_FILE libssl-4-x64.dll)
 else()
   set(OUTPUT_NAME_SUFFIX "") # No suffix for 32-bit builds
   set(OPENSSL_CONFIGURE_COMMAND perl Configure VC-WIN32)
-  set(OPENSSL_LIBCRYPTO_FILE libcrypto-3${CMAKE_SHARED_LIBRARY_SUFFIX})
-  set(OPENSSL_LIBSSL_FILE libssl-3${CMAKE_SHARED_LIBRARY_SUFFIX})
+  set(OPENSSL_LIBCRYPTO_FILE libcrypto-4${CMAKE_SHARED_LIBRARY_SUFFIX})
+  set(OPENSSL_LIBSSL_FILE libssl-4${CMAKE_SHARED_LIBRARY_SUFFIX})
 endif()
 
 # Get libssh2 source code
@@ -206,6 +206,8 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows" AND CRYPTO_BACKEND STREQUAL "OpenSS
     openssl
     GIT_REPOSITORY https://github.com/openssl/openssl.git
     GIT_TAG ${OPENSSL_COMMIT_HASH}
+    GIT_SHALLOW TRUE
+    GIT_SUBMODULES ""
     CONFIGURE_COMMAND
       ${OPENSSL_CONFIGURE_COMMAND}
       --prefix=${OPENSSL_INSTALL_DIR}
