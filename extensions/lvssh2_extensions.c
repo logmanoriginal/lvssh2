@@ -222,12 +222,14 @@ LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC(lvssh2_userauth_publickey_sign_function) {
 	const char* signature_buffer = LHStrBuf(lv_signature);
 	if (signature_buffer) {
 		*sig = (unsigned char*)malloc(signature_length * sizeof(unsigned char));
-		if (*sig)
-		{
+		if (*sig) {
 			memcpy(*sig, signature_buffer, signature_length);
+			*sig_len = signature_length;
 		}
-
-		*sig_len = signature_length;
+		else {
+			DSDisposeHandle(payload.data);
+			return LIBSSH2_ERROR_ALLOC;
+		}
 	}
 
 	DSDisposeHandle(payload.data);
