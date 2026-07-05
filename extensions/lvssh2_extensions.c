@@ -7,6 +7,10 @@
 #define ASSERT_LABVIEW_MAXLEN(x) assert((x) <= INT32_MAX)
 #define ASSERT_NO_ERROR(x) assert((x) == mgNoErr)
 
+static int is_valid_length(size_t len) {
+	return len <= INT32_MAX;
+}
+
 void data_buffer_to_LStrHandle(const void* data, int32 data_length, LStrHandle* string_handle_ptr) {
 	NumericArrayResize(uB, 1, (UHandle*)(string_handle_ptr), data_length);
 
@@ -20,6 +24,9 @@ void data_buffer_to_LStrHandle(const void* data, int32 data_length, LStrHandle* 
 
 void lvssh2_trace_handler_function(LIBSSH2_SESSION* session, void* context, const char* data, size_t length) {
 	ASSERT_LABVIEW_MAXLEN(length);
+	if (!is_valid_length(length)) {
+		return;
+	}
 
 	LStrHandle message = NULL;
 	data_buffer_to_LStrHandle(data, (int32)length, &message);
@@ -37,6 +44,9 @@ libssh2_trace_handler_func get_lvssh2_trace_handler_function(void) {
 
 LIBSSH2_SEND_FUNC(lvssh2_session_callback_send_function) {
 	ASSERT_LABVIEW_MAXLEN(length);
+	if (!is_valid_length(length)) {
+		return LIBSSH2_ERROR_INVAL;
+	}
 
 	lvssh2_abstract* lv_abstract = *(lvssh2_abstract**)abstract;
 	if (!lv_abstract->send)
@@ -56,6 +66,10 @@ LIBSSH2_SEND_FUNC(lvssh2_session_callback_send_function) {
 
 	MgErr error = PostLVUserEvent(lv_abstract->send, &payload);
 	ASSERT_NO_ERROR(error);
+	if (error != mgNoErr) {
+		DSDisposeHandle(payload.buffer);
+		return LIBSSH2_ERROR_BAD_USE;
+	}
 
 	DSDisposeHandle(payload.buffer);
 
@@ -67,6 +81,11 @@ libssh2_cb_generic* get_lvssh2_session_callback_send_function(void) {
 }
 
 LIBSSH2_RECV_FUNC(lvssh2_session_callback_recv_function) {
+	ASSERT_LABVIEW_MAXLEN(length);
+	if (!is_valid_length(length)) {
+		return LIBSSH2_ERROR_INVAL;
+	}
+
 	lvssh2_abstract* lv_abstract = *(lvssh2_abstract**)abstract;
 	if (!lv_abstract->recv)
 	{
@@ -84,6 +103,9 @@ LIBSSH2_RECV_FUNC(lvssh2_session_callback_recv_function) {
 
 	MgErr error = PostLVUserEvent(lv_abstract->recv, &payload);
 	ASSERT_NO_ERROR(error);
+	if (error != mgNoErr) {
+		return LIBSSH2_ERROR_BAD_USE;
+	}
 
 	return bytes_received;
 }
@@ -95,6 +117,9 @@ libssh2_cb_generic* get_lvssh2_session_callback_recv_function(void) {
 LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_response_function) {
 	ASSERT_LABVIEW_MAXLEN(name_len);
 	ASSERT_LABVIEW_MAXLEN(instruction_len);
+	if (!is_valid_length(name_len) || !is_valid_length(instruction_len)) {
+		return;
+	}
 
 	if (num_prompts == 0) {
 		return;
@@ -126,6 +151,12 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 
 	MgErr error = PostLVUserEvent(lv_abstract->kbdint_response, &payload);
 	ASSERT_NO_ERROR(error);
+	if (error != mgNoErr) {
+		free(lv_responses);
+		DSDisposeHandle(lv_name);
+		DSDisposeHandle(lv_instruction);
+		return;
+	}
 
 	for (int i = 0; i < num_prompts; i++) {
 		size_t response_length = LHStrLen(lv_responses[i]);
@@ -159,6 +190,9 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC_PTR get_lvssh2_userauth_keyboard_interacti
 
 LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC(lvssh2_userauth_publickey_sign_function) {
 	ASSERT_LABVIEW_MAXLEN(data_len);
+	if (!is_valid_length(data_len)) {
+		return LIBSSH2_ERROR_INVAL;
+	}
 
 	*sig = NULL;
 	*sig_len = 0;
@@ -174,6 +208,10 @@ LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC(lvssh2_userauth_publickey_sign_function) {
 	LVUserEventRef* e = (LVUserEventRef*)abstract;
 	MgErr error = PostLVUserEvent(*e, &payload);
 	ASSERT_NO_ERROR(error);
+	if (error != mgNoErr) {
+		DSDisposeHandle(payload.data);
+		return LIBSSH2_ERROR_BAD_USE;
+	}
 
 	size_t signature_length = LHStrLen(lv_signature);
 	const char* signature_buffer = LHStrBuf(lv_signature);
