@@ -7,7 +7,7 @@ build_type=${1:-Release}
 crypto_backend=${2:-OpenSSL}
 
 if [[ "$OSTYPE" == "msys"* || "$OSTYPE" == "cygwin"* ]]; then
-    generator="Visual Studio 17 2022"
+    generator="Visual Studio 18 2026"
     build_archs=("Win32" "x64")
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     generator="Unix Makefiles"
@@ -21,7 +21,7 @@ for arch in "${build_archs[@]}"; do
     echo "Building $arch..."
     cmake_cmd="cmake -B build/$arch -S . -G \"$generator\""
 
-    if [[ "$generator" == "Visual Studio 17 2022" ]]; then
+    if [[ "$generator" == "Visual Studio 18 2026" ]]; then
         cmake_cmd+=" -A \"$arch\""
 
         if [[ "$arch" == "Win32" ]]; then
