@@ -66,6 +66,10 @@ LIBSSH2_SEND_FUNC(lvssh2_session_callback_send_function) {
 
 	MgErr error = PostLVUserEvent(lv_abstract->send, &payload);
 	ASSERT_NO_ERROR(error);
+	if (error != mgNoErr) {
+		DSDisposeHandle(payload.buffer);
+		return LIBSSH2_ERROR_BAD_USE;
+	}
 
 	DSDisposeHandle(payload.buffer);
 
@@ -99,6 +103,9 @@ LIBSSH2_RECV_FUNC(lvssh2_session_callback_recv_function) {
 
 	MgErr error = PostLVUserEvent(lv_abstract->recv, &payload);
 	ASSERT_NO_ERROR(error);
+	if (error != mgNoErr) {
+		return LIBSSH2_ERROR_BAD_USE;
+	}
 
 	return bytes_received;
 }
@@ -144,6 +151,12 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 
 	MgErr error = PostLVUserEvent(lv_abstract->kbdint_response, &payload);
 	ASSERT_NO_ERROR(error);
+	if (error != mgNoErr) {
+		free(lv_responses);
+		DSDisposeHandle(lv_name);
+		DSDisposeHandle(lv_instruction);
+		return;
+	}
 
 	for (int i = 0; i < num_prompts; i++) {
 		size_t response_length = LHStrLen(lv_responses[i]);
@@ -195,6 +208,10 @@ LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC(lvssh2_userauth_publickey_sign_function) {
 	LVUserEventRef* e = (LVUserEventRef*)abstract;
 	MgErr error = PostLVUserEvent(*e, &payload);
 	ASSERT_NO_ERROR(error);
+	if (error != mgNoErr) {
+		DSDisposeHandle(payload.data);
+		return LIBSSH2_ERROR_BAD_USE;
+	}
 
 	size_t signature_length = LHStrLen(lv_signature);
 	const char* signature_buffer = LHStrBuf(lv_signature);
