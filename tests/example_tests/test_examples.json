@@ -248,48 +248,6 @@
         }
     },
     {
-        "name": "ssh2",
-        "data": {
-            "file": "ssh2.vi",
-            "controls": [
-                {
-                    "label": "address",
-                    "value": "localhost"
-                },
-                {
-                    "label": "username",
-                    "value": "openssh"
-                },
-                {
-                    "label": "password",
-                    "value": "openssh"
-                },
-                {
-                    "label": "command",
-                    "value": "echo test"
-                }
-            ],
-            "expectations": [
-                {
-                    "label": "error out",
-                    "value": {
-                        "status": false,
-                        "code": 0,
-                        "source": ""
-                    }
-                },
-                {
-                    "label": "response",
-                    "value": "test\n"
-                },
-                {
-                    "label": "exit status",
-                    "value": 0
-                }
-            ]
-        }
-    },
-    {
         "name": "ssh2_echo",
         "data": {
             "file": "ssh2_echo.vi",
