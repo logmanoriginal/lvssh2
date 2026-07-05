@@ -23,6 +23,11 @@ for arch in "${build_archs[@]}"; do
 
     if [[ "$generator" == "Visual Studio 17 2022" ]]; then
         cmake_cmd+=" -A \"$arch\""
+
+        if [[ "$arch" == "Win32" ]]; then
+            # SAFESH:NO is required to prevent linker errors when building with Visual Studio
+            cmake_cmd+=" -DLVSSH2_ENABLE_UNSAFESEH_WIN32=ON"
+        fi
     fi
 
     if [[ "$build_type" == "Release" ]]; then

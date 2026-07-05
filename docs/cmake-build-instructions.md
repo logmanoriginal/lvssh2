@@ -71,3 +71,4 @@ These options provide additional customization of the build process. They can be
 | `LIBSSH2_URL_SIG` | Requires `LIBSSH2_SOURCE=Tarball`.<br><br> URL of the libssh2 tarball signature. The public key used to verify the signature must be available on the system prior to building. |
 | `CRYPTO_BACKEND` | Crypto backend to use. Available options are: "OpenSSL" and "WinCNG". Default is "OpenSSL". |
 | `OPENSSL_COMMIT_HASH` | Requires `CRYPTO_BACKEND=OpenSSL`.<br><br> Commit hash of the OpenSSL repository. Also accepts branch names and tags. The use of commit hashes is **strongly recommended** to avoid pulling malicious code. |
+| `LVSSH2_ENABLE_UNSAFESEH_WIN32` | Win32-only compatibility toggle for `/SAFESEH:NO`. Default is `OFF` (secure default using `/SAFESEH`). Enable only when your toolchain cannot link with `/SAFESEH`. |

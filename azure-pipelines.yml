@@ -60,7 +60,7 @@ jobs:
       displayName: 'Prepare build configurations'
       condition: ne(variables.CACHE_RESTORED, 'true')
       inputs:
-        script: cmake -B build/$(architecture) -S . -G "Visual Studio 17 2022" -A $(architecture) -DLIBSSH2_SOURCE=GitHub -DLIBSSH2_COMMIT_HASH=$(libssh2.commit) -DCRYPTO_BACKEND=$(backend) -DOPENSSL_COMMIT_HASH=$(openssl.commit)
+        script: cmake -B build/$(architecture) -S . -G "Visual Studio 17 2022" -A $(architecture) -DLIBSSH2_SOURCE=GitHub -DLIBSSH2_COMMIT_HASH=$(libssh2.commit) -DCRYPTO_BACKEND=$(backend) -DOPENSSL_COMMIT_HASH=$(openssl.commit) -DLVSSH2_ENABLE_UNSAFESEH_WIN32=ON
         workingDirectory: '$(Build.SourcesDirectory)'
     - task: CmdLine@2
       displayName: 'Build libraries'
