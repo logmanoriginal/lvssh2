@@ -40,6 +40,12 @@ set(
   CACHE STRING "Commit hash of the openssl repository. Also accepts branch names and tags. The use of commit hashes is strongly recommended to avoid pulling malicious code. Only used when CRYPTO_BACKEND is OpenSSL."
 )
 
+option(
+  LVSSH2_ENABLE_UNSAFESEH_WIN32
+  "Allow /SAFESEH:NO on Win32 builds for compatibility with toolchains that cannot link with /SAFESEH."
+  OFF
+)
+
 # Set output directory to libssh2
 # $<1:...> is used to prevent Visual Studio from appending a configuration name to the output directory
 #          see: https://discourse.cmake.org/t/changing-output-directories/8829/2
@@ -124,8 +130,12 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows")
   if(CMAKE_SIZEOF_VOID_P EQUAL 8)
     set(LABVIEW_BASE_PATH "C:/Program Files/National Instruments")
   else()
-    # SAFESH:NO is required to prevent linker errors when building with Visual Studio
-    add_link_options(/SAFESEH:NO)
+    if(LVSSH2_ENABLE_UNSAFESEH_WIN32)
+      message(WARNING "Building with /SAFESEH:NO. This reduces Win32 exploit mitigations and should only be used when required for compatibility.")
+      add_link_options(/SAFESEH:NO)
+    else()
+      add_link_options(/SAFESEH)
+    endif()
     set(LABVIEW_BASE_PATH "C:/Program Files (x86)/National Instruments")
   endif()
 elseif(CMAKE_HOST_SYSTEM_NAME STREQUAL "Linux")
