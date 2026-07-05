@@ -107,6 +107,21 @@ Here is an example that uses lvssh2 to execute a command on a remote SSH server.
 
 ![Example Finder](images/example-finder.png)
 
+## Security Recommendations
+
+Host key verification is strongly recommended before authentication.
+
+Required sequence:
+1. Connect TCP socket and call `libssh2_session_handshake`.
+2. Read remote host key with `libssh2_session_hostkey`.
+3. Check key with `libssh2_knownhost_checkp`.
+4. Continue only when the check result is `LIBSSH2_KNOWNHOST_CHECK_MATCH`.
+
+Do not call authentication methods (password, public key, keyboard-interactive, agent) before a successful host key check. This includes `libssh2_channel_request_auth_agent`, which should only be used after host identity is verified.
+
+See [SECURITY](SECURITY.md) for the complete secure usage guidance.
+See [Secure Usage Guide](docs/secure-usage.md) for a step-by-step integration workflow.
+
 ## Roadmap
 
 See the [open issues](https://github.com/logmanoriginal/labview-composition/issues) for a list of proposed features (and known issues).
