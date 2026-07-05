@@ -1,7 +1,6 @@
 #include "lvssh2_extensions.h"
 #include <assert.h>
 #include <stdlib.h>
-#include <string.h>
 
 // This macro asserts that the given value is less than or equal to INT32_MAX
 // This is used to ensure that the length of a buffer is within the limits of LabVIEW
@@ -10,14 +9,6 @@
 
 static int is_valid_length(size_t len) {
 	return len <= INT32_MAX;
-}
-
-static void clear_buffer(void* ptr, size_t len) {
-	volatile unsigned char* p = (volatile unsigned char*)ptr;
-	while (len > 0) {
-		*p++ = 0;
-		len--;
-	}
 }
 
 void data_buffer_to_LStrHandle(const void* data, int32 data_length, LStrHandle* string_handle_ptr) {
@@ -145,7 +136,7 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 		return;
 	}
 
-	LStrHandle* lv_responses = (LStrHandle*)calloc((size_t)num_prompts, sizeof(LStrHandle));
+	LStrHandle* lv_responses = (LStrHandle*)malloc(num_prompts * sizeof(LStrHandle));
 	if (!lv_responses) {
 		return;
 	}
@@ -166,18 +157,6 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 	MgErr error = PostLVUserEvent(lv_abstract->kbdint_response, &payload);
 	ASSERT_NO_ERROR(error);
 	if (error != mgNoErr) {
-		for (int i = 0; i < num_prompts; i++) {
-			if (lv_responses[i]) {
-				size_t response_length = LHStrLen(lv_responses[i]);
-				char* response_buffer = LHStrBuf(lv_responses[i]);
-				if (response_buffer) {
-					clear_buffer(response_buffer, response_length);
-				}
-
-				DSDisposeHandle(lv_responses[i]);
-			}
-		}
-
 		free(lv_responses);
 		DSDisposeHandle(lv_name);
 		DSDisposeHandle(lv_instruction);
@@ -185,28 +164,23 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 	}
 
 	for (int i = 0; i < num_prompts; i++) {
-		responses[i].text = NULL;
-		responses[i].length = 0;
-
-		if (!lv_responses[i]) {
-			continue;
-		}
-
 		size_t response_length = LHStrLen(lv_responses[i]);
-		char* response_buffer = LHStrBuf(lv_responses[i]);
-		if (response_buffer && response_length > 0) {
-			responses[i].text = (char*)malloc(response_length);
-			if (responses[i].text) {
-				memcpy(responses[i].text, response_buffer, response_length);
-				responses[i].length = response_length;
+		const char* response_buffer = LHStrBuf(lv_responses[i]);
+		if (response_buffer) {
+			LIBSSH2_USERAUTH_KBDINT_RESPONSE* response = (LIBSSH2_USERAUTH_KBDINT_RESPONSE*)malloc(sizeof(LIBSSH2_USERAUTH_KBDINT_RESPONSE));
+			if (response) {
+				response->text = (char*)malloc(response_length);
+				if (response->text) {
+					memcpy(response->text, response_buffer, response_length);
+					response->length = response_length;
+
+					responses[i] = *response;
+				}
+				else {
+					free(response);
+				}
 			}
 		}
-
-		if (response_buffer) {
-			clear_buffer(response_buffer, response_length);
-		}
-
-		DSDisposeHandle(lv_responses[i]);
 	}
 
 	free(lv_responses);
