@@ -79,9 +79,9 @@ To get a local copy up and running follow these simple steps.
 
 * [LabVIEW&trade;](https://ni.com/labview) 2017 or later
 * [VI Package Manager](https://vipm.io/download/)
-* [CMake](https://cmake.org/download/) 3.18 or later
+* [CMake](https://cmake.org/download/) 4.2 or later
 * Windows:
-  * [Visual Studio](https://visualstudio.microsoft.com/download/) 2022 or later (or any compatible C compiler)
+  * [Visual Studio](https://visualstudio.microsoft.com/download/) 2026 or later (or any compatible C compiler)
 
 ### Installation
 

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.22)
+cmake_minimum_required(VERSION 4.2)
 project(lvssh2_extensions C)
 
 # Suppress "lib" prefix on libraries
