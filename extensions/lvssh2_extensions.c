@@ -121,7 +121,12 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 		return;
 	}
 
-	if (num_prompts == 0) {
+	if (num_prompts <= 0) {
+		return;
+	}
+
+	// Prevent oversized allocation attempt
+	if ((size_t)num_prompts > (SIZE_MAX / sizeof(LStrHandle))) {
 		return;
 	}
 
