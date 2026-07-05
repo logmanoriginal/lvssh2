@@ -146,7 +146,11 @@
     </item>
     <item path="libssh2/libssh2_channel_request_auth_agent.vi">
         <title>SSH Channel Request Authentication Agent (libssh2_channel_request_auth_agent)</title>
-        <description>Request authentication agent forwarding on a channel.</description>
+        <description>
+            Request authentication agent forwarding on a channel.
+
+            Only use this function after host key verification succeeds (known host check result MATCH). Enabling agent forwarding on an unverified host can expose credentials.
+        </description>
     </item>
     <item path="libssh2/libssh2_channel_request_pty_ex.vi">
         <title>SSH Channel Request PTY Extended (libssh2_channel_request_pty_ex)</title>
@@ -291,7 +295,11 @@
     </item>
     <item path="libssh2/libssh2_knownhost_checkp.vi">
         <title>SSH Known Host Check (libssh2_knownhost_checkp)</title>
-        <description>Check if a host key is in a host key database.</description>
+        <description>
+            Check if a host key is in a host key database.
+
+            This check is required before authentication. Continue only when the result is MATCH. Treat MISMATCH, NOTFOUND, and FAILURE as authentication failures.
+        </description>
     </item>
     <item path="libssh2/libssh2_knownhost_del.vi">
         <title>SSH Known Host Delete (libssh2_knownhost_del)</title>
@@ -405,19 +413,35 @@
     </item>
     <item path="libssh2/libssh2_session_handshake.vi">
         <title>SSH Session Handshake (libssh2_session_handshake)</title>
-        <description>Perform the SSH handshake on a session.</description>
+        <description>
+            Perform the SSH handshake on a session.
+
+            After handshake, verify the remote host key using libssh2_session_hostkey and libssh2_knownhost_checkp before any authentication.
+        </description>
     </item>
     <item path="libssh2/libssh2_session_handshake_socket.vi">
         <title>SSH Session Handshake Socket (libssh2_session_handshake_socket)</title>
-        <description>Perform the SSH handshake on a session using a TCP socket.</description>
+        <description>
+            Perform the SSH handshake on a session using a TCP socket.
+
+            After handshake, verify the remote host key using libssh2_session_hostkey and libssh2_knownhost_checkp before any authentication.
+        </description>
     </item>
     <item path="libssh2/libssh2_session_handshake_tcp.vi">
         <title>SSH Session Handshake TCP (libssh2_session_handshake_tcp)</title>
-        <description>Perform the SSH handshake on a session using a TCP connection.</description>
+        <description>
+            Perform the SSH handshake on a session using a TCP connection.
+
+            After handshake, verify the remote host key using libssh2_session_hostkey and libssh2_knownhost_checkp before any authentication.
+        </description>
     </item>
     <item path="libssh2/libssh2_session_hostkey.vi">
         <title>SSH Session Host Key (libssh2_session_hostkey)</title>
-        <description>Get the host key of the remote host.</description>
+        <description>
+            Get the host key of the remote host.
+
+            Use this output with libssh2_knownhost_checkp and continue only when the known host check result is MATCH.
+        </description>
     </item>
     <item path="libssh2/libssh2_session_init.vi">
         <title>SSH Session Init (libssh2_session_init)</title>
