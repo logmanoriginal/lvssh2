@@ -1,7 +1,7 @@
 Following software must be installed on the build agent:
 
-- CMake 3.18 or later
-- Visual Studio 2022 or later
+- CMake 4.2 or later
+- Visual Studio 2026 or later
 - LabVIEW 2017 or later
 - Strawberry Perl (for building OpenSSL)
 - NASM (for building OpenSSL)

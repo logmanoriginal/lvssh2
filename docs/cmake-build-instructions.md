@@ -1,7 +1,7 @@
 _TLDR;_ -- Run the following commands from the root of the repository:
 ```bash
-cmake -B build/Win32 -S . -G "Visual Studio 17 2022" -A Win32
-cmake -B build/x64 -S . -G "Visual Studio 17 2022" -A x64
+cmake -B build/Win32 -S . -G "Visual Studio 18 2026" -A Win32
+cmake -B build/x64 -S . -G "Visual Studio 18 2026" -A x64
 cmake --build build/Win32 --config Release
 cmake --build build/x64 --config Release
 ```
@@ -18,9 +18,9 @@ The CMake files are configured to place the output libraries in the correct loca
 
 ## Prerequisites
 
-- CMake 3.18 or later (it is typically best to install the latest version)
+- CMake 4.2 or later (it is typically best to install the latest version)
 - Windows:
-    - Visual Studio 2022 or later
+    - Visual Studio 2026 or later
         - Make sure to install the "Desktop development with C++" workload, which includes the MSVC compiler and CMake.
 
 > [!IMPORTANT]
@@ -34,9 +34,9 @@ Run the following commands from the root of the repository:
 # 1. Configure the build
 # -B: specifies the build directory
 # -S: specifies the source directory
-# -G: specifies the generator (Visual Studio 17 2022 in this case)
+# -G: specifies the generator (Visual Studio 18 2026 in this case)
 # -A: specifies the architecture (Win32 or x64)
-cmake -B build -S . -G "Visual Studio 17 2022" -A Win32
+cmake -B build -S . -G "Visual Studio 18 2026" -A Win32
 
 # 2. Build the libraries
 # "build" is the build directory
