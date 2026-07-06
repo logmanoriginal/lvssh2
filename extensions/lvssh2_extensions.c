@@ -76,6 +76,10 @@ LIBSSH2_SEND_FUNC(lvssh2_session_callback_send_function) {
 
 	DSDisposeHandle(payload.buffer);
 
+	if (bytes_send > (ssize_t)length){
+		bytes_send = length;
+	}
+
 	return bytes_send;
 }
 
@@ -108,6 +112,10 @@ LIBSSH2_RECV_FUNC(lvssh2_session_callback_recv_function) {
 	ASSERT_NO_ERROR(error);
 	if (error != mgNoErr) {
 		return LIBSSH2_ERROR_BAD_USE;
+	}
+
+	if (bytes_received > (ssize_t)length){
+		bytes_received = length;
 	}
 
 	return bytes_received;
