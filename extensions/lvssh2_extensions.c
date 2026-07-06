@@ -283,16 +283,17 @@ LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC(lvssh2_userauth_publickey_sign_function) {
 			memcpy(signature, signature_buffer, signature_length);
 			*sig = signature;
 			*sig_len = signature_length;
-		}
-		else {
+		} else {
 			DSDisposeHandle(payload.data);
 			return LIBSSH2_ERROR_ALLOC;
 		}
+
+		DSDisposeHandle(payload.data);
+		return LIBSSH2_ERROR_NONE;
 	}
 
 	DSDisposeHandle(payload.data);
-
-	return LIBSSH2_ERROR_NONE;
+	return LIBSSH2_ERROR_BAD_USE;
 }
 
 LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC_PTR get_lvssh2_userauth_publickey_sign_function(void) {
