@@ -136,7 +136,7 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 		return;
 	}
 
-	LStrHandle* lv_responses = (LStrHandle*)malloc(num_prompts * sizeof(LStrHandle));
+	LStrHandle* lv_responses = (LStrHandle*)calloc(num_prompts, sizeof(LStrHandle));
 	if (!lv_responses) {
 		return;
 	}
@@ -164,6 +164,13 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 	}
 
 	for (int i = 0; i < num_prompts; i++) {
+		responses[i].text = NULL;
+		responses[i].length = 0;
+
+		if (!lv_responses[i]){
+			continue;
+		}
+
 		size_t response_length = LHStrLen(lv_responses[i]);
 		const char* response_buffer = LHStrBuf(lv_responses[i]);
 		if (response_buffer) {
