@@ -11,15 +11,19 @@ static int is_valid_length(size_t len) {
 	return len <= INT32_MAX;
 }
 
-void data_buffer_to_LStrHandle(const void* data, int32 data_length, LStrHandle* string_handle_ptr) {
-	NumericArrayResize(uB, 1, (UHandle*)(string_handle_ptr), data_length);
+static MgErr data_buffer_to_LStrHandle(const void* data, int32 data_length, LStrHandle* string_handle_ptr) {
+	MgErr error = NumericArrayResize(uB, 1, (UHandle*)(string_handle_ptr), data_length);
+	if (error != mgNoErr){
+		return error;
+	}
 
 	if (!*string_handle_ptr) {
-		return;
+		return mgArgErr;
 	}
 
 	MoveBlock(data, LHStrBuf(*string_handle_ptr), data_length);
 	LStrLen(**string_handle_ptr) = data_length;
+	return mgNoErr;
 }
 
 void lvssh2_trace_handler_function(LIBSSH2_SESSION* session, void* context, const char* data, size_t length) {
@@ -29,9 +33,19 @@ void lvssh2_trace_handler_function(LIBSSH2_SESSION* session, void* context, cons
 	}
 
 	LStrHandle message = NULL;
-	data_buffer_to_LStrHandle(data, (int32)length, &message);
+	if (data_buffer_to_LStrHandle(data, (int32)length, &message) != mgNoErr){
+		return;
+	}
 
 	LVUserEventRef* e = (LVUserEventRef*)context;
+	if (!e){
+		DSDisposeHandle(message);
+		return;
+	}
+
+	// PostLVUserEvent, when bound to the event using `Register Event Callback`, will
+	// synchronously block until the Callback VI handler has finished executing.
+	// Evidence: https://lavag.org/topic/19251-labview-vi-and-c-callback/#findComment-116130
 	MgErr error = PostLVUserEvent(*e, &message);
 	ASSERT_NO_ERROR(error);
 
@@ -49,7 +63,7 @@ LIBSSH2_SEND_FUNC(lvssh2_session_callback_send_function) {
 	}
 
 	lvssh2_abstract* lv_abstract = *(lvssh2_abstract**)abstract;
-	if (!lv_abstract->send)
+	if (!lv_abstract || !lv_abstract->send)
 	{
 		return LIBSSH2_ERROR_BAD_USE;
 	}
@@ -62,8 +76,13 @@ LIBSSH2_SEND_FUNC(lvssh2_session_callback_send_function) {
 	ssize_t bytes_send = 0;
 	payload.bytes_send = &bytes_send;
 
-	data_buffer_to_LStrHandle(buffer, (int32)length, &payload.buffer);
+	if (data_buffer_to_LStrHandle(buffer, (int32)length, &payload.buffer) != mgNoErr){
+		return LIBSSH2_ERROR_ALLOC;
+	}
 
+	// PostLVUserEvent, when bound to the event using `Register Event Callback`, will
+	// synchronously block until the Callback VI handler has finished executing.
+	// Evidence: https://lavag.org/topic/19251-labview-vi-and-c-callback/#findComment-116130
 	MgErr error = PostLVUserEvent(lv_abstract->send, &payload);
 	ASSERT_NO_ERROR(error);
 	if (error != mgNoErr) {
@@ -72,6 +91,10 @@ LIBSSH2_SEND_FUNC(lvssh2_session_callback_send_function) {
 	}
 
 	DSDisposeHandle(payload.buffer);
+
+	if (bytes_send > (ssize_t)length){
+		bytes_send = length;
+	}
 
 	return bytes_send;
 }
@@ -87,7 +110,7 @@ LIBSSH2_RECV_FUNC(lvssh2_session_callback_recv_function) {
 	}
 
 	lvssh2_abstract* lv_abstract = *(lvssh2_abstract**)abstract;
-	if (!lv_abstract->recv)
+	if (!lv_abstract || !lv_abstract->recv)
 	{
 		return LIBSSH2_ERROR_BAD_USE;
 	}
@@ -101,10 +124,17 @@ LIBSSH2_RECV_FUNC(lvssh2_session_callback_recv_function) {
 	ssize_t bytes_received = 0;
 	payload.bytes_received = &bytes_received;
 
+	// PostLVUserEvent, when bound to the event using `Register Event Callback`, will
+	// synchronously block until the Callback VI handler has finished executing.
+	// Evidence: https://lavag.org/topic/19251-labview-vi-and-c-callback/#findComment-116130
 	MgErr error = PostLVUserEvent(lv_abstract->recv, &payload);
 	ASSERT_NO_ERROR(error);
 	if (error != mgNoErr) {
 		return LIBSSH2_ERROR_BAD_USE;
+	}
+
+	if (bytes_received > (ssize_t)length){
+		bytes_received = length;
 	}
 
 	return bytes_received;
@@ -131,21 +161,28 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 	}
 
 	lvssh2_abstract* lv_abstract = *(lvssh2_abstract**)abstract;
-	if (!lv_abstract->kbdint_response)
+	if (!lv_abstract || !lv_abstract->kbdint_response)
 	{
 		return;
 	}
 
-	LStrHandle* lv_responses = (LStrHandle*)malloc(num_prompts * sizeof(LStrHandle));
+	LStrHandle* lv_responses = (LStrHandle*)calloc(num_prompts, sizeof(LStrHandle));
 	if (!lv_responses) {
 		return;
 	}
 
 	LStrHandle lv_name = NULL;
-	data_buffer_to_LStrHandle(name, (int32)name_len, &lv_name);
+	if (data_buffer_to_LStrHandle(name, (int32)name_len, &lv_name) != mgNoErr){
+		free(lv_responses);
+		return;
+	}
 
 	LStrHandle lv_instruction = NULL;
-	data_buffer_to_LStrHandle(instruction, (int32)instruction_len, &lv_instruction);
+	if (data_buffer_to_LStrHandle(instruction, (int32)instruction_len, &lv_instruction) != mgNoErr){
+		DSDisposeHandle(lv_name);
+		free(lv_responses);
+		return;
+	}
 
 	lvssh2_userauth_keyboard_interactive_response_function_input_args payload = { 0 };
 	payload.name = lv_name;
@@ -154,6 +191,9 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 	payload.prompts = prompts;
 	payload.responses = lv_responses;
 
+	// PostLVUserEvent, when bound to the event using `Register Event Callback`, will
+	// synchronously block until the Callback VI handler has finished executing.
+	// Evidence: https://lavag.org/topic/19251-labview-vi-and-c-callback/#findComment-116130
 	MgErr error = PostLVUserEvent(lv_abstract->kbdint_response, &payload);
 	ASSERT_NO_ERROR(error);
 	if (error != mgNoErr) {
@@ -164,21 +204,24 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 	}
 
 	for (int i = 0; i < num_prompts; i++) {
+		responses[i].text = NULL;
+		responses[i].length = 0;
+
+		if (!lv_responses[i]){
+			continue;
+		}
+
 		size_t response_length = LHStrLen(lv_responses[i]);
 		const char* response_buffer = LHStrBuf(lv_responses[i]);
-		if (response_buffer) {
-			LIBSSH2_USERAUTH_KBDINT_RESPONSE* response = (LIBSSH2_USERAUTH_KBDINT_RESPONSE*)malloc(sizeof(LIBSSH2_USERAUTH_KBDINT_RESPONSE));
-			if (response) {
-				response->text = (char*)malloc(response_length);
-				if (response->text) {
-					memcpy(response->text, response_buffer, response_length);
-					response->length = response_length;
-
-					responses[i] = *response;
-				}
-				else {
-					free(response);
-				}
+		if (response_buffer && response_length > 0 && response_length <= INT32_MAX) {
+			// Freed by libssh2 via LIBSSH2_FREE; matches malloc only with the default
+			// session allocator (libssh2_session_init). Do not use libssh2_session_init_ex
+			// with custom allocators without revisiting this.
+			char* text = (char*)malloc(response_length);
+			if (text) {
+				memcpy(text, response_buffer, response_length);
+				responses[i].text = text;
+				responses[i].length = response_length;
 			}
 		}
 	}
@@ -208,9 +251,15 @@ LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC(lvssh2_userauth_publickey_sign_function) {
 	LStrHandle lv_signature = NULL;
 	payload.signature = &lv_signature;
 
-	data_buffer_to_LStrHandle(data, (int32)data_len, &payload.data);
+	if (data_buffer_to_LStrHandle(data, (int32)data_len, &payload.data) != mgNoErr){
+		return LIBSSH2_ERROR_ALLOC;
+	}
 
 	LVUserEventRef* e = (LVUserEventRef*)abstract;
+
+	// PostLVUserEvent, when bound to the event using `Register Event Callback`, will
+	// synchronously block until the Callback VI handler has finished executing.
+	// Evidence: https://lavag.org/topic/19251-labview-vi-and-c-callback/#findComment-116130
 	MgErr error = PostLVUserEvent(*e, &payload);
 	ASSERT_NO_ERROR(error);
 	if (error != mgNoErr) {
@@ -218,23 +267,33 @@ LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC(lvssh2_userauth_publickey_sign_function) {
 		return LIBSSH2_ERROR_BAD_USE;
 	}
 
+	if (!lv_signature){
+		DSDisposeHandle(payload.data);
+		return LIBSSH2_ERROR_BAD_USE;
+	}
+
 	size_t signature_length = LHStrLen(lv_signature);
 	const char* signature_buffer = LHStrBuf(lv_signature);
-	if (signature_buffer) {
-		*sig = (unsigned char*)malloc(signature_length * sizeof(unsigned char));
-		if (*sig) {
-			memcpy(*sig, signature_buffer, signature_length);
+	if (signature_buffer && signature_length > 0 && signature_length <= INT32_MAX) {
+		// Freed by libssh2 via LIBSSH2_FREE; matches malloc only with the default
+		// session allocator (libssh2_session_init). Do not use libssh2_session_init_ex
+		// with custom allocators without revisiting this.
+		unsigned char* signature = (unsigned char*)malloc(signature_length * sizeof(unsigned char));
+		if (signature) {
+			memcpy(signature, signature_buffer, signature_length);
+			*sig = signature;
 			*sig_len = signature_length;
-		}
-		else {
+		} else {
 			DSDisposeHandle(payload.data);
 			return LIBSSH2_ERROR_ALLOC;
 		}
+
+		DSDisposeHandle(payload.data);
+		return LIBSSH2_ERROR_NONE;
 	}
 
 	DSDisposeHandle(payload.data);
-
-	return LIBSSH2_ERROR_NONE;
+	return LIBSSH2_ERROR_BAD_USE;
 }
 
 LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC_PTR get_lvssh2_userauth_publickey_sign_function(void) {
