@@ -12,7 +12,10 @@ static int is_valid_length(size_t len) {
 }
 
 void data_buffer_to_LStrHandle(const void* data, int32 data_length, LStrHandle* string_handle_ptr) {
-	NumericArrayResize(uB, 1, (UHandle*)(string_handle_ptr), data_length);
+	MgErr error = NumericArrayResize(uB, 1, (UHandle*)(string_handle_ptr), data_length);
+	if (error != mgNoErr){
+		return;
+	}
 
 	if (!*string_handle_ptr) {
 		return;
