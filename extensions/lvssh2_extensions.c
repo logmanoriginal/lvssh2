@@ -173,10 +173,11 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 
 		size_t response_length = LHStrLen(lv_responses[i]);
 		const char* response_buffer = LHStrBuf(lv_responses[i]);
-		if (response_buffer) {
-			responses[i].text = (char*)malloc(response_length);
-			if (responses[i].text) {
-				memcpy(responses[i].text, response_buffer, response_length);
+		if (response_buffer && response_length > 0 && response_length <= UINT_MAX) {
+			char* text = (char*)malloc(response_length);
+			if (text) {
+				memcpy(text, response_buffer, response_length);
+				responses[i].text = text;
 				responses[i].length = response_length;
 			}
 		}
