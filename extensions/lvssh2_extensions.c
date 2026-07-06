@@ -35,6 +35,10 @@ void lvssh2_trace_handler_function(LIBSSH2_SESSION* session, void* context, cons
 	data_buffer_to_LStrHandle(data, (int32)length, &message);
 
 	LVUserEventRef* e = (LVUserEventRef*)context;
+
+	// PostLVUserEvent, when bound to the event using `Register Event Callback`, will
+	// synchronously block until the Callback VI handler has finished executing.
+	// Evidence: https://lavag.org/topic/19251-labview-vi-and-c-callback/#findComment-116130
 	MgErr error = PostLVUserEvent(*e, &message);
 	ASSERT_NO_ERROR(error);
 
@@ -67,6 +71,9 @@ LIBSSH2_SEND_FUNC(lvssh2_session_callback_send_function) {
 
 	data_buffer_to_LStrHandle(buffer, (int32)length, &payload.buffer);
 
+	// PostLVUserEvent, when bound to the event using `Register Event Callback`, will
+	// synchronously block until the Callback VI handler has finished executing.
+	// Evidence: https://lavag.org/topic/19251-labview-vi-and-c-callback/#findComment-116130
 	MgErr error = PostLVUserEvent(lv_abstract->send, &payload);
 	ASSERT_NO_ERROR(error);
 	if (error != mgNoErr) {
@@ -108,6 +115,9 @@ LIBSSH2_RECV_FUNC(lvssh2_session_callback_recv_function) {
 	ssize_t bytes_received = 0;
 	payload.bytes_received = &bytes_received;
 
+	// PostLVUserEvent, when bound to the event using `Register Event Callback`, will
+	// synchronously block until the Callback VI handler has finished executing.
+	// Evidence: https://lavag.org/topic/19251-labview-vi-and-c-callback/#findComment-116130
 	MgErr error = PostLVUserEvent(lv_abstract->recv, &payload);
 	ASSERT_NO_ERROR(error);
 	if (error != mgNoErr) {
@@ -165,6 +175,9 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 	payload.prompts = prompts;
 	payload.responses = lv_responses;
 
+	// PostLVUserEvent, when bound to the event using `Register Event Callback`, will
+	// synchronously block until the Callback VI handler has finished executing.
+	// Evidence: https://lavag.org/topic/19251-labview-vi-and-c-callback/#findComment-116130
 	MgErr error = PostLVUserEvent(lv_abstract->kbdint_response, &payload);
 	ASSERT_NO_ERROR(error);
 	if (error != mgNoErr) {
@@ -225,6 +238,10 @@ LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC(lvssh2_userauth_publickey_sign_function) {
 	data_buffer_to_LStrHandle(data, (int32)data_len, &payload.data);
 
 	LVUserEventRef* e = (LVUserEventRef*)abstract;
+
+	// PostLVUserEvent, when bound to the event using `Register Event Callback`, will
+	// synchronously block until the Callback VI handler has finished executing.
+	// Evidence: https://lavag.org/topic/19251-labview-vi-and-c-callback/#findComment-116130
 	MgErr error = PostLVUserEvent(*e, &payload);
 	ASSERT_NO_ERROR(error);
 	if (error != mgNoErr) {
