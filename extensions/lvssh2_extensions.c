@@ -201,7 +201,7 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 
 		size_t response_length = LHStrLen(lv_responses[i]);
 		const char* response_buffer = LHStrBuf(lv_responses[i]);
-		if (response_buffer && response_length > 0 && response_length <= UINT_MAX) {
+		if (response_buffer && response_length > 0 && response_length <= INT32_MAX) {
 			// Freed by libssh2 via LIBSSH2_FREE; matches malloc only with the default
 			// session allocator (libssh2_session_init). Do not use libssh2_session_init_ex
 			// with custom allocators without revisiting this.
@@ -260,7 +260,7 @@ LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC(lvssh2_userauth_publickey_sign_function) {
 
 	size_t signature_length = LHStrLen(lv_signature);
 	const char* signature_buffer = LHStrBuf(lv_signature);
-	if (signature_buffer && signature_length > 0 && signature_length <= UINT_MAX) {
+	if (signature_buffer && signature_length > 0 && signature_length <= INT32_MAX) {
 		// Freed by libssh2 via LIBSSH2_FREE; matches malloc only with the default
 		// session allocator (libssh2_session_init). Do not use libssh2_session_init_ex
 		// with custom allocators without revisiting this.
