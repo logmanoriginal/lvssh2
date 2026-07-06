@@ -49,7 +49,7 @@ LIBSSH2_SEND_FUNC(lvssh2_session_callback_send_function) {
 	}
 
 	lvssh2_abstract* lv_abstract = *(lvssh2_abstract**)abstract;
-	if (!lv_abstract->send)
+	if (!lv_abstract || !lv_abstract->send)
 	{
 		return LIBSSH2_ERROR_BAD_USE;
 	}
@@ -87,7 +87,7 @@ LIBSSH2_RECV_FUNC(lvssh2_session_callback_recv_function) {
 	}
 
 	lvssh2_abstract* lv_abstract = *(lvssh2_abstract**)abstract;
-	if (!lv_abstract->recv)
+	if (!lv_abstract || !lv_abstract->recv)
 	{
 		return LIBSSH2_ERROR_BAD_USE;
 	}
@@ -131,7 +131,7 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 	}
 
 	lvssh2_abstract* lv_abstract = *(lvssh2_abstract**)abstract;
-	if (!lv_abstract->kbdint_response)
+	if (!lv_abstract || !lv_abstract->kbdint_response)
 	{
 		return;
 	}
