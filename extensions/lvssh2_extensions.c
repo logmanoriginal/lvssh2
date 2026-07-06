@@ -11,18 +11,19 @@ static int is_valid_length(size_t len) {
 	return len <= INT32_MAX;
 }
 
-void data_buffer_to_LStrHandle(const void* data, int32 data_length, LStrHandle* string_handle_ptr) {
+static MgErr data_buffer_to_LStrHandle(const void* data, int32 data_length, LStrHandle* string_handle_ptr) {
 	MgErr error = NumericArrayResize(uB, 1, (UHandle*)(string_handle_ptr), data_length);
 	if (error != mgNoErr){
-		return;
+		return error;
 	}
 
 	if (!*string_handle_ptr) {
-		return;
+		return mgArgErr;
 	}
 
 	MoveBlock(data, LHStrBuf(*string_handle_ptr), data_length);
 	LStrLen(**string_handle_ptr) = data_length;
+	return mgNoErr;
 }
 
 void lvssh2_trace_handler_function(LIBSSH2_SESSION* session, void* context, const char* data, size_t length) {
@@ -32,7 +33,9 @@ void lvssh2_trace_handler_function(LIBSSH2_SESSION* session, void* context, cons
 	}
 
 	LStrHandle message = NULL;
-	data_buffer_to_LStrHandle(data, (int32)length, &message);
+	if (data_buffer_to_LStrHandle(data, (int32)length, &message) != mgNoErr){
+		return;
+	}
 
 	LVUserEventRef* e = (LVUserEventRef*)context;
 	if (!e){
@@ -73,7 +76,9 @@ LIBSSH2_SEND_FUNC(lvssh2_session_callback_send_function) {
 	ssize_t bytes_send = 0;
 	payload.bytes_send = &bytes_send;
 
-	data_buffer_to_LStrHandle(buffer, (int32)length, &payload.buffer);
+	if (data_buffer_to_LStrHandle(buffer, (int32)length, &payload.buffer) != mgNoErr){
+		return LIBSSH2_ERROR_ALLOC;
+	}
 
 	// PostLVUserEvent, when bound to the event using `Register Event Callback`, will
 	// synchronously block until the Callback VI handler has finished executing.
@@ -167,10 +172,17 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 	}
 
 	LStrHandle lv_name = NULL;
-	data_buffer_to_LStrHandle(name, (int32)name_len, &lv_name);
+	if (data_buffer_to_LStrHandle(name, (int32)name_len, &lv_name) != mgNoErr){
+		free(lv_responses);
+		return;
+	}
 
 	LStrHandle lv_instruction = NULL;
-	data_buffer_to_LStrHandle(instruction, (int32)instruction_len, &lv_instruction);
+	if (data_buffer_to_LStrHandle(instruction, (int32)instruction_len, &lv_instruction) != mgNoErr){
+		DSDisposeHandle(lv_name);
+		free(lv_responses);
+		return;
+	}
 
 	lvssh2_userauth_keyboard_interactive_response_function_input_args payload = { 0 };
 	payload.name = lv_name;
@@ -239,7 +251,9 @@ LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC(lvssh2_userauth_publickey_sign_function) {
 	LStrHandle lv_signature = NULL;
 	payload.signature = &lv_signature;
 
-	data_buffer_to_LStrHandle(data, (int32)data_len, &payload.data);
+	if (data_buffer_to_LStrHandle(data, (int32)data_len, &payload.data) != mgNoErr){
+		return LIBSSH2_ERROR_ALLOC;
+	}
 
 	LVUserEventRef* e = (LVUserEventRef*)abstract;
 
