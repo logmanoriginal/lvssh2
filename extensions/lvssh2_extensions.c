@@ -226,7 +226,7 @@ LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC(lvssh2_userauth_publickey_sign_function) {
 
 	size_t signature_length = LHStrLen(lv_signature);
 	const char* signature_buffer = LHStrBuf(lv_signature);
-	if (signature_buffer) {
+	if (signature_buffer && signature_length > 0 && signature_length <= UINT_MAX) {
 		// Freed by libssh2 via LIBSSH2_FREE; matches malloc only with the default
 		// session allocator (libssh2_session_init). Do not use libssh2_session_init_ex
 		// with custom allocators without revisiting this.
