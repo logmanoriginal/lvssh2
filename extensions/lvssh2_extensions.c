@@ -35,6 +35,10 @@ void lvssh2_trace_handler_function(LIBSSH2_SESSION* session, void* context, cons
 	data_buffer_to_LStrHandle(data, (int32)length, &message);
 
 	LVUserEventRef* e = (LVUserEventRef*)context;
+	if (!e){
+		DSDisposeHandle(message);
+		return;
+	}
 
 	// PostLVUserEvent, when bound to the event using `Register Event Callback`, will
 	// synchronously block until the Callback VI handler has finished executing.
