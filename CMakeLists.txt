@@ -4,7 +4,8 @@ project(lvssh2_extensions C)
 # Suppress "lib" prefix on libraries
 set(CMAKE_SHARED_LIBRARY_PREFIX "")
 
-set(CMAKE_C_STANDARD 99)
+# C11 is required for <threads.h> (completion rendezvous in the extensions library)
+set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED YES)
 set(CMAKE_C_EXTENSIONS OFF)
 
