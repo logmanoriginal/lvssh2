@@ -47,6 +47,12 @@ option(
   OFF
 )
 
+option(
+  LIBSSH2_ENABLE_DEBUG_LOGGING
+  "Build libssh2 with debug trace logging (libssh2_trace)."
+  OFF
+)
+
 # Set output directory to libssh2
 # $<1:...> is used to prevent Visual Studio from appending a configuration name to the output directory
 #          see: https://discourse.cmake.org/t/changing-output-directories/8829/2
@@ -191,6 +197,10 @@ elseif(CMAKE_HOST_SYSTEM_NAME STREQUAL "Linux")
   target_link_options(${PROJECT_NAME} PRIVATE "LINKER:--allow-shlib-undefined")
 endif()
 
+if(LIBSSH2_ENABLE_DEBUG_LOGGING)
+  set(LIBSSH2_EXTRA_CMAKE_ARGS -DENABLE_DEBUG_LOGGING=ON)
+endif()
+
 set_target_properties(${PROJECT_NAME} PROPERTIES
   OUTPUT_NAME "${PROJECT_NAME}${OUTPUT_NAME_SUFFIX}"
 )
@@ -313,6 +323,7 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows" AND CRYPTO_BACKEND STREQUAL "OpenSS
       -DOPENSSL_CRYPTO_LIBRARY=${OPENSSL_INSTALL_DIR}/lib/libcrypto.lib
       -DOPENSSL_SSL_LIBRARY=${OPENSSL_INSTALL_DIR}/lib/libssl.lib
       -DDLL_LIBCRYPTO=${CMAKE_SOURCE_DIR}/libssh2/${OPENSSL_LIBCRYPTO_FILE} # Do not rely on libssh2 discovery
+      ${LIBSSH2_EXTRA_CMAKE_ARGS}
     INSTALL_COMMAND ""
   )
 else()
@@ -328,6 +339,7 @@ else()
       -DBUILD_TESTING=OFF
       -DLIBSSH2_NO_DEPRECATED=ON
       -DCRYPTO_BACKEND=${CRYPTO_BACKEND}
+      ${LIBSSH2_EXTRA_CMAKE_ARGS}
     INSTALL_COMMAND ""
   )
 endif()

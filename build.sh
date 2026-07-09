@@ -38,6 +38,7 @@ for arch in "${build_archs[@]}"; do
         cmake_cmd+=" -DCMAKE_BUILD_TYPE=Debug"
         cmake_cmd+=" -DLIBSSH2_SOURCE=GitHub"
         cmake_cmd+=" -DLIBSSH2_COMMIT_HASH=a312b43325e3383c865a87bb1d26cb52e3292641"
+        cmake_cmd+=" -DLIBSSH2_ENABLE_DEBUG_LOGGING=ON"
     fi
 
     cmake_cmd+=" -DCRYPTO_BACKEND=$crypto_backend"
