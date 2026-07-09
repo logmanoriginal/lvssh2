@@ -188,7 +188,7 @@ add_subdirectory(extensions)
 if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows")
   target_link_libraries(${PROJECT_NAME} "${LABVIEW_CINTOOLS_DIR}/labview.lib")
 elseif(CMAKE_HOST_SYSTEM_NAME STREQUAL "Linux")
-  target_link_libraries(${PROJECT_NAME} "${LABVIEW_CINTOOLS_DIR}/liblv.so")
+  target_link_options(${PROJECT_NAME} PRIVATE "LINKER:--allow-shlib-undefined")
 endif()
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
