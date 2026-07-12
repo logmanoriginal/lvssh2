@@ -2,11 +2,16 @@ Following software must be installed on the build agent:
 
 - CMake 4.2 or later
 - Visual Studio 2026 or later
-- LabVIEW 2017 or later
+- LabVIEW 2017 or later (32-bit and 64-bit)
+  - Add the followng paths the `PATH` environment variable:
+    - `LabVIEW_32` to the LabVIEW 32-bit installation path (e.g., `C:\Program Files (x86)\National Instruments\LabVIEW 2017`)
+    - `LabVIEW_32_PORT` to the LabVIEW 32-bit port number (e.g., `3363`)
+    - `LabVIEW_64` to the LabVIEW 64-bit installation path (e.g., `C:\Program Files\National Instruments\LabVIEW 2017`)
+    - `LabVIEW_64_PORT` to the LabVIEW 64-bit port number (e.g., `3364`)
+  - The `VIPM API` and `JKI State Machine` VI packages must be installed manually.
 - Strawberry Perl (for building OpenSSL)
 - NASM (for building OpenSSL)
 
-The `VIPM API` and `JKI State Machine` VI packages must be installed manually.
 
 ```ps1
 winget install Kitware.CMake --source winget
@@ -14,6 +19,6 @@ winget install StrawberryPerl.StrawberryPerl --source winget
 winget install NASM.NASM --source winget
 ```
 
-Add NASM to the user PATH environment variable (`%USERPROFILE%\AppData\Local\bin\NASM`).
+Add NASM to the user `PATH` environment variable (`%USERPROFILE%\AppData\Local\bin\NASM`).
 
 Move the environment variable for Strawberry Perl to the top of the system PATH environment variable (must occur before any other Perl installations, like git-scm).
