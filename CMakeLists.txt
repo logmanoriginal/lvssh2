@@ -4,7 +4,8 @@ project(lvssh2_extensions C)
 # Suppress "lib" prefix on libraries
 set(CMAKE_SHARED_LIBRARY_PREFIX "")
 
-set(CMAKE_C_STANDARD 99)
+# C11 is required for <threads.h> (completion rendezvous in the extensions library)
+set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED YES)
 set(CMAKE_C_EXTENSIONS OFF)
 
@@ -187,7 +188,7 @@ add_subdirectory(extensions)
 if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows")
   target_link_libraries(${PROJECT_NAME} "${LABVIEW_CINTOOLS_DIR}/labview.lib")
 elseif(CMAKE_HOST_SYSTEM_NAME STREQUAL "Linux")
-  target_link_libraries(${PROJECT_NAME} "${LABVIEW_CINTOOLS_DIR}/liblv.so")
+  target_link_options(${PROJECT_NAME} PRIVATE "LINKER:--allow-shlib-undefined")
 endif()
 
 set_target_properties(${PROJECT_NAME} PROPERTIES

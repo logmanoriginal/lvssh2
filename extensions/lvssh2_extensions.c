@@ -2,6 +2,88 @@
 #include <assert.h>
 #include <stdlib.h>
 
+// C11 threads require MSVC 2022 17.8+ (/std:c11) on Windows and glibc 2.28+ on
+// Linux. macOS is not supported.
+#ifdef __STDC_NO_THREADS__
+#error "C11 threads support is required"
+#endif
+#include <threads.h>
+
+// PostLVUserEvent only guarantees that the event data has been copied when it
+// returns; whether the LabVIEW handler has already run depends on platform and
+// registration method and must not be relied upon. Callback shims that read
+// results written by the handler therefore block on this rendezvous until the
+// handler VI calls lvssh2_extensions_signal_completion.
+struct lvssh2_completion {
+	mtx_t lock;
+	cnd_t cond;
+	int done;
+};
+
+// Asserts that the return value of a threads function is `thrd_success`.
+#define ASSERT_THRD_SUCCESS(x) assert((x) == thrd_success)
+
+static int completion_init(lvssh2_completion* completion) {
+	int result = mtx_init(&completion->lock, mtx_plain);
+	ASSERT_THRD_SUCCESS(result);
+	if (result != thrd_success) {
+		return result;
+	}
+
+	result = cnd_init(&completion->cond);
+	ASSERT_THRD_SUCCESS(result);
+	if (result != thrd_success) {
+		mtx_destroy(&completion->lock);
+		return result;
+	}
+
+	completion->done = 0;
+	return thrd_success;
+}
+
+static void completion_wait(lvssh2_completion* completion) {
+	int result = mtx_lock(&completion->lock);
+	ASSERT_THRD_SUCCESS(result);
+
+	// Loop in case of spurious wakeup
+	// https://en.cppreference.com/c/thread/cnd_wait
+	while (!completion->done) {
+		result = cnd_wait(&completion->cond, &completion->lock);
+		ASSERT_THRD_SUCCESS(result);
+	}
+
+	result = mtx_unlock(&completion->lock);
+	ASSERT_THRD_SUCCESS(result);
+}
+
+// Signals while holding the lock so the waiter cannot observe `done` and
+// destroy the completion before the signaler is finished touching it.
+static void completion_signal(lvssh2_completion* completion) {
+	int result = mtx_lock(&completion->lock);
+	ASSERT_THRD_SUCCESS(result);
+
+	completion->done = 1;
+
+	result = cnd_signal(&completion->cond);
+	ASSERT_THRD_SUCCESS(result);
+
+	result = mtx_unlock(&completion->lock);
+	ASSERT_THRD_SUCCESS(result);
+}
+
+static void completion_destroy(lvssh2_completion* completion) {
+	mtx_destroy(&completion->lock);
+	cnd_destroy(&completion->cond);
+}
+
+void lvssh2_extensions_signal_completion(uintptr_t completion) {
+	if (!completion) {
+		return;
+	}
+
+	completion_signal((lvssh2_completion*)completion);
+}
+
 // This macro asserts that the given value is less than or equal to INT32_MAX
 // This is used to ensure that the length of a buffer is within the limits of LabVIEW
 #define ASSERT_LABVIEW_MAXLEN(x) assert((x) <= INT32_MAX)
@@ -43,9 +125,7 @@ void lvssh2_trace_handler_function(LIBSSH2_SESSION* session, void* context, cons
 		return;
 	}
 
-	// PostLVUserEvent, when bound to the event using `Register Event Callback`, will
-	// synchronously block until the Callback VI handler has finished executing.
-	// Evidence: https://lavag.org/topic/19251-labview-vi-and-c-callback/#findComment-116130
+	// Fire-and-forget: do not wait for completion because the trace handler returns no data.
 	MgErr error = PostLVUserEvent(*e, &message);
 	ASSERT_NO_ERROR(error);
 
@@ -80,15 +160,26 @@ LIBSSH2_SEND_FUNC(lvssh2_session_callback_send_function) {
 		return LIBSSH2_ERROR_ALLOC;
 	}
 
-	// PostLVUserEvent, when bound to the event using `Register Event Callback`, will
-	// synchronously block until the Callback VI handler has finished executing.
-	// Evidence: https://lavag.org/topic/19251-labview-vi-and-c-callback/#findComment-116130
+	lvssh2_completion completion;
+	if (completion_init(&completion) != thrd_success) {
+		DSDisposeHandle(payload.buffer);
+		return LIBSSH2_ERROR_ALLOC;
+	}
+
+	payload.completion = (uintptr_t)&completion;
+
+	// The outputs written by the handler VI (*bytes_send) are only valid after
+	// completion_wait returns; the handler VI must always signal the completion.
 	MgErr error = PostLVUserEvent(lv_abstract->send, &payload);
 	ASSERT_NO_ERROR(error);
 	if (error != mgNoErr) {
+		completion_destroy(&completion);
 		DSDisposeHandle(payload.buffer);
 		return LIBSSH2_ERROR_BAD_USE;
 	}
+
+	completion_wait(&completion);
+	completion_destroy(&completion);
 
 	DSDisposeHandle(payload.buffer);
 
@@ -124,14 +215,25 @@ LIBSSH2_RECV_FUNC(lvssh2_session_callback_recv_function) {
 	ssize_t bytes_received = 0;
 	payload.bytes_received = &bytes_received;
 
-	// PostLVUserEvent, when bound to the event using `Register Event Callback`, will
-	// synchronously block until the Callback VI handler has finished executing.
-	// Evidence: https://lavag.org/topic/19251-labview-vi-and-c-callback/#findComment-116130
+	lvssh2_completion completion;
+	if (completion_init(&completion) != thrd_success) {
+		return LIBSSH2_ERROR_ALLOC;
+	}
+
+	payload.completion = (uintptr_t)&completion;
+
+	// The outputs written by the handler VI (buffer contents, *bytes_received) are
+	// only valid after completion_wait returns; the handler VI must always signal
+	// the completion.
 	MgErr error = PostLVUserEvent(lv_abstract->recv, &payload);
 	ASSERT_NO_ERROR(error);
 	if (error != mgNoErr) {
+		completion_destroy(&completion);
 		return LIBSSH2_ERROR_BAD_USE;
 	}
+
+	completion_wait(&completion);
+	completion_destroy(&completion);
 
 	if (bytes_received > (ssize_t)length){
 		bytes_received = length;
@@ -191,17 +293,30 @@ LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(lvssh2_userauth_keyboard_interactive_respo
 	payload.prompts = prompts;
 	payload.responses = lv_responses;
 
-	// PostLVUserEvent, when bound to the event using `Register Event Callback`, will
-	// synchronously block until the Callback VI handler has finished executing.
-	// Evidence: https://lavag.org/topic/19251-labview-vi-and-c-callback/#findComment-116130
-	MgErr error = PostLVUserEvent(lv_abstract->kbdint_response, &payload);
-	ASSERT_NO_ERROR(error);
-	if (error != mgNoErr) {
+	lvssh2_completion completion;
+	if (completion_init(&completion) != thrd_success) {
 		free(lv_responses);
 		DSDisposeHandle(lv_name);
 		DSDisposeHandle(lv_instruction);
 		return;
 	}
+
+	payload.completion = (uintptr_t)&completion;
+
+	// The outputs written by the handler VI (responses[]) are only valid after
+	// completion_wait returns; the handler VI must always signal the completion.
+	MgErr error = PostLVUserEvent(lv_abstract->kbdint_response, &payload);
+	ASSERT_NO_ERROR(error);
+	if (error != mgNoErr) {
+		completion_destroy(&completion);
+		free(lv_responses);
+		DSDisposeHandle(lv_name);
+		DSDisposeHandle(lv_instruction);
+		return;
+	}
+
+	completion_wait(&completion);
+	completion_destroy(&completion);
 
 	for (int i = 0; i < num_prompts; i++) {
 		responses[i].text = NULL;
@@ -257,15 +372,26 @@ LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC(lvssh2_userauth_publickey_sign_function) {
 
 	LVUserEventRef* e = (LVUserEventRef*)abstract;
 
-	// PostLVUserEvent, when bound to the event using `Register Event Callback`, will
-	// synchronously block until the Callback VI handler has finished executing.
-	// Evidence: https://lavag.org/topic/19251-labview-vi-and-c-callback/#findComment-116130
+	lvssh2_completion completion;
+	if (completion_init(&completion) != thrd_success) {
+		DSDisposeHandle(payload.data);
+		return LIBSSH2_ERROR_ALLOC;
+	}
+
+	payload.completion = (uintptr_t)&completion;
+
+	// The outputs written by the handler VI (*signature) are only valid after
+	// completion_wait returns; the handler VI must always signal the completion.
 	MgErr error = PostLVUserEvent(*e, &payload);
 	ASSERT_NO_ERROR(error);
 	if (error != mgNoErr) {
+		completion_destroy(&completion);
 		DSDisposeHandle(payload.data);
 		return LIBSSH2_ERROR_BAD_USE;
 	}
+
+	completion_wait(&completion);
+	completion_destroy(&completion);
 
 	if (!lv_signature){
 		DSDisposeHandle(payload.data);

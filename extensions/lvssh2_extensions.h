@@ -12,9 +12,13 @@
 
 #include "lv_prolog.h"
 
+// Completion rendezvous shared between a callback shim and its LabVIEW handler VI.
+typedef struct lvssh2_completion lvssh2_completion;
+
 typedef struct {
 	LStrHandle data;
 	LStrHandle* signature;
+	uintptr_t completion;
 } lvssh2_userauth_publickey_sign_function_input_args;
 
 typedef struct {
@@ -28,6 +32,7 @@ typedef struct {
 	LStrHandle buffer;
 	int flags;
 	ssize_t* bytes_send;
+	uintptr_t completion;
 } lvssh2_session_callback_send_function_input_args;
 
 typedef struct {
@@ -36,6 +41,7 @@ typedef struct {
 	size_t length;
 	int flags;
 	ssize_t* bytes_received;
+	uintptr_t completion;
 } lvssh2_session_callback_recv_function_input_args;
 
 typedef struct {
@@ -44,6 +50,7 @@ typedef struct {
 	int num_prompts;
 	const LIBSSH2_USERAUTH_KBDINT_PROMPT* prompts;
 	LStrHandle* responses;
+	uintptr_t completion;
 } lvssh2_userauth_keyboard_interactive_response_function_input_args;
 
 // Function pointer for the userauth publickey sign function
@@ -63,3 +70,9 @@ LVSSH2_API libssh2_cb_generic* get_lvssh2_session_callback_recv_function(void);
 LVSSH2_API LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC_PTR get_lvssh2_userauth_keyboard_interactive_response_function(void);
 
 LVSSH2_API LIBSSH2_USERAUTH_PUBLICKEY_SIGN_FUNC_PTR get_lvssh2_userauth_publickey_sign_function(void);
+
+// Releases the callback shim blocked on the given completion. The LabVIEW handler VI
+// must call this exactly once for every event it receives, as its final operation and
+// on every code path (including error paths), after writing all outputs through the
+// payload pointers. `completion` is the value of the payload's `completion` field.
+LVSSH2_API void lvssh2_extensions_signal_completion(uintptr_t completion);

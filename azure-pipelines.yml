@@ -15,7 +15,11 @@ pr:
 
 pool:
   name: Default
-  demands: LabVIEW
+  demands:
+    - LabVIEW_32
+    - LabVIEW_32_PORT
+    - LabVIEW_64
+    - LabVIEW_64_PORT
 
 variables:
   libssh2.version: '1.11.1'
@@ -29,12 +33,22 @@ jobs:
     timeoutInMinutes: 180 # Increase timeout to accomodate long build times for OpenSSL
     strategy:
       matrix:
-        'x86-win-openssl-debug':
-          architecture: 'Win32'
+        'x64-win-openssl-debug':
+          architecture: 'x64'
+          labview: '%LabVIEW_64%'
+          labview_port: '%LabVIEW_64_PORT%'
           backend: 'OpenSSL'
           config: 'Debug'
+        'x64-win-openssl-release':
+          architecture: 'x64'
+          labview: '%LabVIEW_64%'
+          labview_port: '%LabVIEW_64_PORT%'
+          backend: 'OpenSSL'
+          config: 'Release'
         'x86-win-openssl-release':
           architecture: 'Win32'
+          labview: '%LabVIEW_32%'
+          labview_port: '%LabVIEW_32_PORT%'
           backend: 'OpenSSL'
           config: 'Release'
     steps:
@@ -74,12 +88,12 @@ jobs:
     - task: CmdLine@2
       displayName: 'Restore packages'
       inputs:
-        script: 'LabVIEWCLI -LabVIEWPath "%LabVIEW%\LabVIEW.exe" -AdditionalOperationDirectory "$(Build.SourcesDirectory)\Toolchain" -OperationName Restore -Configuration "$(Build.SourcesDirectory)\lvssh2-dev.vipc"'
+        script: 'LabVIEWCLI -LabVIEWPath "$(labview)\LabVIEW.exe" -PortNumber $(labview_port) -AdditionalOperationDirectory "$(Build.SourcesDirectory)\Toolchain" -OperationName Restore -Configuration "$(Build.SourcesDirectory)\lvssh2-dev.vipc"'
         workingDirectory: '$(Build.SourcesDirectory)'
     - task: CmdLine@2
       displayName: 'Run tests'
       inputs:
-        script: 'LabVIEWCLI -LabVIEWPath "%LabVIEW%\LabVIEW.exe" -AdditionalOperationDirectory "$(Build.SourcesDirectory)\Toolchain" -OperationName Test -Project "$(Build.SourcesDirectory)\lvssh2.lvproj" -ResultsFolder "$(System.DefaultWorkingDirectory)\TestResults"'
+        script: 'LabVIEWCLI -LabVIEWPath "$(labview)\LabVIEW.exe" -PortNumber $(labview_port) -AdditionalOperationDirectory "$(Build.SourcesDirectory)\Toolchain" -OperationName Test -Project "$(Build.SourcesDirectory)\lvssh2.lvproj" -ResultsFolder "$(System.DefaultWorkingDirectory)\TestResults"'
         workingDirectory: '$(Build.SourcesDirectory)'
     - script: docker compose down
       displayName: 'Stop SSH server'
