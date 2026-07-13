@@ -39,18 +39,21 @@ jobs:
           labview_port: '%LabVIEW_64_PORT%'
           backend: 'OpenSSL'
           config: 'Debug'
+          debugLogging: 'ON'
         'x64-win-openssl-release':
           architecture: 'x64'
           labview: '%LabVIEW_64%'
           labview_port: '%LabVIEW_64_PORT%'
           backend: 'OpenSSL'
           config: 'Release'
+          debugLogging: 'OFF'
         'x86-win-openssl-release':
           architecture: 'Win32'
           labview: '%LabVIEW_32%'
           labview_port: '%LabVIEW_32_PORT%'
           backend: 'OpenSSL'
           config: 'Release'
+          debugLogging: 'OFF'
     steps:
     - task: Cache@2
       displayName: 'Cache built DLLs'
@@ -74,7 +77,7 @@ jobs:
       displayName: 'Prepare build configurations'
       condition: ne(variables.CACHE_RESTORED, 'true')
       inputs:
-        script: cmake -B build/$(architecture) -S . -G "Visual Studio 18 2026" -A $(architecture) -DLIBSSH2_SOURCE=GitHub -DLIBSSH2_COMMIT_HASH=$(libssh2.commit) -DCRYPTO_BACKEND=$(backend) -DOPENSSL_COMMIT_HASH=$(openssl.commit) -DLVSSH2_ENABLE_UNSAFESEH_WIN32=ON
+        script: cmake -B build/$(architecture) -S . -G "Visual Studio 18 2026" -A $(architecture) -DLIBSSH2_SOURCE=GitHub -DLIBSSH2_COMMIT_HASH=$(libssh2.commit) -DCRYPTO_BACKEND=$(backend) -DOPENSSL_COMMIT_HASH=$(openssl.commit) -DLVSSH2_ENABLE_UNSAFESEH_WIN32=ON -DLIBSSH2_ENABLE_DEBUG_LOGGING=$(debugLogging)
         workingDirectory: '$(Build.SourcesDirectory)'
     - task: CmdLine@2
       displayName: 'Build libraries'
