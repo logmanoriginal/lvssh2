@@ -103,7 +103,7 @@ jobs:
       workingDirectory: '$(Build.SourcesDirectory)/docker'
     - publish: '$(System.DefaultWorkingDirectory)/docker/openssh-server/config/logs/openssh/current'
       displayName: 'Publish SSH server logs'
-      artifact: server-log-($(Agent.JobName))
+      artifact: server-log-($(Agent.JobName).$(System.JobAttempt))
     - task: PublishTestResults@2
       displayName: 'Publish test results'
       inputs:
