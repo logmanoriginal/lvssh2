@@ -37,7 +37,7 @@ set(
 set_property(CACHE CRYPTO_BACKEND PROPERTY STRINGS "OpenSSL" "WinCNG")
 
 set(
-  OPENSSL_COMMIT_HASH "1e963a8680ec78ad2072792c7a1a71f3c530bd2e"
+  OPENSSL_COMMIT_HASH "f089acdf4bc7ba94a79f4bf6eb7362c3e7d14aa9"
   CACHE STRING "Commit hash of the openssl repository. Also accepts branch names and tags. The use of commit hashes is strongly recommended to avoid pulling malicious code. Only used when CRYPTO_BACKEND is OpenSSL."
 )
 
