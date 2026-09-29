@@ -24,8 +24,8 @@ pool:
 variables:
   libssh2.version: '1.11.1'
   libssh2.commit: 'a312b43325e3383c865a87bb1d26cb52e3292641'
-  openssl.version: '4.0.2'
-  openssl.commit: 'f089acdf4bc7ba94a79f4bf6eb7362c3e7d14aa9'
+  openssl.version: '4.0.3'
+  openssl.commit: 'af1775b60dfa141a4ad762585052cabeb9f37e9e'
   DLL_CACHE_FOLDER: '$(System.DefaultWorkingDirectory)/Cache'
 
 jobs:
