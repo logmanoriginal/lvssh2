@@ -86,8 +86,8 @@ The build process automatically places all libraries in the appropriate director
 - 64-bit:
     - `libssh2/libssh2_extensions_64.dll` (Windows) or `libssh2/libssh2_extensions_64.so` (Linux)
     - `libssh2/libssh2_64.dll` (Windows) or `libssh2/libssh2_64.so` (Linux)
-    - `libssh2/libssl-4-64.dll` (Windows, OpenSSL)
-    - `libssh2/libcrypto-4-64.dll` (Windows, OpenSSL)
+    - `libssh2/libssl-4-x64.dll` (Windows, OpenSSL)
+    - `libssh2/libcrypto-4-x64.dll` (Windows, OpenSSL)
 
 > [!TIP]
 > Both 32-bit and 64-bit libraries can coexist in the same directory. LabVIEW will automatically choose the appropriate library based on the bitness of LabVIEW. See [Configuring the Call Library Function Node](https://www.ni.com/docs/en-US/bundle/labview/page/configuring-the-call-library-function-node.html) for more information.
