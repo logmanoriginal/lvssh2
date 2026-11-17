@@ -79,12 +79,12 @@ These options provide additional customization of the build process. They can be
 The build process automatically places all libraries in the appropriate directories:
 
 - 32-bit:
-    - `libssh2/libssh2_extensions.dll` (Windows) or `libssh2/libssh2_extensions.so` (Linux)
+    - `libssh2/lvssh2_extensions.dll` (Windows) or `libssh2/lvssh2_extensions.so` (Linux)
     - `libssh2/libssh2.dll` (Windows) or `libssh2/libssh2.so` (Linux)
     - `libssh2/libssl-4.dll` (Windows, OpenSSL)
     - `libssh2/libcrypto-4.dll` (Windows, OpenSSL)
 - 64-bit:
-    - `libssh2/libssh2_extensions_64.dll` (Windows) or `libssh2/libssh2_extensions_64.so` (Linux)
+    - `libssh2/lvssh2_extensions_64.dll` (Windows) or `libssh2/lvssh2_extensions_64.so` (Linux)
     - `libssh2/libssh2_64.dll` (Windows) or `libssh2/libssh2_64.so` (Linux)
     - `libssh2/libssl-4-x64.dll` (Windows, OpenSSL)
     - `libssh2/libcrypto-4-x64.dll` (Windows, OpenSSL)
