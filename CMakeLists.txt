@@ -206,6 +206,8 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 include(ExternalProject)
 
 if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows" AND CRYPTO_BACKEND STREQUAL "OpenSSL")
+  find_package(Git REQUIRED)
+
   set(OPENSSL_INSTALL_DIR ${CMAKE_BINARY_DIR}/openssl)
   set(OPENSSL_INCLUDE_DIR ${OPENSSL_INSTALL_DIR}/include)
 
@@ -221,16 +223,8 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows" AND CRYPTO_BACKEND STREQUAL "OpenSS
     set(OPENSSL_BUILD_COMMAND nmake)
   endif()
 
-  ExternalProject_Add(
-    openssl
-    GIT_REPOSITORY https://github.com/openssl/openssl.git
-    GIT_TAG ${OPENSSL_COMMIT_HASH}
-    GIT_SHALLOW TRUE
-    GIT_SUBMODULES ""
-    CONFIGURE_COMMAND
-      ${OPENSSL_CONFIGURE_COMMAND}
-      --prefix=${OPENSSL_INSTALL_DIR}
-      --openssldir=${OPENSSL_INSTALL_DIR}
+  set(
+    OPENSSL_CONFIGURE_OPTIONS
       no-apps
       no-docs
       no-tests
@@ -274,10 +268,45 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows" AND CRYPTO_BACKEND STREQUAL "OpenSS
       no-rmd160 # RIPEMD-16 (optional in libssh2)
       no-blake2
       no-scrypt
+  )
+
+  # OpenSSL builds in source without dependency tracking (no-makedepend), so a
+  # reconfigure keeps the objects of the previous commit or options and links
+  # them into the new DLL. Clean the source tree whenever either one changes.
+  # file(CONFIGURE) only rewrites the file when its content changes.
+  set(OPENSSL_BUILD_ID_FILE ${CMAKE_BINARY_DIR}/openssl-build-id.txt)
+  file(
+    CONFIGURE
+    OUTPUT ${OPENSSL_BUILD_ID_FILE}
+    CONTENT "${OPENSSL_COMMIT_HASH}\n${OPENSSL_CONFIGURE_COMMAND}\n${OPENSSL_CONFIGURE_OPTIONS}\n"
+  )
+
+  ExternalProject_Add(
+    openssl
+    GIT_REPOSITORY https://github.com/openssl/openssl.git
+    GIT_TAG ${OPENSSL_COMMIT_HASH}
+    GIT_SHALLOW TRUE
+    GIT_SUBMODULES ""
+    CONFIGURE_COMMAND
+      ${OPENSSL_CONFIGURE_COMMAND}
+      --prefix=${OPENSSL_INSTALL_DIR}
+      --openssldir=${OPENSSL_INSTALL_DIR}
+      ${OPENSSL_CONFIGURE_OPTIONS}
     BUILD_COMMAND ${OPENSSL_BUILD_COMMAND}
     BUILD_IN_SOURCE 1
     INSTALL_COMMAND ${OPENSSL_BUILD_COMMAND} install
     INSTALL_DIR ${OPENSSL_INSTALL_DIR}
+  )
+
+  ExternalProject_Add_Step(
+    openssl
+    clean
+    COMMENT "Cleaning the OpenSSL source tree"
+    COMMAND ${GIT_EXECUTABLE} clean -xdfq
+    WORKING_DIRECTORY <SOURCE_DIR>
+    DEPENDEES download
+    DEPENDERS configure
+    DEPENDS ${OPENSSL_BUILD_ID_FILE}
   )
 
   # Custom command to copy the OpenSSL crypto DLL to the libssh2 directory.
