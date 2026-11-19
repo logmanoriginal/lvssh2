@@ -268,6 +268,8 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows" AND CRYPTO_BACKEND STREQUAL "OpenSS
       no-rmd160 # RIPEMD-16 (optional in libssh2)
       no-blake2
       no-scrypt
+      no-ui-console # Never prompt for passphrases on stdin
+      no-autoload-config # Do not read openssl.cnf from the compiled-in OPENSSLDIR
   )
 
   # OpenSSL builds in source without dependency tracking (no-makedepend), so a
