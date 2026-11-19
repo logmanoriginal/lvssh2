@@ -152,8 +152,6 @@
 			<Item Name="libcrypto-4-x64.dll" Type="Document" URL="../libssh2/libcrypto-4-x64.dll"/>
 			<Item Name="libcrypto-4.dll" Type="Document" URL="../libssh2/libcrypto-4.dll"/>
 			<Item Name="libssh2_64.dll" Type="Document" URL="../libssh2/libssh2_64.dll"/>
-			<Item Name="libssl-4-x64.dll" Type="Document" URL="../libssh2/libssl-4-x64.dll"/>
-			<Item Name="libssl-4.dll" Type="Document" URL="../libssh2/libssl-4.dll"/>
 			<Item Name="lvssh2_extensions_64.dll" Type="Document" URL="../libssh2/lvssh2_extensions_64.dll"/>
 			<Item Name="ws2_32.dll" Type="Document" URL="ws2_32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>

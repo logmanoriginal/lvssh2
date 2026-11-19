@@ -66,12 +66,10 @@ if(CMAKE_SIZEOF_VOID_P EQUAL 8)
   set(OUTPUT_NAME_SUFFIX "_64") # Append "_64" to the output name for 64-bit builds
   set(OPENSSL_CONFIGURE_COMMAND perl Configure VC-WIN64A)
   set(OPENSSL_LIBCRYPTO_FILE libcrypto-4-x64.dll)
-  set(OPENSSL_LIBSSL_FILE libssl-4-x64.dll)
 else()
   set(OUTPUT_NAME_SUFFIX "") # No suffix for 32-bit builds
   set(OPENSSL_CONFIGURE_COMMAND perl Configure VC-WIN32)
   set(OPENSSL_LIBCRYPTO_FILE libcrypto-4${CMAKE_SHARED_LIBRARY_SUFFIX})
-  set(OPENSSL_LIBSSL_FILE libssl-4${CMAKE_SHARED_LIBRARY_SUFFIX})
 endif()
 
 # Get libssh2 source code
@@ -282,23 +280,16 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows" AND CRYPTO_BACKEND STREQUAL "OpenSS
     INSTALL_DIR ${OPENSSL_INSTALL_DIR}
   )
 
-  # Custom command to copy OpenSSL DLLs to the libssh2 directory
+  # Custom command to copy the OpenSSL crypto DLL to the libssh2 directory.
+  # libssh2 only uses libcrypto, so libssl is not shipped.
   add_custom_command(
     TARGET openssl
     POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy
       ${OPENSSL_INSTALL_DIR}/bin/${OPENSSL_LIBCRYPTO_FILE}
       ${CMAKE_SOURCE_DIR}/libssh2
-    COMMAND ${CMAKE_COMMAND} -E copy
-      ${OPENSSL_INSTALL_DIR}/bin/${OPENSSL_LIBSSL_FILE}
-      ${CMAKE_SOURCE_DIR}/libssh2
-    COMMENT "Copying OpenSSL DLLs to the libssh2 directory"
+    COMMENT "Copying ${OPENSSL_LIBCRYPTO_FILE} to the libssh2 directory"
   )
-
-  add_library(OpenSSL::SSL STATIC IMPORTED GLOBAL)
-  set_property(TARGET OpenSSL::SSL PROPERTY IMPORTED_LOCATION ${OPENSSL_INSTALL_DIR}/lib/libssl.lib)
-  set_property(TARGET OpenSSL::SSL PROPERTY INTERFACE_INCLUDE_DIRECTORIES ${OPENSSL_INCLUDE_DIR})
-  add_dependencies(OpenSSL::SSL OpenSSL)
 
   add_library(OpenSSL::Crypto STATIC IMPORTED GLOBAL)
   set_property(TARGET OpenSSL::Crypto PROPERTY IMPORTED_LOCATION ${OPENSSL_INSTALL_DIR}/lib/libcrypto.lib)
