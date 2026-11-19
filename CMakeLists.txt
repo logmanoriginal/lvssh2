@@ -280,6 +280,16 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows" AND CRYPTO_BACKEND STREQUAL "OpenSS
       no-integrity-only-ciphers
       no-ml-dsa
       no-slh-dsa
+      no-sshkdf
+      no-sskdf
+      no-x942kdf
+      no-x963kdf
+      no-kbkdf
+      no-krb5kdf
+      no-ikev2kdf
+      no-snmpkdf
+      no-srtpkdf
+      no-pvkkdf
   )
 
   # OpenSSL builds in source without dependency tracking (no-makedepend), so a
