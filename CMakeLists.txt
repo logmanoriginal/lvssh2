@@ -268,6 +268,33 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows" AND CRYPTO_BACKEND STREQUAL "OpenSS
       no-rmd160 # RIPEMD-16 (optional in libssh2)
       no-blake2
       no-scrypt
+      no-ui-console # Never prompt for passphrases on stdin
+      no-autoload-config # Do not read openssl.cnf from the compiled-in OPENSSLDIR
+      no-dsa # ssh-dss is disabled in libssh2 unless LIBSSH2_DSA_ENABLE is set
+      no-dh # libssh2 implements DH key exchange with BN functions
+      no-camellia
+      no-chacha # libssh2 ships its own chacha20-poly1305
+      no-poly1305
+      no-cmac
+      no-siphash
+      no-integrity-only-ciphers
+      no-ml-dsa
+      no-slh-dsa
+      no-sshkdf
+      no-sskdf
+      no-x942kdf
+      no-x963kdf
+      no-kbkdf
+      no-krb5kdf
+      no-ikev2kdf
+      no-snmpkdf
+      no-srtpkdf
+      no-pvkkdf
+      no-winstore
+      no-uplink
+      no-sock
+      no-async
+      no-thread-pool
   )
 
   # OpenSSL builds in source without dependency tracking (no-makedepend), so a
