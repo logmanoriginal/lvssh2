@@ -17,6 +17,7 @@ description: >
 - `<repo_root>/CMakeLists.txt` - The main CMake configuration file that specifies the default versions of libssh2 and OpenSSL to use.
 - `<repo_root>/build.sh` - The build script that compiles the project and links against pre-defined versions of libssh2 and OpenSSL.
 - `<repo_root>/azure-pipelines.yml` - The Azure Pipelines configuration file that defines the CI/CD pipeline, including the versions of libssh2 and OpenSSL to use during the build process.
+- `<repo_root>/lvssh2.cdx.json` - The CycloneDX BOM file that lists the versions and dependencies of libssh2 and OpenSSL used in the project.
 
 ## Inputs
 
@@ -67,6 +68,8 @@ In `azure-pipelines.yml`, update:
 Compare the current versions with the user-provided versions.
 
 If the user-provided version is newer than the current version, update the corresponding key files to reflect the new version.
+
+Additionally, update the `lvssh2.cdx.json` file to reflect the new versions and commit hashes of libssh2 and OpenSSL. This includes updating the `version`, `purl`, `cpe`, `pedigree.commits.uid`, and `pedigree.commits.url` fields for both libraries.
 
 ### 3. Build
 
