@@ -1,0 +1,88 @@
+{
+    "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.7",
+    "version": 1,
+    "metadata": {
+        "component": {
+            "name": "lvssh2",
+            "version": "0.11.0",
+            "type": "library",
+            "bom-ref": "pkg:github/logmanoriginal/lvssh2",
+            "purl": "pkg:github/logmanoriginal/lvssh2@0.11.0",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "BSD-3-Clause"
+                    }
+                }
+            ]
+        }
+    },
+    "components": [
+        {
+            "name": "libssh2",
+            "version": "1.11.1",
+            "type": "library",
+            "bom-ref": "pkg:github/libssh2/libssh2",
+            "purl": "pkg:github/libssh2/libssh2@1.11.1",
+            "cpe": "cpe:2.3:a:libssh2:libssh2:1.11.1:-:*:*:*:*:*:*",
+            "pedigree": {
+                "commits": [
+                    {
+                        "uid": "a312b43325e3383c865a87bb1d26cb52e3292641",
+                        "url": "https://github.com/libssh2/libssh2/commit/a312b43325e3383c865a87bb1d26cb52e3292641"
+                    }
+                ]
+            },
+            "licenses": [
+                {
+                    "license": {
+                        "id": "BSD-3-Clause"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "openssl",
+            "version": "4.1.0",
+            "type": "library",
+            "bom-ref": "pkg:github/openssl/openssl",
+            "purl": "pkg:github/openssl/openssl@4.1.0",
+            "cpe": "cpe:2.3:a:openssl:openssl:4.1.0:-:*:*:*:*:*:*",
+            "pedigree": {
+                "commits": [
+                    {
+                        "uid": "2f4e3a5fec05394068cfa7379890ab552483a8a6",
+                        "url": "https://github.com/openssl/openssl/commit/2f4e3a5fec05394068cfa7379890ab552483a8a6"
+                    }
+                ]
+            },
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0"
+                    }
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "ref": "pkg:github/logmanoriginal/lvssh2",
+            "dependsOn": [
+                "pkg:github/libssh2/libssh2"
+            ]
+        },
+        {
+            "ref": "pkg:github/libssh2/libssh2",
+            "dependsOn": [
+                "pkg:github/openssl/openssl"
+            ]
+        },
+        {
+            "ref": "pkg:github/openssl/openssl",
+            "dependsOn": []
+        }
+    ]
+}

@@ -221,6 +221,9 @@ https://github.com/logmanoriginal/lvssh2/releases/tag/0.11.0</Release_Notes>
       <Exclusions>
         <Path>.github</Path>
       </Exclusions>
+      <Exclusions>
+        <Path>lvssh2.cdx.json</Path>
+      </Exclusions>
       <Place_Folder_Contents>
         <Path/>
       </Place_Folder_Contents>
