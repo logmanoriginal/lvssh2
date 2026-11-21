@@ -1,0 +1,38 @@
+name: Vulnerability Scan
+
+on:
+  push:
+  schedule:
+    - cron: '0 3 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Scan SBOM
+        id: scan
+        uses: anchore/scan-action@v7.4.2
+        with:
+          sbom: lvssh2.cdx.json
+          fail-build: false
+          output-format: sarif
+
+      - name: Associate SBOM findings with the SBOM file
+        env:
+          SARIF_FILE: ${{ steps.scan.outputs.sarif }}
+        run: |
+          jq '(.runs[].results[]? | select(.locations[0].physicalLocation.artifactLocation.uri == "")) |= del(.partialFingerprints.primaryLocationLineHash)
+            | (.runs[].results[]?.locations[]?.physicalLocation.artifactLocation | select(.uri == "") | .uri) = "lvssh2.cdx.json"' "$SARIF_FILE" > grype.sarif
+
+      - name: Upload results
+        uses: github/codeql-action/upload-sarif@v4
+        with:
+          sarif_file: grype.sarif
+          category: grype-sbom
